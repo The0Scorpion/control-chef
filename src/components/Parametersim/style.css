@@ -1,0 +1,549 @@
+.parametersim {
+  height: 387px;
+  position: relative;
+  width: 861px;
+}
+
+.parametersim .overlap {
+  background-color: #6454f0;
+  border-radius: 5px;
+  height: 58px;
+  left: 0;
+  position: absolute;
+  top: 17px;
+  width: 153px;
+}
+
+.parametersim .pitch-set-point {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+}
+
+.parametersim .pitch {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+}
+
+.parametersim .pitch-input {
+  background-color: #d9d9d9;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  height: 17px;
+  left: 45px;
+  position: absolute;
+  top: 28px;
+  width: 88px;
+}
+
+.parametersim .overlap-group {
+  height: 387px;
+  left: 153px;
+  position: absolute;
+  top: 0;
+  width: 708px;
+}
+
+.parametersim .div {
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  width: 59px;
+}
+
+.parametersim .summation-point {
+  background-color: #d9d9d9;
+  border-radius: 18.5px;
+  height: 37px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 37px;
+}
+
+.parametersim .arrow {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 23px;
+  z-index: 0;
+}
+
+.parametersim .text-wrapper {
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 25px;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 8px;
+  width: 31px;
+}
+
+.parametersim .overlap-2 {
+  height: 37px;
+  left: 234px;
+  position: absolute;
+  top: 34px;
+  width: 59px;
+}
+
+.parametersim .img {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 23px;
+}
+
+.parametersim .text-wrapper-2 {
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 25px;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 10px;
+  width: 31px;
+}
+
+.parametersim .overlap-3 {
+  height: 387px;
+  left: 34px;
+  position: absolute;
+  top: 0;
+  width: 674px;
+}
+
+.parametersim .overlap-4 {
+  height: 98px;
+  left: 25px;
+  position: absolute;
+  top: 0;
+  width: 175px;
+}
+
+.parametersim .div-2 {
+  background-color: #6454f0;
+  border-radius: 5px;
+  height: 98px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 153px;
+}
+
+.parametersim .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 89px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+}
+
+.parametersim .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 39px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+}
+
+.parametersim .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 41px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 49px;
+}
+
+.parametersim .div-3 {
+  background-color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  height: 17px;
+  left: 67px;
+  position: absolute;
+  top: 28px;
+  width: 88px;
+}
+
+.parametersim .div-4 {
+  background-color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  height: 17px !important;
+  left: 67px;
+  position: absolute;
+  top: 49px;
+  width: 88px;
+}
+
+.parametersim .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 39px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+}
+
+.parametersim .div-5 {
+  background-color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  height: 17px;
+  left: 67px;
+  position: absolute;
+  top: 70px;
+  width: 88px;
+}
+
+.parametersim .arrow-2 {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 46px;
+  width: 23px;
+  z-index: 1000;
+}
+
+.parametersim .overlap-5 {
+  height: 98px;
+  left: 259px;
+  position: absolute;
+  top: 0;
+  width: 175px;
+}
+
+.parametersim .overlap-6 {
+  height: 387px;
+  left: 434px;
+  position: absolute;
+  top: 0;
+  width: 240px;
+}
+
+.parametersim .img-box {
+  background-color: #6454f0;
+  border-radius: 5px;
+  height: 387px;
+  left: 68px;
+  position: absolute;
+  top: 0;
+  width: 172px;
+}
+
+.parametersim .plant-img {
+  height: 213px;
+  left: 78px;
+  object-fit: cover;
+  position: absolute;
+  top: 83px;
+  width: 151px;
+}
+
+.parametersim .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 139px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+}
+
+.parametersim .arrow-3 {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 46px;
+  width: 69px;
+}
+
+.parametersim .arrow-4 {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 244px;
+  width: 69px;
+  z-index: -1000;
+}
+
+.parametersim .sensed-angular {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 326px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 105px;
+}
+
+.parametersim .pitch-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 124px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 134px;
+}
+
+.parametersim .roll-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 119px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 346px;
+}
+
+.parametersim .overlap-7 {
+  height: 85px;
+  left: 0;
+  position: absolute;
+  top: 73px;
+  width: 502px;
+}
+
+.parametersim .arrow-5 {
+  height: 84px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: 1000;
+}
+
+.parametersim .line {
+  height: 2px;
+  left: 7px;
+  position: absolute;
+  top: 83px;
+  width: 495px;
+}
+
+.parametersim .overlap-8 {
+  height: 53px;
+  left: 234px;
+  position: absolute;
+  top: 72px;
+  width: 268px;
+}
+
+.parametersim .arrow-6 {
+  height: 53px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: 1000;
+}
+
+.parametersim .line-2 {
+  height: 2px;
+  left: 7px;
+  position: absolute;
+  top: 51px;
+  width: 261px;
+}
+
+.parametersim .overlap-group-2 {
+  height: 98px;
+  left: 25px;
+  position: absolute;
+  top: 198px;
+  width: 175px;
+}
+
+.parametersim .overlap-9 {
+  height: 98px;
+  left: 259px;
+  position: absolute;
+  top: 198px;
+  width: 175px;
+}
+
+.parametersim .sensed-angular-2 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 330px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 307px;
+}
+
+.parametersim .overlap-10 {
+  height: 98px;
+  left: 0;
+  position: absolute;
+  top: 271px;
+  width: 502px;
+}
+
+.parametersim .arrow-7 {
+  height: 98px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: 1000;
+}
+
+.parametersim .line-3 {
+  height: 2px;
+  left: 7px;
+  position: absolute;
+  top: 96px;
+  width: 495px;
+}
+
+.parametersim .overlap-11 {
+  height: 59px;
+  left: 234px;
+  position: absolute;
+  top: 270px;
+  width: 268px;
+}
+
+.parametersim .arrow-8 {
+  height: 59px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: 1000;
+}
+
+.parametersim .line-4 {
+  height: 2px;
+  left: 7px;
+  position: absolute;
+  top: 57px;
+  width: 261px;
+}
+
+.parametersim .overlap-12 {
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 233px;
+  width: 59px;
+}
+
+.parametersim .overlap-13 {
+  height: 37px;
+  left: 234px;
+  position: absolute;
+  top: 232px;
+  width: 59px;
+}
+
+.parametersim .overlap-14 {
+  background-color: #6454f0;
+  border-radius: 5px;
+  height: 58px;
+  left: 0;
+  position: absolute;
+  top: 215px;
+  width: 153px;
+}
+
+.parametersim .roll-set-point {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+}
+
+.parametersim .roll {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+}

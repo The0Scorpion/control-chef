@@ -1,0 +1,342 @@
+.nav-bar {
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(135deg, rgb(5, 5, 24) 7.28%, rgb(23, 3, 43) 96.28%);
+  border-radius: 0 0 20px 20px;
+  height: 80px;
+  position: relative;
+  width: 1348;
+}
+
+.nav-bar .logo {
+  height: 48px;
+  left: 20;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  transition: all 0.5s ease;
+  width: 273px;
+}
+
+.nav-bar .mask-group-3 {
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 273px;
+}
+
+.nav-bar .group-21 {
+  height: 18px;
+  left: 590px;
+  position: absolute;
+  top: -18px;
+  width: 800px;
+  background: none;
+}
+
+.nav-bar .log-in {
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 840px;
+  padding: 10px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .log-in:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .reservation {
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 420px;
+  padding: 10px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .reservation:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .theories-explanation {
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 240px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .theories-explanation:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .dropdown-content-theories {
+  display: none;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  left: 255px;
+  top: 70px;
+  padding: 10px;
+  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 5px;
+  width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-theory:hover .dropdown-content-theories {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-theories .text1:hover {
+  cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-theories .text1 {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.nav-bar .dropdown-content-experiments {
+  display: none;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  left: 90px;
+  top: 70px;
+  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-exp:hover .dropdown-content-experiments {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-experiments .text1:hover {
+  cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-experiments .text1 {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.nav-bar .experiments {
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 120px;
+  padding: 10px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .experiments:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.p{
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+}
+
+.p2{
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff1f;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  padding: 5px; 
+}
+
+.nav-bar .text-wrapper-9:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .text-wrapper-10:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .text-wrapper-11:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+}
+
+.nav-bar .text-wrapper-9 {
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 750px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  width:fit-content;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .text-wrapper-10 {
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 640px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  width:fit-content;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-bar .text-wrapper-11 {
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  left: 540px;
+  padding: 10px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  width:fit-content;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}

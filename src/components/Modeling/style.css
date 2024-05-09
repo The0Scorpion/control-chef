@@ -1,0 +1,91 @@
+.modeling {
+  height: 936px;
+  position: relative;
+  width: 1300px;
+}
+
+.modeling .overlap-2 {
+  height: 796px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1300px;
+}
+
+.modeling .MODELING-wrapper {
+  background-color: #ffffff4c;
+  border-radius: 20px 0px 0px 20px;
+  height: 86px;
+  left: 938px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 411px;
+}
+
+.modeling .MODELING {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 136px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 29px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.modeling .overlap-3 {
+  height: 737px;
+  left: 0;
+  position: absolute;
+  top: 59px;
+  width: 1328px;
+}
+
+.modeling .group {
+  height: 737px;
+  left: 60px;
+  position: absolute;
+  top: 0;
+  width: 755px;
+}
+
+.modeling .img {
+  height: 450px;
+}
+
+.modeling .when-a-positive {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 650px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  text-align: right;
+  top: 72px;
+  width: 635px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.modeling .the-model-equation {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 283px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 500px;
+  width: 718px;
+  text-align: justify;
+  text-justify: inter-word;
+}

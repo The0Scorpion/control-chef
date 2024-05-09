@@ -1,0 +1,15 @@
+.nav-log-wrapper {
+  height: 65px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  width: 370px;
+}
+
+.nav-log-wrapper .mask-group {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 70%;
+}
+

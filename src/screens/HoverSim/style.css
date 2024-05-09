@@ -1,0 +1,1598 @@
+.hoversim {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hoversim .overlap-6 {
+  position: absolute;
+}
+
+.hoversim .class {
+  border-radius: 202.57px/662.27px !important;
+  height: 1325px !important;
+  top: 2737px !important;
+  width: 405px !important;
+}
+
+.hoversim .class-2 {
+  border-radius: 133.57px/640.23px !important;
+  height: 1280px !important;
+  top: 2646px !important;
+  width: 267px !important;
+}
+
+.hoversim .class-3 {
+  height: 4061px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 1098px !important;
+}
+
+.hoversim .class-4 {
+  height: 3926px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 724px !important;
+}
+
+.hoversim .class-5 {
+  border-radius: 180.67px/583.5px !important;
+  height: 1167px !important;
+  left: 308px !important;
+  width: 361px !important;
+}
+
+.hoversim .class-6 {
+  border-radius: 119.13px/564.08px !important;
+  height: 1128px !important;
+  left: 203px !important;
+  width: 238px !important;
+}
+
+.hoversim .class-7 {
+  border-radius: 180.67px/583.5px !important;
+  height: 1167px !important;
+  left: 737px !important;
+  top: 1561px !important;
+  width: 361px !important;
+}
+
+.hoversim .class-8 {
+  border-radius: 119.13px/564.08px !important;
+  height: 1128px !important;
+  left: 486px !important;
+  top: 1509px !important;
+  width: 238px !important;
+}
+
+.hoversim .footer-2 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.hoversim .group-30 {
+  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .group-31 {
+  position: absolute;
+}
+
+.hoversim .control-chef-high-2 {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.hoversim .frame-5 {
+  overflow: hidden;
+}
+
+.hoversim .overlap-7 {
+  position: absolute;
+}
+
+.hoversim .frame-wrapper {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .frame-6 {
+  overflow: hidden;
+}
+
+.hoversim .overlap-group-4 {
+  position: absolute;
+}
+
+.hoversim .group-32 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .group-33 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .text-15 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .frame-7 {
+  overflow: hidden;
+  position: absolute;
+}
+
+.hoversim .group-34 {
+  left: 0;
+  position: absolute;
+}
+
+.hoversim .group-35 {
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .group-36 {
+  position: absolute;
+}
+
+.hoversim .mask-group-4 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .mask-group-5 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .mask-group-6 {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .group-37 {
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .text-wrapper-15 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.hoversim .group-38 {
+  position: absolute;
+}
+
+.hoversim .overlap-group-5 {
+  position: absolute;
+}
+
+.hoversim .text-wrapper-16 {
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease;
+}
+
+.hoversim .text-wrapper-17 {
+  color: #ffffff;
+  left: 1px;
+  position: absolute;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.hoversim .text-wrapper-18 {
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.hoversim .text-wrapper-19 {
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.hoversim .group-39 {
+  position: absolute;
+  top: 0;
+}
+
+.hoversim .control-chef {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.hoversim .group-40 {
+  position: absolute;
+}
+
+.hoversim .overlap-group-6 {
+  position: absolute;
+}
+
+.hoversim .home {
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease;
+}
+
+.hoversim .about-us {
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.hoversim .group-41 {
+  left: 0;
+  position: absolute;
+}
+
+.hoversim .overlap-8 {
+  position: absolute;
+}
+
+.hoversim .rectangle-7 {
+  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
+  border-radius: 20px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+}
+
+.hoversim .p {
+  color: #ffffff;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.hoversim .graphs-instance {
+  height: 1323px !important;
+  left: 30px !important;
+  position: absolute !important;
+  top: 650px !important;
+  width: 765px !important;
+  align-items: center !important;
+}
+
+.hoversim .instance-node {
+  height: 307px !important;
+  top: 70px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-2 {
+  height: 266px !important;
+  top: 41px !important;
+  width: 377px !important;
+}
+
+.hoversim .graphs-3 {
+  height: 22px !important;
+  left: 154px !important;
+  white-space: nowrap !important;
+  width: 70px !important;
+}
+
+.hoversim .graphs-4 {
+  height: 307px !important;
+  top: 385px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-5 {
+  height: 310px !important;
+  top: 698px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-6 {
+  height: 266px !important;
+  top: 44px !important;
+  width: 377px !important;
+}
+
+.hoversim .graphs-7 {
+  left: 158px !important;
+}
+
+.hoversim .graphs-8 {
+  height: 307px !important;
+  top: 1016px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-9 {
+  height: 310px !important;
+  left: 388px !important;
+  top: 67px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-10 {
+  left: 139px !important;
+}
+
+.hoversim .graphs-11 {
+  height: 310px !important;
+  left: 388px !important;
+  top: 382px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-12 {
+  height: 310px !important;
+  left: 388px !important;
+  top: 698px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-13 {
+  left: 140px !important;
+}
+
+.hoversim .graphs-14 {
+  height: 310px !important;
+  left: 388px !important;
+  top: 1013px !important;
+  width: 379px !important;
+}
+
+.hoversim .graphs-15 {
+  height: 29px !important;
+  left: 140px !important;
+  width: unset !important;
+}
+
+.hoversim .graphs-16 {
+  height: 49px !important;
+  left: 318px !important;
+  top: -7px !important;
+  width: unset !important;
+}
+
+.hoversim .class-9 {
+  height: 250px !important;
+  left: 15px !important;
+  position: absolute !important;
+  top: 580px !important;
+  width: 327px !important;
+  background-color: #d9d9d9;
+}
+
+.hoversim .class-10 {
+  height: 400px !important;
+  left: 60px !important;
+  background-color: #d9d9d9;
+  position: absolute !important;
+  top: 750px !important;
+  width: 700px !important;
+}
+
+.hoversim .class-11 {
+  font-size: var(--subheader-font-size) !important;
+  height: 29px !important;
+  left: 0px !important;
+  top: 0px !important;
+  color: yellow !important;
+  z-index: 1;
+}
+
+.hoversim .class-12 {
+  left: 120px !important;
+  top: 750 !important;
+  color:yellow;
+  background-color: aquamarine;
+  z-index: 1;
+}
+
+
+.hoversim .parameters-instance {
+  left: 0px !important;
+  position: absolute !important;
+  top: 170px !important;
+}
+
+.hoversim .simulation-streaming-instance {
+  left: 160px !important;
+  position: absolute !important;
+  top: 90px !important;
+}
+
+.hoversim .buttons-instance {
+  left: 10px !important;
+  position: absolute !important;
+  top: 580px !important;
+}
+
+.hoversim .group-42 {
+  height: 14px;
+  left: 730px;
+  position: absolute;
+  top: 12px;
+  width: 33px;
+}
+
+.hoversim .rectangle-8 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+
+.hoversim .rectangle-9 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 33px;
+}
+
+.hoversim .rectangle-10 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 33px;
+}
+
+.hoversim .control-chef-high-3 {
+  height: 35px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 1px;
+  transition: all 0.5s ease;
+  width: 199px;
+}
+
+.hoversim .div-4 {
+  height: 35px;
+}
+
+.hoversim .frame-8 {
+  height: 35px;
+  overflow: hidden;
+  width: 199px;
+}
+
+.hoversim .div-wrapper-3 {
+  height: 35px;
+  width: 199px;
+}
+
+.hoversim .overlap-9 {
+  height: 35px;
+  position: absolute;
+}
+
+.hoversim .mask-group-7 {
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 199px;
+}
+
+.hoversim .frame-9 {
+  height: 35px;
+  overflow: hidden;
+}
+
+.hoversim .overlap-group-7 {
+  height: 59px;
+  position: absolute;
+  width: 199px;
+}
+
+.hoversim .group-43 {
+  height: 59px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 59px;
+}
+
+.hoversim .frame-10 {
+  height: 35px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.hoversim .group-44 {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 95px;
+}
+
+.hoversim .group-45 {
+  height: 35px;
+  left: 103px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+.hoversim .group-46 {
+  height: 21px;
+  left: 141px;
+  position: absolute;
+  top: 6px;
+  width: 58px;
+}
+
+.hoversim .blur-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.hoversim .footer-instance {
+  background-color: transparent !important;
+  left: 100px !important;
+  position: absolute !important;
+  top: 2600px !important;
+}
+
+.hoversim .graphs-17 {
+  left: 100px !important;
+  position: absolute !important;
+  top: 600px !important;
+}
+
+.hoversim .nav {
+  top: 2500px !important;
+}
+
+.hoversim .video-stream-instance {
+  left: 130px !important;
+  position: absolute !important;
+  top: 690px !important;
+}
+
+.hoversim .parameters-2 {
+  left: 120px !important;
+  position: absolute !important;
+  top: 200px !important;
+}
+
+.hoversim .simulation-streaming-2 {
+  left: 410px !important;
+  position: absolute !important;
+  top: 120px !important;
+}
+
+.hoversim .buttons-2 {
+  left: 1050px !important;
+  position: absolute !important;
+  top: 250px !important;
+}
+
+.hoversim .nav-bar-instance2 {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+}
+
+.hoversim .parameters-3 {
+  height: 422px !important;
+  left: 15px !important;
+  position: absolute !important;
+  top: 80px !important;
+  width: 326px !important;
+}
+
+.hoversim .parameters-4 {
+  height: 25px !important;
+  left: 7px !important;
+  top: 95px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-5 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0px !important;
+  width: 57px !important;
+  padding-right: 10px !important;
+}
+
+.hoversim .parameters-6 {
+  height: 25px !important;
+  left: 58px !important;
+  width: 93px !important;
+}
+
+.hoversim .parameters-7 {
+  height: 25px !important;
+  width: 91px !important;
+}
+
+.hoversim .parameters-8 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  left: 50px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 5px !important;
+  width: 95px !important;
+  padding: 5px !important;
+}
+
+.hoversim .parameters-9 {
+  height: 25px !important;
+  left: 173px !important;
+  top: 95px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-10 {
+  height: 25px !important;
+  left: 6px !important;
+  top: 135px !important;
+  width: 139px !important;
+}
+
+.hoversim .parameters-11 {
+  height: 25px !important;
+  left: 46px !important;
+  width: 93px !important;
+}
+
+.hoversim .parameters-12 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  left: 24px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 5px !important;
+  width: 43px !important;
+}
+
+.hoversim .parameters-13 {
+  height: 25px !important;
+  left: 175px !important;
+  top: 135px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-14 {
+  height: 25px !important;
+  left: 7px !important;
+  top: 174px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-15 {
+  height: 25px !important;
+  left: 173px !important;
+  top: 174px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-16 {
+  height: 25px !important;
+  left: 8px !important;
+  top: 213px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-17 {
+  height: 25px !important;
+  left: 47px !important;
+  width: 93px !important;
+}
+
+.hoversim .parameters-18 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  left: 23px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 5px !important;
+  width: 45px !important;
+}
+
+.hoversim .parameters-19 {
+  height: 25px !important;
+  left: 174px !important;
+  top: 213px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-20 {
+  height: 25px !important;
+  left: 10px !important;
+  top: 252px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-21 {
+  height: 25px !important;
+  left: 45px !important;
+  width: 93px !important;
+}
+
+.hoversim .parameters-22 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  left: 25px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 5px !important;
+  width: 41px !important;
+}
+
+.hoversim .parameters-23 {
+  height: 25px !important;
+  left: 176px !important;
+  top: 252px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-24 {
+  height: 25px !important;
+  left: 8px !important;
+  top: 291px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-25 {
+  height: 25px !important;
+  left: 174px !important;
+  top: 291px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-26 {
+  height: 30px !important;
+  left: 10px !important;
+  top: 327px !important;
+  width: 141px !important;
+}
+
+.hoversim .parameters-27 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 30px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0 !important;
+  width: 41px !important;
+}
+
+.hoversim .parameters-28 {
+  height: 25px !important;
+  left: 45px !important;
+  top: 3px !important;
+  width: 93px !important;
+}
+
+.hoversim .parameters-29 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 12px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 15px !important;
+  left: 16px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 5px !important;
+  width: 59px !important;
+}
+
+.hoversim .parameters-30 {
+  height: 30px !important;
+  left: 176px !important;
+  top: 327px !important;
+  width: 138px !important;
+}
+
+.hoversim .parameters-31 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 27px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 30px !important;
+  white-space: nowrap !important;
+}
+
+.hoversim .simulation-streaming-3 {
+  height: 23px !important;
+  left: 80px !important;
+  position: absolute !important;
+  top: 40px !important;
+  width: 200px !important;
+}
+
+.hoversim .simulation-streaming-4 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 20px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: -8px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: -2px !important;
+}
+
+.hoversim .buttons-3 {
+  height: 85px !important;
+  left: 0px !important;
+  position: absolute !important;
+  top: 540px !important;
+  width: 284px !important;
+}
+
+.hoversim .buttons-4 {
+  height: 34px !important;
+  top: 49px !important;
+  width: 138px !important;
+}
+
+.hoversim .buttons-5 {
+  height: 39px !important;
+  width: 141px !important;
+}
+
+.hoversim .buttons-6 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: 100px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0px !important;
+  white-space: nowrap !important;
+  width: 70px !important;
+  align-items: center !important;
+}
+
+.hoversim .buttons-7 {
+  height: 34px !important;
+  width: 138px !important;
+}
+
+.hoversim .buttons-8 {
+  height: 34px !important;
+  width: 136px !important;
+}
+
+.hoversim .buttons-9 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: 250px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0px !important;
+  white-space: nowrap !important;
+  width: 70px !important;
+  align-items: center !important;
+}
+
+.hoversim .buttons-90 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: 25px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0px !important;
+  white-space: nowrap !important;
+  width: 70px !important;
+  align-items: center !important;
+}
+
+.hoversim .buttons-10 {
+  height: 34px !important;
+  left: 148px !important;
+  width: 138px !important;
+}
+
+.hoversim .buttons-11 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: 175px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 0px !important;
+  white-space: nowrap !important;
+  width: 70px !important;
+  align-items: center !important;
+}
+
+.hoversim .buttons-12 {
+  height: 34px !important;
+  left: 148px !important;
+  top: 51px !important;
+  width: 138px !important;
+}
+
+
+.hoversim .group-47 {
+  height: 6px;
+  left: 309px;
+  position: absolute;
+  top: 5px;
+  width: 14px;
+}
+
+.hoversim .rectangle-11 {
+  background-color: #d9d9d9;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 14px;
+}
+
+.hoversim .rectangle-12 {
+  background-color: #d9d9d9;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.hoversim .rectangle-13 {
+  background-color: #d9d9d9;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 14px;
+}
+
+.hoversim .control-chef-high-4 {
+  height: 15px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease;
+  width: 85px;
+}
+
+.hoversim .div-wrapper-4 {
+  height: 15px;
+}
+
+.hoversim .frame-11 {
+  height: 15px;
+  overflow: hidden;
+  width: 85px;
+}
+
+.hoversim .div-5 {
+  height: 15px;
+  width: 84px;
+}
+
+.hoversim .overlap-10 {
+  height: 15px;
+  position: absolute;
+  width: 84px;
+}
+
+.hoversim .mask-group-8 {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 84px;
+}
+
+.hoversim .frame-12 {
+  height: 15px;
+  overflow: hidden;
+}
+
+.hoversim .overlap-group-8 {
+  height: 26px;
+  position: absolute;
+  width: 84px;
+}
+
+.hoversim .group-48 {
+  height: 26px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 25px;
+}
+
+.hoversim .frame-13 {
+  height: 15px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.hoversim .group-49 {
+  height: 9px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 40px;
+}
+
+.hoversim .group-50 {
+  height: 15px;
+  left: 44px;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.hoversim .group-51 {
+  height: 9px;
+  left: 60px;
+  position: absolute;
+  top: 3px;
+  width: 24px;
+}
+
+.hoversim .graphs-18 {
+  height: 1565px !important;
+  left: 20px !important;
+  position: absolute !important;
+  top: 810px !important;
+  width: 326px !important;
+}
+
+.hoversim .graphs-19 {
+  height: 359px !important;
+  top: 87px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-20 {
+  height: 315px !important;
+  top: 44px !important;
+  width: 161px !important;
+}
+
+.hoversim .graphs-21 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 60px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+  width: unset !important;
+}
+
+.hoversim .graphs-22 {
+  height: 359px !important;
+  top: 460px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-23 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 62px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+  width: unset !important;
+}
+
+.hoversim .graphs-24 {
+  height: 359px !important;
+  top: 833px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-25 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 61px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+}
+
+.hoversim .graphs-26 {
+  height: 359px !important;
+  top: 1206px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-27 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 64px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+  width: unset !important;
+}
+
+.hoversim .graphs-28 {
+  height: 359px !important;
+  left: 165px !important;
+  top: 87px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-29 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 49px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+}
+
+.hoversim .graphs-30 {
+  height: 359px !important;
+  left: 165px !important;
+  top: 460px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-31 {
+  height: 359px !important;
+  left: 165px !important;
+  top: 833px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-32 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 50px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+}
+
+.hoversim .graphs-33 {
+  height: 359px !important;
+  left: 165px !important;
+  top: 1206px !important;
+  width: 163px !important;
+}
+
+.hoversim .graphs-34 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 15px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 18px !important;
+  left: 50px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  white-space: nowrap !important;
+  width: unset !important;
+}
+
+.hoversim .graphs-35 {
+  font-family: "Salsa", Helvetica !important;
+  font-size: 20px !important;
+  font-style: unset !important;
+  font-weight: 400 !important;
+  height: 25px !important;
+  left: 131px !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  top: 9px !important;
+  width: unset !important;
+}
+
+.hoversim .nav-bar-tab-instance {
+  height: 20px !important;
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  width: 360px !important;
+  z-index: 1 !important;
+  border-radius:  0px 0px 3px 3px  !important;
+}
+
+.hoversim .logo1{
+  left:10px !important;
+  top: 2px !important;
+  width: 40% !important;
+}
+
+.hoversim .nav-bar1{
+  left: 300px !important;
+  top: 2px !important;
+}
+
+.hoversim .nav-bar2{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoversim .nav-bar3{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoversim .nav-bar4{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoversim .nav-bar5{
+  left: 180px !important;
+  min-width: 50px !important;
+  top:10px !important;
+  padding: 5px !important;
+}
+
+.hoversim .nav-bar6{
+  font-size: var(--copyright-font-size) !important;
+}
+
+.welcome-and .nav-bar7{
+  left: -85px !important;
+  top: 0px !important;
+  min-width: 100px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.welcome-and .nav-bar8{
+  left: -85px !important;
+  top: 0px !important;
+  min-width: 100px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.hoversim .footer5{
+  left:0px !important;
+  top:2440px !important;
+}
+
+.hoversim .groupfooter{
+  left:0px !important;
+  top:0px !important;
+  height: 100px !important;
+  width: 358px !important;
+}
+
+.hoversim .group2{
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoversim .controlcheifhighfooter{
+  left:-20px;
+  top:20px;
+}
+
+.hoversim .maskgroupfooter{
+  width: 30% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoversim .group7footer{
+  left:260px !important;
+  top:-30px !important;
+}
+
+.hoversim .group9footer{
+  left:170px !important;
+  top:-30px !important;
+}
+
+.hoversim .textwrapperfooter{
+  font-size: var(--copyright-font-size) !important;
+  top: 20px !important;
+}
+
+.hoversim .textwrapper2footer{
+  font-size: var(--f10-font-size) !important;
+  top: -5px !important;
+}
+
+.hoversim .textwrapper3footer{
+  font-size: var(--f10-font-size) !important;
+  top: 10px !important;
+}
+
+.hoversim .textwrapper4footer{
+  font-size: var(--f10-font-size) !important;
+  top: 25px !important;
+}
+
+.hoversim .textwrapper5footer{
+  font-size: var(--f10-font-size) !important;
+  top: 40px !important;
+}
+
+.hoversim .buttonfooter{
+  font-size: var(--f10-font-size) !important;
+}
+
+.hoversim .group8footer{
+  left:0px !important; 
+}
+
+.hoversim .group10footer{
+  left:0px !important;
+}
+
+.hoversim .overlab2footer{
+  left:0px !important;
+  top:-120px !important;
+}
+
+.hoversim .rectanglefooter{
+  left: 0px !important;
+  width: 358px !important;
+  height: 10px !important;
+}
+
+.hoversim .copyrightfooter{
+  left:0px !important;
+  font-size: 7px !important;
+}
+
+.hoversim .nav-bar-tab {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 10000 !important;
+}
+
+.hoversim .footer1{
+  left:0px !important;
+  top:2100px !important;
+  position: absolute !important;
+}
+
+.hoversim .groupfooter1{
+  left:0px !important;
+  top:0px !important;
+  height: 150px !important;
+  width: 835px !important;
+}
+
+.hoversim .group2footer1{
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoversim .controlcheifhighfooter1{
+  left:10px;
+  top:65px;
+}
+
+.hoversim .maskgroupfooter1{
+  width: 50% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoversim .group7footer1{
+  left:720px !important;
+  top:-10px !important;
+}
+
+.hoversim .group9footer1{
+  left:550px !important;
+  top:-10px !important;
+}
+
+.hoversim .textwrapperfooter1{
+  font-size: var(--subheader-font-size) !important;
+  top: 20px !important;
+}
+
+.hoversim .textwrapper2footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 5px !important;
+}
+
+.hoversim .textwrapper3footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 30px !important;
+}
+
+.hoversim .textwrapper4footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 55px !important;
+}
+
+.hoversim .textwrapper5footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 80px !important;
+}
+
+.hoversim .buttonfooter1{
+  font-size: var(--paragraph-font-size) !important;
+}
+
+.hoversim .group8footer1{
+  left:0px !important; 
+}
+
+.hoversim .group10footer1{
+  left:0px !important;
+}
+
+.hoversim .overlab2footer1{
+  left:0px !important;
+}
+
+.hoversim .rectanglefooter1{
+  left: 0px !important;
+  width: 835px !important;
+  height: 20px !important;
+  top:60px !important;
+}
+
+.hoversim .copyrightfooter1{
+  left:210px !important;
+  top: 65px !important;
+  font-size: var(--f10-font-size) !important;
+}
+
+.hoversim .rollgroup1{
+  left: 10px !important;
+}
+
+.hoversim .pitchgroup1{
+  left:10px !important;
+  z-index: 1 !important;
+}
+
+.hoversim .plantimg1{
+  left: 400px !important;
+  z-index: 1 !important;
+}
+
+.hoversim .arrow1{
+  left: 32px !important;
+  z-index: -10;
+}
+
+.hoversim .start1{
+  left: 20px !important;
+  width: 150px !important;
+}
+
+.hoversim .stop1{
+  left: 200px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hoversim .set1{
+  left: 400px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hoversim .reset1{
+  left: 600px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hoversim .nav1{
+  top: 2030px !important;
+  position: absolute !important;
+}
+
+.hoversim .next1{
+  left: 710px !important;
+}
+
+.hoversim .SimulationPoints-2{
+  position: absolute !important;
+  left: 1050px !important;
+  top: 215px !important;
+}

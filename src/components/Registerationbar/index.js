@@ -1,0 +1,1 @@
+export { Registerationbar } from "./Registerationbar";

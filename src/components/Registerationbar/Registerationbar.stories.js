@@ -1,0 +1,48 @@
+import { Registerationbar } from ".";
+
+export default {
+  title: "Components/Registerationbar",
+  component: Registerationbar,
+};
+
+export const Default = {
+  args: {
+    className: {},
+    overlapClassName: {},
+    registrationClassName: {},
+    overlapClassNameOverride: {},
+    rectangleClassName: {},
+    firstNameClassName: {},
+    overlapGroupClassName: {},
+    rectangleClassNameOverride: {},
+    passwordClassName: {},
+    overlapGroupClassNameOverride: {},
+    divClassName: {},
+    universityClassName: {},
+    divClassNameOverride: {},
+    rectangleClassName1: {},
+    collegeClassName: {},
+    overlapClassName1: {},
+    rectangleClassName2: {},
+    countryClassName: {},
+    overlapClassName2: {},
+    rectangleClassName3: {},
+    birthdayClassName: {},
+    overlapClassName3: {},
+    rectangleClassName4: {},
+    lastNameClassName: {},
+    overlapClassName4: {},
+    rectangleClassName5: {},
+    comfirmPasswordClassName: {},
+    overlapClassName5: {},
+    rectangleClassName6: {},
+    usernameEmailComClassName: {},
+    loginButtonClassName: {},
+    signUpWrapperClassName: {},
+    signUpClassName: {},
+    loginButtonClassNameOverride: {},
+    signInWrapperClassName: {},
+    signInClassName: {},
+    alreadyHaveAnClassName: {},
+  },
+};

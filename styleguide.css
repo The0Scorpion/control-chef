@@ -1,0 +1,92 @@
+:root {
+  --copyright-font-family: "Salsa", Helvetica;
+  --copyright-font-size: 12px;
+  --copyright-font-style: normal;
+  --copyright-font-weight: 400;
+  --copyright-letter-spacing: 0px;
+  --copyright-line-height: normal;
+
+  --header-font-family: "Salsa", Helvetica;
+  --header-font-size: 24px;
+  --header-font-style: normal;
+  --header-font-weight: 400;
+  --header-letter-spacing: 0px;
+  --header-line-height: normal;
+
+  --paragraph-font-family: "Salsa", Helvetica;
+  --paragraph-font-size: 15px;
+  --paragraph-font-style: normal;
+  --paragraph-font-weight: 400;
+  --paragraph-letter-spacing: 0px;
+  --paragraph-line-height: normal;
+
+  --subheader-font-family: "Salsa", Helvetica;
+  --subheader-font-size: 20px;
+  --subheader-font-style: normal;
+  --subheader-font-weight: 400;
+  --subheader-letter-spacing: 0px;
+  --subheader-line-height: normal;
+
+  --f10-font-family: "Salsa", Helvetica;
+  --f10-font-size: 10px;
+  --f10-font-style: normal;
+  --f10-font-weight: 400;
+  --f10-letter-spacing: 0px;
+  --f10-line-height: normal;
+  
+  --f18-font-family: "Salsa", Helvetica;
+  --f18-font-size: 18px;
+  --f18-font-style: normal;
+  --f18-font-weight: 400;
+  --f18-letter-spacing: 0px;
+  --f18-line-height: normal;
+
+  --f22-font-family: "Salsa", Helvetica;
+  --f22-font-size: 22px;
+  --f22-font-style: normal;
+  --f22-font-weight: 400;
+  --f22-letter-spacing: 0px;
+  --f22-line-height: normal;
+
+  --f30-font-family: "Salsa", Helvetica;
+  --f30-font-size: 30px;
+  --f30-font-style: normal;
+  --f30-font-weight: 400;
+  --f30-letter-spacing: 0px;
+  --f30-line-height: normal;
+
+  --f50-font-family: "Salsa", Helvetica;
+  --f50-font-size: 50px;
+  --f50-font-style: normal;
+  --f50-font-weight: 400;
+  --f50-letter-spacing: 0px;
+  --f50-line-height: normal;
+
+  --f55-font-family: "Salsa", Helvetica;
+  --f55-font-size: 55px;
+  --f55-font-style: normal;
+  --f55-font-weight: 400;
+  --f55-letter-spacing: 0px;
+  --f55-line-height: normal;
+
+  --f60-font-family: "Salsa", Helvetica;
+  --f60-font-size: 60px;
+  --f60-font-style: normal;
+  --f60-font-weight: 400;
+  --f60-letter-spacing: 0px;
+  --f60-line-height: normal;
+
+  --f70-font-family: "Salsa", Helvetica;
+  --f70-font-size: 70px;
+  --f70-font-style: normal;
+  --f70-font-weight: 400;
+  --f70-letter-spacing: 0px;
+  --f70-line-height: normal;
+
+  --title-font-family: "Salsa", Helvetica;
+  --title-font-size: 40px;
+  --title-font-style: normal;
+  --title-font-weight: 400;
+  --title-letter-spacing: 0px;
+  --title-line-height: normal;
+}

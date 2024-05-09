@@ -1,0 +1,366 @@
+.registerationbar {
+  height: 800px;
+  width: 1250px;
+}
+
+.registerationbar .registration {
+  color: #ffffff;
+  background: none;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-weight: var(--f30-font-weight);
+  height: 61px;
+  left: 200px;
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+  position: absolute;
+  text-align: center;
+  top: -50px;
+  width: 500px;
+}
+
+.registerationbar .overlap-group {
+  height: 40px;
+  left: 43px;
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+}
+
+.registerationbar .div {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  width: 350px;
+  height: 40px;
+  left: 43px;
+  position: absolute;
+  top: 355px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-2 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 40px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  left: 43px;
+  position: absolute;
+  top: 120px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-3 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  left: 500px;
+  position: absolute;
+  top: 120px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-4 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  left: 500px;
+  position: absolute;
+  top: 200px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-5 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 40px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  left: 43px;
+  position: absolute;
+  top: 200px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-6 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 40px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  left: 500px;
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-7 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  left: 500px;
+  position: absolute;
+  top: 355px;
+  width: 350px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .overlap-8 {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  left: 43px;
+  position: absolute;
+  top: 280px;
+  width: 805px;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: #ffffff;
+  color: #ffffffa6;
+}
+
+.registerationbar .login-button {
+  box-sizing: border-box;
+  height: 40px;
+  left: 100px;
+  position: absolute;
+  top: 420px;
+  width: 200px;
+  background-color: #fffdfd2b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 2px #ffffff80;
+  color: #ffffff;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.registerationbar .login-button:hover{
+  cursor: pointer;
+}
+
+.registerationbar .overlap-wrapper {
+  background-color: #ffffff2b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 2px #ffffff80;
+  color: #ffffff;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-weight: var(--subheaeder-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  white-space: nowrap;
+  height: 40px;
+  left: 638px;
+  position: absolute;
+  top: 420px;
+  width: 200px;
+}
+
+.registerationbar .overlap-wrapper:hover{
+  cursor: pointer;
+}
+
+.registerationbar .already-have-an {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 25px;
+  left: 430px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 430px;
+}
+
+.registerationbar .firstname{
+  position: absolute;
+  left:80px;
+  top:10px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .lastname1{
+  position: absolute;
+  left:570px;
+  top:10px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .college1{
+  position: absolute;
+  left:570px;
+  top: 90px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .university1{
+  position: absolute;
+  left:80px;
+  top: 90px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .username{
+  position: absolute;
+  left: 80px;;
+  top: 250px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .confirmpassword1{
+  position: absolute;
+  left:570px;
+  top:330px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .password1{
+  position: absolute;
+  left:80px;
+  top:330px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .birthdayclass{
+  position: absolute;
+  background: none;
+  left:80px;
+  top:170px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+.registerationbar .countryclass{
+  position: absolute;
+  left:570px;
+  top:170px;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  color:white;
+}
+
+
+
+

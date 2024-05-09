@@ -1,0 +1,684 @@
+.welcome-and {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1340;
+  overflow: hidden;
+}
+
+.welcome-and .testimonials-instance {
+  left: 315px !important;
+  position: absolute !important;
+  top: 1350px !important;
+}
+
+.welcome-and .nav-bar-tab {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 1 !important;
+}
+
+.welcome-and .intro-instance {
+  height: 323px !important;
+  left: 0px !important;
+  position: absolute !important;
+  top: 100px !important;
+  width: 765px !important;
+}
+
+.welcome-and .instance-node {
+  font-size: var(--f55-font-size) !important;
+  height: 203px !important;
+  top: 58px !important;
+  width: 297px !important;
+}
+
+.welcome-and .intro-2 {
+  height: 323px !important;
+  left: 447px !important;
+  width: 318px !important;
+}
+
+.welcome-and .class-13 {
+  height: 100px !important;
+  left: -220px !important;
+  top: 16px !important;
+  width: 742px !important;
+  font-family: var(--title-font-family) !important;
+  font-size: var(--title-font-size) !important;
+  font-style: var(--title-font-style) !important;
+  font-weight: var(--title-font-weight) !important;
+  letter-spacing: var(--title-letter-spacing) !important;
+  line-height: var(--title-line-height) !important;
+  
+}
+
+.welcome-and .class-14 {
+  height: 63px !important;
+  left: 95px !important;
+  top: 14px !important;
+  font-family: var(--f50-font-family) !important;
+  font-size: var(--f50-font-size) !important;
+  font-style: var(--f50-font-style) !important;
+  font-weight: var(--f50-font-weight) !important;
+  letter-spacing: var(--f50-letter-spacing) !important;
+  line-height: var(--f50-line-height) !important;
+}
+
+.welcome-and .class-15 {
+  font-weight: 700 !important;
+  height: 133px !important;
+  left: 0px !important;
+  top: 185px !important;
+  width: 313px !important;
+  text-align: center;
+  font-family: var(--paragraph-font-family) !important;
+  font-size: var(--paragraph-font-size) !important;
+  font-style: var(--paragraph-font-style) !important;
+  font-weight: var(--paragraph-font-weight) !important;
+  letter-spacing: var(--paragraph-letter-spacing) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.welcome-and .class-16 {
+  height: 92px !important;
+  left: 9px !important;
+  top: 192px !important;
+  width: 760px !important;
+  font-family: var(--f18-font-family) !important;
+  font-size: var(--f18-font-size) !important;
+  font-style: var(--f18-font-style) !important;
+  font-weight: var(--f18-font-weight) !important;
+  letter-spacing: var(--f18-letter-spacing) !important;
+  line-height: var(--f18-line-height) !important;
+}
+
+.welcome-and .class-17 {
+  height: 494px !important;
+  left: 0px !important;
+  top: 390px !important;
+  width: 312px !important;
+  text-align: center;
+  font-family: var(--paragraph-font-family) !important;
+  font-size: var(--paragraph-font-size) !important;
+  font-style: var(--paragraph-font-style) !important;
+  font-weight: var(--paragraph-font-weight) !important;
+  letter-spacing: var(--paragraph-letter-spacing) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.welcome-and .class-18 {
+  height: 299px !important;
+  left: 12px !important;
+  top: 400px !important;
+  width: 757px !important;
+  font-family: var(--f18-font-family) !important;
+  font-size: var(--f18-font-size) !important;
+  font-style: var(--f18-font-style) !important;
+  font-weight: var(--f18-font-weight) !important;
+  letter-spacing: var(--f18-letter-spacing) !important;
+  line-height: var(--f18-line-height) !important;
+}
+
+.welcome-and .class-20 {
+  height: 719px !important;
+  left: 30px !important;
+  position: absolute !important;
+  top: 450px !important;
+  width: 769px !important;
+}
+
+.welcome-and .class-201 {
+  height: 719px !important;
+  left: 20px !important;
+  position: absolute !important;
+  top: 350px !important;
+  width: 769px !important;
+}
+
+.welcome-and .class-21 {
+  height: 28px !important;
+  left: 0px !important;
+  top: 350px !important;
+  font-family: var(--f22-font-family) !important;
+  font-size: var(--f22-font-size) !important;
+  font-style: var(--f22-font-style) !important;
+  font-weight: var(--f22-font-weight) !important;
+  letter-spacing: var(--f22-letter-spacing) !important;
+  line-height: var(--f22-line-height) !important;
+}
+
+.welcome-and .class-22 {
+  height: 30px !important;
+  left: 5px !important;
+  top: 343px !important;
+  font-family: var(--header-font-family) !important;
+  font-size: var(--header-font-size) !important;
+  font-style: var(--header-font-style) !important;
+  font-weight: var(--header-font-weight) !important;
+  letter-spacing: var(--header-letter-spacing) !important;
+  line-height: var(--header-line-height) !important;
+}
+
+.welcome-and .class-23 {
+  height: 28px !important;
+  left: 0px !important;
+  top: 150px !important;
+  font-family: var(--f22-font-family) !important;
+  font-size: var(--f22-font-size) !important;
+  font-style: var(--f22-font-style) !important;
+  font-weight: var(--f22-font-weight) !important;
+  letter-spacing: var(--f22-letter-spacing) !important;
+  line-height: var(--f22-line-height) !important;
+}
+
+.welcome-and .class-24 {
+  height: 30px !important;
+  left: 0px !important;
+  top: 137px !important;
+  font-family: var(--header-font-family) !important;
+  font-size: var(--header-font-size) !important;
+  font-style: var(--header-font-style) !important;
+  font-weight: var(--header-font-weight) !important;
+  letter-spacing: var(--header-letter-spacing) !important;
+  line-height: var(--header-line-height) !important;
+}
+
+.welcome-and .testimonials-3 {
+  height: 452px !important;
+  left: 30px !important;
+  position: absolute !important;
+  top: 1200px !important;
+  width: 765px !important;
+}
+
+.welcome-and .testimonials-instance {
+  height: 452px !important;
+  left: 0px !important;
+  position: absolute !important;
+  top: 1250px !important;
+  width: 765px !important;
+}
+
+.welcome-and .testimonials-91 {
+  left: 40px !important;
+  top: 110px !important;
+  width: unset !important;
+  font-family: var(--f18-font-family) !important;
+  font-size: var(--f18-font-size) !important;
+  font-style: var(--f18-font-style) !important;
+  font-weight: var(--f18-font-weight) !important;
+  letter-spacing: var(--f18-letter-spacing) !important;
+  line-height: var(--f18-line-height) !important;
+}
+
+.welcome-and .testimonials-101 {
+  height: 95px !important;
+  left: 0px !important;
+  top: 144px !important;
+  width: 203px !important;
+  font-family: var(--paragraph-font-family) !important;
+  font-size: var(--paragraph-font-size) !important;
+  font-style: var(--paragraph-font-style) !important;
+  font-weight: var(--paragraph-font-weight) !important;
+  letter-spacing: var(--paragraph-letter-spacing) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.welcome-and .testimonials-81 {
+  border-radius: 10.77px/10.8px !important;
+  height: 22px !important;
+  left: 80px !important;
+  width: 22px !important;
+}
+
+.welcome-and .testimonials-71 {
+  height: 80px !important;
+  left: 80px !important;
+  top: 5px !important;
+  width: 80px !important;
+}
+
+.welcome-and .testimonials-51 {
+  height: 290px !important;
+  width: 248px !important;
+  left: 40px !important;
+}
+
+.welcome-and .testimonials-131 {
+  height: 153px !important;
+  left: 0px !important;
+  width: 434px !important;
+}
+
+.welcome-and .testimonials-121 {
+  height: 290px !important;
+  left: 0px !important;
+  top: 762px !important;
+  width: 252px !important;
+}
+
+.welcome-and .testimonials-41 {
+  height: 290px !important;
+  top: 162px !important;
+  width: 252px !important;
+  left: 0px !important;
+}
+
+.welcome-and .testimonials-111 {
+  height: 290px !important;
+  left: 0px !important;
+  top: 460px !important;
+  width: 252px !important;
+}
+
+.welcome-and .testimonials-141 {
+  font-size: var(--title-font-size) !important;
+  height: 116px !important;
+  top: 37px !important;
+  width: 350px !important;
+  left:0px !important;
+}
+
+.welcome-and .testimonials-61 {
+  height: 245px !important;
+  top: 45px !important;
+  width: 248px !important;
+}
+
+.welcome-and .testimonials-151 {
+  font-size: var(--header-font-size) !important;
+  height: 43px !important;
+  left: 0px !important;
+}
+
+.welcome-and .testimonials-4 {
+  height: 290px !important;
+  top: 162px !important;
+  width: 252px !important;
+}
+
+.welcome-and .testimonials-5 {
+  height: 290px !important;
+  width: 248px !important;
+}
+
+.welcome-and .testimonials-6 {
+  height: 245px !important;
+  top: 45px !important;
+  width: 248px !important;
+}
+
+.welcome-and .testimonials-7 {
+  height: 80px !important;
+  left: 84px !important;
+  top: 5px !important;
+  width: 80px !important;
+}
+
+.welcome-and .testimonials-8 {
+  border-radius: 11px !important;
+  height: 22px !important;
+  left: 140px !important;
+  width: 22px !important;
+}
+
+.welcome-and .testimonials-9 {
+  left: 37px !important;
+  top: 99px !important;
+  width: unset !important;
+  font-family: var(--f18-font-family) !important;
+  font-size: var(--f18-font-size) !important;
+  font-style: var(--f18-font-style) !important;
+  font-weight: var(--f18-font-weight) !important;
+  letter-spacing: var(--f18-letter-spacing) !important;
+  line-height: var(--f18-line-height) !important;
+}
+
+.welcome-and .testimonials-10 {
+  height: 95px !important;
+  left: 22px !important;
+  top: 144px !important;
+  width: 203px !important;
+  font-family: var(--paragraph-font-family) !important;
+  font-size: var(--paragraph-font-size) !important;
+  font-style: var(--paragraph-font-style) !important;
+  font-weight: var(--paragraph-font-weight) !important;
+  letter-spacing: var(--paragraph-letter-spacing) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.welcome-and .testimonials-11 {
+  height: 290px !important;
+  left: 259px !important;
+  top: 162px !important;
+  width: 252px !important;
+}
+
+.welcome-and .testimonials-12 {
+  height: 290px !important;
+  left: 517px !important;
+  top: 162px !important;
+  width: 252px !important;
+}
+
+.welcome-and .testimonials-13 {
+  height: 153px !important;
+  left: 165px !important;
+  width: 434px !important;
+}
+
+.welcome-and .testimonials-14 {
+  font-size: var(--title-font-size) !important;
+  height: 116px !important;
+  top: 37px !important;
+  width: 434px !important;
+}
+
+.welcome-and .testimonials-15 {
+  font-size: var(--header-font-size) !important;
+  height: 43px !important;
+  left: 95px !important;
+  width: 245px !important;
+}
+
+.welcome-and .footer-instance {
+  background-color: transparent !important;
+  left: 80px !important;
+  position: absolute !important;
+  top: 1850px !important;
+}
+
+.welcome-and .testimonials-16 {
+  left: 85px !important;
+  position: absolute !important;
+  top: 1200px !important;
+}
+
+.welcome-and .welcome-instance {
+  left: 80px !important;
+  position: absolute !important;
+  top: 480px !important;
+}
+
+.welcome-and .intro-3 {
+  left: 50px !important;
+  position: absolute !important;
+  top: 140px !important;
+}
+
+.welcome-and .nav-bar-instance {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+}
+
+.welcome-and .intro-4 {
+  left: -275px !important;
+  position: absolute !important;
+  top: 350px !important;
+}
+
+.welcome-and .introwrap834{
+  font-size: var(--title-font-size) !important;
+  left:320px !important;
+  top: -300px !important;
+  width:260px !important;
+}
+
+.welcome-and .homebanner834{
+  height: auto !important;
+  width:15% !important;
+  left: 320px !important;
+  top:-200px !important;
+}
+
+.welcome-and .nav-bar-tab-instance {
+  height: 20px !important;
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  width: 360px !important;
+  z-index: 1 !important;
+  border-radius:  0px 0px 3px 3px  !important;
+}
+
+.welcome-and .nav-bar1{
+  left: 300px !important;
+  top: 2px !important;
+}
+
+.welcome-and .nav-bar2{
+  width: 40% !important;
+  height: auto !important;
+  left: 0px !important;
+
+}
+
+.welcome-and .nav-bar3{
+  width: 40% !important;
+  height: auto !important;
+  left: 0px !important;
+}
+
+.welcome-and .nav-bar4{
+  width: 40% !important;
+  height: auto !important;
+  left: 0px !important;
+}
+
+.welcome-and .nav-bar9{
+  left:10px !important;
+  top: 2px !important;
+  width: 40% !important;
+}
+
+.welcome-and .nav-bar5{
+  left: 180px !important;
+  min-width: 50px !important;
+  top:10px !important;
+  padding: 5px !important;
+}
+
+.welcome-and .nav-bar6{
+  font-size: var(--copyright-font-size) !important;
+}
+
+.welcome-and .nav-bar71{
+  position: absolute !important;
+  left: -120px !important;
+  top: 100px !important;
+  min-width: 30px !important;
+}
+
+.welcome-and .nav-bar81{
+  position: absolute !important;
+  left: -85px !important;
+  top: 150px !important;
+  min-width: 30px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.welcome-and .footer5{
+  left:0px !important;
+  top:2350px !important;
+}
+
+.welcome-and .groupfooter{
+  left:0px !important;
+  top:0px !important;
+  height: 100px !important;
+  width: 358px !important;
+}
+
+.welcome-and .group2{
+  left:0px !important;
+  top:0px !important;
+}
+
+.welcome-and .controlcheifhighfooter{
+  left:0px;
+  top:20px;
+}
+
+.welcome-and .maskgroupfooter{
+  width: 30% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.welcome-and .group7footer{
+  left:260px !important;
+  top:-30px !important;
+}
+
+.welcome-and .group9footer{
+  left:170px !important;
+  top:-30px !important;
+}
+
+.welcome-and .textwrapperfooter{
+  font-size: var(--copyright-font-size) !important;
+  top: 20px !important;
+}
+
+.welcome-and .textwrapper2footer{
+  font-size: var(--f10-font-size) !important;
+  top: -5px !important;
+}
+
+.welcome-and .textwrapper3footer{
+  font-size: var(--f10-font-size) !important;
+  top: 10px !important;
+}
+
+.welcome-and .textwrapper4footer{
+  font-size: var(--f10-font-size) !important;
+  top: 25px !important;
+}
+
+.welcome-and .textwrapper5footer{
+  font-size: var(--f10-font-size) !important;
+  top: 40px !important;
+}
+
+.welcome-and .buttonfooter{
+  font-size: var(--f10-font-size) !important;
+}
+
+.welcome-and .group8footer{
+  left:0px !important; 
+}
+
+.welcome-and .group10footer{
+  left:0px !important;
+}
+
+.welcome-and .overlab2footer{
+  left:0px !important;
+  top:-120px !important;
+}
+
+.welcome-and .rectanglefooter{
+  left: 0px !important;
+  width: 358px !important;
+  height: 10px !important;
+}
+
+.welcome-and .copyrightfooter{
+  left:0px !important;
+  font-size: 7px !important;
+}
+
+.welcome-and .footer1{
+  left:0px !important;
+  top:1730px !important;
+  position: absolute !important;
+}
+
+.welcome-and .groupfooter1{
+  left:0px !important;
+  top:0px !important;
+  height: 150px !important;
+  width: 835px !important;
+}
+
+.welcome-and .group2footer1{
+  left:0px !important;
+  top:0px !important;
+}
+
+.welcome-and .controlcheifhighfooter1{
+  left:10px;
+  top:65px;
+}
+
+.welcome-and .maskgroupfooter1{
+  width: 50% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.welcome-and .group7footer1{
+  left:720px !important;
+  top:-10px !important;
+}
+
+.welcome-and .group9footer1{
+  left:550px !important;
+  top:-10px !important;
+}
+
+.welcome-and .textwrapperfooter1{
+  font-size: var(--subheader-font-size) !important;
+  top: 20px !important;
+}
+
+.welcome-and .textwrapper2footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 5px !important;
+}
+
+.welcome-and .textwrapper3footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 30px !important;
+}
+
+.welcome-and .textwrapper4footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 55px !important;
+}
+
+.welcome-and .textwrapper5footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 80px !important;
+}
+
+.welcome-and .group8footer1{
+  left:0px !important; 
+}
+
+.welcome-and .group10footer1{
+  left:0px !important;
+}
+
+.welcome-and .overlab2footer1{
+  left:0px !important;
+}
+
+.welcome-and .rectanglefooter1{
+  left: 0px !important;
+  width: 835px !important;
+  height: 20px !important;
+  top:60px !important;
+}
+
+.welcome-and .copyrightfooter1{
+  left:210px !important;
+  top: 65px !important;
+  font-size: var(--f10-font-size) !important;
+}

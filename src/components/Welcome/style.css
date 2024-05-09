@@ -1,0 +1,81 @@
+.welcome {
+  height: 623px;
+  position: relative;
+  width: 1064px;
+}
+
+.welcome .the-availability-of {
+  color: #ffffff;
+  height: 292px;
+  left: 16px;
+  position: absolute;
+  top: 380px;
+  width: 1048px;
+  font-family: var(--f22-font-family);
+  font-size: var(--f22-font-size);
+  font-style: var(--f22-font-style);
+  font-weight: var(--f22-font-weight);
+  letter-spacing: var(--f22-letter-spacing);
+  line-height: var(--f22-line-height);
+}
+
+.welcome .abstract {
+  color: #ffffff;
+  height: 38px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 342px;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-style: var(--f30-font-style);
+  font-weight: var(--f30-font-weight);
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+}
+
+.welcome .creating-an-IOT-lab {
+  color: #ffffff;
+  height: 89px;
+  left: 12px;
+  position: absolute;
+  top: 212px;
+  width: 1052px;
+  font-family: var(--f22-font-family);
+  font-size: var(--f22-font-size);
+  font-style: var(--f22-font-style);
+  font-weight: var(--f22-font-weight);
+  letter-spacing: var(--f22-letter-spacing);
+  line-height: var(--f22-line-height);
+}
+
+.welcome .our-vision {
+  color: #ffffff;
+  height: 38px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 163px;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-style: var(--f30-font-style);
+  font-weight: var(--f30-font-weight);
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+}
+
+.welcome .welcome-to-control {
+  color: #ffffff;
+  font-family: var(--f50-font-family);
+  font-size: var(--f50-font-size);
+  font-style: var(--f50-font-style);
+  font-weight: var(--f50-font-weight);
+  height: 81px;
+  left: 250px;
+  letter-spacing: var(--f50-letter-spacing);
+  line-height: var(--f50-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  text-decoration: underline;
+}

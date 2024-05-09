@@ -1,0 +1,644 @@
+.hoverdoc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hoverdoc .nav-bar-tab-instance {
+  height: 20px !important;
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  width: 360px !important;
+  z-index: 1 !important;
+  border-radius:  0px 0px 3px 3px  !important;
+}
+
+.hoverdoc .logo1{
+  top: 2px !important;
+  left: 5px !important;
+  width: 35% !important;
+}
+
+.hoverdoc .nav-bar1{
+  left: 300px !important;
+  top: 2px !important;
+}
+
+.hoverdoc .nav-bar2{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoverdoc .nav-bar3{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoverdoc .nav-bar4{
+  width:60% !important;
+  height:auto !important;
+}
+
+.hoverdoc .nav-bar5{
+  left: 180px !important;
+  min-width: 50px !important;
+  top:10px !important;
+  padding: 5px !important;
+}
+
+.hoverdoc .nav-bar6{
+  font-size: var(--copyright-font-size) !important;
+}
+
+.hoverdoc .nav72{
+  position: absolute !important;
+  left: -120px !important;
+  top: 100px !important;
+  min-width: 30px !important;
+}
+
+.hoverdoc .nav82{
+  position: absolute !important;
+  left: -85px !important;
+  top: 150px !important;
+  min-width: 30px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.hoverdoc .footer5{
+  left:0px !important;
+  top:2440px !important;
+}
+
+.hoverdoc .groupfooter{
+  left:0px !important;
+  top:0px !important;
+  height: 100px !important;
+  width: 358px !important;
+}
+
+.hoverdoc .controlcheifhighfooter{
+  left:-20px;
+  top:20px;
+}
+
+.hoverdoc .maskgroupfooter{
+  width: 30% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoverdoc .group7footer{
+  left:260px !important;
+  top:-30px !important;
+}
+
+.hoverdoc .group9footer{
+  left:170px !important;
+  top:-30px !important;
+}
+
+.hoverdoc .textwrapperfooter{
+  font-size: var(--copyright-font-size) !important;
+  top: 20px !important;
+}
+
+.hoverdoc .textwrapper2footer{
+  font-size: var(--f10-font-size) !important;
+  top: -5px !important;
+}
+
+.hoverdoc .textwrapper3footer{
+  font-size: var(--f10-font-size) !important;
+  top: 10px !important;
+}
+
+.hoverdoc .textwrapper4footer{
+  font-size: var(--f10-font-size) !important;
+  top: 25px !important;
+}
+
+.hoverdoc .textwrapper5footer{
+  font-size: var(--f10-font-size) !important;
+  top: 40px !important;
+}
+
+.hoverdoc .buttonfooter{
+  font-size: var(--f10-font-size) !important;
+}
+
+.hoverdoc .group8footer{
+  left:0px !important; 
+}
+
+.hoverdoc .group10footer{
+  left:0px !important;
+}
+
+.hoverdoc .overlab2footer{
+  left:0px !important;
+  top:-120px !important;
+}
+
+.hoverdoc .rectanglefooter{
+  left: 0px !important;
+  width: 358px !important;
+  height: 10px !important;
+}
+
+.hoverdoc .copyrightfooter{
+  left:0px !important;
+  font-size: 7px !important;
+}
+
+.hoverdoc .nav-bar-tab {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 1 !important;
+}
+
+.hoverdoc .footer1{
+  left:0px !important;
+  top:2420px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .groupfooter1{
+  left:0px !important;
+  top:0px !important;
+  height: 150px !important;
+  width: 835px !important;
+}
+
+.hoverdoc .group2footer1{
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoverdoc .controlcheifhighfooter1{
+  left:10px;
+  top:65px;
+}
+
+.hoverdoc .maskgroupfooter1{
+  width: 50% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoverdoc .group7footer1{
+  left:720px !important;
+  top:-10px !important;
+}
+
+.hoverdoc .group9footer1{
+  left:550px !important;
+  top:-10px !important;
+}
+
+.hoverdoc .textwrapperfooter1{
+  font-size: var(--subheader-font-size) !important;
+  top: 20px !important;
+}
+
+.hoverdoc .textwrapper2footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 5px !important;
+}
+
+.hoverdoc .textwrapper3footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 30px !important;
+}
+
+.hoverdoc .textwrapper4footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 55px !important;
+}
+
+.hoverdoc .textwrapper5footer1{
+  font-size: var(--paragraph-font-size) !important;
+  top: 80px !important;
+}
+
+.hoverdoc .buttonfooter1{
+  font-size: var(--paragraph-font-size) !important;
+}
+
+.hoverdoc .group8footer1{
+  left:0px !important; 
+}
+
+.hoverdoc .group10footer1{
+  left:0px !important;
+}
+
+.hoverdoc .overlab2footer1{
+  left:0px !important;
+}
+
+.hoverdoc .rectanglefooter1{
+  left: 0px !important;
+  width: 835px !important;
+  height: 20px !important;
+  top:60px !important;
+}
+
+.hoverdoc .copyrightfooter1{
+  left:210px !important;
+  top: 65px !important;
+  font-size: var(--f10-font-size) !important;
+}
+
+.hoverdoc .about{
+  position: absolute !important;
+  top: 100px !important;
+  left: 101px !important;
+}
+
+.hoverdoc .howitwork{
+  position: absolute !important;
+  top: 700px !important;
+  left: 0px !important;
+}
+.hoverdoc .modeling{
+  top: 1500px !important;
+  left: 0px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .blockdiagram{
+  top:2200px !important;
+  position: absolute !important;
+  left: 10px !important;
+}
+
+.hoverdoc .navigate{
+  top:2800px !important;
+  left: 0px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .footerdoc {
+  background-color: transparent !important;
+  left: 100px !important;
+  position: absolute !important;
+  top: 2870px !important;
+}
+
+.hoverdoc .navbardoc {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 100 !important;
+}
+
+.hoverdoc .backop{
+  opacity: 0 !important;
+}
+
+.hoverdoc .about1{
+ left:0px !important;
+ top:60px !important;
+ width: 834px !important;
+ height: 400px !important;
+}
+
+.hoverdoc .textdof{
+  font-size: 18px !important;
+  width: 360px !important;
+  top: 19px !important;
+}
+
+.hoverdoc .boxdof{
+  left: 429px !important;
+  width: 400px !important;
+  height: 150px !important;
+  top: 100px !important;
+}
+
+.hoverdoc .titleabout{
+ font-size: 30px !important;
+ left: 250px !important;
+ top: 15px !important;
+}
+
+.hoverdoc .hoverimg{
+  height: 50% !important;
+  width: 30% !important;
+  left: 50px !important;
+}
+
+.hoverdoc .howitwork1{
+  top: 470px !important;
+}
+
+.hoverdoc .howtext{
+  font-size: 20px !important; 
+}
+
+.hoverdoc .thedof{
+  font-size: 20px !important;
+  width: 700px !important;
+}
+
+.hoverdoc .modeling1{
+ top:1200px !important; 
+}
+
+.hoverdoc .modelingwrapper1{
+  left:527px !important;
+  width: 300px !important;
+  height: 80px !important; 
+}
+
+.hoverdoc .mod1{
+  top:0px !important;
+  left: 10px !important;
+  width: 10px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .paragraph1{
+  left:0px !important;
+}
+
+.hoverdoc .imgmodel1{
+  width:50% !important;
+  height: 50% !important;
+  top: 100px !important;
+  left: -40px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .positive1{
+  width: 400px !important;
+  left: 400px !important;
+  top: 30px !important;
+}
+
+.hoverdoc .equation1{
+  top: 650px !important;
+  left:50px !important;
+}
+
+.hoverdoc .blockdiagram1{
+  left: -450px !important;
+  top: 2000px !important;
+}
+
+.hoverdoc .imgbd1{
+  width: 800px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .navi1{
+  top: 2350px !important;
+}
+
+.hoverdoc .next1{
+  left:700px !important;
+}
+
+.hoverdoc .back1{
+  opacity: 0% !important;
+}
+
+.hoverdoc .about20{
+  position: absolute !important;
+  left:0px !important;
+  top: 20px !important;
+  width: 360px !important;
+}
+
+.hoverdoc .about21{
+  left:158px !important;
+  width: 200px !important;
+  height: 80px !important;
+  border-radius: 10px 0px 0px 10px !important;
+  top: 80px !important;
+}
+
+.hoverdoc .about22{
+  font-size: 10px !important;
+  width: 170px !important;
+  top: 8px !important;
+  left: 15px !important;
+}
+
+.hoverdoc .about24{
+  font-size: 15px !important;
+  left: 80px !important;
+  top: 10px !important;
+}
+
+.hoverdoc .about25{
+  width: 20% !important;
+  height: 30% !important;
+}
+
+.hoverdoc .howitwork20{
+  top: 240px !important;
+  left: 0px !important;
+}
+
+.hoverdoc .howitwork21{
+  width: 300px !important;
+  left: 15px !important;
+  font-size: 10px !important;
+  top: 50px !important;
+  line-height: 15px !important;
+}
+
+.hoverdoc .howitwork22{
+  width: 170px !important;
+  height: 35px !important;
+  border-radius: 0px 10px 10px 0px !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.hoverdoc .howitwork23{
+  font-size: 12px !important;
+  left: 35px !important;
+  top: 10px !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.hoverdoc .modeling20{
+  top: 550px !important;
+  left: 0px !important;
+}
+
+.hoverdoc .modeling21{
+  left: 0px !important;
+}
+
+.hoverdoc .modeling22{
+  left: 187px !important;
+  top: 50px !important;
+  width: 170px !important;
+  height: 35px !important;
+  border-radius: 10px 0px 0px 10px !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.hoverdoc .modeling23{
+  font-size: 12px !important;
+  left: 50px !important;
+  top: 10px !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.hoverdoc .modeling25{
+  width: 180px !important;
+  left: 170px !important;
+  font-size: 10px !important;
+  top: 30px !important;
+  line-height: 15px !important;
+}
+
+.hoverdoc .modeling26{
+  top: 300px !important;
+  font-size: 12px !important;
+  left: 90px !important;
+}
+
+.hoverdoc .modeling27{
+  position: absolute !important;
+  width: 20% !important;
+  height: 20% !important;
+  left: -50px !important;
+  top: 55px !important;
+}
+
+.hoverdoc .blockdiagram21{
+  width: 80% !important;
+  position: absolute !important;
+  left: -320px !important;
+  top: 920px !important;
+}
+
+.hoverdoc .blockdiagram20{
+  left:0 !important;
+}
+
+.hoverdoc .footer5{
+  left: 0px !important;
+  position: absolute !important;
+  top:1100px !important;
+}
+
+.hoverdoc .groupfooter{
+  left:0px !important;
+  top:0px !important;
+  height: 100px !important;
+  width: 358px !important;
+}
+
+.hoverdoc .group2{
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoverdoc .controlcheifhighfooter{
+  left:0px;
+  top:20px;
+}
+
+.hoverdoc .maskgroupfooter{
+  width: 30% !important;
+  height: auto !important;
+  left:0px !important;
+  top:0px !important;
+}
+
+.hoverdoc .group7footer{
+  left:260px !important;
+  top:-30px !important;
+}
+
+.hoverdoc .group9footer{
+  left:170px !important;
+  top:-30px !important;
+}
+
+.hoverdoc .textwrapperfooter{
+  font-size: var(--copyright-font-size) !important;
+  top: 20px !important;
+}
+
+.hoverdoc .textwrapper2footer{
+  font-size: var(--f10-font-size) !important;
+  top: -5px !important;
+}
+
+.hoverdoc .textwrapper3footer{
+  font-size: var(--f10-font-size) !important;
+  top: 10px !important;
+}
+
+.hoverdoc .textwrapper4footer{
+  font-size: var(--f10-font-size) !important;
+  top: 25px !important;
+}
+
+.hoverdoc .textwrapper5footer{
+  font-size: var(--f10-font-size) !important;
+  top: 40px !important;
+}
+
+.hoverdoc .buttonfooter{
+  font-size: var(--f10-font-size) !important;
+}
+
+.hoverdoc .group8footer{
+  left:0px !important; 
+}
+
+.hoverdoc .group10footer{
+  left:0px !important;
+}
+
+.hoverdoc .overlab2footer{
+  left:0px !important;
+  top:-120px !important;
+}
+
+.hoverdoc .rectanglefooter{
+  left: 0px !important;
+  width: 358px !important;
+  height: 10px !important;
+}
+
+.hoverdoc .copyrightfooter{
+  left:0px !important;
+  font-size: 7px !important;
+}
+
+.hoverdoc .navigate2{
+  top: 1070px !important;
+
+}
+
+.hoverdoc .backop2{
+  opacity: 0 !important;
+}
+
+.hoverdoc .next2{
+  border-radius: 5px !important;
+  height: 22px !important;
+  width: 40px !important;
+  left: 300px !important;
+  font-size: 12px !important;
+}

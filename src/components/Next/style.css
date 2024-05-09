@@ -1,0 +1,46 @@
+.navigate{
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+.navigate .next {
+  background-color: #6454f0;
+  border-radius: 10px;
+  height: 44px;
+  width: 84px;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 1220px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  transition: all;
+  top:0;
+}
+
+.navigate .next:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.navigate .back {
+  background-color: #6454f0;
+  border-radius: 10px;
+  height: 44px;
+  width: 84px;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  transition: all;
+  top:0px;
+}

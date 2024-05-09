@@ -1,0 +1,217 @@
+.footer {
+  height: 243px;
+  position: relative;
+  width: 1066px;
+}
+
+button{
+  color:#ffffff;
+  font-family: var(--copyright-font-family);
+  transition: all 0.5ms ease;
+}
+
+button:hover{
+  transform: scale(1.07);
+}
+
+a{
+  color:#ffffff;
+  font-family: var(--copyright-font-family);
+  transition: all 0.5ms ease;
+}
+
+a:hover{
+  transform: scale(1.07);
+}
+
+.footer .group {
+  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
+  border-radius: 20px;
+  height: 202px;
+  left: 0px;
+  position: absolute;
+  top: 0;
+  width: 1066px;
+}
+
+.footer .group-2 {
+  height: 153px;
+  left: 32px;
+  position: relative;
+  top: 23px;
+  width: 982px;
+}
+
+.footer .control-chef-high {
+  height: 55px;
+  left: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  width: 317px;
+}
+
+.footer .mask-group {
+  height: 55px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 316px;
+}
+
+.footer .group-7 {
+  height: 153px;
+  left: 905px;
+  position: absolute;
+  top: 0px;
+  width: 79px;
+}
+
+.footer .text-wrapper {
+  color: #ffffff;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  height: 25px;
+  left: 0;
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.footer .group-8 {
+  height: 108px;
+  left: 14px;
+  position: absolute;
+  top: 45px;
+  width: 71px;
+}
+
+.footer .text-wrapper-2 {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  height: 18px;
+  left: 0;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer .text-wrapper-3 {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  height: 18px;
+  left: 0;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer .text-wrapper-4 {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  height: 18px;
+  left: 0;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer .text-wrapper-5 {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  height: 18px;
+  left: 0;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 90px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer .group-9 {
+  height: 93px;
+  left: 715px;
+  position: absolute;
+  top: 0px;
+  width: 116px;
+}
+
+.footer .group-10 {
+  height: 48px;
+  left: 37px;
+  position: absolute;
+  top: 45px;
+  width: 65px;
+}
+
+.footer .overlap-wrapper {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 223px;
+  width: 1066px;
+}
+
+.footer .overlap-2 {
+  height: 21px;
+  position: relative;
+  width: 1066px;
+}
+
+.footer .rectangle {
+  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
+  border-radius: 20px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 1066px;
+}
+
+.footer .copyright {
+  color: #ffffff;
+  font-family: var(--copyright-font-family);
+  font-size: var(--copyright-font-size);
+  font-style: var(--copyright-font-style);
+  font-weight: var(--copyright-font-weight);
+  height: 21px;
+  left: 350px;
+  letter-spacing: var(--copyright-letter-spacing);
+  line-height: var(--copyright-line-height);
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  width: 377px;
+}
+
+

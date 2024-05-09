@@ -1,0 +1,20 @@
+.simulation-streaming {
+  height: 49px;
+  position: relative;
+  width: 434px;
+}
+
+.simulation-streaming .text-wrapper-8 {
+  color: #ffffff;
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-style: var(--title-font-style);
+  font-weight: var(--title-font-weight);
+  height: 49px;
+  left: 0;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  position: absolute;
+  text-align: center;
+  top: -1px;
+}

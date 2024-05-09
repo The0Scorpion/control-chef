@@ -1,0 +1,261 @@
+.nav-bar-2 {
+  height: 60px;
+  background: linear-gradient(135deg, rgb(5, 5, 24) 7.28%, rgb(23, 3, 43) 96.28%);
+  border-radius: 0 0 20px 20px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 835px;
+}
+
+button{
+  background: none;
+  border: none;
+  transition: all 0.5ms ease;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.group-42:hover{
+  opacity: 50%;
+}
+
+.nav-bar-dropdown{
+  position: absolute;
+  display: inline;
+}
+
+.nav-bar-2 .dropdown-content-nav {
+  display: none;
+  position: absolute;
+  text-align: center;
+  left: 520px;
+  top: 25px;
+  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 20px;
+  min-width: 200px;
+  padding-bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-bar-2 .theories-explanation {
+  color: #ffffff;
+  background: none;
+  transition: all 0.2s ease;
+  white-space: nowrap; 
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+}
+
+.nav-bar-2 .theories-explanation:hover{
+  cursor: pointer;
+}
+
+.nav-bar-2 .dropdown-content-theories {
+  display: none;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  left: -200px;
+  top: 180px;
+  padding: 10px;
+  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 20px;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-theory:hover .dropdown-content-theories {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-theories .text1:hover {
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-theories .text1 {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+}
+
+.nav-bar-2 .dropdown-content-experiments {
+  display: none;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  left: -200px;
+  top: 220px;
+  padding: 10px;
+  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 20px;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-experiment:hover .dropdown-content-experiments {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-experiments .text1:hover {
+  cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-experiments .text1 {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+}
+
+.nav-bar-2 .experiments {
+  color: #ffffff;
+  background: none;
+  transition: all 0.2s ease;
+  white-space: nowrap; 
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+}
+
+.nav-bar-2 .experiments:hover{
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-bar-2 .p2{
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  background:none;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height); 
+}
+
+
+.nav-bar-2 .text1{
+  border-radius: 5px;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  color: white;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-nav .a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-nav .a:hover {
+  cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.nav-bar-dropdown:hover .dropdown-content-nav {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-bar-2 .group-42 {
+  height: 14px;
+  left: 730px;
+  position: absolute;
+  top: 20px;
+  width: 33px;
+  transition: all 0.5ms ease;
+}
+
+.nav-bar-2 .rectangle-8 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+
+.nav-bar-2 .rectangle-9 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 33px;
+}
+
+.nav-bar-2 .rectangle-10 {
+  background-color: #d9d9d9;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 33px;
+}
+
+.nav-bar-2 .control-chef-high-3 {
+  height: 35px;
+  left: 50px ;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  transition: all 0.5s ease;
+  width: 199px;
+}
+
+
+.nav-bar-2 .mask-group-7 {
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 199px;
+}

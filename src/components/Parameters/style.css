@@ -1,0 +1,168 @@
+.parameters {
+  background-color: #6785f133;
+  border-radius: 25px;
+  height: 367px;
+  position: relative;
+  transform: translate(0, 25px);
+  width: 613px;
+}
+
+.parameters .text {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 83px;
+  width: 258px;
+}
+
+.parameters .text-wrapper-7 {
+  color: #ffffff;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  height: 20px;
+  left: 0;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  width: 77px;
+}
+
+.parameters .input {
+  height: 22px;
+  left: 85px;
+  position: absolute;
+  top: 0;
+  width: 173px;
+  background-color: #ffffff;
+  color: #000000b2;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  text-align: center;
+}
+
+.parameters .text-2 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 83px;
+  width: 258px;
+}
+
+.parameters .text-3 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 117px;
+  width: 258px;
+}
+
+.parameters .text-4 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 117px;
+  width: 258px;
+}
+
+.parameters .text-5 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 151px;
+  width: 258px;
+}
+
+.parameters .text-6 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 151px;
+  width: 258px;
+}
+
+.parameters .text-7 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 185px;
+  width: 258px;
+}
+
+.parameters .text-8 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 185px;
+  width: 258px;
+}
+
+.parameters .text-9 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 219px;
+  width: 258px;
+}
+
+.parameters .text-10 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 219px;
+  width: 258px;
+}
+
+.parameters .text-11 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 253px;
+  width: 258px;
+}
+
+.parameters .text-12 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 253px;
+  width: 258px;
+}
+
+.parameters .text-13 {
+  height: 22px;
+  left: 18px;
+  position: absolute;
+  top: 287px;
+  width: 258px;
+}
+
+.parameters .text-14 {
+  height: 22px;
+  left: 331px;
+  position: absolute;
+  top: 287px;
+  width: 258px;
+}
+
+.parameters .please-enter-your {
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: var(--header-font-style);
+  font-weight: var(--header-font-weight);
+  height: 29px;
+  left: 87px;
+  letter-spacing: var(--header-letter-spacing);
+  line-height: var(--header-line-height);
+  position: absolute;
+  text-align: center;
+  top: 25px;
+}

@@ -1,0 +1,136 @@
+.testimonials-wrapper {
+  height: 628px;
+  position: relative;
+  width: 1065px;
+}
+
+.testimonials-wrapper .testimonial-item-4 {
+  height: 403px;
+  left: 0;
+  position: absolute;
+  top: 225px;
+  width: 349px;
+}
+
+.testimonials-wrapper .overlap-group-4 {
+  height: 403px;
+  position: relative;
+  width: 345px;
+}
+
+.testimonials-wrapper .rectangle-3 {
+  background-color: #0d4a831a;
+  border-radius: 20px;
+  height: 340px;
+  left: 0;
+  position: absolute;
+  top: 63px;
+  width: 345px;
+}
+
+.testimonials-wrapper .mask-group-2 {
+  height: 111px;
+  left: 117px;
+  mix-blend-mode: luminosity;
+  position: absolute;
+  top: 7px;
+  width: 111px;
+}
+
+.testimonials-wrapper .ellipse-4 {
+  background-color: #acacacc9;
+  border-radius: 15px;
+  height: 30px;
+  left: 195px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+.testimonials-wrapper .text-wrapper-10 {
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: var(--header-font-style);
+  font-weight: var(--header-font-weight);
+  height: 32px;
+  left: 60px;
+  letter-spacing: var(--header-letter-spacing);
+  line-height: var(--header-line-height);
+  position: absolute;
+  text-align: center;
+  top: 137px;
+  width: 230px;
+}
+
+.testimonials-wrapper .text-wrapper-11 {
+  color: #ffffff;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  height: 174px;
+  left: 31px;
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  position: absolute;
+  text-align: center;
+  top: 179px;
+  width: 283px;
+}
+
+.testimonials-wrapper .testimonial-item-5 {
+  height: 403px;
+  left: 360px;
+  position: absolute;
+  top: 225px;
+  width: 349px;
+}
+
+.testimonials-wrapper .testimonial-item-6 {
+  height: 403px;
+  left: 720px;
+  position: absolute;
+  top: 225px;
+  width: 349px;
+}
+
+.testimonials-wrapper .overlap-5 {
+  height: 220px;
+  left: 230px;
+  position: absolute;
+  top: -1px;
+  width: 604px;
+}
+
+.testimonials-wrapper .read-what-others-2 {
+  color: #ffffff;
+  height: 174px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 46px;
+  width: 604px;
+  font-family: var(--f60-font-family);
+  font-size: var(--f60-font-size);
+  font-style: var(--f60-font-style);
+  font-weight: var(--f60-font-weight);
+  letter-spacing: var(--f60-letter-spacing);
+  line-height: var(--f60-line-height);
+}
+
+.testimonials-wrapper .testimonials-2 {
+  color: #ffffff;
+  height: 60px;
+  left: 132px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 341px;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-style: var(--f30-font-style);
+  font-weight: var(--f30-font-weight);
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+}

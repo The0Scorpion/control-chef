@@ -1,0 +1,29 @@
+.intro-wrapper {
+  height: 254px;
+  position: relative;
+  width: 1250px;
+}
+
+.intro-wrapper .text-wrapper-9 {
+  color: #ffffff;
+  height: 279px;
+  left: 90px;
+  position: absolute;
+  top: 20px;
+  width: 500px;
+  font-family: var(--f70-font-family);
+  font-size: var(--f70-font-size);
+  font-style: var(--f70-font-style);
+  font-weight: var(--f70-font-weight);
+  letter-spacing: var(--f70-letter-spacing);
+  line-height: var(--f70-line-height);
+}
+
+.intro-wrapper .home-banner-2 {
+  height: auto;
+  left: 770px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 20%;
+}

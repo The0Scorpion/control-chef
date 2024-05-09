@@ -1,0 +1,630 @@
+.registration {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.registration .div-3 {
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+}
+
+.registration .registerationbar-2 {
+  height: 287px;
+  left: 44px;
+  position: absolute;
+  top: 75px;
+  width: 271px;
+}
+
+.registration .overlap-10 {
+  background-color: #ffffff08;
+  border: 2px solid;
+  border-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 10px #ffffff1a;
+  height: 292px;
+  left: 23px;
+  position: absolute;
+  width: 219px;
+}
+
+.registration .registration-2 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  height: 29px;
+  left: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+}
+
+.registration .first-name {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .password {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .university {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .college {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .country {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .birthday {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .last-name {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .comfirm-password {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 5px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.registration .username-email-com-wrapper {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  left: 49px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 201px;
+}
+
+.registration .button {
+  all: unset;
+  box-sizing: border-box;
+  height: 24px;
+  left: 131px;
+  position: absolute;
+  top: 197px;
+  width: 65px;
+}
+
+.registration .overlap-group-3 {
+  background-color: #d9d9d92b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 5px #ffffff80;
+  height: 24px;
+  position: absolute;
+  width: 63px;
+}
+
+.registration .sign-up {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 18px;
+  left: 5px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.registration .login-button-2 {
+  height: 24px;
+  left: 131px;
+  position: absolute;
+  top: 252px;
+  width: 65px;
+}
+
+.registration .sign-in {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 18px;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.registration .p {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 15px;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 227px;
+}
+
+.registration .navlog834 {
+  left: 80px !important;
+  position: absolute !important;
+  top: 22px !important;
+  transition: all 0.5s ease !important;
+}
+
+.registration .maskgroup{
+  max-width: 50% !important;
+  height: auto !important;
+}
+
+.registration .nav-log-1 {
+  height: 65px !important;
+  left: 47px !important;
+  position: absolute !important;
+  top: 30px !important;
+  transition: all 0.5s ease !important;
+  width: 334px !important;
+}
+
+.registration .registerationbar-instance {
+  height: 600px !important;
+  left: 65px !important;
+  position: absolute !important;
+  top: 124px !important;
+  width: 600px !important;
+}
+
+.registration .registration1{
+  width: 700px !important;
+  height: 800px !important;
+}
+
+.registration .registration2{
+  left:100px !important;
+  font-size: var(--f30-font-size);
+}
+
+.registration .registration3{
+  left: 40px !important;
+  height: 40px !important;
+  width: 300px !important;
+}
+
+.registration .passwordinput1{
+  left: 40px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 400px !important;
+}
+
+.registration .universityinput1{
+  left: 40px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 130px !important;
+}
+
+.registration .collegeinput1{
+  left: 370px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 130px !important;
+}
+
+.registration .birthdayinput1{
+  left: 40px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 220px !important;
+}
+
+.registration .lastnameinput1{
+  left: 370px !important;
+  height: 40px !important;
+  width: 300px !important;
+}
+
+.registration .confirmpasswordinput1{
+  left: 370px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 400px !important;
+}
+
+.registration .usernameinput1{
+  left: 40px !important;
+  height: 40px !important;
+  width: 630px !important;
+  top: 310px !important;
+}
+
+.registration .countryinput1{
+  left: 370px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 220px !important;
+}
+
+.registration .logininput1{
+  left: 450px !important;
+  height: 50px !important;
+  width: 200px !important;
+  top: 470px !important;
+}
+
+.registration .signinput1{
+  left: 450px !important;
+  height: 50px !important;
+  width: 200px !important;
+  top: 580px !important;
+}
+
+.registration .alreadyinput1{
+  left: 400px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 540px !important;
+}
+
+.registration .firstname2{
+  left: 60px !important;
+}
+
+.registration .lastname2{
+  left: 400px !important;
+}
+
+.registration .university2{
+  left: 60px !important;
+  top: 100px !important;
+}
+
+.registration .college2{
+  left: 400px !important;
+  top: 100px !important;
+}
+
+.registration .birthday2{
+  left: 60px !important;
+  top: 190px !important;
+}
+
+.registration .country2{
+  left: 400px !important;
+  top:190 !important;
+}
+
+.registration .username2{
+  left: 60px !important;
+  top: 280px !important;
+}
+
+.registration .password2{
+  left: 60px !important;
+  top: 370px !important;
+}
+
+.registration .confirmpassword2{
+  left: 400px !important;
+  top: 370px !important;
+}
+
+.registration .nav-log-instance {
+  left: 88px !important;
+  position: absolute !important;
+  top: 20px !important;
+}
+
+.registration .registerationbar-21 {
+  left: 210 !important;
+  position: absolute !important;
+  top: 120px !important;
+}
+
+.registration .register11{
+  left: 70px !important;
+  position: absolute;
+  top: 30px !important;
+}
+
+.registration .registration31{
+  width: 350px !important;
+  height: 970px !important;
+  left: 50px !important;
+}
+
+.registration .registration32{
+  left:-70px !important;
+  top: 30px !important;
+  font-size: var(--header-font-size);
+}
+
+.registration .registration33{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 100px !important;
+}
+
+.registration .passwordinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 625px !important;
+}
+
+.registration .universityinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 250px !important;
+}
+
+.registration .collegeinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 325px !important;
+}
+
+.registration .birthdayinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 475px !important;
+}
+
+.registration .lastnameinput2{
+  left: 20px !important;
+  top: 175px !important;
+  height: 40px !important;
+  width: 300px !important;
+}
+
+.registration .confirmpasswordinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 700px !important;
+}
+
+.registration .usernameinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 550px !important;
+}
+
+.registration .countryinput2{
+  left: 20px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 400px !important;
+}
+
+.registration .logininput2{
+  left: 60px !important;
+  height: 50px !important;
+  width: 200px !important;
+  top: 800px !important;
+}
+
+.registration .signinput2{
+  left: 60px !important;
+  height: 50px !important;
+  width: 200px !important;
+  top: 900px !important;
+}
+
+.registration .alreadyinput2{
+  left: 10px !important;
+  height: 40px !important;
+  width: 300px !important;
+  top: 860px !important;
+  font-size: var(--paragraph-font-size) !important;
+}
+
+.registration .firstname3{
+  left: 40px !important;
+  top: 70px !important;
+  font-size: var(--paragraph-font-size) !important;
+}
+
+.registration .lastname3{
+  left: 40px !important;
+  top: 150px !important;
+  font-size: var(--paragraph-font-size) !important;
+}
+
+.registration .university3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 230px !important;
+}
+
+.registration .college3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 305px !important;
+}
+
+.registration .birthday3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 380px !important;
+}
+
+.registration .country3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 455px !important;
+}
+
+.registration .username3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 530px !important;
+}
+
+.registration .password3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 605px !important;
+}
+
+.registration .confirmpassword3{
+  left: 40px !important;
+  font-size: var(--paragraph-font-size) !important;
+  top: 680px !important;
+}

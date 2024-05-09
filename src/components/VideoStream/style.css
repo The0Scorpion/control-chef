@@ -1,0 +1,22 @@
+.video-stream {
+  height: 548px;
+  position: absolute;
+  width: 1024px;
+  background-color: #ffffff22;
+  border-radius: 20px;
+}
+
+.video-stream .text-wrapper-6 {
+  color: #ffffff;
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-style: var(--title-font-style);
+  font-weight: var(--title-font-weight);
+  height: 49px;
+  left: 391px;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0px;
+}

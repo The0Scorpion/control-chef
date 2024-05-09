@@ -1,0 +1,283 @@
+.login-and {
+  background: linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(26.25, 26.25, 126) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-and .div-2 {
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+
+.login-and .login-bar-2 {
+  background-color: #ffffff08;
+  border: 2px solid;
+  border-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 10px #ffffff1a;
+  height: 300px;
+  left: 51px;
+  position: absolute;
+  top: 85px;
+  width: 246px;
+}
+
+.login-and .log-in-2 {
+  color: #ffffff;
+  height: 43px;
+  left: 95px;
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+}
+
+.login-and .username-email-com-2 {
+  color: #05051880;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+  border:0;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 25px;
+  left: 8px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  position: absolute;
+  text-align: center;
+  top: 90px;
+  width: 222;
+}
+
+.login-and .password-wrapper {
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 50px;
+  color: #05051880;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-weight: var(--paragraph-font-weight);
+  height: 25px;
+  left: 8px;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 120px;
+  width: 222px;
+}
+
+.login-and .login-button-2 {
+  height: 37px;
+  left: 15px;
+  position: absolute;
+  top: 186px;
+  width: 130px;
+}
+
+.login-and .log-in-3 {
+  color: #ffffff;
+  height: 37px;
+  left: 38px;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  background-color: #d9d9d92b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 5px #ffffff80;
+  width: 130px;
+}
+
+.login-and .create {
+  color: #ffffff;
+  height: 37px;
+  left: 5px;
+  position: absolute;
+  text-align: center;
+  top: 53px;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  background-color: #d9d9d92b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 5px #ffffff80;
+  width: 200px;
+}
+
+.login-and .nav-log {
+  height: 27px !important;
+  left: 29px !important;
+  position: absolute !important;
+  top: 29px !important;
+  transition: all 0.5s ease !important;
+  width: 149px !important;
+}
+
+.login-and .nav-log-1 {
+  height: 65px !important;
+  left: 47px !important;
+  position: absolute !important;
+  top: -110px !important;
+  transition: all 0.5s ease !important;
+  width: 370px !important;
+}
+
+.login-and .navlog834 {
+  left: 0px !important;
+  position: absolute !important;
+  top: 22px !important;
+  transition: all 0.5s ease !important;
+}
+
+.login-and .maskgroup{
+  max-width: 50% !important;
+  height: auto !important;
+}
+
+.login-and .nav-log-instance {
+  left: 98px !important;
+  position: absolute !important;
+  top: -100px !important;
+}
+
+.login-and .overlap-4 {
+  position: absolute;
+}
+
+.login-and .watermark-instance {
+  height: 140px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 303px !important;
+  transition: all 0.5s ease !important;
+  width: 793px !important;
+}
+
+.login-and .login-bar-instance {
+  height: 410px !important;
+  left: 75px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 530px !important;
+}
+
+.login-and .instance-node {
+  left: 200px !important;
+  top: 40px !important;
+  
+}
+
+.login-and .login-bar-4 {
+  height: 40px !important;
+  left: 65px !important;
+  width: 400px !important;
+  top:100px !important;
+  border-radius: 35px !important;
+}
+
+.login-and .login-bar-7 {
+  height: 40px !important;
+  left: 65px !important;
+  width: 400px !important;
+  top: 150px !important;
+  border-radius: 35px !important;
+}
+
+.login-and .login-bar-9 {
+  height: 50px !important;
+  width: 250px !important;
+  top:220px !important;
+  left: 130px !important;
+  border-radius: 40px !important;
+}
+
+.login-and .createclassname {
+  left: 85px !important;
+  top: 300px !important;
+  height: 50px !important;
+  width: 350px !important;
+  border-radius: 40px !important;
+}
+
+
+.login-and .login-bar-5 {
+  height: 80px !important;
+  left: 31px !important;
+  top: 306px !important;
+  width: 571px !important;
+}
+
+.login-and .watermark-2 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 225px !important;
+}
+
+.login-and .login-bar-11 {
+  left: 120px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.login-and .login-bar-instance-1 {
+  height: 350px !important;
+  left: 20px !important;
+  position: absolute !important;
+  top: 80px !important;
+  width: 300px !important;
+}
+
+.login-and .instance-node-1 {
+  left: 115px !important;
+  top: 30px !important;
+  font-size: var(--header-font-family) !important;
+}
+
+.login-and .login-bar-9-1 {
+  height: 50px !important;
+  width: 270px !important;
+  top:190px !important;
+  left: 75px !important;
+  width: 150px !important;
+  font-size: var(--subheader-font-size);
+}
+
+.login-and .login-bar-7-1 {
+  height: 35px !important;
+  left: 10px !important;
+  width: 280px !important;
+  top: 120px;
+  font-size: var(--subheader-font-size);
+}
+
+.login-and .login-bar-4-1 {
+  height: 35px !important;
+  left: 10px !important;
+  width: 280px !important;
+  top: 80px;
+  font-size: var(--subheader-font-size);
+}
+
+
+
+.login-and .createclassname-1 {
+  left: 20px !important;
+  top: 260px !important;
+  width: 260px !important;
+  font-size: var(--subheader-font-size) !important;
+}

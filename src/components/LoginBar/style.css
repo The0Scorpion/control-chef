@@ -1,0 +1,96 @@
+.login-bar {
+  background-color: #ffffff08;
+  border: 2px solid;
+  border-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 10px #ffffff1a;
+  height: 400px;
+  position: relative;
+  width: 500px;
+}
+
+.login-bar .log-in {
+  color: #ffffff;
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  height: 61px;
+  left: 190px;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  position: absolute;
+  text-align: center;
+  top: 20px;
+}
+
+.login-bar .username-email-com {
+  color: #050518;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  height: 40px;
+  left: 50px;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  width: 400px;
+  font-family: var(--f18-font-family);
+  font-size: var(--f18-font-size);
+  font-weight: var(--f18-font-weight);
+  letter-spacing: var(--f18-letter-spacing);
+  line-height: var(--f18-line-height);
+}
+
+.login-bar .password {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  color: #05051880;
+  height: 40px;
+  left: 50px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 400px;
+  font-family: var(--f18-font-family);
+  font-size: var(--f18-font-size);
+  font-weight: var(--f18-font-weight);
+  letter-spacing: var(--f18-letter-spacing);
+  line-height: var(--f18-line-height);
+}
+
+.login-bar .log-in-wrapper {
+  background-color: #d9d9d92b;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 5px #ffffff80;
+  height: 50px;
+  width: 180px;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  top: 250px;
+  left: 160px;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-weight: var(--f30-font-weight);
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+}
+
+.login-bar .text-create-wrapper {
+  color: #ffffff;
+  font-family: var(--f30-font-family);
+  font-size: var(--f30-font-size);
+  font-weight: var(--f30-font-weight);
+  height: 50px;
+  left: 100px;
+  letter-spacing: var(--f30-letter-spacing);
+  line-height: var(--f30-line-height);
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  top: 320px;
+  background-color: #d9d9d92b;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 5px #ffffff80;
+  width: 300px;
+}

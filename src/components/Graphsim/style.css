@@ -1,0 +1,103 @@
+.graphsim {
+  height: 1841px;
+  position: relative;
+  transform: translate(0, 25px);
+  width: 1065px;
+}
+
+.graphsim .group-22 {
+  height: 427px;
+  left: 0;
+  position: absolute;
+  top: 98px;
+  width: 527px;
+}
+
+.graphsim .rectangle-5 {
+  background-color: #d9d9d9;
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 57px;
+  width: 525px;
+}
+
+.graphsim .text-wrapper-12 {
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: var(--header-font-style);
+  font-weight: var(--header-font-weight);
+  height: 31px;
+  left: 215px;
+  letter-spacing: var(--header-letter-spacing);
+  line-height: var(--header-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 97px;
+}
+
+.graphsim .group-24 {
+  height: 426px;
+  left: 0;
+  position: absolute;
+  top: 576px;
+  width: 527px;
+}
+
+.graphsim .rectangle-6 {
+  background-color: #d9d9d9;
+  height: 370px;
+  left: 0;
+  position: absolute;
+  top: 56px;
+  width: 525px;
+}
+
+.graphsim .x-vel {
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: var(--header-font-style);
+  font-weight: var(--header-font-weight);
+  height: 29px;
+  left: 233px;
+  letter-spacing: var(--header-letter-spacing);
+  line-height: var(--header-line-height);
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.graphsim .group-26 {
+  height: 426px;
+  left: 540px;
+  position: absolute;
+  top: 99px;
+  width: 527px;
+}
+
+.graphsim .group-28 {
+  height: 426px;
+  left: 540px;
+  position: absolute;
+  top: 576px;
+  width: 527px;
+}
+
+.graphsim .text-wrapper-14 {
+  color: #ffffff;
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-style: var(--title-font-style);
+  font-weight: var(--title-font-weight);
+  height: 53px;
+  left: 469px;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 130px;
+}
