@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useWindowWidth } from "../../breakpoints";
 import { ButtonsSim } from "../../components/ButtonsSim";
 import { Footer } from "../../components/Footer";
@@ -7,7 +7,7 @@ import { NavBar } from "../../components/NavBar";
 import { NavBar_2 } from "../../components/NavBar_2";
 import { Next } from "../../components/Next/Next";
 import { Parametersim } from "../../components/Parametersim";
-import { BlockDiagramand } from "../../components/BlockDiagramand";
+import { Parametersnewand } from "../../components/Parametersnewand";
 import { SimulationStreaming } from "../../components/SimulationStreaming";
 import { Amplify } from "aws-amplify";
 import awsConfig from "../../aws-export";
@@ -19,15 +19,20 @@ import { simulate } from "../../components/2DOF_Model";
 Amplify.configure(awsConfig);
 
 export const HoverSimcomponent = () => {
-  
-  const screenWidth = useWindowWidth(); 
-  const [SimulationPoints,setSimulationPoints] = useState(null)
-  const [ParameterData,setParameterData] = useState(null)
-  const GraphAndSimulate = () => {
-    const Sim=simulate(ParameterData);
-    console.log("Points:", SimulationPoints);
 
+  const screenWidth = useWindowWidth();
+  const [SimulationPoints, setSimulationPoints] = useState(null)
+  const [Simulation, setSimulation] = useState(null)
+  const [ParameterData, setParameterData] = useState(null)
+  const GraphAndSimulate = () => {
+    const Sim = simulate(ParameterData);
+    console.log("Points:", SimulationPoints);
     setSimulationPoints(Sim);
+  };
+  const destroygraph = () => {
+    console.log(1);
+    const destroy = 5;
+    setSimulation(destroy);
   };
   return (
     <div className="hoversim"
@@ -37,56 +42,51 @@ export const HoverSimcomponent = () => {
           screenWidth < 834
             ? "2565px"
             : screenWidth >= 834 && screenWidth < 1300
-              ? "2730px"
+              ? "1690px"
               : screenWidth >= 1300
-                ? "2850px"
+                ? "2050px"
                 : undefined,
-        width:"100%"
+        width: "100%"
       }}
     >
       {screenWidth >= 834 && screenWidth < 1300 && (
         <>
           <Parametersim
+            setParameterData={setParameterData}
             className="parameters-instance"
             rollgroup="rollgroup1"
             pitchgroup="pitchgroup1"
             plantgroup="plantimg1"
             arrow3="arrow1"
             arrow4="arrow1" />
-          <SimulationStreaming className="simulation-streaming-instance" />
-          <ButtonsSim 
+          <SimulationStreaming
+            title="Simulation of Hover"
+            className="simulation-streaming-instance" />
+          <ButtonsSim
+            GraphAndSimulate={GraphAndSimulate}
+            destroygraph={destroygraph}
             className="buttons-instance"
             startClassName="start1"
             stopClassName="stop1"
             setClassName="set1"
             resetClassName="reset1" />
           <Graphsim
+            SimulationPoints={SimulationPoints}
+            Simulation={Simulation}
             className="graphs-instance"
-            divClassName="graphs-5"
             divClassName1="graphs-16"
-            divClassNameOverride="graphs-6"
             groupClassName="instance-node"
-            groupClassName1="graphs-8"
+            divClassName="graphs-5"
             groupClassName2="graphs-9"
-            groupClassName3="graphs-11"
             groupClassName4="graphs-12"
-            groupClassName5="graphs-14"
-            groupClassNameOverride="graphs-4"
             rectangleClassName="graphs-2"
+            divClassNameOverride="graphs-2"
             rectangleClassName1="graphs-2"
-            rectangleClassName2="graphs-6"
-            rectangleClassName3="graphs-6"
-            rectangleClassName4="graphs-6"
-            rectangleClassName5="graphs-6"
             rectangleClassNameOverride="graphs-2"
             xPosClassName="graphs-3"
-            xPosPidClassName="graphs-10"
-            xVelClassName="graphs-7"
-            xVelPidClassName="graphs-13"
+            xVelClassName="graphs-3"
             yPosClassName="graphs-3"
-            yPosPidClassName="graphs-10"
             yVelClassName="graphs-3"
-            yVelPidClassName="graphs-15"
           />
           <NavBar_2 className="nav-bar-tab" />
           <Footer
@@ -113,36 +113,43 @@ export const HoverSimcomponent = () => {
             next="next1"
             back="back1"
             linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation"/>
+            linkTo2="/Hover-Documentation" />
         </>
       )}
-     
+
       {screenWidth >= 1300 && (
-        
         <>
           <Footer className="footer-instance" />
           <Graphsim
             SimulationPoints={SimulationPoints}
+            Simulation={Simulation}
             className="graphs-17" />
           <Parametersim
             setParameterData={setParameterData}
             className="parameters-2" />
-          <SimulationStreaming className="simulation-streaming-2" />
-          <ButtonsSim className="SimulationPoints-2" 
-          GraphAndSimulate={GraphAndSimulate} />
+          <SimulationStreaming
+            title="Simulation of Hover"
+            className="simulation-streaming-2" />
+          <ButtonsSim
+            className="SimulationPoints-2"
+            GraphAndSimulate={GraphAndSimulate}
+            destroygraph={destroygraph} />
           <NavBar
             className="nav-bar-instance2"
           />
           <Next navigate="nav"
             linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation"/>
+            linkTo2="/Hover-Documentation" />
         </>
       )}
 
       {screenWidth < 834 && (
         <>
-          <BlockDiagramand/>
+          <Parametersnewand 
+            className="BlockDiagrams5"
+            />
           <SimulationStreaming
+            title="Simulation of Hover"
             className="simulation-streaming-3"
             simulationStreamingClassName="simulation-streaming-4"
           />
@@ -154,32 +161,22 @@ export const HoverSimcomponent = () => {
             stopClassName="buttons-6"
           />
           <Graphsim
+            SimulationPoints={SimulationPoints}
+            Simulation={Simulation}
             className="graphs-18"
-            divClassName="graphs-24"
             divClassName1="graphs-35"
-            divClassNameOverride="graphs-20"
             groupClassName="graphs-19"
-            groupClassName1="graphs-26"
+            divClassName="graphs-24"
             groupClassName2="graphs-28"
-            groupClassName3="graphs-30"
             groupClassName4="graphs-31"
-            groupClassName5="graphs-33"
-            groupClassNameOverride="graphs-22"
             rectangleClassName="graphs-20"
+            divClassNameOverride="graphs-20"
             rectangleClassName1="graphs-20"
-            rectangleClassName2="graphs-20"
-            rectangleClassName3="graphs-20"
-            rectangleClassName4="graphs-20"
-            rectangleClassName5="graphs-20"
             rectangleClassNameOverride="graphs-20"
             xPosClassName="graphs-21"
-            xPosPidClassName="graphs-29"
-            xVelClassName="graphs-25"
-            xVelPidClassName="graphs-32"
-            yPosClassName="graphs-23"
-            yPosPidClassName="graphs-29"
-            yVelClassName="graphs-27"
-            yVelPidClassName="graphs-34"
+            xVelClassName="graphs-21"
+            yPosClassName="graphs-21"
+            yVelClassName="graphs-21"
           />
           <NavBar_2
             className="nav-bar-tab-instance"
@@ -214,7 +211,12 @@ export const HoverSimcomponent = () => {
             rectangle="rectanglefooter"
             copyright="copyrightfooter"
           />
-          
+          <Next navigate="nav2"
+            next="next2"
+            back="back2"
+            linkTo1="/hover-realtime"
+            linkTo2="/Hover-Documentation"
+            />
         </>
       )}
     </div>

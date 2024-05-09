@@ -13,12 +13,12 @@ export const ButtonsSim = ({
   setClassName,
   resetClassName,
   GraphAndSimulate,
-  sendDataTostop,
+  destroygraph,
 }) => {
 
   return (
     <div className={`buttons ${className}`}>
-      <button className={`stop ${stopClassName}`} onClick={sendDataTostop} >Stop</button>
+      <button className={`stop ${stopClassName}`} onClick={destroygraph} >Stop</button>
       <button className={`start ${startClassName}`} onClick={GraphAndSimulate}>Start</button>
       <button className={`set ${setClassName}`} onClick={GraphAndSimulate}>Set</button>
       <button className={`reset ${resetClassName}`}>Reset</button>

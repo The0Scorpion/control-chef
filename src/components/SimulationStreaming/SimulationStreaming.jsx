@@ -6,10 +6,14 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import React from "react";
 import "./style.css";
 
-export const SimulationStreaming = ({ className, simulationStreamingClassName }) => {
+export const SimulationStreaming = ({ 
+  className, 
+  title,
+  simulationStreamingClassName
+ }) => {
   return (
     <div className={`simulation-streaming ${className}`}>
-      <div className={`text-wrapper-8 ${simulationStreamingClassName}`}>Simulation &amp; Streaming</div>
+      <div className={`text-wrapper-8 ${simulationStreamingClassName}`}>{title}</div>
     </div>
   );
 };

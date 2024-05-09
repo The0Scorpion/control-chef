@@ -18,6 +18,7 @@ export const Graphsim = ({
   groupClassName4,
   divClassName1,
   SimulationPoints,
+  Simulation,
 }) => {
 
   // Define chartRefs object
@@ -33,13 +34,23 @@ export const Graphsim = ({
 
   useEffect(() => {
     // Call the main function to get XPos, YPos, XVel, and YVel values
-  /*if(SimulationPoints){
-        setThetaValues(SimulationPoints);
-    }*/
+    if (Simulation === 5) {
+      for (const [key, ref] of Object.entries(chartRefs)) {
+        if (SimulationPoints[key] && ref.current) {
+          // Destroy existing chart if it exists
+          const canvasId = `chart-${key}`;
+          const existingChart = Chart.getChart(canvasId);
+          if (existingChart) {
+            existingChart.destroy(); // Destroy the chart instance
+          } 
+        }
+      }
+    }
+     
     if(SimulationPoints){
     // Create charts when data changes
     for (const [key, ref] of Object.entries(chartRefs)) {
-      console.log("THETA "+SimulationPoints);
+      console.log("THETA:"+ SimulationPoints);
       if (SimulationPoints[key] && ref.current) {
         // Destroy existing chart if it exists
         const canvasId = `chart-${key}`;

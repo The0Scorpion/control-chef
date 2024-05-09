@@ -1,0 +1,415 @@
+.parametersnewand {
+  height: 117px;
+  width: 343px;
+  position: absolute;
+  left: 5px;
+  top: 60px;
+}
+
+.parametersnewand .group {
+  height: 91px;
+  left: 6px;
+  position: relative;
+  top: 13px;
+  width: 361px;
+}
+
+.parametersnewand .overlap-group {
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 74px;
+}
+
+.parametersnewand .pitch-input-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 5px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+}
+
+.parametersnewand .overlap {
+  height: 91px;
+  left: 74px;
+  position: absolute;
+  top: 0;
+  width: 257px;
+}
+
+.parametersnewand .div {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 35px;
+}
+
+.parametersnewand .arrow {
+  height: 7px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  width: 16px;
+}
+
+.parametersnewand .ellipse {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  height: 20px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.parametersnewand .flexcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  height: 15px;
+  left: 16px;
+  position: absolute;
+  top: 5px;
+  width: 17px;
+}
+
+.parametersnewand .text {
+  align-self: stretch;
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 7px;
+  position: relative;
+}
+
+.parametersnewand .text-wrapper {
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 7px;
+}
+
+.parametersnewand .overlap-2 {
+  height: 62px;
+  left: 21px;
+  position: absolute;
+  top: 0;
+  width: 236px;
+}
+
+.parametersnewand .overlap-3 {
+  height: 23px;
+  left: 14px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+.parametersnewand .img {
+  height: 7px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 16px;
+}
+
+.parametersnewand .rectangle {
+  background-color: #6454f0;
+  border: 1px solid;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+}
+
+.parametersnewand .PID {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 6px;
+}
+
+.parametersnewand .overlap-4 {
+  height: 38px;
+  left: 76px;
+  position: absolute;
+  top: 1px;
+  width: 35px;
+}
+
+.parametersnewand .flexcontainer-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  height: 15px;
+  left: 17px;
+  position: absolute;
+  top: 5px;
+  width: 17px;
+}
+
+.parametersnewand .arrow-2 {
+  height: 18px;
+  left: 21px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  width: 7px;
+}
+
+.parametersnewand .overlap-5 {
+  height: 23px;
+  left: 112px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+.parametersnewand .rectangle-2 {
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+}
+
+.parametersnewand .overlap-6 {
+  height: 23px;
+  left: 174px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+.parametersnewand .plant {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+}
+
+.parametersnewand .overlap-7 {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 22px;
+  width: 201px;
+}
+
+.parametersnewand .line {
+  height: 16px;
+  left: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1px;
+}
+
+.parametersnewand .line-2 {
+  height: 1px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 197px;
+}
+
+.parametersnewand .arrow-3 {
+  height: 18px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.parametersnewand .sensed-angular {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 111px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+  width: 83px;
+}
+
+.parametersnewand .pitch-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+  width: 42px;
+}
+
+.parametersnewand .overlap-8 {
+  height: 39px;
+  left: 175px;
+  position: absolute;
+  top: 24px;
+  width: 42px;
+}
+
+.parametersnewand .arrow-4 {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 38px;
+  width: 38px;
+}
+
+.parametersnewand .arrow-5 {
+  height: 38px;
+  left: 34px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.parametersnewand .overlap-9 {
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: 52px;
+  width: 35px;
+}
+
+.parametersnewand .overlap-10 {
+  height: 40px;
+  left: 22px;
+  position: absolute;
+  top: 51px;
+  width: 222px;
+}
+
+.parametersnewand .overlap-11 {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 22px;
+  width: 222px;
+}
+
+.parametersnewand .line-3 {
+  height: 1px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 218px;
+}
+
+.parametersnewand .roll-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 37px;
+}
+
+.parametersnewand .sensed-angular-2 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 113px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 78px;
+}
+
+.parametersnewand .line-4 {
+  height: 68px;
+  left: 244px;
+  object-fit: cover;
+  position: absolute;
+  top: 23px;
+  width: 1px;
+}
+
+.parametersnewand .roll-input-angle-wrapper {
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 1px;
+  position: absolute;
+  top: 51px;
+  width: 74px;
+}
+
+.parametersnewand .roll-input-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+}

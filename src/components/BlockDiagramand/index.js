@@ -1,1 +1,0 @@
-export { BlockDiagramand } from "./BlockDiagramand";
