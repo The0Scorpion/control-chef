@@ -112,8 +112,8 @@ export const HoverSimcomponent = () => {
           <Next navigate="nav1"
             next="next1"
             back="back1"
-            linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation" />
+            linkTo1="/hover-realtime/"
+            linkTo2="/Hover-Documentation/" />
         </>
       )}
 
@@ -138,8 +138,8 @@ export const HoverSimcomponent = () => {
             className="nav-bar-instance2"
           />
           <Next navigate="nav"
-            linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation" />
+            linkTo1="/hover-realtime/"
+            linkTo2="/Hover-Documentation/" />
         </>
       )}
 
@@ -214,8 +214,8 @@ export const HoverSimcomponent = () => {
           <Next navigate="nav2"
             next="next2"
             back="back2"
-            linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation"
+            linkTo1="/hover-realtime/"
+            linkTo2="/Hover-Documentation/"
             />
         </>
       )}
