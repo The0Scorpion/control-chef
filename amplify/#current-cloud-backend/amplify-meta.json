@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-website-website-7c92b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::201162808408:role/amplify-website-website-7c92b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::201162808408:role/amplify-website-website-7c92b-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-website-website-7c92b-deployment",
+      "UnauthRoleName": "amplify-website-website-7c92b-unauthRole",
+      "StackName": "amplify-website-website-7c92b",
+      "StackId": "arn:aws:cloudformation:eu-west-3:201162808408:stack/amplify-website-website-7c92b/eeff9220-07bb-11ef-9bf1-0e9f57582205",
+      "AmplifyAppId": "d3ndyc2e3bza67"
+    }
+  },
+  "auth": {
+    "website0fbe4b59": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-website-website-7c92b-deployment/amplify-cfn-templates/auth/website0fbe4b59-cloudformation-template.json",
+        "logicalId": "authwebsite0fbe4b59"
+      },
+      "lastPushTimeStamp": "2024-05-01T13:15:53.600Z",
+      "output": {
+        "UserPoolId": "eu-west-3_OMoDS9eAU",
+        "AppClientIDWeb": "3s2vu7c1f5f7n7ki8tdr4smfre",
+        "AppClientID": "4ejbp1ng700ji7dk81vjmula2i",
+        "IdentityPoolId": "eu-west-3:b775130d-4a9c-4079-ae26-f8d7812c1a13",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-3:201162808408:userpool/eu-west-3_OMoDS9eAU",
+        "IdentityPoolName": "website0fbe4b59_identitypool_0fbe4b59__website",
+        "UserPoolName": "website0fbe4b59_userpool_0fbe4b59"
+      },
+      "lastPushDirHash": "+UU26WqnWFoYDd1pajd5xolYV6M="
+    }
+  }
+}
