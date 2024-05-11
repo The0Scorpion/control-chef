@@ -390,13 +390,15 @@
 }
 
 .hoverdoc .blockdiagram1{
-  left: -450px !important;
+  left: 0px !important;
+  position: absolute;
   top: 2000px !important;
 }
 
 .hoverdoc .imgbd1{
   width: 800px !important;
-  position: absolute !important;
+  position: absolute;
+  left: 30px !important;
 }
 
 .hoverdoc .navi1{
@@ -525,7 +527,7 @@
 .hoverdoc .blockdiagram21{
   width: 80% !important;
   position: absolute !important;
-  left: -320px !important;
+  left: -330px !important;
   top: 920px !important;
 }
 

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useWindowWidth } from "../../breakpoints";
+import { useLocation } from "react-router-dom";
 import { Buttons } from "../../components/Buttons";
 import { Footer } from "../../components/Footer";
 import { Graphs } from "../../components/Graphs";
@@ -20,6 +21,7 @@ Amplify.configure(awsConfig);
 
 export const HoverRTcomponent = () => {
   const screenWidth = useWindowWidth();
+  const [scrollToTop, setScrollToTop] = useState(false);
   const [parameterData, setParameterData] = useState(null);
   const [Work, setWork] = useState(0);
 
@@ -77,7 +79,7 @@ export const HoverRTcomponent = () => {
       headers: {
         'Content-Type': 'application/json' // Specify content type as JSON ?data=${parameterData}
       },
-      body:  "{\"work\": 0}" // Stringify the parameterData object
+      body: "{\"work\": 0}" // Stringify the parameterData object
     })
       .then(response => {
         if (response.ok) {
@@ -92,6 +94,21 @@ export const HoverRTcomponent = () => {
       });
   };
 
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Scroll to the top of the page when the route changes to "/"
+      window.scrollTo(0, 0);
+      setScrollToTop(true);
+    } else {
+      setScrollToTop(false);
+    }
+  }, [location.pathname]);
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once
+
+
   return (
     <div className="hover"
       style={{
@@ -102,16 +119,22 @@ export const HoverRTcomponent = () => {
             : screenWidth >= 834 && screenWidth < 1300
               ? "2730px"
               : screenWidth >= 1300
-                ? "3548px"
+                ? "2700px"
                 : undefined,
-        width:"100%"
+        width: "100%"
       }}
     >
       {screenWidth >= 834 && screenWidth < 1300 && (
         <>
-          <Parameters className="parameters-instance" />
-         
-          <Buttons className="buttons-instance" />
+          <Parametersnew
+            setParameterData={setParameterData} 
+            className="parameters-instance" />
+          <Buttons
+            sendDataToLambda={sendDataToLambda}
+            sendDataTostart={sendDataTostart}
+            sendDataTostop={sendDataTostop}
+            parameterData={parameterData}
+            className="buttons-instance" />
           <Graphs
             className="graphs-instance"
             divClassName="graphs-5"
@@ -177,7 +200,9 @@ export const HoverRTcomponent = () => {
           <Parametersnew
             setParameterData={setParameterData}
             className="parameters-2" />
-          <SimulationStreaming className="simulation-streaming-2" />
+          <SimulationStreaming
+            title="Real Time Simulation" 
+            className="simulation-streaming-2" />
           <Buttons
             sendDataToLambda={sendDataToLambda}
             sendDataTostart={sendDataTostart}
@@ -189,7 +214,7 @@ export const HoverRTcomponent = () => {
           />
           <Next navigate="nav"
             next="next"
-            linkTo2="/hover-simulation"/>
+            linkTo2="/hover-simulation" />
         </>
       )}
 

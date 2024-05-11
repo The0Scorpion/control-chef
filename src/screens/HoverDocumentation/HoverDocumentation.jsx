@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useWindowWidth } from "../../breakpoints";
+import { useLocation } from "react-router-dom";
 import { useWindowWidth } from "../../breakpoints";
 import { Footer } from "../../components/Footer";
 import { NavBar } from "../../components/NavBar";
@@ -17,19 +19,42 @@ import "./style.css";
 Amplify.configure(awsConfig);
 
 export const HoverDoccomponent = () => {
+  const location = useLocation();
   const screenWidth = useWindowWidth();
+  const [scrollToTop, setScrollToTop] = useState(false);
+  // Function to calculate the height of the last component
+  const calculateLastComponentHeight = () => {
+    // You can customize this function to calculate the height of the last component in each condition block
+    if (screenWidth < 834) {
+      return 1220; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 834 && screenWidth < 1300) {
+      return 2610; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 1300) {
+      return 3120; // Adjust this value based on the height of the last component
+    }
+    // Return a default value if none of the conditions match
+    return 0;
+  };
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Scroll to the top of the page when the route changes to "/"
+      window.scrollTo(0, 0);
+      setScrollToTop(true);
+    } else {
+      setScrollToTop(false);
+    }
+  }, [location.pathname]);
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once
+
   return (
     <div className="hoverdoc"
       style={{
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
-        height:
-          screenWidth < 834
-            ? "1220px"
-            : screenWidth >= 834 && screenWidth < 1300
-              ? "2610px"
-              : screenWidth >= 1300
-                ? "3150px"
-                : undefined,
+        height: calculateLastComponentHeight(),
         width: "100%"
       }}
     >
@@ -40,12 +65,12 @@ export const HoverDoccomponent = () => {
             theDOFhoverwrapper="boxdof"
             abouttheDOF="titleabout"
             img="hoverimg" />
-          <HowItWorks 
+          <HowItWorks
             className="howitwork1"
             HowItWorksbox="howitworksbox1"
             HowItWorkstext="howtext"
             thedegreeof="thedof" />
-          <Modeling 
+          <Modeling
             className="modeling1"
             model="model1"
             modelingwrapper="modelingwrapper1"
@@ -54,7 +79,7 @@ export const HoverDoccomponent = () => {
             whenapositive="positive1"
             img="imgmodel1"
             equation="equation1" />
-          <BlockDiagram 
+          <BlockDiagram
             className="blockdiagram1"
             imgblockdiagram="imgbd1" />
           <Next navigate="navi1"
@@ -101,20 +126,20 @@ export const HoverDoccomponent = () => {
 
       {screenWidth < 834 && (
         <>
-          <About 
+          <About
             className="about20"
             theDOFhoverwrapper="about21"
             theDOFhover="about22"
             aboutwrapper="about23"
             abouttheDOF="about24"
             img="about25" />
-          <HowItWorks 
+          <HowItWorks
             className="howitwork20"
             thedegreeof="howitwork21"
             HowItWorksbox="howitwork22"
             HowItWorkstext="howitwork23"
-             />
-          <Modeling 
+          />
+          <Modeling
             className="modeling20"
             model="modeling21"
             modelingwrapper="modeling22"
@@ -123,7 +148,7 @@ export const HoverDoccomponent = () => {
             whenapositive="modeling25"
             equation="modeling26"
             img="modeling27" />
-          <BlockDiagram 
+          <BlockDiagram
             className="blockdiagram20"
             imgblockdiagram="blockdiagram21" />
           <Next navigate="navigate2"

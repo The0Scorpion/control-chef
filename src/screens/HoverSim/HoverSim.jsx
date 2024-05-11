@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useWindowWidth } from "../../breakpoints";
+import { useLocation } from "react-router-dom";
 import { ButtonsSim } from "../../components/ButtonsSim";
 import { Footer } from "../../components/Footer";
 import { Graphsim } from "../../components/Graphsim";
@@ -20,7 +21,37 @@ Amplify.configure(awsConfig);
 
 export const HoverSimcomponent = () => {
 
+  const location = useLocation();
   const screenWidth = useWindowWidth();
+  const [scrollToTop, setScrollToTop] = useState(false);
+  // Function to calculate the height of the last component
+  const calculateLastComponentHeight = () => {
+    // You can customize this function to calculate the height of the last component in each condition block
+    if (screenWidth < 834) {
+      return 870; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 834 && screenWidth < 1300) {
+      return 1690; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 1300) {
+      return 2050; // Adjust this value based on the height of the last component
+    }
+    // Return a default value if none of the conditions match
+    return 0;
+  };
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Scroll to the top of the page when the route changes to "/"
+      window.scrollTo(0, 0);
+      setScrollToTop(true);
+    } else {
+      setScrollToTop(false);
+    }
+  }, [location.pathname]);
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once
+
   const [SimulationPoints, setSimulationPoints] = useState(null)
   const [Simulation, setSimulation] = useState(null)
   const [ParameterData, setParameterData] = useState(null)
@@ -38,14 +69,7 @@ export const HoverSimcomponent = () => {
     <div className="hoversim"
       style={{
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
-        height:
-          screenWidth < 834
-            ? "870px"
-            : screenWidth >= 834 && screenWidth < 1300
-              ? "1690px"
-              : screenWidth >= 1300
-                ? "2050px"
-                : undefined,
+        height: calculateLastComponentHeight(),
         width: "100%"
       }}
     >
@@ -145,7 +169,7 @@ export const HoverSimcomponent = () => {
 
       {screenWidth < 834 && (
         <>
-          <Parametersnewand 
+          <Parametersnewand
             setParameterData={setParameterData}
             className="BlockDiagrams5"
           />
@@ -219,7 +243,7 @@ export const HoverSimcomponent = () => {
             back="back2"
             linkTo1="/hover-realtime/"
             linkTo2="/Hover-Documentation/"
-            />
+          />
         </>
       )}
     </div>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useWindowWidth } from "../../breakpoints";
+import { useLocation } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { NavBar } from "../../components/NavBar";
 import { NavBar_2 } from "../../components/NavBar_2";
@@ -9,21 +10,45 @@ import { IntroWrapper } from "../../components/IntroWrapper";
 import "./style.css";
 
 export const Homepage = () => {
+  const location = useLocation();
   const screenWidth = useWindowWidth();
+  const [scrollToTop, setScrollToTop] = useState(false);
+  // Function to calculate the height of the last component
+  const calculateLastComponentHeight = () => {
+    // You can customize this function to calculate the height of the last component in each condition block
+    if (screenWidth < 834) {
+      return 2465; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 834 && screenWidth < 1300) {
+      return 1920; // Adjust this value based on the height of the last component
+    } else if (screenWidth >= 1300) {
+      return 2100; // Adjust this value based on the height of the last component
+    }
+    // Return a default value if none of the conditions match
+    return 0;
+  };
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Scroll to the top of the page when the route changes to "/"
+      window.scrollTo(0, 0);
+      setScrollToTop(true);
+    } else {
+      setScrollToTop(false);
+    }
+  }, [location.pathname]);
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once
+
+
   return (
     <div
       className="welcome-and"
       style={{
         background: "linear-gradient(135deg, rgb(5, 5, 24) 60%, rgb(26.25, 26.25, 126) 100%)",
-        height:
-          screenWidth < 834
-            ? "2465px"
-            : screenWidth >= 834 && screenWidth < 1300
-              ? "1920px"
-              : screenWidth >= 1300
-                ? "2100px"
-                : undefined,
-        width:"100%"
+        height: calculateLastComponentHeight(), // Set the height dynamically
+        width: "100%"
       }}
     >
       {screenWidth < 834 && (
