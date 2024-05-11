@@ -617,6 +617,7 @@
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
+  z-index: 10000 !important;
 }
 
 .hoversim .parameters-3 {
@@ -1125,7 +1126,7 @@
 }
 
 .hoversim .graphs-24 {
-  top: 420px !important;
+  top: 270px !important;
 }
 
 .hoversim .graphs-28 {
@@ -1135,13 +1136,13 @@
 
 .hoversim .graphs-31 {
   left: 165px !important;
-  top: 420px !important;
+  top: 270px !important;
 }
 
 .hoversim .graphs-20 {
-  height: 315px !important;
+  height: 160px !important;
   top: 44px !important;
-  width: 161px !important;
+  width: 160px !important;
 }
 
 .hoversim .graphs-21 {
@@ -1336,7 +1337,7 @@
 
 .hoversim .footer5{
   left:0px !important;
-  top:2440px !important;
+  top: 750px !important;
 }
 
 .hoversim .groupfooter{
@@ -1586,5 +1587,21 @@
 
 .hoversim .nav2{
   position: absolute !important;
-  top: 1000px !important;
+  top: 720px !important;
+}
+
+.hoversim .next2{
+  border-radius: 5px !important;
+  height: 22px !important;
+  width: 40px !important;
+  left: 300px !important;
+  font-size: 12px !important;
+}
+
+.hoversim .back2{
+  border-radius: 5px !important;
+  height: 22px !important;
+  width: 40px !important;
+  left: 25px !important;
+  font-size: 12px !important;
 }

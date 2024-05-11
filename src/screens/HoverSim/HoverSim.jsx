@@ -40,7 +40,7 @@ export const HoverSimcomponent = () => {
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
         height:
           screenWidth < 834
-            ? "2565px"
+            ? "870px"
             : screenWidth >= 834 && screenWidth < 1300
               ? "1690px"
               : screenWidth >= 1300
@@ -146,14 +146,17 @@ export const HoverSimcomponent = () => {
       {screenWidth < 834 && (
         <>
           <Parametersnewand 
+            setParameterData={setParameterData}
             className="BlockDiagrams5"
-            />
+          />
           <SimulationStreaming
             title="Simulation of Hover"
             className="simulation-streaming-3"
             simulationStreamingClassName="simulation-streaming-4"
           />
           <ButtonsSim
+            GraphAndSimulate={GraphAndSimulate}
+            destroygraph={destroygraph}
             className="buttons-3"
             resetClassName="buttons-9"
             setClassName="buttons-11"
