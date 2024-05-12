@@ -1,168 +1,485 @@
 .parameters {
-  background-color: #6785f133;
-  border-radius: 25px;
-  height: 367px;
+  height: 117px;
+  width: 343px;
+  position: absolute;
+  left: 5px;
+  top: 60px;
+}
+
+.parameters .group {
+  height: 91px;
+  left: 6px;
   position: relative;
-  transform: translate(0, 25px);
-  width: 613px;
+  top: 13px;
+  width: 361px;
+}
+
+.parameters .pitch-input-angle {
+  color: #ffffff;
+  background-color: rgb(0, 0, 24);
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 0px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  position: absolute;
+  width: 74px;
+}
+
+.parameters .overlap {
+  height: 91px;
+  left: 74px;
+  position: absolute;
+  top: 0;
+  width: 257px;
+}
+
+.parameters .div {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 35px;
+}
+
+.parameters .arrow {
+  height: 7px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  width: 16px;
+}
+
+.parameters .ellipse {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  height: 20px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.parameters .flexcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  height: 15px;
+  left: 16px;
+  position: absolute;
+  top: 5px;
+  width: 17px;
 }
 
 .parameters .text {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 83px;
-  width: 258px;
+  align-self: stretch;
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 7px;
+  position: relative;
 }
 
-.parameters .text-wrapper-7 {
-  color: #ffffff;
-  font-family: var(--paragraph-font-family);
-  font-size: var(--paragraph-font-size);
-  font-style: var(--paragraph-font-style);
-  font-weight: var(--paragraph-font-weight);
-  height: 20px;
-  left: 0;
-  letter-spacing: var(--paragraph-letter-spacing);
-  line-height: var(--paragraph-line-height);
-  position: absolute;
-  text-align: center;
-  top: 1px;
-  width: 77px;
+.parameters .text-wrapper {
+  color: #6454f0;
+  font-family: "Salsa", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 7px;
 }
 
-.parameters .input {
-  height: 22px;
-  left: 85px;
+.parameters .overlap-2 {
+  height: 62px;
+  left: 21px;
   position: absolute;
   top: 0;
-  width: 173px;
-  background-color: #ffffff;
-  color: #000000b2;
-  font-family: var(--paragraph-font-family);
-  font-size: var(--paragraph-font-size);
-  font-style: var(--paragraph-font-style);
-  font-weight: var(--paragraph-font-weight);
-  letter-spacing: var(--paragraph-letter-spacing);
-  line-height: var(--paragraph-line-height);
-  text-align: center;
+  width: 236px;
 }
 
-.parameters .text-2 {
-  height: 22px;
-  left: 331px;
+.parameters .overlap-3 {
+  height: 23px;
+  left: 14px;
   position: absolute;
-  top: 83px;
-  width: 258px;
+  top: 0;
+  width: 62px;
 }
 
-.parameters .text-3 {
-  height: 22px;
-  left: 18px;
+.parameters .img {
+  height: 7px;
+  left: 0;
+  object-fit: cover;
   position: absolute;
-  top: 117px;
-  width: 258px;
+  top: 7px;
+  width: 16px;
 }
 
-.parameters .text-4 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 117px;
-  width: 258px;
-}
-
-.parameters .text-5 {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 151px;
-  width: 258px;
-}
-
-.parameters .text-6 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 151px;
-  width: 258px;
-}
-
-.parameters .text-7 {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 185px;
-  width: 258px;
-}
-
-.parameters .text-8 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 185px;
-  width: 258px;
-}
-
-.parameters .text-9 {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 219px;
-  width: 258px;
-}
-
-.parameters .text-10 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 219px;
-  width: 258px;
-}
-
-.parameters .text-11 {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 253px;
-  width: 258px;
-}
-
-.parameters .text-12 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 253px;
-  width: 258px;
-}
-
-.parameters .text-13 {
-  height: 22px;
-  left: 18px;
-  position: absolute;
-  top: 287px;
-  width: 258px;
-}
-
-.parameters .text-14 {
-  height: 22px;
-  left: 331px;
-  position: absolute;
-  top: 287px;
-  width: 258px;
-}
-
-.parameters .please-enter-your {
+.parameters .PID {
   color: #ffffff;
-  font-family: var(--header-font-family);
-  font-size: var(--header-font-size);
-  font-style: var(--header-font-style);
-  font-weight: var(--header-font-weight);
-  height: 29px;
-  left: 87px;
-  letter-spacing: var(--header-letter-spacing);
-  line-height: var(--header-line-height);
+  border: none;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
   position: absolute;
   text-align: center;
-  top: 25px;
+  background-color: #6454f0;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+}
+
+
+.parameters .PID3 {
+  color: #ffffff;
+  border: none;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  background-color: #6454f0;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+}
+
+.parameters .overlap-4 {
+  height: 38px;
+  left: 76px;
+  position: absolute;
+  top: 1px;
+  width: 35px;
+}
+
+.parameters .flexcontainer-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  height: 15px;
+  left: 17px;
+  position: absolute;
+  top: 5px;
+  width: 17px;
+}
+
+.parameters .arrow-2 {
+  height: 18px;
+  left: 21px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  width: 7px;
+}
+
+.parameters .overlap-5 {
+  height: 23px;
+  left: 112px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+.parameters .PID2 {
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+}
+
+.parameters .PID4 {
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: 47px;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+}
+
+.parameters .overlap-6 {
+  height: 23px;
+  left: 174px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+.parameters .plant {
+  color: #ffffff;
+  background-color: #6454f0;
+  border-radius: 5px;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 23px;
+  width: 47px;
+  left: 10px;
+  top: 0px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+}
+
+.parameters .overlap-7 {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 22px;
+  width: 201px;
+}
+
+.parameters .line {
+  height: 16px;
+  left: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1px;
+}
+
+.parameters .line-2 {
+  height: 1px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 197px;
+}
+
+.parameters .arrow-3 {
+  height: 18px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.parameters .sensed-angular {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 111px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+  width: 83px;
+}
+
+.parameters .pitch-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+  width: 42px;
+}
+
+.parameters .overlap-8 {
+  height: 39px;
+  left: 175px;
+  position: absolute;
+  top: 24px;
+  width: 42px;
+}
+
+.parameters .arrow-4 {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 38px;
+  width: 38px;
+}
+
+.parameters .arrow-5 {
+  height: 38px;
+  left: 34px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.parameters .overlap-9 {
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: 52px;
+  width: 35px;
+}
+
+.parameters .overlap-10 {
+  height: 40px;
+  left: 22px;
+  position: absolute;
+  top: 51px;
+  width: 222px;
+}
+
+.parameters .overlap-11 {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 22px;
+  width: 222px;
+}
+
+.parameters .line-3 {
+  height: 1px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 218px;
+}
+
+.parameters .roll-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 37px;
+}
+
+.parameters .sensed-angular-2 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  height: 10px;
+  left: 113px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 78px;
+}
+
+.parameters .line-4 {
+  height: 68px;
+  left: 244px;
+  object-fit: cover;
+  position: absolute;
+  top: 23px;
+  width: 1px;
+}
+
+.parameters .roll-input-angle {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 0px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 51px;
+  border: 1px solid;
+  border-color: #6454f0;
+  border-radius: 5px;
+  height: 23px;
+  position: absolute;
+  width: 74px;
+}
+
+/* Add styles for popups */
+.parameters .popup {
+  position: absolute;
+  background: linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  border-radius: 5px;
+  width: 100px;
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 0px;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 999; /* Ensure popup is above other elements */
+}
+
+/* Add styles for input fields and buttons inside the popup */
+.parameters .popup input {
+  margin: 5px;
+  width: 60px; /* Add margin-bottom */
+}
+
+.parameters .popup button {
+  margin: 5px; /* Add margin-right */
+}
+
+.parameters .textk{
+  font-family: "Salsa", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  margin: 5px;
+  color: white;
+  display: inline-block;
 }

@@ -31,7 +31,7 @@ export const Graphs = ({
 
   useEffect(() => {
     fetch("https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test", {
-      method: "GET",
+      method: "ANY",
       headers: {
         "Content-Type": "application/json",
       },
@@ -94,9 +94,6 @@ export const Graphs = ({
       }
     }
   }, [data]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div className={`graphsim ${className}`}>

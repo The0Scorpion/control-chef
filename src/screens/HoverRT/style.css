@@ -295,7 +295,7 @@
   height: 1323px !important;
   left: 30px !important;
   position: absolute !important;
-  top: 1150px !important;
+  top: 1200px !important;
   width: 765px !important;
   align-items: center !important;
 }
@@ -327,7 +327,7 @@
 
 .hover .graphs-5 {
   height: 310px !important;
-  top: 698px !important;
+  top: 400px !important;
   width: 379px !important;
 }
 
@@ -368,7 +368,7 @@
 .hover .graphs-12 {
   height: 310px !important;
   left: 388px !important;
-  top: 698px !important;
+  top: 400px !important;
   width: 379px !important;
 }
 
@@ -433,7 +433,7 @@
 
 
 .hover .parameters-instance {
-  left: 90px !important;
+  left: 0px !important;
   position: absolute !important;
   top: 170px !important;
 }
@@ -445,7 +445,7 @@
 }
 
 .hover .buttons-instance {
-  left: 170px !important;
+  left: 10px !important;
   position: absolute !important;
   top: 580px !important;
 }
@@ -605,6 +605,18 @@
   top: 690px !important;
 }
 
+.hover .video-stream-instance1 {
+  left: 30px !important;
+  position: absolute !important;
+  top: 690px !important;
+}
+
+.hover .video-stream-instance2 {
+  left: 15px !important;
+  position: absolute !important;
+  top: 220px !important;
+}
+
 .hover .parameters-2 {
   left: 120px !important;
   position: absolute !important;
@@ -627,7 +639,7 @@
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
-  z-index: 1000 !important;
+  z-index: 10000 !important;
 }
 
 .hover .parameters-3 {
@@ -900,7 +912,7 @@
   height: 85px !important;
   left: 0px !important;
   position: absolute !important;
-  top: 540px !important;
+  top: 185px !important;
   width: 284px !important;
 }
 
@@ -917,7 +929,7 @@
 
 .hover .buttons-6 {
   font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
+  font-size: 10px !important;
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
@@ -928,6 +940,8 @@
   white-space: nowrap !important;
   width: 70px !important;
   align-items: center !important;
+  border-radius: 7px !important;
+  border-width: 1px !important;
 }
 
 .hover .buttons-7 {
@@ -942,7 +956,7 @@
 
 .hover .buttons-9 {
   font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
+  font-size: 10px !important;
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
@@ -953,11 +967,13 @@
   white-space: nowrap !important;
   width: 70px !important;
   align-items: center !important;
+  border-radius: 7px !important;
+  border-width: 1px !important;
 }
 
 .hover .buttons-90 {
   font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
+  font-size: 10px !important;
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
@@ -967,6 +983,7 @@
   top: 0px !important;
   white-space: nowrap !important;
   width: 70px !important;
+  border-radius: 7px !important;
   align-items: center !important;
 }
 
@@ -978,7 +995,7 @@
 
 .hover .buttons-11 {
   font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
+  font-size: 10px !important;
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
@@ -988,6 +1005,7 @@
   top: 0px !important;
   white-space: nowrap !important;
   width: 70px !important;
+  border-radius: 7px !important;
   align-items: center !important;
 }
 
@@ -1126,20 +1144,18 @@
   height: 1565px !important;
   left: 20px !important;
   position: absolute !important;
-  top: 810px !important;
+  top: 430px !important;
   width: 326px !important;
 }
 
 .hover .graphs-19 {
-  height: 359px !important;
-  top: 87px !important;
-  width: 163px !important;
+  top: 45px !important;
 }
 
 .hover .graphs-20 {
-  height: 315px !important;
+  height: 160px !important;
   top: 44px !important;
-  width: 161px !important;
+  width: 160px !important;
 }
 
 .hover .graphs-21 {
@@ -1175,9 +1191,7 @@
 }
 
 .hover .graphs-24 {
-  height: 359px !important;
-  top: 833px !important;
-  width: 163px !important;
+  top: 270px !important;
 }
 
 .hover .graphs-25 {
@@ -1212,10 +1226,8 @@
 }
 
 .hover .graphs-28 {
-  height: 359px !important;
   left: 165px !important;
-  top: 87px !important;
-  width: 163px !important;
+  top: 45px !important;
 }
 
 .hover .graphs-29 {
@@ -1238,10 +1250,8 @@
 }
 
 .hover .graphs-31 {
-  height: 359px !important;
   left: 165px !important;
-  top: 833px !important;
-  width: 163px !important;
+  top: 270px !important;
 }
 
 .hover .graphs-32 {
@@ -1285,7 +1295,7 @@
   left: 131px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
-  top: 9px !important;
+  top: 0px !important;
   width: unset !important;
 }
 
@@ -1295,7 +1305,7 @@
   position: fixed !important;
   top: 0px !important;
   width: 360px !important;
-  z-index: 1 !important;
+  z-index: 10000 !important;
   border-radius:  0px 0px 3px 3px  !important;
 }
 
@@ -1354,7 +1364,7 @@
 
 .hover .footer5{
   left:0px !important;
-  top:2440px !important;
+  top:1000px !important;
 }
 
 .hover .groupfooter{
@@ -1448,12 +1458,12 @@
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
-  z-index: 1 !important;
+  z-index: 10000 !important;
 }
 
 .hover .footer1{
   left:0px !important;
-  top:2550px !important;
+  top:2050px !important;
   position: absolute !important;
 }
 
@@ -1543,4 +1553,72 @@
   left:210px !important;
   top: 65px !important;
   font-size: var(--f10-font-size) !important;
+}
+
+.hover .rollgroup1{
+  left: 10px !important;
+}
+
+.hover .pitchgroup1{
+  left:10px !important;
+  z-index: 1 !important;
+}
+
+.hover .plantimg1{
+  left: 400px !important;
+  z-index: 1 !important;
+}
+
+.hover .arrow1{
+  left: 32px !important;
+  z-index: -10;
+}
+
+.hover .start1{
+  left: 20px !important;
+  width: 150px !important;
+}
+
+.hover .stop1{
+  left: 200px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hover .set1{
+  left: 400px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hover .reset1{
+  left: 600px !important;
+  top: 0px !important;
+  width: 150px !important;
+}
+
+.hover .nav1{
+  top: 1980px !important;
+  position: absolute !important;
+}
+
+.hover .next1{
+  opacity: 0%  !important;
+}
+
+.hover .nav2{
+  position: absolute !important;
+  top: 950px !important;
+}
+
+.hover .next2{
+  opacity: 0% !important;
+}
+
+.hover .back2{
+  border-radius: 5px !important;
+  height: 22px !important;
+  width: 40px !important;
+  left: 25px !important;
+  font-size: 12px !important;
 }

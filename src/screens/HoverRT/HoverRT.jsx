@@ -20,6 +20,7 @@ import "./style.css";
 Amplify.configure(awsConfig);
 
 export const HoverRTcomponent = () => {
+  const location = useLocation();
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
   const [parameterData, setParameterData] = useState(null);
@@ -115,9 +116,9 @@ export const HoverRTcomponent = () => {
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
         height:
           screenWidth < 834
-            ? "2565px"
+            ? "1120px"
             : screenWidth >= 834 && screenWidth < 1300
-              ? "2730px"
+              ? "2250px"
               : screenWidth >= 1300
                 ? "2700px"
                 : undefined,
@@ -126,43 +127,56 @@ export const HoverRTcomponent = () => {
     >
       {screenWidth >= 834 && screenWidth < 1300 && (
         <>
+          <SimulationStreaming
+            title="Real Time Simulation"
+            className="simulation-streaming-instance" 
+          />
           <Parametersnew
             setParameterData={setParameterData} 
-            className="parameters-instance" />
+            className="parameters-instance" 
+            rollgroup="rollgroup1"
+            pitchgroup="pitchgroup1"
+            plantgroup="plantimg1"
+            arrow3="arrow1"
+            arrow4="arrow1"
+          />
+          <URDFViewer
+            urdfUrl="/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf"
+            className="video-stream-instance1"
+            width="800"
+            height="500"
+          />
           <Buttons
             sendDataToLambda={sendDataToLambda}
             sendDataTostart={sendDataTostart}
             sendDataTostop={sendDataTostop}
             parameterData={parameterData}
-            className="buttons-instance" />
+            className="buttons-instance"
+            startClassName="start1"
+            stopClassName="stop1"
+            setClassName="set1"
+            resetClassName="reset1" 
+          />
           <Graphs
             className="graphs-instance"
-            divClassName="graphs-5"
             divClassName1="graphs-16"
-            divClassNameOverride="graphs-6"
             groupClassName="instance-node"
-            groupClassName1="graphs-8"
+            divClassName="graphs-5"
             groupClassName2="graphs-9"
-            groupClassName3="graphs-11"
             groupClassName4="graphs-12"
-            groupClassName5="graphs-14"
-            groupClassNameOverride="graphs-4"
             rectangleClassName="graphs-2"
+            divClassNameOverride="graphs-2"
             rectangleClassName1="graphs-2"
-            rectangleClassName2="graphs-6"
-            rectangleClassName3="graphs-6"
-            rectangleClassName4="graphs-6"
-            rectangleClassName5="graphs-6"
             rectangleClassNameOverride="graphs-2"
             xPosClassName="graphs-3"
-            xPosPidClassName="graphs-10"
-            xVelClassName="graphs-7"
-            xVelPidClassName="graphs-13"
+            xVelClassName="graphs-3"
             yPosClassName="graphs-3"
-            yPosPidClassName="graphs-10"
             yVelClassName="graphs-3"
-            yVelPidClassName="graphs-15"
           />
+          <Next navigate="nav1"
+            next="next1"
+            back="back1"
+            linkTo2="/hover-simulation" />
           <NavBar_2 className="nav-bar-tab" />
           <Footer
             className="footer1"
@@ -221,81 +235,18 @@ export const HoverRTcomponent = () => {
       {screenWidth < 834 && (
         <>
           <Parameters
+            setParameterData={setParameterData}
             className="parameters-3"
-            divClassName="parameters-10"
-            divClassNameOverride="parameters-13"
-            groupClassName="parameters-6"
-            groupClassName1="parameters-6"
-            groupClassName10="parameters-6"
-            groupClassName2="parameters-6"
-            groupClassName3="parameters-6"
-            groupClassName4="parameters-6"
-            groupClassName5="parameters-6"
-            groupClassName6="parameters-6"
-            groupClassName7="parameters-6"
-            groupClassName8="parameters-6"
-            groupClassName9="parameters-6"
-            groupClassNameOverride="parameters-6"
-            overlapGroupClassName="parameters-7"
-            overlapGroupClassNameOverride="parameters-7"
-            overlapGroupWrapperClassName="parameters-11"
-            overlapGroupWrapperClassNameOverride="parameters-11"
-            pleaseEnterYourClassName="parameters-31"
-            textClassName="parameters-4"
-            textClassName1="parameters-14"
-            textClassName10="parameters-30"
-            textClassName2="parameters-15"
-            textClassName3="parameters-16"
-            textClassName4="parameters-19"
-            textClassName5="parameters-20"
-            textClassName6="parameters-23"
-            textClassName7="parameters-24"
-            textClassName8="parameters-25"
-            textClassName9="parameters-26"
-            textClassNameOverride="parameters-9"
-            xPosKdClassName="parameters-5"
-            xPosKdClassNameOverride="parameters-8"
-            xPosKdWrapperClassName="parameters-7"
-            xPosKiClassName="parameters-5"
-            xPosKiClassNameOverride="parameters-8"
-            xPosKiWrapperClassName="parameters-7"
-            xPosKpClassName="parameters-5"
-            xPosKpClassNameOverride="parameters-8"
-            xSetPointClassName="parameters-5"
-            xSetPointClassNameOverride="parameters-8"
-            xSetPointWrapperClassName="parameters-7"
-            xVelKdClassName="parameters-5"
-            xVelKdClassNameOverride="parameters-8"
-            xVelKdWrapperClassName="parameters-7"
-            xVelKiClassName="parameters-5"
-            xVelKiClassNameOverride="parameters-8"
-            xVelKiWrapperClassName="parameters-7"
-            xVelKpClassName="parameters-5"
-            xVelKpClassNameOverride="parameters-8"
-            xVelKpWrapperClassName="parameters-7"
-            yPosKdClassName="parameters-5"
-            yPosKdClassNameOverride="parameters-8"
-            yPosKdWrapperClassName="parameters-7"
-            yPosKiClassName="parameters-5"
-            yPosKiClassNameOverride="parameters-8"
-            yPosKiWrapperClassName="parameters-7"
-            yPosKpClassName="parameters-5"
-            yPosKpClassNameOverride="parameters-8"
-            ySetPointClassName="parameters-5"
-            ySetPointClassNameOverride="parameters-8"
-            ySetPointWrapperClassName="parameters-7"
-            yVelKdClassName="parameters-5"
-            yVelKdClassNameOverride="parameters-8"
-            yVelKdWrapperClassName="parameters-7"
-            yVelKiClassName="parameters-5"
-            yVelKiClassNameOverride="parameters-8"
-            yVelKiWrapperClassName="parameters-7"
-            yVelKpClassName="parameters-5"
-            yVelKpClassNameOverride="parameters-8"
-            yVelKpWrapperClassName="parameters-7"
+          />
+          <URDFViewer
+            urdfUrl="/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf"
+            className="video-stream-instance2"
+            width="300"
+            height="200"
           />
           <SimulationStreaming
             className="simulation-streaming-3"
+            title="Real Time Simulation"
             simulationStreamingClassName="simulation-streaming-4"
           />
           <Buttons
@@ -307,31 +258,19 @@ export const HoverRTcomponent = () => {
           />
           <Graphs
             className="graphs-18"
-            divClassName="graphs-24"
             divClassName1="graphs-35"
-            divClassNameOverride="graphs-20"
             groupClassName="graphs-19"
-            groupClassName1="graphs-26"
+            divClassName="graphs-24"
             groupClassName2="graphs-28"
-            groupClassName3="graphs-30"
             groupClassName4="graphs-31"
-            groupClassName5="graphs-33"
-            groupClassNameOverride="graphs-22"
             rectangleClassName="graphs-20"
+            divClassNameOverride="graphs-20"
             rectangleClassName1="graphs-20"
-            rectangleClassName2="graphs-20"
-            rectangleClassName3="graphs-20"
-            rectangleClassName4="graphs-20"
-            rectangleClassName5="graphs-20"
             rectangleClassNameOverride="graphs-20"
             xPosClassName="graphs-21"
-            xPosPidClassName="graphs-29"
-            xVelClassName="graphs-25"
-            xVelPidClassName="graphs-32"
-            yPosClassName="graphs-23"
-            yPosPidClassName="graphs-29"
-            yVelClassName="graphs-27"
-            yVelPidClassName="graphs-34"
+            xVelClassName="graphs-21"
+            yPosClassName="graphs-21"
+            yVelClassName="graphs-21"
           />
           <NavBar_2
             className="nav-bar-tab-instance"
@@ -365,6 +304,11 @@ export const HoverRTcomponent = () => {
             overlapwrapper="overlapwrapperfooter"
             rectangle="rectanglefooter"
             copyright="copyrightfooter"
+          />
+          <Next navigate="nav2"
+            next="next2"
+            back="back2"
+            linkTo2="/hover-simulation"
           />
         </>
       )}

@@ -5,6 +5,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export const URDFViewer = ({ 
   urdfUrl,
+  width,
+  height,
   className
 }) => {
   const containerRef = useRef();
@@ -16,17 +18,17 @@ export const URDFViewer = ({
     if(setonce==1){return;}
     const container = containerRef.current;
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1000/ 600, 0.001, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.001, 1000); // Use width and height props for aspect ratio
     camera.position.set(5, 5, 5); // Set initial camera position
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     const ambientLight = new THREE.AmbientLight(0xffffff, .5); // Pure white ambient light with full intensity
     const directionalLight = new THREE.DirectionalLight(0xffffff,0.5); // Pure white directional light with full intensity
 
-// Add the lights to the scene
-scene.add(ambientLight);
-scene.add(directionalLight);
+    // Add the lights to the scene
+    scene.add(ambientLight);
+    scene.add(directionalLight);
     
-    renderer.setSize(1000, 600);
+    renderer.setSize(width, height); // Use width and height props for renderer size
     container.appendChild(renderer.domElement);
 
     setonce=1;
@@ -59,7 +61,7 @@ scene.add(directionalLight);
             console.log('Current Camera Position:', currentPosition);
             console.log('Current Camera Rotation:', currentRotation);
             
-        });
+          });
         }, 300); // Adjust the delay time as needed
       }, 
       undefined, 
@@ -75,8 +77,6 @@ scene.add(directionalLight);
     animate();
 
     const handleResize = () => {
-      const width = 1000;
-      const height = 600;
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
@@ -87,7 +87,7 @@ scene.add(directionalLight);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [urdfUrl]);
+  }, [urdfUrl, width, height]);
 
   return (
     <div className={`urdf ${className}`} ref={containerRef} />
