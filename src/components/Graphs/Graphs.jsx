@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import "./style.css";
-import axios from 'axios';
+
 export const Graphs = ({
   className,
   groupClassName,
@@ -28,21 +28,46 @@ export const Graphs = ({
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
-  useEffect(() => {
+
 
   // Define the API Gateway endpoint
-  const apiGatewayUrl = 'https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test';
+  const apiGatewayUrl = 'https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test/Getdata';
   
-    axios.get(apiGatewayUrl)
-  .then(response => {
-    // Handle the response data
-    console.log('Response:', response.data);
-  })
-  .catch(error => {
-    // Handle errors
-    console.error('Error:', error);
-  });
+  useEffect(() => {
+    fetch(apiGatewayUrl, {
+      method: "GET",
+      headers: {
+        "Access-Control-Allow-Headers": "Content-Type", // Allow specific headers
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const Stream=response.body;
+        console.log(Stream);
+        const reader=Stream.getReader();
+        let result = '';
+        /*while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          // Convert the value (Uint8Array) to a string
+          result += new TextDecoder().decode(value);
+        }*/
+
+        // Parse the result as JSON
+        const jsonData = JSON.parse(result);
+
+        // Update state with the data
+        setData(jsonData);
+        setLoading(false);
+        
+      })
+      .catch(error => {
+        setError(error);
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -78,6 +103,7 @@ export const Graphs = ({
 
     if (data) {
       console.log("Data available, creating charts...");
+      console.log(data);
       for (const [key, ref] of Object.entries(chartRefs)) {
         if (data[key] && ref.current) {
           createGraph(ref.current.getContext("2d"), key, data[key]);
