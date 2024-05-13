@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import "./style.css";
-
+import axios from 'axios';
 export const Graphs = ({
   className,
   groupClassName,
@@ -28,30 +28,21 @@ export const Graphs = ({
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
   useEffect(() => {
-    fetch("https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test", {
-      method: "ANY",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((responseJson) => {
-        console.log("Data fetched successfully:", responseJson);
-        setData(responseJson.body ? JSON.parse(responseJson.body) : null);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setError(error);
-        setLoading(false);
-      });
+
+  // Define the API Gateway endpoint
+  const apiGatewayUrl = 'https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test';
+  
+    axios.get(apiGatewayUrl)
+  .then(response => {
+    // Handle the response data
+    console.log('Response:', response.data);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('Error:', error);
+  });
   }, []);
 
   useEffect(() => {
