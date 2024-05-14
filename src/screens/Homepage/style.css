@@ -503,6 +503,7 @@
 
 .welcome-and .footer5{
   left:0px !important;
+  position: absolute !important;
   top:2350px !important;
 }
 

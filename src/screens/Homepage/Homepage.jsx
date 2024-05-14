@@ -13,19 +13,7 @@ export const Homepage = () => {
   const location = useLocation();
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
-  // Function to calculate the height of the last component
-  const calculateLastComponentHeight = () => {
-    // You can customize this function to calculate the height of the last component in each condition block
-    if (screenWidth < 834) {
-      return 2465; // Adjust this value based on the height of the last component
-    } else if (screenWidth >= 834 && screenWidth < 1300) {
-      return 1920; // Adjust this value based on the height of the last component
-    } else if (screenWidth >= 1300) {
-      return 2100; // Adjust this value based on the height of the last component
-    }
-    // Return a default value if none of the conditions match
-    return 0;
-  };
+
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -42,13 +30,48 @@ export const Homepage = () => {
   }, []); // Empty dependency array ensures this effect runs only once
 
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const clientHeight = document.documentElement.clientHeight;
+
+      // Check if the user has scrolled to the bottom of the page
+      if (scrollTop + clientHeight >= scrollHeight) {
+        // If at the bottom, prevent further scrolling
+        document.documentElement.style.overflowY = 'hidden';
+      } else {
+        // If not at the bottom, allow scrolling
+        document.documentElement.style.overflowY = 'auto';
+      }
+    };
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
   return (
     <div
       className="welcome-and"
       style={{
         background: "linear-gradient(135deg, rgb(5, 5, 24) 60%, rgb(26.25, 26.25, 126) 100%)",
-        height: calculateLastComponentHeight(), // Set the height dynamically
-        width: {screenWidth}
+        height: screenWidth < 834
+          ? "2465px"
+          : screenWidth >= 834 && screenWidth < 1300
+            ? "1920px"
+            : screenWidth >= 1300
+              ? "2100px"
+              : undefined, // Set the height dynamically
+        width: { screenWidth }
       }}
     >
       {screenWidth < 834 && (

@@ -23,19 +23,6 @@ export const HoverDoccomponent = () => {
   const location = useLocation();
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
-  // Function to calculate the height of the last component
-  const calculateLastComponentHeight = () => {
-    // You can customize this function to calculate the height of the last component in each condition block
-    if (screenWidth < 834) {
-      return 1220; // Adjust this value based on the height of the last component
-    } else if (screenWidth >= 834 && screenWidth < 1300) {
-      return 2610; // Adjust this value based on the height of the last component
-    } else if (screenWidth >= 1300) {
-      return 3120; // Adjust this value based on the height of the last component
-    }
-    // Return a default value if none of the conditions match
-    return 0;
-  };
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -51,6 +38,35 @@ export const HoverDoccomponent = () => {
     window.scrollTo(0, 0);
   }, []); // Empty dependency array ensures this effect runs only once
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const clientHeight = document.documentElement.clientHeight;
+
+      // Check if the user has scrolled to the bottom of the page
+      if (scrollTop + clientHeight >= scrollHeight) {
+        // If at the bottom, prevent further scrolling
+        document.documentElement.style.overflowY = 'hidden';
+      } else {
+        // If not at the bottom, allow scrolling
+        document.documentElement.style.overflowY = 'auto';
+      }
+    };
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
   return (
     <Authenticator>
       {({ signOut, user }) => (
@@ -58,8 +74,14 @@ export const HoverDoccomponent = () => {
           <div className="hoverdoc"
             style={{
               background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
-              height: calculateLastComponentHeight(),
-              width: {screenWidth}
+              height: screenWidth < 834
+                ? "1220px"
+                : screenWidth >= 834 && screenWidth < 1300
+                  ? "2610px"
+                  : screenWidth >= 1300
+                    ? "3120px"
+                    : undefined,
+              width: { screenWidth }
             }}
           >
             {screenWidth >= 834 && screenWidth < 1300 && (
@@ -91,7 +113,7 @@ export const HoverDoccomponent = () => {
                   back="back1"
                   linkTo1="/hover-simulation" />
                 <NavBar_2
-                  onclick={signOut}  
+                  onclick={signOut}
                   className="nav-bar-tab" />
                 <Footer
                   className="footer1"
@@ -120,9 +142,9 @@ export const HoverDoccomponent = () => {
               <>
                 <Footer className="footerdoc" />
                 <NavBar
-                  onclick={signOut} 
+                  onclick={signOut}
                   className="navbardoc"
-                 />
+                />
                 <About className="about" />
                 <HowItWorks className="howitwork" />
                 <Modeling className="modeling" />
@@ -165,7 +187,7 @@ export const HoverDoccomponent = () => {
                   back="backop2"
                   next="next2" />
                 <NavBar_2
-                  onclick={signOut} 
+                  onclick={signOut}
                   className="nav-bar-tab-instance"
                   controltotal1="logo1"
                   navbarclassName="nav-bar1"
