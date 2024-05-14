@@ -48,7 +48,7 @@ export const Homepage = () => {
       style={{
         background: "linear-gradient(135deg, rgb(5, 5, 24) 60%, rgb(26.25, 26.25, 126) 100%)",
         height: calculateLastComponentHeight(), // Set the height dynamically
-        width: "100%"
+        width: {screenWidth}
       }}
     >
       {screenWidth < 834 && (

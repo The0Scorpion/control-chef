@@ -32,19 +32,17 @@ const ws = useRef(null);
 
 useEffect(() => {
   // Establish WebSocket connection when component mounts
-  ws.current = new WebSocket("wss://hl9x4dyc1g.execute-api.eu-west-3.amazonaws.com/production");
+  ws.current = new WebSocket("wss://mygiohwl0g.execute-api.eu-west-3.amazonaws.com/production/");
 
   // Event listener for when the WebSocket connection is opened
   ws.current.onopen = () => {
     console.log("WebSocket connected");
   };
-
   // Event listener for incoming messages
   ws.current.onmessage = (event) => {
     console.log("Message received:", event.data);
     // Handle incoming message as needed
   };
-
   // Event listener for when the WebSocket connection is closed
   ws.current.onclose = () => {
     console.log("WebSocket disconnected");
@@ -167,7 +165,7 @@ const sendDataToWebSocket = (data) => {
               : screenWidth >= 1300
                 ? "2700px"
                 : undefined,
-        width: "100%"
+        width: {screenWidth}
       }}
     >
       {screenWidth >= 834 && screenWidth < 1300 && (

@@ -59,7 +59,7 @@ export const HoverDoccomponent = () => {
             style={{
               background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
               height: calculateLastComponentHeight(),
-              width: "100%"
+              width: {screenWidth}
             }}
           >
             {screenWidth >= 834 && screenWidth < 1300 && (
