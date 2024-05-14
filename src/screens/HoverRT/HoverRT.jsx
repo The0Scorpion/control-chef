@@ -257,6 +257,10 @@ export const HoverRTcomponent = () => {
             simulationStreamingClassName="simulation-streaming-4"
           />
           <Buttons
+            sendDataToLambda={sendDataToLambda}
+            sendDataTostart={sendDataTostart}
+            sendDataTostop={sendDataTostop}
+            parameterData={parameterData}
             className="buttons-3"
             resetClassName="buttons-9"
             setClassName="buttons-11"
