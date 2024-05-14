@@ -149,35 +149,6 @@ export const HoverRTcomponent = () => {
     window.scrollTo(0, 0);
   }, []); // Empty dependency array ensures this effect runs only once
 
-  useEffect(() => {
-    // Scroll to the top of the page when the component mounts
-    window.scrollTo(0, 0);
-
-    // Function to handle scroll event
-    const handleScroll = () => {
-      const scrollHeight = document.documentElement.scrollHeight;
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const clientHeight = document.documentElement.clientHeight;
-
-      // Check if the user has scrolled to the bottom of the page
-      if (scrollTop + clientHeight >= scrollHeight) {
-        // If at the bottom, prevent further scrolling
-        document.documentElement.style.overflowY = 'hidden';
-      } else {
-        // If not at the bottom, allow scrolling
-        document.documentElement.style.overflowY = 'auto';
-      }
-    };
-
-    // Attach scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup function to remove event listener when component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // Empty dependency array ensures this effect runs only once
-
   return (
     <Authenticator>
       {({ signOut, user }) => (
