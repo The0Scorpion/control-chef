@@ -1,8 +1,10 @@
 .welcome-and {
   display: flex;
   flex-direction: row;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  width: 1340;
+  width: 100%;
   overflow: hidden;
 }
 
