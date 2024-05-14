@@ -16,6 +16,7 @@ import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
 import { simulate } from "../../components/2DOF_Model";
+import { Authenticator } from "@aws-amplify/ui-react";
 
 Amplify.configure(awsConfig);
 
@@ -66,6 +67,9 @@ export const HoverSimcomponent = () => {
     setSimulation(destroy);
   };
   return (
+    <Authenticator>
+      {({ signOut, user }) => (
+        <>
     <div className="hoversim"
       style={{
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
@@ -112,7 +116,9 @@ export const HoverSimcomponent = () => {
             yPosClassName="graphs-3"
             yVelClassName="graphs-3"
           />
-          <NavBar_2 className="nav-bar-tab" />
+          <NavBar_2
+            onclick={signOut} 
+            className="nav-bar-tab" />
           <Footer
             className="footer1"
             group="groupfooter1"
@@ -159,6 +165,7 @@ export const HoverSimcomponent = () => {
             GraphAndSimulate={GraphAndSimulate}
             destroygraph={destroygraph} />
           <NavBar
+            onclick={signOut}
             className="nav-bar-instance2"
           />
           <Next navigate="nav"
@@ -206,6 +213,7 @@ export const HoverSimcomponent = () => {
             yVelClassName="graphs-21"
           />
           <NavBar_2
+            onclick={signOut}
             className="nav-bar-tab-instance"
             controltotal1="logo1"
             navbarclassName="nav-bar1"
@@ -247,6 +255,9 @@ export const HoverSimcomponent = () => {
         </>
       )}
     </div>
+    </>
+      )}
+    </Authenticator>
   );
 };
 

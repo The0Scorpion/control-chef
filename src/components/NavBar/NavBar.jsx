@@ -11,8 +11,7 @@ import { Link } from "react-router-dom"
 export const NavBar = ({ 
   className, 
   navalltext,
-  login,
-  registration,
+  onclick,
   contact,
   about,
   reservation,
@@ -22,6 +21,7 @@ export const NavBar = ({
   dropdowncontenttheory,
   theoriesexp,
   experiments,
+  signoutbtn
 }) => {
   return (
     <div className={`nav-bar ${className}`}>
@@ -48,6 +48,7 @@ export const NavBar = ({
         <button className={`text-wrapper-10 ${contact}`}><Link to="/"><p className="p">Contact us</p></Link></button>
         <button className={`text-wrapper-11 ${about}`}><Link to="/"><p className="p">About us</p></Link></button>
         <button className={`reservation ${reservation}`}><Link to="/"><p className="p">Reservation</p></Link></button>
+        <button className={`Signoutbtn ${signoutbtn}`} onClick={onclick}><p className="p">Sign Out</p></button>
         <div className={`dropdown-theory ${dropdowntheory}`}>
           <button className={`theories-explanation ${theoriesexp}`}>Theories Explanation</button>
           <div className={`dropdown-content-theories ${dropdowncontenttheory}`}>

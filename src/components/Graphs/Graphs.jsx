@@ -31,14 +31,15 @@ export const Graphs = ({
 
 
   // Define the API Gateway endpoint
-  const apiGatewayUrl = 'https://vxg0tzfd94.execute-api.eu-west-3.amazonaws.com/test/Getdata';
+  const apiGatewayUrl = 'https://4var1r0nlb.execute-api.eu-west-3.amazonaws.com/Main/GetData';
   
   useEffect(() => {
     fetch(apiGatewayUrl, {
       method: "GET",
       headers: {
+        "Access-Control-Allow-Origin": "*", // Allow requests from all origins
         "Access-Control-Allow-Headers": "Content-Type", // Allow specific headers
-        "Content-Type": "application/json",
+
       },
     })
       .then((response) => {

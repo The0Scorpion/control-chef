@@ -14,6 +14,7 @@ import { URDFViewer } from "../../components/URDFViewer";
 import { Amplify } from "aws-amplify";
 import awsConfig from "../../aws-export";
 import { withAuthenticator } from "@aws-amplify/ui-react";
+import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
 
@@ -111,6 +112,9 @@ export const HoverRTcomponent = () => {
 
 
   return (
+    <Authenticator>
+      {({ signOut, user }) => (
+        <>
     <div className="hover"
       style={{
         background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
@@ -177,7 +181,9 @@ export const HoverRTcomponent = () => {
             next="next1"
             back="back1"
             linkTo2="/hover-simulation" />
-          <NavBar_2 className="nav-bar-tab" />
+          <NavBar_2
+            onclick={signOut}  
+            className="nav-bar-tab" />
           <Footer
             className="footer1"
             group="groupfooter1"
@@ -224,6 +230,7 @@ export const HoverRTcomponent = () => {
             parameterData={parameterData}
             className="buttons-2" />
           <NavBar
+            onclick={signOut} 
             className="nav-bar-instance2"
           />
           <Next navigate="nav"
@@ -273,6 +280,7 @@ export const HoverRTcomponent = () => {
             yVelClassName="graphs-21"
           />
           <NavBar_2
+            onclick={signOut} 
             className="nav-bar-tab-instance"
             controltotal1="logo1"
             navbarclassName="nav-bar1"
@@ -313,6 +321,9 @@ export const HoverRTcomponent = () => {
         </>
       )}
     </div>
+    </>
+      )}
+    </Authenticator>
   );
 };
 

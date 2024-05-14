@@ -17,6 +17,7 @@ export const NavBar_2 = ({
   controlchef2,
   controlchef3,
   controltotal1,
+  onclick,
   dropdowncontenttheories,
   dropdowncontentexperiments
  }) => {
@@ -49,6 +50,7 @@ export const NavBar_2 = ({
               <Link className="a" to="/simulation-pendulum"><button className={`p2 ${navbartext}`}>Linear Inverted Pendulum</button></Link>
             </div>
           </div>
+          <div className="a"><button className={`text1 ${navbartext}`} onClick={onclick}>Sign Out</button></div>
         </div>
       </div>
       <div className={`control-chef-high-3 ${controltotal1}`}>
