@@ -74,6 +74,86 @@ export const Homepage = () => {
         width: { screenWidth }
       }}
     >
+      {screenWidth < 834 && (
+        <>
+          <Welcome
+            abstractClassName="class-21"
+            className="class-201"
+            creatingAnIotLabClassName="class-15"
+            ourVisionClassName="class-23"
+            text="Abstract"
+            text1="Our Vision"
+            text2={<>Welcome To <br />control Chef</>}
+            theAvailabilityOfClassName="class-17"
+            welcomeToControlClassName="class-13"
+          />
+          <TestimonialsWrapper
+            className="testimonials-instance"
+            divClassName="testimonials-91"
+            divClassName1="testimonials-91"
+            divClassName2="testimonials-101"
+            divClassName3="testimonials-91"
+            divClassName4="testimonials-101"
+            divClassNameOverride="testimonials-10"
+            ellipseClassName="testimonials-81"
+            ellipseClassName1="testimonials-81"
+            ellipseClassNameOverride="testimonials-81"
+            imgClassName="testimonials-71"
+            maskGroupClassName="testimonials-71"
+            maskGroupClassNameOverride="testimonials-71"
+            overlapClassName="testimonials-51"
+            overlapClassNameOverride="testimonials-51"
+            overlapGroupClassName="testimonials-51"
+            overlapGroupClassNameOverride="testimonials-131"
+            overlapWrapperClassName="testimonials-121"
+            readWhatOthersClassName="testimonials-141"
+            rectangleClassName="testimonials-61"
+            rectangleClassName1="testimonials-61"
+            rectangleClassNameOverride="testimonials-61"
+            testimonialItemClassName="testimonials-41"
+            testimonialItemClassNameOverride="testimonials-111"
+            testimonialsClassName="testimonials-151"
+          />
+          <IntroWrapper
+            className="intro-4"
+            divClassName="introwrap834"
+            homeBannerClassName="homebanner834"
+          />
+          <NavBar_2
+            className="nav-bar-tab-instance"
+            navbarclassName="nav-bar1"
+            controltotal1="nav-bar9"
+            controlchef1="nav-bar2"
+            controlchef2="nav-bar3"
+            controlchef3="nav-bar4"
+            navbardrop="nav-bar5"
+            navbartext="nav-bar6"
+            dropdowncontentexperiments="nav-bar71"
+            dropdowncontenttheories="nav-bar81"
+          />
+          <Footer
+            className="footer5"
+            group="groupfooter"
+            group2="group2footer"
+            controlchefhigh="controlcheifhighfooter"
+            maskgroup="maskgroupfooter"
+            group7="group7footer"
+            buttonf="buttonfooter"
+            textwrapper="textwrapperfooter"
+            textwrapper2="textwrapper2footer"
+            textwrapper3="textwrapper3footer"
+            textwrapper4="textwrapper4footer"
+            textwrapper5="textwrapper5footer"
+            group8="group8footer"
+            group9="group9footer"
+            group10="group10footer"
+            overlab2="overlab2footer"
+            overlapwrapper="overlapwrapperfooter"
+            rectangle="rectanglefooter"
+            copyright="copyrightfooter"
+          />
+        </>
+      )}
       {screenWidth >= 834 && screenWidth < 1300 && (
         <>
           <NavBar_2 className="nav-bar-tab" />
@@ -169,86 +249,7 @@ export const Homepage = () => {
         </>
       )}
 
-      {screenWidth < 834 && (
-        <>
-          <Welcome
-            abstractClassName="class-21"
-            className="class-201"
-            creatingAnIotLabClassName="class-15"
-            ourVisionClassName="class-23"
-            text="Abstract"
-            text1="Our Vision"
-            text2={<>Welcome To <br />control Chef</>}
-            theAvailabilityOfClassName="class-17"
-            welcomeToControlClassName="class-13"
-          />
-          <TestimonialsWrapper
-            className="testimonials-instance"
-            divClassName="testimonials-91"
-            divClassName1="testimonials-91"
-            divClassName2="testimonials-101"
-            divClassName3="testimonials-91"
-            divClassName4="testimonials-101"
-            divClassNameOverride="testimonials-10"
-            ellipseClassName="testimonials-81"
-            ellipseClassName1="testimonials-81"
-            ellipseClassNameOverride="testimonials-81"
-            imgClassName="testimonials-71"
-            maskGroupClassName="testimonials-71"
-            maskGroupClassNameOverride="testimonials-71"
-            overlapClassName="testimonials-51"
-            overlapClassNameOverride="testimonials-51"
-            overlapGroupClassName="testimonials-51"
-            overlapGroupClassNameOverride="testimonials-131"
-            overlapWrapperClassName="testimonials-121"
-            readWhatOthersClassName="testimonials-141"
-            rectangleClassName="testimonials-61"
-            rectangleClassName1="testimonials-61"
-            rectangleClassNameOverride="testimonials-61"
-            testimonialItemClassName="testimonials-41"
-            testimonialItemClassNameOverride="testimonials-111"
-            testimonialsClassName="testimonials-151"
-          />
-          <IntroWrapper
-            className="intro-4"
-            divClassName="introwrap834"
-            homeBannerClassName="homebanner834"
-          />
-          <NavBar_2
-            className="nav-bar-tab-instance"
-            navbarclassName="nav-bar1"
-            controltotal1="nav-bar9"
-            controlchef1="nav-bar2"
-            controlchef2="nav-bar3"
-            controlchef3="nav-bar4"
-            navbardrop="nav-bar5"
-            navbartext="nav-bar6"
-            dropdowncontentexperiments="nav-bar71"
-            dropdowncontenttheories="nav-bar81"
-          />
-          <Footer
-            className="footer5"
-            group="groupfooter"
-            group2="group2footer"
-            controlchefhigh="controlcheifhighfooter"
-            maskgroup="maskgroupfooter"
-            group7="group7footer"
-            buttonf="buttonfooter"
-            textwrapper="textwrapperfooter"
-            textwrapper2="textwrapper2footer"
-            textwrapper3="textwrapper3footer"
-            textwrapper4="textwrapper4footer"
-            textwrapper5="textwrapper5footer"
-            group8="group8footer"
-            group9="group9footer"
-            group10="group10footer"
-            overlab2="overlab2footer"
-            overlapwrapper="overlapwrapperfooter"
-            rectangle="rectanglefooter"
-            copyright="copyrightfooter"
-          />
-        </>
-      )}
+
     </div>
   );
 };
