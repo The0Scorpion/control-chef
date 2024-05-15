@@ -1,0 +1,168 @@
+// this is how you can connect aws with the react app (display data coming from iotcore (MQTT))
+
+//this playlist will help you https://youtube.com/playlist?list=PLTUPrJfBdlQC8Bq9nV10FYStgol9mGl34&si=4ZmUOa3DJdkQgGGs
+
+first you create 2 lambda function:
+
+//first lambda "connection"//
+
+// this lambda function is written in node.js
+// don't forget to add these iam rules add this inline policy 
+/* "allssmaccess" {
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": "ssm:*",
+			"Resource": "*"
+		}
+	]
+} */
+
+// you can also use this test code
+
+/*{
+  "requestContext": {
+    "connectionId": "xxxxxxx"
+  }
+}*/
+
+//the lambda code
+const { SSMClient, PutParameterCommand } = require("@aws-sdk/client-ssm");
+
+exports.handler = async (event, context) => {
+    console.log(event);
+    let connectionId = event.requestContext.connectionId;
+    console.log("myConnectionID is: ", connectionId);
+
+    const ssmClient = new SSMClient({ region: "eu-west-3" }); // replace with your AWS region
+
+    try {
+        const params = {
+            Name: "connection_identification",
+            Value: connectionId,
+            Overwrite: true,
+        };
+
+        const command = new PutParameterCommand(params);
+        const data = await ssmClient.send(command);
+        console.log("success: ", data);
+
+        const response = {
+            statusCode: 200,
+            body: JSON.stringify("Hello from Lambda!"),
+        };
+        return response;
+    } catch (error) {
+        console.error("Error saving parameter to SSM: ", error);
+        const response = {
+            statusCode: 500,
+            body: JSON.stringify("An error occurred while saving the connection ID to SSM."),
+        };
+        return response;
+    }
+};
+
+
+//second lambda "sendIoTpayload"
+// this lambda function is written in python
+//add a trigger to the iot core topic
+// don't forget to add this i am rules add this inline policy
+/* "ExecuteAPI" {
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": "execute-api:*",
+			"Resource": "*"
+		}
+	]
+}
+*/
+
+/* "ssm_connection" {
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ssm:GetParameter",
+				"ssm:PutParameter"
+			],
+			"Resource": "arn:aws:ssm:eu-west-3:201162808408:parameter/*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"execute-api:ManageConnections",
+				"execute-api:Invoke"
+			],
+			"Resource": "arn:aws:execute-api:eu-west-3:201162808408:your-api-id/*"
+		}
+	]
+}
+*/
+
+//this is the lambda code
+import json
+import boto3
+
+Websocket_HTTPS_URL = "https://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production"
+client = boto3.client("apigatewaymanagementapi", endpoint_url=Websocket_HTTPS_URL)
+ssm_Client = boto3.client('ssm')
+
+def lambda_handler(event, context):
+    print("Event received:", event)
+    
+    try:
+        # Replace 'your-ssm-parameter-name' with the actual parameter name
+        ssm_parameter_name = 'connection_identification'
+        
+        response_ssm = ssm_Client.get_parameter(Name=ssm_parameter_name)
+        print("SSM Parameter response:", response_ssm)
+        
+        connectionId = response_ssm['Parameter']['Value']
+        print("Retrieved connection ID:", connectionId)
+        
+        Test_Message = json.dumps({"message": "Hello from lambda, hardcoded test message"})
+        IoT_Message = json.dumps(event)
+        
+        response = client.post_to_connection(ConnectionId=connectionId, Data=IoT_Message)
+        print("API Gateway response:", response)
+        
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Message sent successfully!')
+        }
+        
+    except ssm_Client.exceptions.ParameterNotFound as e:
+        print("Error: SSM Parameter not found:", str(e))
+        return {
+            'statusCode': 400,
+            'body': json.dumps('SSM Parameter not found.')
+        }
+    except client.exceptions.GoneException as e:
+        print("Error: Connection ID is no longer available:", str(e))
+        return {
+            'statusCode': 410,
+            'body': json.dumps('Connection ID is no longer available.')
+        }
+    except client.exceptions.LimitExceededException as e:
+        print("Error: API Gateway limit exceeded:", str(e))
+        return {
+            'statusCode': 429,
+            'body': json.dumps('API Gateway limit exceeded.')
+        }
+    except Exception as e:
+        print("Error: General exception:", str(e))
+        return {
+            'statusCode': 500,
+            'body': json.dumps(f'An error occurred while processing the request: {str(e)}')
+        }
+
+///////////////////////////////////////////
+second create a websocket 
+///////////////////////////////////////////
+third create a parameter in system manager

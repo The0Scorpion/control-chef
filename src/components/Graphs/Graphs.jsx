@@ -25,93 +25,91 @@ export const Graphs = ({
     YVel: useRef(null),
   };
 
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [idArr, setIdArr] = useState([]);
+  const [xPosArr, setXPosArr] = useState([]);
+  const [yPosArr, setYPosArr] = useState([]);
+  const [xVelArr, setXVelArr] = useState([]);
+  const [yVelArr, setYVelArr] = useState([]);
+  const [socket, setSocket] = useState(null);
 
-
-  // Define the API Gateway endpoint
-  const apiGatewayUrl = 'https://4var1r0nlb.execute-api.eu-west-3.amazonaws.com/Main/GetData';
-  
   useEffect(() => {
-    fetch(apiGatewayUrl, {
-      method: "GET",
-      headers: {
-        "Access-Control-Allow-Origin": "*", // Allow requests from all origins
-        "Access-Control-Allow-Headers": "Content-Type", // Allow specific headers
+    // Initialize WebSocket connection
+    const ws = new WebSocket('wss://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production'); 
 
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const Stream=response.body;
-        console.log(Stream);
-        const reader=Stream.getReader();
-        let result = '';
-        /*while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          // Convert the value (Uint8Array) to a string
-          result += new TextDecoder().decode(value);
-        }*/
+    ws.addEventListener('open', event => {
+      console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
+    });
 
-        // Parse the result as JSON
-        const jsonData = JSON.parse(result);
+    ws.addEventListener('message', event => {
+      console.log('Your iot payload is:', event.data);
+      drawChart(event.data);
+    });
 
-        // Update state with the data
-        setData(jsonData);
-        setLoading(false);
-        
-      })
-      .catch(error => {
-        setError(error);
-        setLoading(false);
-      });
+    // Set the WebSocket object in state
+    setSocket(ws);
+
   }, []);
 
   useEffect(() => {
-    const createGraph = (ctx, label, data) => {
-      console.log("Creating chart for", label);
-      return new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: data.map((item, index) => index),
-          datasets: [{
-            label: label,
-            borderColor: "black",
-            borderWidth: 1,
-            pointRadius: 0,
-            data: data.map((item) => item[label.toLowerCase()]),
-            fill: false,
-          }],
-        },
-        options: {
-          scales: {
-            x: {
-              type: "linear",
-              position: "bottom",
-            },
-            y: {
-              type: "linear",
-              position: "left",
-            },
+    if (idArr.length > 0) {
+      updateChart(chartRefs.XPos.current, "XPos", idArr, xPosArr);
+      updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
+      updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
+      updateChart(chartRefs.YVel.current, "YVel", idArr, yVelArr);
+    }
+  }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr]);
+
+  const drawChart = (data) => {
+    const IoT_Payload = JSON.parse(data);
+    console.log("our json object", IoT_Payload);
+
+    const { ID, xpos, ypos, xvel, yvel} = IoT_Payload;
+    setIdArr(prevState => [...prevState, Number(ID)]);
+    setXPosArr(prevState => [...prevState, Number(xpos)]);
+    setYPosArr(prevState => [...prevState, Number(ypos)]);
+    setXVelArr(prevState => [...prevState, Number(xvel)]);
+    setYVelArr(prevState => [...prevState, Number(yvel)]);
+  };
+
+  const createGraph = (ctx, label, labels, data) => {
+    console.log("Creating chart for", label);
+    return new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: label,
+          borderColor: "black",
+          borderWidth: 1,
+          pointRadius: 0,
+          data: data,
+          fill: false,
+        }],
+      },
+      options: {
+        scales: {
+          x: {
+            type: "category", // Change to category type for string labels
+            position: "bottom",
+          },
+          y: {
+            type: "linear",
+            position: "left",
           },
         },
-      });
-    };
+      },
+    });
+  };
 
-    if (data) {
-      console.log("Data available, creating charts...");
-      console.log(data);
-      for (const [key, ref] of Object.entries(chartRefs)) {
-        if (data[key] && ref.current) {
-          createGraph(ref.current.getContext("2d"), key, data[key]);
-        }
-      }
+  const updateChart = (ctx, label, labels, data) => {
+    if (!ctx.chart) {
+      ctx.chart = createGraph(ctx, label, labels, data);
+    } else {
+      ctx.chart.data.labels = labels;
+      ctx.chart.data.datasets[0].data = data;
+      ctx.chart.update();
     }
-  }, [data]);
+  };
 
   return (
     <div className={`graphsim ${className}`}>

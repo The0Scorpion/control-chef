@@ -27,45 +27,7 @@ export const HoverRTcomponent = () => {
   const [parameterData, setParameterData] = useState(null);
   const [Work, setWork] = useState(0);
 
-  // WebSocket instance
-  const ws = useRef(null);
-
-  useEffect(() => {
-    // Establish WebSocket connection when component mounts
-    ws.current = new WebSocket("wss://mygiohwl0g.execute-api.eu-west-3.amazonaws.com/production/");
-
-    // Event listener for when the WebSocket connection is opened
-    ws.current.onopen = () => {
-      console.log("WebSocket connected");
-    };
-    // Event listener for incoming messages
-    ws.current.onmessage = (event) => {
-      console.log("Message received:", event.data);
-      // Handle incoming message as needed
-    };
-    // Event listener for when the WebSocket connection is closed
-    ws.current.onclose = () => {
-      console.log("WebSocket disconnected");
-    };
-
-    // Cleanup function to close WebSocket connection when component unmounts
-    return () => {
-      if (ws.current) {
-        ws.current.close();
-      }
-    };
-  }, []);
-
-  // Function to send data over WebSocket
-  const sendDataToWebSocket = (data) => {
-    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-      ws.current.send(JSON.stringify(data));
-    } else {
-      console.error("WebSocket connection not open");
-    }
-  };
-
-
+  
   const sendDataToLambda = () => {
     if (!parameterData) {
       console.error("No parameter data to send.");
