@@ -35,7 +35,7 @@ export const Homepage = () => {
       style={{
         background: "linear-gradient(135deg, rgb(5, 5, 24) 60%, rgb(26.25, 26.25, 126) 100%)",
         height: screenWidth < 834
-          ? "2465px"
+          ? "2455px"
           : screenWidth >= 834 && screenWidth < 1300
             ? "1920px"
             : screenWidth >= 1300
@@ -117,9 +117,6 @@ export const Homepage = () => {
             group8="group8footer"
             group9="group9footer"
             group10="group10footer"
-            overlab2="overlab2footer"
-            overlapwrapper="overlapwrapperfooter"
-            rectangle="rectanglefooter"
             copyright="copyrightfooter"
           />
         </>
@@ -187,9 +184,6 @@ export const Homepage = () => {
             group8="group8footer1"
             group9="group9footer1"
             group10="group10footer1"
-            overlab2="overlab2footer"
-            overlapwrapper="overlapwrapperfooter1"
-            rectangle="rectanglefooter1"
             copyright="copyrightfooter1"
           />
         </>

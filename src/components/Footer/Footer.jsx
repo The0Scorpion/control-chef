@@ -5,10 +5,10 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import React from "react";
 import "./style.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { number } from "prop-types";
 
-export const Footer = ({ 
+export const Footer = ({
   className,
   group,
   group2,
@@ -23,12 +23,9 @@ export const Footer = ({
   group8,
   group9,
   group10,
-  overlapwrapper,
-  overlab2,
-  rectangle,
   copyright,
   buttonf,
- }) => {
+}) => {
   return (
     <div className={`footer ${className}`}>
       <div className={`group ${group}`}>
@@ -68,12 +65,7 @@ export const Footer = ({
           </div>
         </div>
       </div>
-      <div className={`overlap-wrapper ${overlapwrapper}`}>
-        <div className={`overlap-2 ${overlab2}`}>
-          <div className={`rectangle ${rectangle}`} />
-          <p className={`copyright ${copyright}`}>Copyright @ { new Date().getFullYear() } Control Chef - All Rights Reserved</p>
-        </div>
-      </div>
+      <p className={`copyright ${copyright}`}>Copyright @ {new Date().getFullYear()} Control Chef - All Rights Reserved</p>
     </div>
   );
 };

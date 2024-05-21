@@ -1,12 +1,10 @@
 .welcome {
-  height: 623px;
   position: relative;
   width: 1064px;
 }
 
 .welcome .the-availability-of {
   color: #ffffff;
-  height: 292px;
   left: 16px;
   position: absolute;
   top: 380px;
@@ -17,11 +15,12 @@
   font-weight: var(--f22-font-weight);
   letter-spacing: var(--f22-letter-spacing);
   line-height: var(--f22-line-height);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .welcome .abstract {
   color: #ffffff;
-  height: 38px;
   left: 0;
   position: absolute;
   text-align: center;
@@ -36,7 +35,6 @@
 
 .welcome .creating-an-IOT-lab {
   color: #ffffff;
-  height: 89px;
   left: 12px;
   position: absolute;
   top: 212px;
@@ -47,11 +45,12 @@
   font-weight: var(--f22-font-weight);
   letter-spacing: var(--f22-letter-spacing);
   line-height: var(--f22-line-height);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .welcome .our-vision {
   color: #ffffff;
-  height: 38px;
   left: 0;
   position: absolute;
   text-align: center;

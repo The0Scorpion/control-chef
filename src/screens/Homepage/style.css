@@ -129,11 +129,11 @@
 }
 
 .welcome-and .class-201 {
-  height: 719px !important;
+  height: 880px !important;
   left: 20px !important;
   position: absolute !important;
   top: 350px !important;
-  width: 769px !important;
+  width: 330px !important;
 }
 
 .welcome-and .class-21 {
@@ -193,11 +193,11 @@
 }
 
 .welcome-and .testimonials-instance {
-  height: 452px !important;
+  height: 1080px !important;
   left: 0px !important;
   position: absolute !important;
   top: 1250px !important;
-  width: 765px !important;
+  width: 330px !important;
 }
 
 .welcome-and .testimonials-91 {
@@ -414,23 +414,25 @@
 }
 
 .welcome-and .intro-4 {
-  left: -275px !important;
+  left: 0px !important;
   position: absolute !important;
-  top: 350px !important;
+  top: 30px !important;
+  width: 330px !important;
+  height: 300px !important;
 }
 
 .welcome-and .introwrap834{
   font-size: var(--title-font-size) !important;
-  left:320px !important;
-  top: -300px !important;
+  left: 50px !important;
+  top: 0px !important;
   width:260px !important;
 }
 
 .welcome-and .homebanner834{
   height: auto !important;
-  width:15% !important;
-  left: 320px !important;
-  top:-200px !important;
+  width: 50% !important;
+  left: 70px !important;
+  top: 110px !important;
 }
 
 .welcome-and .nav-bar-tab-instance {
@@ -503,7 +505,9 @@
 .welcome-and .footer5{
   left:0px !important;
   position: absolute !important;
-  top:2350px !important;
+  top:2320px !important;
+  height: 100px !important;
+  width: 350px !important;
 }
 
 .welcome-and .groupfooter{
@@ -513,14 +517,16 @@
   width: 358px !important;
 }
 
-.welcome-and .group2{
+.welcome-and .group2footer{
   left:0px !important;
   top:0px !important;
+  width: 360px !important;
+  height: 100px !important;
 }
 
 .welcome-and .controlcheifhighfooter{
-  left:0px;
-  top:20px;
+  left: 10px !important;
+  top: 43px !important;
 }
 
 .welcome-and .maskgroupfooter{
@@ -532,37 +538,41 @@
 
 .welcome-and .group7footer{
   left:260px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 60px !important;
+  height: 80px !important;
 }
 
 .welcome-and .group9footer{
   left:170px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 70px !important;
+  height: 80px !important;
 }
 
 .welcome-and .textwrapperfooter{
   font-size: var(--copyright-font-size) !important;
-  top: 20px !important;
+  top: 0px !important;
 }
 
 .welcome-and .textwrapper2footer{
   font-size: var(--f10-font-size) !important;
-  top: -5px !important;
+  top: 0px !important;
 }
 
 .welcome-and .textwrapper3footer{
   font-size: var(--f10-font-size) !important;
-  top: 10px !important;
+  top: 15px !important;
 }
 
 .welcome-and .textwrapper4footer{
   font-size: var(--f10-font-size) !important;
-  top: 25px !important;
+  top: 30px !important;
 }
 
 .welcome-and .textwrapper5footer{
   font-size: var(--f10-font-size) !important;
-  top: 40px !important;
+  top: 45px !important;
 }
 
 .welcome-and .buttonfooter{
@@ -570,32 +580,31 @@
 }
 
 .welcome-and .group8footer{
-  left:0px !important; 
+  left: 0px !important; 
+  top : 20px !important;
+  width: 50px !important;
+  height: 60px !important;
 }
 
 .welcome-and .group10footer{
   left:0px !important;
-}
-
-.welcome-and .overlab2footer{
-  left:0px !important;
-  top:-120px !important;
-}
-
-.welcome-and .rectanglefooter{
-  left: 0px !important;
-  width: 358px !important;
-  height: 10px !important;
+  top : 20px !important;
+  width: 50px !important;
+  height: 30px !important;
 }
 
 .welcome-and .copyrightfooter{
   left:0px !important;
+  top: 110px !important;
+  width: 360px !important;
   font-size: 7px !important;
 }
 
 .welcome-and .footer1{
   left:0px !important;
   top:1730px !important;
+  max-width: 834px !important;
+  height: 188px !important;
   position: absolute !important;
 }
 
@@ -666,19 +675,9 @@
   left:0px !important;
 }
 
-.welcome-and .overlab2footer1{
-  left:0px !important;
-}
-
-.welcome-and .rectanglefooter1{
-  left: 0px !important;
-  width: 835px !important;
-  height: 20px !important;
-  top:60px !important;
-}
-
 .welcome-and .copyrightfooter1{
-  left:210px !important;
-  top: 65px !important;
+  left:0px !important;
+  top: 165px !important;
+  width: 834 !important;
   font-size: var(--f10-font-size) !important;
 }

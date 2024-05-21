@@ -276,15 +276,6 @@
   width: 201px;
 }
 
-.parameters .line {
-  height: 16px;
-  left: 200px;
-  object-fit: cover;
-  position: absolute;
-  top: 2px;
-  width: 1px;
-}
-
 .parameters .line-2 {
   height: 1px;
   left: 4px;

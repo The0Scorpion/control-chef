@@ -174,44 +174,23 @@ a:hover{
   width: 65px;
 }
 
-.footer .overlap-wrapper {
-  height: 21px;
-  left: 0;
-  position: absolute;
-  top: 223px;
-  width: 1066px;
-}
-
-.footer .overlap-2 {
-  height: 21px;
-  position: relative;
-  width: 1066px;
-}
-
-.footer .rectangle {
+.footer .copyright {
   background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
   border-radius: 20px;
-  height: 18px;
   left: 0;
   position: absolute;
-  top: 2px;
   width: 1066px;
-}
-
-.footer .copyright {
   color: #ffffff;
   font-family: var(--copyright-font-family);
   font-size: var(--copyright-font-size);
   font-style: var(--copyright-font-style);
   font-weight: var(--copyright-font-weight);
   height: 21px;
-  left: 350px;
   letter-spacing: var(--copyright-letter-spacing);
   line-height: var(--copyright-line-height);
   position: absolute;
   text-align: center;
-  top: 2px;
-  width: 377px;
+  top: 230px;
 }
 
 

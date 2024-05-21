@@ -119,7 +119,7 @@ export const Graphsim = ({
         <div className={`text-wrapper-12 ${xPosClassName}`}>X Pos</div>
       </div>
       <div className={`group-24 ${divClassName}`}>
-        <canvas ref={chartRefs.XVel} className={`rectangle-6 ${divClassNameOverride}`} id={`chart-XVel`}></canvas>
+        <canvas ref={chartRefs.XVel} className={`rectangle-5 ${divClassNameOverride}`} id={`chart-XVel`}></canvas>
         <div className={`x-vel ${xVelClassName}`}> X Vel</div>
       </div>
       <div className={`group-26 ${groupClassName2}`}>
