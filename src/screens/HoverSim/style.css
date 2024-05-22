@@ -223,7 +223,7 @@
 }
 
 .hoversim .graphs-instance {
-  height: 1323px !important;
+  height: 710px !important;
   left: 30px !important;
   position: absolute !important;
   top: 650px !important;
@@ -1368,6 +1368,8 @@
 .hoversim .footer1{
   left:0px !important;
   top: 1500px !important;
+  max-width: 834px !important;
+  height: 188px !important;
   position: absolute !important;
 }
 
@@ -1381,6 +1383,7 @@
 .hoversim .group2footer1{
   left:0px !important;
   top:0px !important;
+  width: 834px !important ;
 }
 
 .hoversim .controlcheifhighfooter1{
@@ -1442,20 +1445,10 @@
   left:0px !important;
 }
 
-.hoversim .overlab2footer1{
-  left:0px !important;
-}
-
-.hoversim .rectanglefooter1{
-  left: 0px !important;
-  width: 835px !important;
-  height: 20px !important;
-  top:60px !important;
-}
-
 .hoversim .copyrightfooter1{
-  left:210px !important;
-  top: 65px !important;
+  left:0px !important;
+  top: 165px !important;
+  width: 834 !important;
   font-size: var(--f10-font-size) !important;
 }
 

@@ -101,9 +101,6 @@ export const HoverDoccomponent = () => {
                   group8="group8footer1"
                   group9="group9footer1"
                   group10="group10footer1"
-                  overlab2="overlab2footer"
-                  overlapwrapper="overlapwrapperfooter1"
-                  rectangle="rectanglefooter1"
                   copyright="copyrightfooter1"
                 />
               </>
