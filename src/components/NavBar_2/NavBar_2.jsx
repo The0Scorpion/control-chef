@@ -13,6 +13,7 @@ export const NavBar_2 = ({
   navbarclassName,
   navbardrop,
   navbartext,
+  navbartexts,
   controlchef1,
   controlchef2,
   controlchef3,

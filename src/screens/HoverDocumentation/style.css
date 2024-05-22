@@ -102,31 +102,6 @@
   top:-30px !important;
 }
 
-.hoverdoc .textwrapperfooter{
-  font-size: var(--copyright-font-size) !important;
-  top: 20px !important;
-}
-
-.hoverdoc .textwrapper2footer{
-  font-size: var(--f10-font-size) !important;
-  top: -5px !important;
-}
-
-.hoverdoc .textwrapper3footer{
-  font-size: var(--f10-font-size) !important;
-  top: 10px !important;
-}
-
-.hoverdoc .textwrapper4footer{
-  font-size: var(--f10-font-size) !important;
-  top: 25px !important;
-}
-
-.hoverdoc .textwrapper5footer{
-  font-size: var(--f10-font-size) !important;
-  top: 40px !important;
-}
-
 .hoverdoc .buttonfooter{
   font-size: var(--f10-font-size) !important;
 }
@@ -165,6 +140,8 @@
 .hoverdoc .footer1{
   left:0px !important;
   top:2420px !important;
+  max-width: 834px !important;
+  height: 188px !important;
   position: absolute !important;
 }
 
@@ -178,6 +155,7 @@
 .hoverdoc .group2footer1{
   left:0px !important;
   top:0px !important;
+  width: 834px !important ;
 }
 
 .hoverdoc .controlcheifhighfooter1{
@@ -239,20 +217,10 @@
   left:0px !important;
 }
 
-.hoverdoc .overlab2footer1{
-  left:0px !important;
-}
-
-.hoverdoc .rectanglefooter1{
-  left: 0px !important;
-  width: 835px !important;
-  height: 20px !important;
-  top:60px !important;
-}
-
 .hoverdoc .copyrightfooter1{
-  left:210px !important;
-  top: 65px !important;
+  left:0px !important;
+  top: 165px !important;
+  width: 834 !important;
   font-size: var(--f10-font-size) !important;
 }
 
@@ -268,19 +236,19 @@
   left: 0px !important;
 }
 .hoverdoc .modeling{
-  top: 1500px !important;
+  top: 1450px !important;
   left: 0px !important;
   position: absolute !important;
 }
 
 .hoverdoc .blockdiagram{
-  top:2200px !important;
+  top:2300px !important;
   position: absolute !important;
   left: 10px !important;
 }
 
 .hoverdoc .navigate{
-  top:2800px !important;
+  top:2850px !important;
   left: 0px !important;
   position: absolute !important;
 }
@@ -289,7 +257,7 @@
   background-color: transparent !important;
   left: 100px !important;
   position: absolute !important;
-  top: 2870px !important;
+  top: 2920px !important;
 }
 
 .hoverdoc .navbardoc {
@@ -337,6 +305,9 @@
 
 .hoverdoc .howitwork1{
   top: 470px !important;
+  left: 0px !important;
+  width: 834px !important;
+  position: absolute !important;
 }
 
 .hoverdoc .howtext{
@@ -350,10 +321,18 @@
 
 .hoverdoc .modeling1{
  top:1200px !important; 
+ left: 0px !important;
+ width: 834px !important;
+ height: 750px !important;
 }
 
+.hoverdoc .model1{
+  width: 834px !important;
+  height: 650px !important;
+ }
+
 .hoverdoc .modelingwrapper1{
-  left:527px !important;
+  left: 535px !important;
   width: 300px !important;
   height: 80px !important; 
 }
@@ -367,30 +346,35 @@
 
 .hoverdoc .paragraph1{
   left:0px !important;
+  top: 100px !important;
+  width: 834px !important;
+  height: 550px !important;
 }
 
 .hoverdoc .imgmodel1{
-  width:50% !important;
-  height: 50% !important;
-  top: 100px !important;
-  left: -40px !important;
+  width: 50% !important;
+  height: auto !important;
+  top: 50px !important;
+  left: 0px !important;
   position: absolute !important;
 }
 
 .hoverdoc .positive1{
   width: 400px !important;
-  left: 400px !important;
-  top: 30px !important;
+  left: 430px !important;
+  top: 0px !important;
 }
 
 .hoverdoc .equation1{
-  top: 650px !important;
-  left:50px !important;
+  top: 660px !important;
+  left: 100px !important;
 }
 
 .hoverdoc .blockdiagram1{
   left: 0px !important;
   position: absolute;
+  width: 834px !important;
+  height: 330px !important;
   top: 2000px !important;
 }
 
@@ -417,10 +401,11 @@
   left:0px !important;
   top: 20px !important;
   width: 360px !important;
+  height: 215px !important;
 }
 
 .hoverdoc .about21{
-  left:158px !important;
+  left:160px !important;
   width: 200px !important;
   height: 80px !important;
   border-radius: 10px 0px 0px 10px !important;
@@ -434,6 +419,11 @@
   left: 15px !important;
 }
 
+.hoverdoc .about23{
+  width: 360px !important;
+  height: 215px !important;
+}
+
 .hoverdoc .about24{
   font-size: 15px !important;
   left: 80px !important;
@@ -441,17 +431,22 @@
 }
 
 .hoverdoc .about25{
-  width: 20% !important;
-  height: 30% !important;
+  width: 50% !important;
+  height: auto !important;
+  left: -10px !important;
+  top: 35px !important;
 }
 
 .hoverdoc .howitwork20{
   top: 240px !important;
   left: 0px !important;
+  width: 360px !important;
+  height: 310px !important;
+  position: absolute !important;
 }
 
 .hoverdoc .howitwork21{
-  width: 300px !important;
+  width: 330px !important;
   left: 15px !important;
   font-size: 10px !important;
   top: 50px !important;
@@ -475,17 +470,21 @@
 }
 
 .hoverdoc .modeling20{
-  top: 550px !important;
+  top: 570px !important;
+  width: 360px !important;
+  height: 320px !important;
   left: 0px !important;
 }
 
 .hoverdoc .modeling21{
   left: 0px !important;
+  width: 360px !important;
+  height: 250px !important;
 }
 
 .hoverdoc .modeling22{
-  left: 187px !important;
-  top: 50px !important;
+  left: 189px !important;
+  top: 0px !important;
   width: 170px !important;
   height: 35px !important;
   border-radius: 10px 0px 0px 10px !important;
@@ -501,43 +500,55 @@
   justify-content: center !important;
 }
 
+.hoverdoc .modeling24{
+  top: 50px !important;
+  width: 360px !important;
+  left: 0px !important;
+  height: 250px !important;
+}
+
 .hoverdoc .modeling25{
   width: 180px !important;
   left: 170px !important;
   font-size: 10px !important;
-  top: 30px !important;
+  top: 0px !important;
   line-height: 15px !important;
 }
 
 .hoverdoc .modeling26{
-  top: 300px !important;
+  top: 270px !important;
   font-size: 12px !important;
   left: 90px !important;
+  width: 250px !important;
 }
 
 .hoverdoc .modeling27{
   position: absolute !important;
-  width: 20% !important;
-  height: 20% !important;
-  left: -50px !important;
-  top: 55px !important;
+  width: 45% !important;
+  height: auto !important;
+  left: 0px !important;
+  top: 15px !important;
 }
 
 .hoverdoc .blockdiagram21{
-  width: 80% !important;
+  width: 100% !important;
   position: absolute !important;
-  left: -330px !important;
+  left: 10px !important;
   top: 920px !important;
 }
 
 .hoverdoc .blockdiagram20{
-  left:0 !important;
+  left: 0 !important;
+  width: 360px !important;
+  position: absolute !important;
 }
 
 .hoverdoc .footer5{
   left: 0px !important;
   position: absolute !important;
   top:1100px !important;
+  height: 100px !important;
+  width: 350px !important;
 }
 
 .hoverdoc .groupfooter{
@@ -547,14 +558,16 @@
   width: 358px !important;
 }
 
-.hoverdoc .group2{
+.hoverdoc .group2footer{
   left:0px !important;
   top:0px !important;
+  width: 360px !important;
+  height: 100px !important;
 }
 
 .hoverdoc .controlcheifhighfooter{
-  left:0px;
-  top:20px;
+  left: 10px;
+  top: 43px;
 }
 
 .hoverdoc .maskgroupfooter{
@@ -566,37 +579,41 @@
 
 .hoverdoc .group7footer{
   left:260px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 60px !important;
+  height: 80px !important;
 }
 
 .hoverdoc .group9footer{
   left:170px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 70px !important;
+  height: 80px !important;
 }
 
 .hoverdoc .textwrapperfooter{
   font-size: var(--copyright-font-size) !important;
-  top: 20px !important;
+  top: 0px !important;
 }
 
 .hoverdoc .textwrapper2footer{
   font-size: var(--f10-font-size) !important;
-  top: -5px !important;
+  top: 0px !important;
 }
 
 .hoverdoc .textwrapper3footer{
   font-size: var(--f10-font-size) !important;
-  top: 10px !important;
+  top: 15px !important;
 }
 
 .hoverdoc .textwrapper4footer{
   font-size: var(--f10-font-size) !important;
-  top: 25px !important;
+  top: 30px !important;
 }
 
 .hoverdoc .textwrapper5footer{
   font-size: var(--f10-font-size) !important;
-  top: 40px !important;
+  top: 45px !important;
 }
 
 .hoverdoc .buttonfooter{
@@ -604,27 +621,25 @@
 }
 
 .hoverdoc .group8footer{
-  left:0px !important; 
+  left: 0px !important; 
+  top : 20px !important;
+  width: 50px !important;
+  height: 60px !important; 
 }
 
 .hoverdoc .group10footer{
   left:0px !important;
-}
-
-.hoverdoc .overlab2footer{
-  left:0px !important;
-  top:-120px !important;
-}
-
-.hoverdoc .rectanglefooter{
-  left: 0px !important;
-  width: 358px !important;
-  height: 10px !important;
+  top : 20px !important;
+  width: 50px !important;
+  height: 30px !important;
 }
 
 .hoverdoc .copyrightfooter{
   left:0px !important;
+  top: 110px !important;
+  width: 360px !important;
   font-size: 7px !important;
+  height: 10px !important;
 }
 
 .hoverdoc .navigate2{

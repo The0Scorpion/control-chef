@@ -1,7 +1,7 @@
 .modeling {
-  height: 936px;
+  height: 590px;
   position: relative;
-  width: 1300px;
+  width: 1348px;
 }
 
 .modeling .overlap-2 {
@@ -16,7 +16,7 @@
   background-color: #ffffff4c;
   border-radius: 20px 0px 0px 20px;
   height: 86px;
-  left: 938px;
+  left: 937px;
   position: absolute;
   top: 0;
   right: 0;
@@ -39,23 +39,19 @@
 }
 
 .modeling .overlap-3 {
-  height: 737px;
+  height: 460px;
   left: 0;
   position: absolute;
   top: 59px;
   width: 1328px;
 }
 
-.modeling .group {
-  height: 737px;
-  left: 60px;
+.modeling .img {
+  left: 30px;
   position: absolute;
   top: 0;
   width: 755px;
-}
-
-.modeling .img {
-  height: 450px;
+  height: auto;
 }
 
 .modeling .when-a-positive {
@@ -79,12 +75,12 @@
   font-family: "Salsa", Helvetica;
   font-size: 30px;
   font-weight: 400;
-  left: 283px;
+  left: 300px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 500px;
+  top: 730px;
   width: 718px;
   text-align: justify;
   text-justify: inter-word;

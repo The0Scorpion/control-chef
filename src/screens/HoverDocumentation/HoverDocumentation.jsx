@@ -50,7 +50,7 @@ export const HoverDoccomponent = () => {
                 : screenWidth >= 834 && screenWidth < 1300
                   ? "2610px"
                   : screenWidth >= 1300
-                    ? "3120px"
+                    ? "3170px"
                     : undefined,
               width: { screenWidth }
             }}
@@ -186,9 +186,6 @@ export const HoverDoccomponent = () => {
                   group8="group8footer"
                   group9="group9footer"
                   group10="group10footer"
-                  overlab2="overlab2footer"
-                  overlapwrapper="overlapwrapperfooter"
-                  rectangle="rectanglefooter"
                   copyright="copyrightfooter"
                 />
               </>
