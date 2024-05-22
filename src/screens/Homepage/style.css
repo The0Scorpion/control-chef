@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .welcome-and .testimonials-instance {
