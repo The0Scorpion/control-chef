@@ -41,9 +41,9 @@
 
 .welcome-and .class-13 {
   height: 100px !important;
-  left: -220px !important;
+  left: 0px !important;
   top: 16px !important;
-  width: 742px !important;
+  width: 300px !important;
   font-family: var(--title-font-family) !important;
   font-size: var(--title-font-size) !important;
   font-style: var(--title-font-style) !important;
@@ -455,28 +455,18 @@
 }
 
 .welcome-and .nav-bar2{
-  width: 40% !important;
+  width: 60% !important;
   height: auto !important;
-  left: 0px !important;
-
 }
 
 .welcome-and .nav-bar3{
-  width: 40% !important;
+  width: 60% !important;
   height: auto !important;
-  left: 0px !important;
 }
 
 .welcome-and .nav-bar4{
-  width: 40% !important;
+  width: 60% !important;
   height: auto !important;
-  left: 0px !important;
-}
-
-.welcome-and .nav-bar9{
-  left:10px !important;
-  top: 2px !important;
-  width: 40% !important;
 }
 
 .welcome-and .nav-bar5{

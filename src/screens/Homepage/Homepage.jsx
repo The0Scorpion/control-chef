@@ -102,7 +102,7 @@ export const Homepage = () => {
                 onclick={signOut}
                 className="nav-bar-tab-instance"
                 navbarclassName="nav-bar1"
-                controltotal1="nav-bar9"
+                controltotal1="logo1"
                 controlchef1="nav-bar2"
                 controlchef2="nav-bar3"
                 controlchef3="nav-bar4"
