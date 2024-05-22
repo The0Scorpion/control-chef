@@ -443,6 +443,12 @@
   border-radius:  0px 0px 3px 3px  !important;
 }
 
+.welcome-and .logo1{
+  top: 2px !important;
+  left: 5px !important;
+  width: 35% !important;
+}
+
 .welcome-and .nav-bar1{
   left: 300px !important;
   top: 2px !important;
