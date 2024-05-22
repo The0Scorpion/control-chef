@@ -233,9 +233,6 @@ export const HoverSimcomponent = () => {
             group8="group8footer"
             group9="group9footer"
             group10="group10footer"
-            overlab2="overlab2footer"
-            overlapwrapper="overlapwrapperfooter"
-            rectangle="rectanglefooter"
             copyright="copyrightfooter"
           />
           <Next navigate="nav2"

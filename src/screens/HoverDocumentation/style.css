@@ -68,68 +68,6 @@
   margin: 0 !important;
 }
 
-.hoverdoc .footer5{
-  left:0px !important;
-  top:2440px !important;
-}
-
-.hoverdoc .groupfooter{
-  left:0px !important;
-  top:0px !important;
-  height: 100px !important;
-  width: 358px !important;
-}
-
-.hoverdoc .controlcheifhighfooter{
-  left:-20px;
-  top:20px;
-}
-
-.hoverdoc .maskgroupfooter{
-  width: 30% !important;
-  height: auto !important;
-  left:0px !important;
-  top:0px !important;
-}
-
-.hoverdoc .group7footer{
-  left:260px !important;
-  top:-30px !important;
-}
-
-.hoverdoc .group9footer{
-  left:170px !important;
-  top:-30px !important;
-}
-
-.hoverdoc .buttonfooter{
-  font-size: var(--f10-font-size) !important;
-}
-
-.hoverdoc .group8footer{
-  left:0px !important; 
-}
-
-.hoverdoc .group10footer{
-  left:0px !important;
-}
-
-.hoverdoc .overlab2footer{
-  left:0px !important;
-  top:-120px !important;
-}
-
-.hoverdoc .rectanglefooter{
-  left: 0px !important;
-  width: 358px !important;
-  height: 10px !important;
-}
-
-.hoverdoc .copyrightfooter{
-  left:0px !important;
-  font-size: 7px !important;
-}
-
 .hoverdoc .nav-bar-tab {
   left: 0px !important;
   position: fixed !important;
@@ -544,11 +482,11 @@
 }
 
 .hoverdoc .footer5{
-  left: 0px !important;
+  left:0px !important;
+  top:2440px !important;
   position: absolute !important;
-  top:1100px !important;
+  width: 360px !important;
   height: 100px !important;
-  width: 350px !important;
 }
 
 .hoverdoc .groupfooter{
