@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <HoverSim />,
   },
   {
-    path: "/hover-realtime/",
+    path: "/hover-realtime",
     element: <HoverRT />,
   },
   {
