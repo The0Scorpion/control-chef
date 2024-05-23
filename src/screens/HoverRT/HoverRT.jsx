@@ -122,7 +122,7 @@ export const HoverRTcomponent = () => {
                 screenWidth < 834
                   ? "1120px"
                   : screenWidth >= 834 && screenWidth < 1300
-                    ? "2250px"
+                    ? "2240px"
                     : screenWidth >= 1300
                       ? "2700px"
                       : undefined,
@@ -199,9 +199,6 @@ export const HoverRTcomponent = () => {
                   group8="group8footer1"
                   group9="group9footer1"
                   group10="group10footer1"
-                  overlab2="overlab2footer"
-                  overlapwrapper="overlapwrapperfooter1"
-                  rectangle="rectanglefooter1"
                   copyright="copyrightfooter1"
                 />
               </>
@@ -312,9 +309,6 @@ export const HoverRTcomponent = () => {
                   group8="group8footer"
                   group9="group9footer"
                   group10="group10footer"
-                  overlab2="overlab2footer"
-                  overlapwrapper="overlapwrapperfooter"
-                  rectangle="rectanglefooter"
                   copyright="copyrightfooter"
                 />
                 <Next navigate="nav2"

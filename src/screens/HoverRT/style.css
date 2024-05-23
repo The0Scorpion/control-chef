@@ -291,7 +291,7 @@
 }
 
 .hover .graphs-instance {
-  height: 1323px !important;
+  height: 710px !important;
   left: 30px !important;
   position: absolute !important;
   top: 1200px !important;
@@ -626,6 +626,7 @@
   left: 410px !important;
   position: absolute !important;
   top: 120px !important;
+  width: 380px !important;
 }
 
 .hover .buttons-2 {
@@ -891,7 +892,7 @@
   height: 23px !important;
   left: 80px !important;
   position: absolute !important;
-  top: 40px !important;
+  top: 45px !important;
   width: 200px !important;
 }
 
@@ -900,19 +901,18 @@
   font-size: 20px !important;
   font-style: unset !important;
   font-weight: 400 !important;
-  height: 25px !important;
-  left: -8px !important;
+  left: 0px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
-  top: -2px !important;
+  top: 0px !important;
 }
 
 .hover .buttons-3 {
-  height: 85px !important;
-  left: 0px !important;
+  height: 25px !important;
+  left: 10px !important;
   position: absolute !important;
   top: 185px !important;
-  width: 284px !important;
+  width: 325px !important;
 }
 
 .hover .buttons-4 {
@@ -932,7 +932,7 @@
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
-  left: 100px !important;
+  left: 85px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
   top: 0px !important;
@@ -959,7 +959,7 @@
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
-  left: 250px !important;
+  left: 255px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
   top: 0px !important;
@@ -976,7 +976,7 @@
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
-  left: 25px !important;
+  left: 0px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
   top: 0px !important;
@@ -998,7 +998,7 @@
   font-style: unset !important;
   font-weight: 400 !important;
   height: 25px !important;
-  left: 175px !important;
+  left: 170px !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
   top: 0px !important;
@@ -1140,7 +1140,7 @@
 }
 
 .hover .graphs-18 {
-  height: 1565px !important;
+  height: 480px !important;
   left: 20px !important;
   position: absolute !important;
   top: 430px !important;
@@ -1149,6 +1149,8 @@
 
 .hover .graphs-19 {
   top: 45px !important;
+  width: 160px !important;
+  height: 205px !important;
 }
 
 .hover .graphs-20 {
@@ -1191,6 +1193,8 @@
 
 .hover .graphs-24 {
   top: 270px !important;
+  width: 160px !important;
+  height: 205px !important;
 }
 
 .hover .graphs-25 {
@@ -1227,6 +1231,8 @@
 .hover .graphs-28 {
   left: 165px !important;
   top: 45px !important;
+  width: 160px !important;
+  height: 205px !important;
 }
 
 .hover .graphs-29 {
@@ -1251,6 +1257,8 @@
 .hover .graphs-31 {
   left: 165px !important;
   top: 270px !important;
+  width: 160px !important;
+  height: 205px !important;
 }
 
 .hover .graphs-32 {
@@ -1364,6 +1372,9 @@
 .hover .footer5{
   left:0px !important;
   top:1000px !important;
+  position: absolute !important;
+  width: 360px !important;
+  height: 100px !important;
 }
 
 .hover .groupfooter{
@@ -1373,14 +1384,16 @@
   width: 358px !important;
 }
 
-.hover .group2{
+.hover .group2footer{
   left:0px !important;
   top:0px !important;
+  width: 360px !important;
+  height: 100px !important;
 }
 
 .hover .controlcheifhighfooter{
-  left:-20px;
-  top:20px;
+  left: 10px;
+  top: 43px;
 }
 
 .hover .maskgroupfooter{
@@ -1392,37 +1405,41 @@
 
 .hover .group7footer{
   left:260px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 60px !important;
+  height: 80px !important;
 }
 
 .hover .group9footer{
   left:170px !important;
-  top:-30px !important;
+  top: 10px !important;
+  width: 70px !important;
+  height: 80px !important;
 }
 
 .hover .textwrapperfooter{
   font-size: var(--copyright-font-size) !important;
-  top: 20px !important;
+  top: 0px !important;
 }
 
 .hover .textwrapper2footer{
   font-size: var(--f10-font-size) !important;
-  top: -5px !important;
+  top: 0px !important;
 }
 
 .hover .textwrapper3footer{
   font-size: var(--f10-font-size) !important;
-  top: 10px !important;
+  top: 15px !important;
 }
 
 .hover .textwrapper4footer{
   font-size: var(--f10-font-size) !important;
-  top: 25px !important;
+  top: 30px !important;
 }
 
 .hover .textwrapper5footer{
   font-size: var(--f10-font-size) !important;
-  top: 40px !important;
+  top: 45px !important;
 }
 
 .hover .buttonfooter{
@@ -1430,27 +1447,25 @@
 }
 
 .hover .group8footer{
-  left:0px !important; 
+  left:0px !important;
+  top : 20px !important;
+  width: 50px !important;
+  height: 60px !important;   
 }
 
 .hover .group10footer{
   left:0px !important;
-}
-
-.hover .overlab2footer{
-  left:0px !important;
-  top:-120px !important;
-}
-
-.hover .rectanglefooter{
-  left: 0px !important;
-  width: 358px !important;
-  height: 10px !important;
+  top : 20px !important;
+  width: 50px !important;
+  height: 30px !important;
 }
 
 .hover .copyrightfooter{
   left:0px !important;
+  top: 110px !important;
+  width: 360px !important;
   font-size: 7px !important;
+  height: 10px !important;
 }
 
 .hover .nav-bar-tab {
@@ -1463,6 +1478,8 @@
 .hover .footer1{
   left:0px !important;
   top:2050px !important;
+  max-width: 834px !important;
+  height: 188px !important;
   position: absolute !important;
 }
 
@@ -1476,6 +1493,7 @@
 .hover .group2footer1{
   left:0px !important;
   top:0px !important;
+  width: 834px !important ;
 }
 
 .hover .controlcheifhighfooter1{
@@ -1537,20 +1555,10 @@
   left:0px !important;
 }
 
-.hover .overlab2footer1{
-  left:0px !important;
-}
-
-.hover .rectanglefooter1{
-  left: 0px !important;
-  width: 835px !important;
-  height: 20px !important;
-  top:60px !important;
-}
-
 .hover .copyrightfooter1{
-  left:210px !important;
-  top: 65px !important;
+  left:0px !important;
+  top: 165px !important;
+  width: 834 !important;
   font-size: var(--f10-font-size) !important;
 }
 
@@ -1603,6 +1611,7 @@
 
 .hover .next1{
   opacity: 0%  !important;
+  left: 500px !important;
 }
 
 .hover .nav2{
@@ -1612,6 +1621,7 @@
 
 .hover .next2{
   opacity: 0% !important;
+  left: 150px !important
 }
 
 .hover .back2{

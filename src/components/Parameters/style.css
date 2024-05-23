@@ -11,7 +11,7 @@
   left: 6px;
   position: relative;
   top: 13px;
-  width: 361px;
+  width: 340px;
 }
 
 .parameters .pitch-input-angle {
@@ -274,6 +274,15 @@
   position: absolute;
   top: 22px;
   width: 201px;
+}
+
+.parameters .line {
+  height: 16px;
+  left: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1px;
 }
 
 .parameters .line-2 {
