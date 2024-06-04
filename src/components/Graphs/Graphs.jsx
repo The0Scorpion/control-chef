@@ -17,6 +17,8 @@ export const Graphs = ({
   groupClassName2,
   groupClassName4,
   divClassName1,
+  setj1,
+  setj2,
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -64,6 +66,9 @@ export const Graphs = ({
     console.log("our json object", IoT_Payload);
 
     const { ID, xpos, ypos, xvel, yvel} = IoT_Payload;
+    console.log(xpos);
+    setj1(xpos);
+    setj2(ypos);
     setIdArr(prevState => [...prevState, Number(ID)]);
     setXPosArr(prevState => [...prevState, Number(xpos)]);
     setYPosArr(prevState => [...prevState, Number(ypos)]);

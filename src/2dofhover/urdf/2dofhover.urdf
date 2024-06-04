@@ -29,10 +29,10 @@
           filename="../meshes/base_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="1 0 0 1" />
+        name="base">
+            <color rgba="0 0 0 1"/>
       </material>
+
     </visual>
     <collision>
       <origin
@@ -68,11 +68,9 @@
         <mesh
           filename="../meshes/link1.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 1 1 1" />
-      </material>
+      <material name="Cyan">
+       <color rgba="0.380392 0.380392 0.47 0.90"/>
+       </material>
     </visual>
     <collision>
       <origin
@@ -127,9 +125,8 @@
           filename="../meshes/link2.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0 1 0 1" />
+        name="base">
+            <color rgba="0.99 0.99 0.99 0.5"/>
       </material>
     </visual>
     <collision>

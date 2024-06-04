@@ -26,8 +26,9 @@ export const HoverRTcomponent = () => {
   const [scrollToTop, setScrollToTop] = useState(false);
   const [parameterData, setParameterData] = useState(null);
   const [Work, setWork] = useState(0);
-
-  
+  const [JointAngle1,setJointAngle1]=useState(0);
+  const [JointAngle2,setJointAngle2]=useState(0);
+  const urdfUrl1 = '/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf';
   const sendDataToLambda = () => {
     if (!parameterData) {
       console.error("No parameter data to send.");
@@ -117,7 +118,7 @@ export const HoverRTcomponent = () => {
         <>
           <div className="hover"
             style={{
-              background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
+              background: "rgb(20, 20, 80)",
               height:
                 screenWidth < 834
                   ? "1120px"
@@ -145,10 +146,12 @@ export const HoverRTcomponent = () => {
                   arrow4="arrow1"
                 />
                 <URDFViewer
-                  urdfUrl="/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf"
+                 urdfUrl={urdfUrl1}
                   className="video-stream-instance1"
                   width="800"
                   height="500"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
                 />
                 <Buttons
                   sendDataToLambda={sendDataToLambda}
@@ -176,6 +179,8 @@ export const HoverRTcomponent = () => {
                   xVelClassName="graphs-3"
                   yPosClassName="graphs-3"
                   yVelClassName="graphs-3"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
                 />
                 <Next navigate="nav1"
                   next="next1"
@@ -207,12 +212,17 @@ export const HoverRTcomponent = () => {
             {screenWidth >= 1300 && (
               <>
                 <Footer className="footer-instance" />
-                <Graphs className="graphs-17" />
+                <Graphs className="graphs-17" 
+                setj1={setJointAngle1}
+                setj2={setJointAngle2}
+                />
                 <URDFViewer
-                  urdfUrl="/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf"
+                  urdfUrl={urdfUrl1}
                   className="video-stream-instance"
                   width="1000"
                   height="600"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
                 />
                 <Parametersnew
                   setParameterData={setParameterData}
@@ -243,10 +253,12 @@ export const HoverRTcomponent = () => {
                   className="parameters-3"
                 />
                 <URDFViewer
-                  urdfUrl="/__parcel_source_root/src/2dofhover/urdf/2dofhover.urdf"
+                  urdfUrl={urdfUrl1}
                   className="video-stream-instance2"
                   width="300"
                   height="200"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
                 />
                 <SimulationStreaming
                   className="simulation-streaming-3"
@@ -279,6 +291,8 @@ export const HoverRTcomponent = () => {
                   xVelClassName="graphs-21"
                   yPosClassName="graphs-21"
                   yVelClassName="graphs-21"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
                 />
                 <NavBar_2
                   onclick={signOut}
