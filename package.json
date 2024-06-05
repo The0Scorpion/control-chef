@@ -7,7 +7,10 @@
     "build": "parcel build --public-url ./ --no-scope-hoist",
     "dev": "parcel",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "start": "serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@aws-amplify/backend-cli": "^0.16.0",
@@ -16,6 +19,7 @@
     "aws-amplify": "^6.0.28",
     "axios": "^1.6.8",
     "chart.js": "^4.4.2",
+    "express": "^4.19.2",
     "formidable": "^1.2.6",
     "har-validator": "^5.1.5",
     "land": "^2.0.4",
