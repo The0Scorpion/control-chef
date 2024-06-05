@@ -53,7 +53,7 @@
     "@storybook/testing-library": "0.2.0",
     "buffer": "^6.0.3",
     "htmlnano": "2.0.3",
-    "parcel": "^2.8.0",
+    "parcel": "^2.12.0",
     "parcel-reporter-static-files-copy": "^1.5.0",
     "process": "^0.11.10",
     "storybook": "^7.6.17"
