@@ -5,12 +5,10 @@
   "source": "./index.html",
   "scripts": {
     "build": "parcel build --public-url ./ --no-scope-hoist",
-    "dev": "parcel",
+    "dev": "parcel serve index.html --port 1234",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "start": "parcel npm install react-scripts --legacy-peer-deps",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@aws-amplify/backend-cli": "^0.16.0",
@@ -28,7 +26,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "^5.0.1",
     "react-stl-viewer": "^2.5.0",
     "request": "^2.88.2",
     "stable": "^0.1.8",
@@ -57,6 +54,15 @@
     "parcel": "^2.12.0",
     "parcel-reporter-static-files-copy": "^1.5.0",
     "process": "^0.11.10",
-    "storybook": "^7.6.17"
+    "storybook": "^7.6.17",
+    "typescript": "^4.9.5"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "source": "./public",
+        "destination": "./dist/public"
+      }
+    ]
   }
 }
