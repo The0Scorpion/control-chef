@@ -19,6 +19,7 @@ function ScrollToTop() {
 
   React.useEffect(() => {
     console.log("ScrollToTop component triggered");
+    console.log(pathname);
     window.scrollTo(0, 0);
   }, [pathname]);
 

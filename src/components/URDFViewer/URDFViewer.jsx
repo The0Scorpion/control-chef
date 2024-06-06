@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import URDFLoader from 'urdf-loader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { useLoaderData, useLocation } from 'react-router-dom';
 
 export const URDFViewer = ({ 
   urdfUrl,
@@ -22,7 +23,6 @@ export const URDFViewer = ({
 
   useEffect(() => {
     if (setonce.current) return;
-
     const container = containerRef.current;
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xffffff);//0x141450
