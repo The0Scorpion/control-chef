@@ -28,7 +28,7 @@ export const HoverRTcomponent = () => {
   const [Work, setWork] = useState(0);
   const [JointAngle1,setJointAngle1]=useState(0);
   const [JointAngle2,setJointAngle2]=useState(0);
-  const urdfUrl1 = '/2dofhover/urdf/2dofhover.urdf';
+  const urdfUrl1 = '2dofhover/urdf/2dofhover.urdf';
   const sendDataToLambda = () => {
     if (!parameterData) {
       console.error("No parameter data to send.");
