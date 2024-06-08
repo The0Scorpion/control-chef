@@ -1,15 +1,9 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-navbar.jsx
-*/
-
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-export const NavBar = ({ 
-  className, 
+export const NavBar = ({
+  className,
   navalltext,
   onclick,
   contact,
@@ -30,21 +24,11 @@ export const NavBar = ({
           <img
             className="mask-group-3"
             alt="Mask group"
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-23@2x.png"
-          />
-          <img
-            className="mask-group-3"
-            alt="Mask group"
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-24@2x.png"
-          />
-          <img
-            className="mask-group-3"
-            alt="Mask group"
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-25@2x.png"
+            src="https://c.animaapp.com/Kvyg7vC4/img/group-1@2x.png"
           />
         </Link>
       </div>
-      <div className= {`group-21 ${navalltext}`}>
+      <div className={`group-21 ${navalltext}`}>
         <button className={`text-wrapper-10 ${contact}`}><Link to="/"><p className="p">Contact us</p></Link></button>
         <button className={`text-wrapper-11 ${about}`}><Link to="/"><p className="p">About us</p></Link></button>
         <button className={`reservation5 ${reservation}`}><Link to="/"><p className="p">Reservation</p></Link></button>
