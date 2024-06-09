@@ -42,7 +42,7 @@ export const Homepage = () => {
         <div
           className="welcome-and"
           style={{
-            background: "linear-gradient(135deg, rgb(5, 5, 24) 60%, rgb(26.25, 26.25, 126) 100%)",
+            background: "darkblue",
             width: { screenWidth }
           }}
         >
