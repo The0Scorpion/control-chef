@@ -1,7 +1,7 @@
 .intro-wrapper {
   height: auto; /* Remove fixed height */
   position: relative;
-  width: 90vw; /* Make it full width */
+  width: 100%; /* Make it full width */
 }
 
 .intro-wrapper .text-wrapper-9 {
@@ -9,8 +9,8 @@
   height: auto; /* Remove fixed height */
   left: 5%; /* Adjust position */
   position: absolute;
-  top: 20px;
-  width: 40%; /* Adjust width */
+  top: 3vw;
+  width: 40vw; /* Adjust width */
   font-family: var(--f70-font-family);
   font-size: var(--f70-font-size);
   font-style: var(--f70-font-style);
@@ -25,6 +25,6 @@
   left: 60%; /* Adjust position */
   object-fit: cover;
   position: absolute;
-  top: 0px;
-  width: 20%; /* Adjust width */
+  top: 1vw;
+  width: 25vw; /* Adjust width */
 }

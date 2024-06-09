@@ -51,15 +51,6 @@ export const Homepage = () => {
               <NavBar_2
                 onclick={signOut}
                 className="nav-bar-tab-instance"
-                navbarclassName="nav-bar1"
-                controltotal1="logo1"
-                controlchef1="nav-bar2"
-                controlchef2="nav-bar3"
-                controlchef3="nav-bar4"
-                navbardrop="nav-bar5"
-                navbartext="nav-bar6"
-                dropdowncontentexperiments="nav-bar71"
-                dropdowncontenttheories="nav-bar81"
               />
               <IntroWrapper
                 className="intro-4"
@@ -71,18 +62,11 @@ export const Homepage = () => {
                 className="class-201"
                 creatingAnIotLabClassName="class-15"
                 ourVisionClassName="class-23"
-                text="Abstract"
-                text1="Our Vision"
-                text2={<>Welcome To <br />control Chef</>}
-                theAvailabilityOfClassName="class-17"
-                welcomeToControlClassName="class-13"
+                theAvailabilityOfClassName="class-203"
               />
               <Footer
                 className="footer5"
-                group="groupfooter"
-                group2="group2footer"
-                controlchefhigh="controlcheifhighfooter"
-                maskgroup="maskgroupfooter"
+                group="groupwrap"
                 group7="group7footer"
                 buttonf="buttonfooter"
                 textwrapper="textwrapperfooter"
@@ -107,36 +91,12 @@ export const Homepage = () => {
               />
               <IntroWrapper
                 className="intro-instance"
-                divClassName="instance-node"
-                homeBannerClassName="intro-2"
               />
               <Welcome
-                abstractClassName="class-22"
                 className="class-20"
-                creatingAnIotLabClassName="class-16"
-                ourVisionClassName="class-24"
-                text="Abstract"
-                text1="Our Vision"
-                text2="Welcome To Control Chef"
-                theAvailabilityOfClassName="class-18"
-                welcomeToControlClassName="class-14"
               />
               <Footer
                 className="footer1"
-                group="groupfooter1"
-                group2="group2footer1"
-                controlchefhigh="controlcheifhighfooter1"
-                maskgroup="maskgroupfooter1"
-                group7="group7footer1"
-                textwrapper="textwrapperfooter1"
-                textwrapper2="textwrapper2footer1"
-                textwrapper3="textwrapper3footer1"
-                textwrapper4="textwrapper4footer1"
-                textwrapper5="textwrapper5footer1"
-                group8="group8footer1"
-                group9="group9footer1"
-                group10="group10footer1"
-                copyright="copyrightfooter1"
               />
               {/* Add an empty div to cut the height of the page */}
             <div style={{ height: 0 }}></div>
