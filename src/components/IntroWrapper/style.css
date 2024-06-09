@@ -1,29 +1,30 @@
 .intro-wrapper {
-  height: 254px;
+  height: auto; /* Remove fixed height */
   position: relative;
-  width: 1250px;
+  width: 90vw; /* Make it full width */
 }
 
 .intro-wrapper .text-wrapper-9 {
   color: #ffffff;
-  height: 279px;
-  left: 90px;
+  height: auto; /* Remove fixed height */
+  left: 5%; /* Adjust position */
   position: absolute;
   top: 20px;
-  width: 500px;
+  width: 40%; /* Adjust width */
   font-family: var(--f70-font-family);
   font-size: var(--f70-font-size);
   font-style: var(--f70-font-style);
   font-weight: var(--f70-font-weight);
   letter-spacing: var(--f70-letter-spacing);
   line-height: var(--f70-line-height);
+  text-align: center;
 }
 
 .intro-wrapper .home-banner-2 {
   height: auto;
-  left: 770px;
+  left: 60%; /* Adjust position */
   object-fit: cover;
   position: absolute;
   top: 0px;
-  width: 20%;
+  width: 20%; /* Adjust width */
 }

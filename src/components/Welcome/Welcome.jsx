@@ -20,6 +20,14 @@ export const Welcome = ({
 }) => {
   return (
     <div className={`welcome ${className}`}>
+      <div className={`welcome-to-control ${welcomeToControlClassName}`}>{text2}</div>
+      <div className={`our-vision ${ourVisionClassName}`}>{text1}</div>
+      <p className={`creating-an-IOT-lab ${creatingAnIotLabClassName}`}>
+        Creating an IOT lab for control experiments, Students can
+        explore different control theories through simulations. Subsequently, they will apply their Control parameters
+        to real systems, observe actual results, and receive feedback An unforgettable learning experience...
+      </p>
+      <div className={`abstract ${abstractClassName}`}>{text}</div>
       <p className={`the-availability-of ${theAvailabilityOfClassName}`}>
         The availability of educational tools is a necessity for any educational
         facility, it is of our concern that these tools are accessible and available to as many people as possible, this
@@ -33,14 +41,6 @@ export const Welcome = ({
         topics they get exposed to during courses especially for deep sciences that don’t appear at the application
         surface level, such as ‘control theory’ which we will be discussing shortly after.
       </p>
-      <div className={`abstract ${abstractClassName}`}>{text}</div>
-      <p className={`creating-an-IOT-lab ${creatingAnIotLabClassName}`}>
-        Creating an IOT lab for control experiments, Students can
-        explore different control theories through simulations. Subsequently, they will apply their Control parameters
-        to real systems, observe actual results, and receive feedback An unforgettable learning experience...
-      </p>
-      <div className={`our-vision ${ourVisionClassName}`}>{text1}</div>
-      <div className={`welcome-to-control ${welcomeToControlClassName}`}>{text2}</div>
     </div>
   );
 };

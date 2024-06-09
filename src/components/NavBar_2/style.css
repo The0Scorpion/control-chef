@@ -1,64 +1,71 @@
+/* Base styles */
 .nav-bar-2 {
   height: 60px;
   background: linear-gradient(135deg, rgb(5, 5, 24) 7.28%, rgb(23, 3, 43) 96.28%);
   border-radius: 0 0 20px 20px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 835px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
 }
 
-button{
+button {
   background: none;
   border: none;
-  transition: all 0.5ms ease;
+  transition: all 0.5s ease;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-.group-42:hover{
+.group-42:hover {
   opacity: 50%;
-}
-
-.nav-bar-dropdown{
-  position: absolute;
-  display: inline;
 }
 
 .nav-bar-2 .dropdown-content-nav {
   display: none;
   position: absolute;
+  top: 30px;
+  right: 3vw;
+  width: 20vw;
   text-align: center;
-  left: 520px;
-  top: 25px;
-  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  background: linear-gradient(135deg, rgb(57.5, 48.3, 138) 0%, rgb(13.17, 74.83, 131.75) 100%);
   border-radius: 20px;
-  min-width: 200px;
-  padding-bottom: 20px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 1vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.nav-bar-2 .theories-explanation {
+.nav-bar-2 .theories-explanation,
+.nav-bar-2 .experiments,
+.nav-bar-2 .p2,
+.nav-bar-2 .text1 {
   color: #ffffff;
   background: none;
   transition: all 0.2s ease;
-  white-space: nowrap; 
+  white-space: nowrap;
   border-radius: 20px;
-  margin: 5px;
+  margin: 0.5vw;
   align-items: center;
   text-align: center;
   font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
+  font-size: calc(var(--subheader-font-size) * 1vw);
   font-style: var(--subheader-font-style);
   font-weight: var(--subheader-font-weight);
   letter-spacing: var(--subheader-letter-spacing);
   line-height: var(--subheader-line-height);
 }
 
-.nav-bar-2 .theories-explanation:hover{
+.nav-bar-2 .theories-explanation:hover,
+.nav-bar-2 .experiments:hover,
+.nav-bar-2 .p2:hover,
+.nav-bar-2 .text1:hover {
   cursor: pointer;
 }
 
@@ -66,196 +73,101 @@ button:hover{
   display: none;
   position: absolute;
   text-align: center;
-  align-items: center;
-  left: -200px;
-  top: 180px;
-  padding: 10px;
-  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  right: 10vw;
+  transform: translateX(-50%);
+  top: 60px;
+  padding: 1vw;
+  background: linear-gradient(135deg, rgb(57.5, 48.3, 138) 0%, rgb(13.17, 74.83, 131.75) 100%);
   border-radius: 20px;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 13vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown-theory:hover .dropdown-content-theories {
-  display: block;
-  cursor: pointer;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content-theories .text1:hover {
-  cursor: pointer;
-  padding: 5px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content-theories .text1 {
-  color: #ffffff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-radius: 20px;
 }
 
 .nav-bar-2 .dropdown-content-experiments {
   display: none;
   position: absolute;
   text-align: center;
-  align-items: center;
-  left: -200px;
-  top: 220px;
-  padding: 10px;
-  background:linear-gradient(135deg, rgb(57.5, 48.3,138 )0%, rgb(13.17,74.83,131.75)100%);
+  right: 5vw;
+  transform: translateX(-50%);
+  top: 70px;
+  padding: 1vw;
+  background: linear-gradient(135deg, rgb(57.5, 48.3, 138) 0%, rgb(13.17, 74.83, 131.75) 100%);
   border-radius: 20px;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 22vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown-experiment:hover .dropdown-content-experiments {
-  display: block;
-  cursor: pointer;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content-experiments .text1:hover {
-  cursor: pointer;
-}
-
-/* Links inside the dropdown */
-.dropdown-content-experiments .text1 {
-  color: #ffffff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-radius: 20px;
-}
-
-.nav-bar-2 .experiments {
-  color: #ffffff;
-  background: none;
-  transition: all 0.2s ease;
-  white-space: nowrap; 
-  border-radius: 20px;
-  margin: 5px;
-  align-items: center;
-  text-align: center;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-}
-
-.nav-bar-2 .experiments:hover{
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.nav-bar-2 .p2{
-  color: #ffffff;
-  border-radius: 5px;
-  margin: 5px;
-  align-items: center;
-  text-align: center;
-  background:none;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height); 
-}
-
-
-.nav-bar-2 .text1{
-  border-radius: 5px;
-  margin: 5px;
-  align-items: center;
-  text-align: center;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  color: white;
-}
-
-/* Links inside the dropdown */
-.dropdown-content-nav .a {
-  color: #ffffff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-radius: 20px;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content-nav .a:hover {
-  cursor: pointer;
-}
-
-/* Show the dropdown menu on hover */
+.dropdown-theory:hover .dropdown-content-theories,
+.dropdown-experiment:hover .dropdown-content-experiments,
 .nav-bar-dropdown:hover .dropdown-content-nav {
   display: block;
   cursor: pointer;
 }
 
+/* Links inside the dropdown */
+.dropdown-content-theories .text1,
+.dropdown-content-experiments .text1 {
+  color: #ffffff;
+  padding: 1vw;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+}
+
+.dropdown-content-theories .text1:hover,
+.dropdown-content-experiments .text1:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Specific styles for elements inside the nav bar */
 .nav-bar-2 .group-42 {
-  height: 14px;
-  left: 730px;
+  display: flex;
   position: absolute;
+  left: 92vw;
   top: 20px;
-  width: 33px;
-  transition: all 0.5ms ease;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 
-.nav-bar-2 .rectangle-8 {
+.nav-bar-2 .rectangle-8{
   background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
+  height: 0.2vw;
+  width: 3.3vw;
+  margin: 0.2vw 0;
   position: absolute;
-  top: 0;
-  width: 33px;
+  top: 0px;
 }
 
-.nav-bar-2 .rectangle-9 {
+.nav-bar-2 .rectangle-9{
   background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
+  height: 0.2vw;
+  width: 3.3vw;
+  margin: 0.2vw 0;
   position: absolute;
   top: 6px;
-  width: 33px;
 }
 
 .nav-bar-2 .rectangle-10 {
   background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
+  height: 0.2vw;
+  width: 3.3vw;
+  margin: 0.2vw 0;
   position: absolute;
-  top: 12px;
-  width: 33px;
+  top:12px;
 }
 
 .nav-bar-2 .control-chef-high-3 {
-  height: 35px;
-  left: 50px ;
-  overflow: hidden;
-  position: absolute;
-  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.5s ease;
-  width: 199px;
 }
 
-
 .nav-bar-2 .mask-group-7 {
-  height: 35px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 199px;
+  height: 3.5vw;
+  width: auto;
+  margin: 0 1vw;
 }

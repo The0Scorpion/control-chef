@@ -13,10 +13,7 @@ export const NavBar_2 = ({
   navbarclassName,
   navbardrop,
   navbartext,
-  navbartexts,
   controlchef1,
-  controlchef2,
-  controlchef3,
   controltotal1,
   onclick,
   dropdowncontenttheories,
@@ -24,6 +21,14 @@ export const NavBar_2 = ({
  }) => {
   return (
     <div className={`nav-bar-2 ${className}`}>
+            <div className={`control-chef-high-3 ${controltotal1}`}>
+        <Link to="/">
+          <img
+            className={`mask-group-7 ${controlchef1}`}
+            src="https://c.animaapp.com/Kvyg7vC4/img/group-1@2x.png"
+          />
+        </Link>
+      </div>
       <div className="nav-bar-dropdown">
         <button className={`group-42 ${navbarclassName}`}>
           <div className="rectangle-8" />
@@ -53,22 +58,6 @@ export const NavBar_2 = ({
           </div>
           <div className="a"><button className={`text1 ${navbartext}`} onClick={onclick}>Sign Out</button></div>
         </div>
-      </div>
-      <div className={`control-chef-high-3 ${controltotal1}`}>
-        <Link to="/">
-          <img
-            className={`mask-group-7 ${controlchef1}`}
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-16@2x.png"
-          />
-          <img
-            className={`mask-group-7 ${controlchef2}`}
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-17@2x.png"
-          />
-          <img
-            className={`mask-group-7 ${controlchef3}`}
-            src="https://c.animaapp.com/zqIJEW6i/img/mask-group-18@2x.png"
-          />
-        </Link>
       </div>
     </div>
   );

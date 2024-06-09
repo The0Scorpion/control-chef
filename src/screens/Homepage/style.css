@@ -383,9 +383,9 @@
 
 .welcome-and .footer-instance {
   background-color: transparent !important;
-  left: 80px !important;
+  left: 0px !important;
   position: absolute !important;
-  top: 1850px !important;
+  top: 1350px !important;
 }
 
 .welcome-and .testimonials-16 {
@@ -395,7 +395,7 @@
 }
 
 .welcome-and .welcome-instance {
-  left: 80px !important;
+  left: 50px !important;
   position: absolute !important;
   top: 480px !important;
 }
@@ -410,6 +410,7 @@
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
+  z-index: 1 !important;
 }
 
 .welcome-and .intro-4 {
@@ -435,72 +436,17 @@
 }
 
 .welcome-and .nav-bar-tab-instance {
-  height: 20px !important;
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
-  width: 360px !important;
   z-index: 1 !important;
   border-radius:  0px 0px 3px 3px  !important;
-}
-
-.welcome-and .logo1{
-  top: 2px !important;
-  left: 5px !important;
-  width: 35% !important;
-}
-
-.welcome-and .nav-bar1{
-  left: 300px !important;
-  top: 2px !important;
-}
-
-.welcome-and .nav-bar2{
-  width: 60% !important;
-  height: auto !important;
-}
-
-.welcome-and .nav-bar3{
-  width: 60% !important;
-  height: auto !important;
-}
-
-.welcome-and .nav-bar4{
-  width: 60% !important;
-  height: auto !important;
-}
-
-.welcome-and .nav-bar5{
-  left: 180px !important;
-  min-width: 50px !important;
-  top:10px !important;
-  padding: 5px !important;
-}
-
-.welcome-and .nav-bar6{
-  font-size: var(--copyright-font-size) !important;
-}
-
-.welcome-and .nav-bar71{
-  position: absolute !important;
-  left: -120px !important;
-  top: 100px !important;
-  min-width: 30px !important;
-}
-
-.welcome-and .nav-bar81{
-  position: absolute !important;
-  left: -85px !important;
-  top: 150px !important;
-  min-width: 30px !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 .welcome-and .footer5{
   left:0px !important;
   position: absolute !important;
-  top:2320px !important;
+  top:1250px !important;
   height: 100px !important;
   width: 350px !important;
 }
@@ -510,6 +456,7 @@
   top:0px !important;
   height: 100px !important;
   width: 358px !important;
+  border-radius: 5px !important;
 }
 
 .welcome-and .group2footer{
@@ -590,14 +537,15 @@
 
 .welcome-and .copyrightfooter{
   left:0px !important;
-  top: 110px !important;
+  top: 105px !important;
   width: 360px !important;
   font-size: 7px !important;
+  height: 7px !important;
 }
 
 .welcome-and .footer1{
   left:0px !important;
-  top:1730px !important;
+  top:1200px !important;
   max-width: 834px !important;
   height: 188px !important;
   position: absolute !important;
