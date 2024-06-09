@@ -51,9 +51,11 @@ export const Homepage = () => {
               <NavBar_2
                 onclick={signOut}
                 className="nav-bar-tab-instance"
+                controlchef1="logo1-control"
                 navbardrop="nav-bar-drop"
                 dropdowncontentexperiments="drop-down-exp"
                 dropdowncontenttheories="drop-down-theory"
+                navbartext="nav-bar-text"
               />
               <IntroWrapper
                 className="intro-4"

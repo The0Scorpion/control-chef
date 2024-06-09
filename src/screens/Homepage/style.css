@@ -14,17 +14,26 @@
 }
 
 .welcome-and .nav-bar-drop{
-  width: 50vw !important;
+  width: 45vw !important;
 }
 
 .welcome-and .drop-down-exp{
-  width: 60vw !important;
+  width: 65vw !important;
   right: 10vw !important;
 }
 
 .welcome-and .drop-down-theory{
-  width: 30vw !important;
+  width: 40vw !important;
   right: 10vw !important;
+}
+
+.welcome-and .nav-bar-text{
+  width: 40vw !important;
+  justify-content: left !important;
+}
+
+.welcome-and .logo1-control{
+  height: 5vw !important;
 }
 
 .welcome-and .intro-3 {
