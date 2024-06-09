@@ -29,6 +29,8 @@
     "react-router-dom": "^6.8.1",
     "react-stl-viewer": "^2.5.0",
     "request": "^2.88.2",
+    "serve": "^14.2.3",
+    "server": "^1.0.39",
     "stable": "^0.1.8",
     "superagent": "^3.8.3",
     "swr": "^2.2.5",
