@@ -1,7 +1,7 @@
 .intro-wrapper {
   height: auto; /* Remove fixed height */
   position: relative;
-  width: 100%; /* Make it full width */
+  width: 90%; /* Make it full width */
 }
 
 .intro-wrapper .text-wrapper-9 {

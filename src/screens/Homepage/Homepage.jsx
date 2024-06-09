@@ -42,7 +42,6 @@ export const Homepage = () => {
         <div
           className="welcome-and"
           style={{
-            background: "darkblue",
             width: { screenWidth }
           }}
         >

@@ -6900,7 +6900,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .welcome {
-  width: 93vw;
+  width: 90%;
   top: 0;
   left: 0;
 }
@@ -6963,7 +6963,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .intro-wrapper {
-  width: 100%;
+  width: 90%;
   height: auto;
   position: relative;
 }

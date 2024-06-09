@@ -44,19 +44,14 @@ export const HoverDoccomponent = () => {
         <>
           <div className="hoverdoc"
             style={{
-              background: "linear-gradient(180deg, rgb(5, 5, 24) 0%, rgb(28.9, 26.25, 126) 100%)",
-              height: screenWidth < 834
-                ? "1220px"
-                : screenWidth >= 834 && screenWidth < 1300
-                  ? "2610px"
-                  : screenWidth >= 1300
-                    ? "3170px"
-                    : undefined,
               width: { screenWidth }
             }}
           >
             {screenWidth >= 834 && screenWidth < 1300 && (
               <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab" />
                 <About className="about1"
                   theDOFhover="textdof"
                   theDOFhoverwrapper="boxdof"
@@ -83,9 +78,6 @@ export const HoverDoccomponent = () => {
                   next="next1"
                   back="back1"
                   linkTo1="/hover-simulation" />
-                <NavBar_2
-                  onclick={signOut}
-                  className="nav-bar-tab" />
                 <Footer
                   className="footer1"
                   group="groupfooter1"
@@ -103,12 +95,12 @@ export const HoverDoccomponent = () => {
                   group10="group10footer1"
                   copyright="copyrightfooter1"
                 />
+                <div style={{ height: 0 }}></div>
               </>
             )}
 
             {screenWidth >= 1300 && (
               <>
-                <Footer className="footerdoc" />
                 <NavBar
                   onclick={signOut}
                   className="navbardoc"
@@ -119,12 +111,28 @@ export const HoverDoccomponent = () => {
                 <BlockDiagram className="blockdiagram" />
                 <Next navigate="navigate"
                   linkTo1="/hover-simulation"
-                  back="backop" />
+                  back="backop" 
+                />
+                <Footer className="footerdoc" />
+                <div style={{ height: 0 }}></div>
               </>
             )}
 
             {screenWidth < 834 && (
               <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab-instance"
+                  controltotal1="logo1"
+                  navbarclassName="nav-bar1"
+                  controlchef1="nav-bar2"
+                  controlchef2="nav-bar3"
+                  controlchef3="nav-bar4"
+                  navbardrop="nav-bar5"
+                  navbartext="nav-bar6"
+                  dropdowncontentexperiments="nav72"
+                  dropdowncontenttheories="nav82"
+                />
                 <About
                   className="about20"
                   theDOFhoverwrapper="about21"
@@ -154,19 +162,6 @@ export const HoverDoccomponent = () => {
                   linkTo1="/hover-simulation"
                   back="backop2"
                   next="next2" />
-                <NavBar_2
-                  onclick={signOut}
-                  className="nav-bar-tab-instance"
-                  controltotal1="logo1"
-                  navbarclassName="nav-bar1"
-                  controlchef1="nav-bar2"
-                  controlchef2="nav-bar3"
-                  controlchef3="nav-bar4"
-                  navbardrop="nav-bar5"
-                  navbartext="nav-bar6"
-                  dropdowncontentexperiments="nav72"
-                  dropdowncontenttheories="nav82"
-                />
                 <Footer
                   className="footer5"
                   group="groupfooter"
@@ -185,6 +180,7 @@ export const HoverDoccomponent = () => {
                   group10="group10footer"
                   copyright="copyrightfooter"
                 />
+                <div style={{ height: 0 }}></div>
               </>
             )}
           </div>
