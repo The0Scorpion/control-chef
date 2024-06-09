@@ -36,7 +36,7 @@ export const Graphs = ({
 
   useEffect(() => {
     // Initialize WebSocket connection
-    const ws = new WebSocket('wss://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production'); 
+    const ws = new WebSocket('wss://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production');
 
     ws.addEventListener('open', event => {
       console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
@@ -65,7 +65,14 @@ export const Graphs = ({
     const IoT_Payload = JSON.parse(data);
     console.log("our json object", IoT_Payload);
 
-    const { ID, xpos, ypos, xvel, yvel} = IoT_Payload;
+    const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
+    if (ID == 0) {
+      setIdArr([]);
+      setXPosArr([]);
+      setYPosArr([]);
+      setXVelArr([]);
+      setYVelArr([]);
+    }
     console.log(xpos);
     setj1(xpos);
     setj2(ypos);
