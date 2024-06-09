@@ -13,6 +13,20 @@
   z-index: 1 !important;
 }
 
+.welcome-and .nav-bar-drop{
+  width: 40vw !important;
+}
+
+.welcome-and .drop-down-exp{
+  width: 50vw !important;
+  right: 10vw !important;
+}
+
+.welcome-and .drop-down-theory{
+  width: 30vw !important;
+  right: 10vw !important;
+}
+
 .welcome-and .intro-3 {
   left: 50px !important;
   position: absolute !important;
