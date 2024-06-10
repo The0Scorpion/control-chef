@@ -6,13 +6,10 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import React from "react";
 import "./style.css";
 
-export const BlockDiagram = ({ 
-  className,
-  imgblockdiagram
- }) => {
+export const BlockDiagram = ({
+  className
+}) => {
   return (
-    <div className={`block-diagram ${className}`}>
-      <img className={`img ${imgblockdiagram}`} src= "https://c.animaapp.com/QXwh4ZEY/img/block-diagram-1.svg"/>
-    </div>
+    <img className={`img ${className}`} src="https://c.animaapp.com/QXwh4ZEY/img/block-diagram-1.svg" />
   );
 };

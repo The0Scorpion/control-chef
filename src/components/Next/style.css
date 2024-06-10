@@ -2,18 +2,20 @@
   position: absolute;
   left:0;
   top:0;
+  height: 3.3vw;
+  width: 100%;
 }
 
 .navigate .next {
   background-color: #6454f0;
   border-radius: 10px;
-  height: 44px;
-  width: 84px;
+  height: 3.3vw;
+  width: 8vw;
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 24px;
   font-weight: 400;
-  left: 1220px;
+  right: 10vw;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -30,13 +32,13 @@
 .navigate .back {
   background-color: #6454f0;
   border-radius: 10px;
-  height: 44px;
-  width: 84px;
+  height: 3.3vw;
+  width: 8vw;
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 24px;
   font-weight: 400;
-  left: 20px;
+  left: 10vw;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;

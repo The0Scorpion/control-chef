@@ -52,30 +52,22 @@ export const HoverDoccomponent = () => {
                 <NavBar_2
                   onclick={signOut}
                   className="nav-bar-tab" />
-                <About className="about1"
+                <About 
+                  className="about1"
                   theDOFhover="textdof"
-                  theDOFhoverwrapper="boxdof"
                   abouttheDOF="titleabout"
-                  img="hoverimg" />
+                />
                 <HowItWorks
                   className="howitwork1"
-                  HowItWorksbox="howitworksbox1"
-                  HowItWorkstext="howtext"
-                  thedegreeof="thedof" />
+                  thedegreeof="textsize"
+               />
                 <Modeling
                   className="modeling1"
-                  model="model1"
-                  modelingwrapper="modelingwrapper1"
-                  Modeling1="mod1"
-                  paragraphgroup="paragraph1"
-                  whenapositive="positive1"
-                  img="imgmodel1"
-                  equation="equation1" />
+               />
                 <BlockDiagram
                   className="blockdiagram1"
-                  imgblockdiagram="imgbd1" />
+               />
                 <Next navigate="navi1"
-                  next="next1"
                   back="back1"
                   linkTo1="/hover-simulation" />
                 <Footer
@@ -119,8 +111,6 @@ export const HoverDoccomponent = () => {
                   className="about20"
                   theDOFhoverwrapper="about21"
                   theDOFhover="about22"
-                  aboutwrapper="about23"
-                  abouttheDOF="about24"
                   img="about25" />
                 <HowItWorks
                   className="howitwork20"
@@ -130,16 +120,10 @@ export const HoverDoccomponent = () => {
                 />
                 <Modeling
                   className="modeling20"
-                  model="modeling21"
-                  modelingwrapper="modeling22"
-                  modeling1="modeling23"
-                  paragraphgroup="modeling24"
-                  whenapositive="modeling25"
-                  equation="modeling26"
-                  img="modeling27" />
+               />
                 <BlockDiagram
-                  className="blockdiagram20"
-                  imgblockdiagram="blockdiagram21" />
+                  className="blockdiagram21" 
+                />
                 <Next navigate="navigate2"
                   linkTo1="/hover-simulation"
                   back="backop2"

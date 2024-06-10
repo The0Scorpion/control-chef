@@ -1,45 +1,71 @@
 .how-it-works {
-  height: 699px;
   position: relative;
-  width: 975px;
+  width: 100%; /* Using viewport width */
+  margin: 0 auto; /* Centering the div */
+  height: 95vh;
 }
 
 .how-it-works .the-degree-of {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 24px;
+  font-size: 1.8vw; /* Responsive font size */
   font-weight: 400;
-  left: 47px;
+  left: 5vw; /* Using viewport units */
   letter-spacing: 0;
-  line-height: 40px;
+  line-height: 4vw; /* Responsive line height */
   position: absolute;
-  top: 98px;
-  width: 928px;
+  top: 14vh; /* Using viewport units */
+  width: 85vw; /* Using viewport units */
   text-align: justify;
   text-justify: inter-word;
 }
 
 .how-it-works .overlap-group {
   background-color: #ffffff4c;
-  border-radius: 0px 20px 20px 0px;
-  height: 86px;
+  border-radius: 0px 2vw 2vw 0px; /* Using viewport units */
+  height: 10vh; /* Using viewport units */
   left: 0;
   position: absolute;
   top: 0;
-  width: 296px;
+  width: 30vw; /* Using viewport units */
 }
 
 .how-it-works .HOW-IT-WORKS {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 24px;
+  font-size: 2.4vw; /* Responsive font size */
   font-weight: 400;
-  left: 47px;
+  left: 5vw; /* Using viewport units */
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 27px;
+  top: 3vh; /* Using viewport units */
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    height: 80vh; /* Adjust for smaller screens */
+  }
+
+  .how-it-works .the-degree-of {
+    font-size: 3.5vw; /* Increase font size for readability */
+    line-height: 5vw;
+    width: 90vw;
+    left: 2.5vw;
+    top: 16vh;
+  }
+
+  .how-it-works .overlap-group {
+    height: 12vh;
+    width: 35vw;
+  }
+
+  .how-it-works .HOW-IT-WORKS {
+    font-size: 3.5vw;
+    top: 4vh;
+    left: 2.5vw;
+  }
 }

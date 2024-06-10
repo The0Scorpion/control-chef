@@ -2,40 +2,29 @@
   width:100%;
   left: 0px;
   top: 0px;
-}
-
-.about .the-DOF-hover-wrapper {
-  background-color: #ffffff73;
-  border-radius: 2vw 0 0 2vw;
-  height: 25vh;
-  right: 0px; 
-  position: absolute;
-  top: 30vh; 
-  width: 45vw; 
+  height: 40vw;
+  display: inline-block;
 }
 
 .about .the-DOF-hover {
+  background-color: #ffffff73;
+  border-radius: 2vw 0 0 2vw;
+  height: 15vh;
+  right: 0vw;
+  top: 10vh;
+  width: 50vw;
   color: #050518;
   font-family: "Salsa", Helvetica;
-  font-size: 1.5vw; 
+  font-size: 1.5vw;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 5vh;
-  left: 2.5vw; 
-  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: justify;
-  text-justify: inter-word;
-  align-items:center ;
-}
-
-.about .div {
- /* height: 60vh;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50vw;  */
+  padding: 15px;
 }
 
 .about .about-the-DOF {
@@ -56,7 +45,7 @@
 }
 
 .about .element {
-  left: 5vw;
+  left: 0px;
   object-fit: cover;
   position: absolute;
   top: 10vh;

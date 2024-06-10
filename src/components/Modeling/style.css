@@ -1,71 +1,49 @@
 .modeling {
-  height: 590px;
   position: relative;
-  width: 1348px;
-}
-
-.modeling .overlap-2 {
-  height: 796px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1300px;
-}
-
-.modeling .MODELING-wrapper {
-  background-color: #ffffff4c;
-  border-radius: 20px 0px 0px 20px;
-  height: 86px;
-  left: 937px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 411px;
+  width: 100%; /* Using viewport width */
+  height: 102vh;
 }
 
 .modeling .MODELING {
+  background-color: #ffffff4c;
+  border-radius: 1vw 0px 0px 1vw; /* Using viewport units */
+  height: 8vh; /* Using viewport height */
+  right: 0vw;
+  position: absolute;
+  top: 0;
+  width: 30vw; /* Using viewport width */
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 24px;
+  font-size: 2vw; /* Responsive font size */
   font-weight: 400;
-  left: 136px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 29px;
-  text-align: justify;
   text-justify: inter-word;
-}
-
-.modeling .overlap-3 {
-  height: 460px;
-  left: 0;
-  position: absolute;
-  top: 59px;
-  width: 1328px;
+  align-content:center;
 }
 
 .modeling .img {
-  left: 30px;
+  left: 1vw; /* Using viewport width */
   position: absolute;
   top: 0;
-  width: 755px;
+  width: 55vw; /* Using viewport width */
   height: auto;
 }
 
 .modeling .when-a-positive {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 24px;
+  font-size: 2vw; /* Responsive font size */
   font-weight: 400;
-  left: 650px;
+  right: 1vw; /* Using viewport width */
   letter-spacing: 0;
-  line-height: 40px;
+  line-height: 3vw; /* Using viewport width */
   position: absolute;
   text-align: right;
-  top: 72px;
-  width: 635px;
+  top: 10vh; /* Using viewport height */
+  width: 45vw; /* Using viewport width */
   text-align: justify;
   text-justify: inter-word;
 }
@@ -73,15 +51,81 @@
 .modeling .the-model-equation {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 30px;
+  font-size: 2.5vw; /* Responsive font size */
   font-weight: 400;
-  left: 300px;
+  left: 30vw; /* Using viewport width */
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 730px;
-  width: 718px;
+  top: 90vh; /* Using viewport height */
+  width: 60vw; /* Using viewport width */
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media (max-width: 1300px) {
+  .modeling .img {
+    width: 60vw;
+    top: 8vw;
+  }
+
+  .modeling .when-a-positive {
+    font-size: 2.2vw;
+    line-height: 3.2vw;
+  }
+
+  .modeling .the-model-equation {
+    font-size: 2.7vw;
+    left: 25vw;
+    top: 65vw;
+  }
+}
+
+@media (max-width: 830px) {
+
+  .modeling .img {
+    width: 65vw;
+  }
+
+  .modeling .when-a-positive {
+    font-size: 2.4vw;
+    line-height: 3.4vw;
+    width: 49vw;
+    right: 0vw;
+  }
+
+  .modeling .the-model-equation {
+    font-size: 2.9vw;
+    left: 19vw;
+    top: 79vh;
+    width: 64vw;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .modeling .MODELING {
+    font-size: 4vw;
+    left: 10vw;
+    top: 3vh;
+  }
+
+  .modeling .img {
+    width: 70vw;
+  }
+
+  .modeling .when-a-positive {
+    font-size: 3vw;
+    line-height: 4vw;
+    width: 52vw;
+    left: 58vw;
+  }
+
+  .modeling .the-model-equation {
+    font-size: 3.5vw;
+    left: 20vw;
+    top: 82vh;
+    width: 68vw;
+  }
 }

@@ -1,8 +1,9 @@
 .hoverdoc {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hoverdoc .navbardoc {
@@ -12,127 +13,45 @@
   z-index: 100 !important;
 }
 
-.hoverdoc .about{
-  position: absolute !important;
+.hoverdoc .about {
+  position: relative !important;
   top: 100px !important;
-}
-
-.hoverdoc .howitwork{
-  position: absolute !important;
-  top: 700px !important;
   left: 0px !important;
 }
-.hoverdoc .modeling{
-  top: 1450px !important;
+
+.hoverdoc .howitwork {
+  position: relative !important;
+  margin-top: 10rem;
   left: 0px !important;
-  position: absolute !important;
 }
 
-.hoverdoc .blockdiagram{
-  top:2300px !important;
-  position: absolute !important;
-  left: 10px !important;
+.hoverdoc .modeling {
+  top: 100px !important;
+  margin-top: 10rem;
+  position: relative !important;
 }
 
-.hoverdoc .navigate{
-  top:2850px !important;
+.hoverdoc .blockdiagram {
+  margin-top: 10rem;
+  position: relative !important;
+  left: 50px !important;
+  width: 90vw;
+}
+
+.hoverdoc .navigate {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   left: 0px !important;
-  position: absolute !important;
+  position: relative !important;
 }
 
-.hoverdoc .backop{
+.hoverdoc .backop {
   display: none !important;
 }
 
 .hoverdoc .footerdoc {
-  background-color: transparent !important;
-  left: 0px !important;
-  position: absolute !important;
-  top: 2920px !important;
-}
-
-.hoverdoc .nav-bar-tab-instance {
-  left: 0px !important;
-  position: fixed !important;
+  position: relative !important;
   top: 0px !important;
-  z-index: 1 !important;
-  border-radius:  0px 0px 3px 3px  !important;
-}
-
-.hoverdoc .nav-bar-drop{
-  width: 45vw !important;
-}
-
-.hoverdoc .drop-down-exp{
-  width: 65vw !important;
-  right: 10vw !important;
-}
-
-.hoverdoc .drop-down-theory{
-  width: 40vw !important;
-  right: 10vw !important;
-}
-
-.hoverdoc .nav-bar-text{
-  width: 40vw !important;
-  justify-content: left !important;
-}
-
-.hoverdoc .logo1-control{
-  height: 5vw !important;
-}
-
-.hoverdoc .logo1{
-  top: 2px !important;
-  left: 5px !important;
-  width: 35% !important;
-}
-
-.hoverdoc .nav-bar1{
-  left: 300px !important;
-  top: 2px !important;
-}
-
-.hoverdoc .nav-bar2{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hoverdoc .nav-bar3{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hoverdoc .nav-bar4{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hoverdoc .nav-bar5{
-  left: 180px !important;
-  min-width: 50px !important;
-  top:10px !important;
-  padding: 5px !important;
-}
-
-.hoverdoc .nav-bar6{
-  font-size: var(--copyright-font-size) !important;
-}
-
-.hoverdoc .nav72{
-  position: absolute !important;
-  left: -120px !important;
-  top: 100px !important;
-  min-width: 30px !important;
-}
-
-.hoverdoc .nav82{
-  position: absolute !important;
-  left: -85px !important;
-  top: 150px !important;
-  min-width: 30px !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 .hoverdoc .nav-bar-tab {
@@ -142,284 +61,172 @@
   z-index: 1 !important;
 }
 
-.hoverdoc .footer1{
-  position: absolute !important;
-  left:0px !important;
-  top:2420px !important;
+.hoverdoc .about1 {
+  top: 70px !important;
+  position: relative !important;
 }
 
-.hoverdoc .textdof{
+.hoverdoc .textdof {
   font-size: 18px !important;
-  width: 360px !important;
-  top: 19px !important;
 }
 
-.hoverdoc .boxdof{
-  left: 429px !important;
-  width: 400px !important;
-  height: 150px !important;
-  top: 100px !important;
+.hoverdoc .titleabout {
+  font-size: 30px !important;
 }
 
-.hoverdoc .titleabout{
- font-size: 30px !important;
- left: 250px !important;
- top: 15px !important;
+.hoverdoc .howitwork1 {
+  position: relative;
+  top: 70px !important;
+  margin-top: 2rem;
+  left: auto;
 }
 
-.hoverdoc .hoverimg{
-  height: 50% !important;
-  width: 30% !important;
-  left: 50px !important;
+.hoverdoc .textsize {
+  font-size: 2.2vw !important;
 }
 
-.hoverdoc .howitwork1{
-  top: 470px !important;
+.hoverdoc .modeling1 {
+  position: relative;
+  width: 100%;
+  top: auto;
+  right: auto;
+  margin-top: 2rem;
+}
+
+.hoverdoc .blockdiagram1 {
+  margin-top: 2rem;
+  width: 80vw;
+  position: relative;
+}
+
+.hoverdoc .navi1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.hoverdoc .back1 {
+  display: none !important;
+}
+
+.hoverdoc .footer1 {
+  position: relative !important;
   left: 0px !important;
-  width: 834px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .howtext{
-  font-size: 20px !important; 
-}
-
-.hoverdoc .thedof{
-  font-size: 20px !important;
-  width: 700px !important;
-}
-
-.hoverdoc .modeling1{
- top:1200px !important; 
- left: 0px !important;
- width: 834px !important;
- height: 750px !important;
-}
-
-.hoverdoc .model1{
-  width: 834px !important;
-  height: 650px !important;
- }
-
-.hoverdoc .modelingwrapper1{
-  left: 535px !important;
-  width: 300px !important;
-  height: 80px !important; 
-}
-
-.hoverdoc .mod1{
-  top:0px !important;
-  left: 10px !important;
-  width: 10px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .paragraph1{
-  left:0px !important;
-  top: 100px !important;
-  width: 834px !important;
-  height: 550px !important;
-}
-
-.hoverdoc .imgmodel1{
-  width: 50% !important;
-  height: auto !important;
-  top: 50px !important;
-  left: 0px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .positive1{
-  width: 400px !important;
-  left: 430px !important;
   top: 0px !important;
 }
 
-.hoverdoc .equation1{
-  top: 660px !important;
-  left: 100px !important;
-}
-
-.hoverdoc .blockdiagram1{
+.hoverdoc .nav-bar-tab-instance {
   left: 0px !important;
-  position: absolute;
-  width: 834px !important;
-  height: 330px !important;
-  top: 2000px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 1 !important;
+  border-radius: 0px 0px 3px 3px !important;
 }
 
-.hoverdoc .imgbd1{
-  width: 800px !important;
-  position: absolute;
-  left: 30px !important;
+.hoverdoc .logo1-control {
+  height: 5vw !important;
 }
 
-.hoverdoc .navi1{
-  top: 2350px !important;
+.hoverdoc .nav-bar-drop {
+  width: 45vw !important;
 }
 
-.hoverdoc .next1{
-  left:700px !important;
+.hoverdoc .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
 }
 
-.hoverdoc .back1{
-  opacity: 0% !important;
+.hoverdoc .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
 }
 
-.hoverdoc .about20{
-  position: absolute !important;
-  left:0px !important;
-  top: 20px !important;
-  width: 360px !important;
-  height: 215px !important;
+.hoverdoc .nav-bar-text {
+  width: 40vw !important;
+  justify-content: left !important;
 }
 
-.hoverdoc .about21{
-  left:160px !important;
-  width: 200px !important;
-  height: 80px !important;
-  border-radius: 10px 0px 0px 10px !important;
+.hoverdoc .about20 {
+  position: relative!important;
   top: 80px !important;
 }
 
-.hoverdoc .about22{
-  font-size: 10px !important;
-  width: 170px !important;
-  top: 8px !important;
-  left: 15px !important;
+.hoverdoc .about21 {
+  height: 15vh !important;
+  top: 8vh !important;
 }
 
-.hoverdoc .about23{
-  width: 360px !important;
-  height: 215px !important;
+.hoverdoc .about22 {
+  top: 8vh !important;
+  font-size: 2.4vw !important;
+  padding: 15px;
 }
 
-.hoverdoc .about24{
-  font-size: 15px !important;
-  left: 80px !important;
-  top: 10px !important;
+@media (max-width: 450px) {
+  .hoverdoc .about22 {
+    top: 3vh !important;
+    font-size: 2.4vw !important;
+    padding: 15px;
+  } 
 }
 
-.hoverdoc .about25{
-  width: 50% !important;
-  height: auto !important;
-  left: -10px !important;
-  top: 35px !important;
+.hoverdoc .about25 {
+  top: 5vh !important;
 }
 
-.hoverdoc .howitwork20{
-  top: 240px !important;
+.hoverdoc .howitwork20 {
+  margin-top: 2rem;
   left: 0px !important;
-  width: 360px !important;
-  height: 310px !important;
-  position: absolute !important;
+  position: relative !important;
 }
 
-.hoverdoc .howitwork21{
-  width: 330px !important;
-  left: 15px !important;
-  font-size: 10px !important;
-  top: 50px !important;
-  line-height: 15px !important;
+.hoverdoc .howitwork22 {
+  height: 8vh !important;
 }
 
-.hoverdoc .howitwork22{
-  width: 170px !important;
-  height: 35px !important;
-  border-radius: 0px 10px 10px 0px !important;
-  align-content: center !important;
-  justify-content: center !important;
+.hoverdoc .howitwork23 {
+  top: 1.6vh !important;
 }
 
-.hoverdoc .howitwork23{
-  font-size: 12px !important;
-  left: 35px !important;
-  top: 10px !important;
-  align-content: center !important;
-  justify-content: center !important;
+.hoverdoc .howitwork21 {
+  top: 9vh !important;
+  font-size: 2.4vw !important;
 }
 
-.hoverdoc .modeling20{
-  top: 570px !important;
-  width: 360px !important;
-  height: 320px !important;
+.hoverdoc .modeling20 {
+  position: relative;
+  margin-top: 2rem;
   left: 0px !important;
 }
 
-.hoverdoc .modeling21{
-  left: 0px !important;
-  width: 360px !important;
-  height: 250px !important;
-}
-
-.hoverdoc .modeling22{
-  left: 189px !important;
-  top: 0px !important;
-  width: 170px !important;
-  height: 35px !important;
-  border-radius: 10px 0px 0px 10px !important;
-  align-content: center !important;
-  justify-content: center !important;
-}
-
-.hoverdoc .modeling23{
-  font-size: 12px !important;
-  left: 50px !important;
-  top: 10px !important;
-  align-content: center !important;
-  justify-content: center !important;
-}
-
-.hoverdoc .modeling24{
-  top: 50px !important;
-  width: 360px !important;
-  left: 0px !important;
-  height: 250px !important;
-}
-
-.hoverdoc .modeling25{
-  width: 180px !important;
-  left: 170px !important;
-  font-size: 10px !important;
-  top: 0px !important;
-  line-height: 15px !important;
-}
-
-.hoverdoc .modeling26{
-  top: 270px !important;
-  font-size: 12px !important;
-  left: 90px !important;
-  width: 250px !important;
-}
-
-.hoverdoc .modeling27{
-  position: absolute !important;
-  width: 45% !important;
-  height: auto !important;
-  left: 0px !important;
-  top: 15px !important;
-}
-
-.hoverdoc .blockdiagram21{
-  width: 100% !important;
-  position: absolute !important;
+.hoverdoc .blockdiagram21 {
+  position: relative !important;
   left: 10px !important;
-  top: 920px !important;
+  margin-top: 2rem;
+  width: 80vw;
 }
 
-.hoverdoc .blockdiagram20{
-  left: 0 !important;
-  width: 360px !important;
-  position: absolute !important;
+.hoverdoc .navigate2 {
+  position: relative;
+  margin-top: 2rem;
 }
 
-.hoverdoc .footer5{
-  left:0px !important;
-  top: 1100px !important;
-  position: absolute !important;
+.hoverdoc .backop2 {
+  display: none !important;
 }
 
-.hoverdoc .textwrapperfooter{
+.hoverdoc .next2 {
+  border-radius: 5px !important;
+  font-size: 12px !important;
+}
+
+.hoverdoc .footer5 {
+  left: 0px !important;
+  top: 0px !important;
+  position: relative !important;
+}
+
+.hoverdoc .textwrapperfooter {
   font-size: var(--copyright-font-size) !important;
 }
 
@@ -427,40 +234,23 @@
 .hoverdoc .textwrapper3footer,
 .hoverdoc .textwrapper4footer,
 .hoverdoc .textwrapper5footer,
-.hoverdoc .buttonfooter{
+.hoverdoc .buttonfooter {
   font-size: var(--f10-font-size) !important;
 }
 
-.hoverdoc .group9footer{
-  left: 60vw !important; 
+.hoverdoc .group9footer {
+  left: 60vw !important;
 }
 
-.hoverdoc .group7footer{
+.hoverdoc .group7footer {
   left: 80vw !important;
 }
 
-.hoverdoc .groupwrap{
+.hoverdoc .groupwrap {
   height: 90px !important;
 }
 
-.hoverdoc .copyrightfooter{
+.hoverdoc .copyrightfooter {
   font-size: 7px !important;
   margin-top: 10px !important;
-}
-
-.hoverdoc .navigate2{
-  top: 1070px !important;
-
-}
-
-.hoverdoc .backop2{
-  opacity: 0 !important;
-}
-
-.hoverdoc .next2{
-  border-radius: 5px !important;
-  height: 22px !important;
-  width: 40px !important;
-  left: 300px !important;
-  font-size: 12px !important;
 }

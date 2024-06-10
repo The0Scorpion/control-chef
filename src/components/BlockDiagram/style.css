@@ -1,9 +1,4 @@
 .block-diagram {
-  height: 535px;
+  width: 80vw;
   position: relative;
-  width: 1300px;
-}
-
-.block-diagram .img{
-  width: 1300px;
 }
