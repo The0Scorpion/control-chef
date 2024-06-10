@@ -80,20 +80,6 @@ export const HoverDoccomponent = () => {
                   linkTo1="/hover-simulation" />
                 <Footer
                   className="footer1"
-                  group="groupfooter1"
-                  group2="group2footer1"
-                  controlchefhigh="controlcheifhighfooter1"
-                  maskgroup="maskgroupfooter1"
-                  group7="group7footer1"
-                  textwrapper="textwrapperfooter1"
-                  textwrapper2="textwrapper2footer1"
-                  textwrapper3="textwrapper3footer1"
-                  textwrapper4="textwrapper4footer1"
-                  textwrapper5="textwrapper5footer1"
-                  group8="group8footer1"
-                  group9="group9footer1"
-                  group10="group10footer1"
-                  copyright="copyrightfooter1"
                 />
                 <div style={{ height: 0 }}></div>
               </>
@@ -111,7 +97,7 @@ export const HoverDoccomponent = () => {
                 <BlockDiagram className="blockdiagram" />
                 <Next navigate="navigate"
                   linkTo1="/hover-simulation"
-                  back="backop" 
+                  back="backop"
                 />
                 <Footer className="footerdoc" />
                 <div style={{ height: 0 }}></div>
@@ -123,15 +109,11 @@ export const HoverDoccomponent = () => {
                 <NavBar_2
                   onclick={signOut}
                   className="nav-bar-tab-instance"
-                  controltotal1="logo1"
-                  navbarclassName="nav-bar1"
-                  controlchef1="nav-bar2"
-                  controlchef2="nav-bar3"
-                  controlchef3="nav-bar4"
-                  navbardrop="nav-bar5"
-                  navbartext="nav-bar6"
-                  dropdowncontentexperiments="nav72"
-                  dropdowncontenttheories="nav82"
+                  controlchef1="logo1-control"
+                  navbardrop="nav-bar-drop"
+                  dropdowncontentexperiments="drop-down-exp"
+                  dropdowncontenttheories="drop-down-theory"
+                  navbartext="nav-bar-text"
                 />
                 <About
                   className="about20"
@@ -164,10 +146,7 @@ export const HoverDoccomponent = () => {
                   next="next2" />
                 <Footer
                   className="footer5"
-                  group="groupfooter"
-                  group2="group2footer"
-                  controlchefhigh="controlcheifhighfooter"
-                  maskgroup="maskgroupfooter"
+                  group="groupwrap"
                   group7="group7footer"
                   buttonf="buttonfooter"
                   textwrapper="textwrapperfooter"

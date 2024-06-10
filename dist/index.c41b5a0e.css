@@ -73,10 +73,10 @@ a:hover {
 }
 
 .footer .mask-group {
-  width: 25vw;
+  width: 18vw;
   height: auto;
   position: absolute;
-  top: 22px;
+  top: 40px;
   left: 5vw;
 }
 
@@ -131,7 +131,10 @@ a:hover {
   align-items: center;
   transition: all .5s;
   display: flex;
-  overflow: hidden;
+}
+
+.nav-bar .logo:hover {
+  transform: scale(.9);
 }
 
 .nav-bar .mask-group-3 {
@@ -357,17 +360,19 @@ button:hover {
 }
 
 .about {
-  height: 583px;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .about .the-DOF-hover-wrapper {
   background-color: #ffffff73;
-  border-radius: 20px 0 0 20px;
-  width: 615px;
-  height: 176px;
+  border-radius: 2vw 0 0 2vw;
+  width: 45vw;
+  height: 25vh;
   position: absolute;
-  top: 225px;
-  left: 600px;
+  top: 30vh;
+  right: 0;
 }
 
 .about .the-DOF-hover {
@@ -375,22 +380,15 @@ button:hover {
   letter-spacing: 0;
   text-align: justify;
   text-justify: inter-word;
-  width: 529px;
+  align-items: center;
+  width: 40vw;
   font-family: Salsa, Helvetica;
-  font-size: 24px;
+  font-size: 1.5vw;
   font-weight: 400;
   line-height: normal;
   position: absolute;
-  top: 30px;
-  left: 20px;
-}
-
-.about .div {
-  width: 800px;
-  height: 584px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  top: 5vh;
+  left: 2.5vw;
 }
 
 .about .about-the-DOF {
@@ -400,22 +398,22 @@ button:hover {
   text-align: justify;
   text-align: right;
   text-justify: distribute-all-lines;
+  width: 50vw;
   font-family: Salsa, Helvetica;
-  font-size: 40px;
+  font-size: 3.5vw;
   font-weight: 400;
   line-height: normal;
   position: absolute;
   top: 0;
-  left: 340px;
+  left: 18vw;
 }
 
 .about .element {
   object-fit: cover;
-  width: 496px;
-  height: 540px;
+  width: 30vw;
   position: absolute;
-  top: 44px;
-  left: 0;
+  top: 10vh;
+  left: 5vw;
 }
 
 .how-it-works {
@@ -6188,14 +6186,82 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   overflow: hidden;
 }
 
-.hoverdoc .nav-bar-tab-instance {
-  z-index: 1 !important;
-  border-radius: 0 0 3px 3px !important;
-  width: 360px !important;
-  height: 20px !important;
+.hoverdoc .navbardoc {
+  z-index: 100 !important;
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+}
+
+.hoverdoc .about {
+  position: absolute !important;
+  top: 100px !important;
+}
+
+.hoverdoc .howitwork {
+  position: absolute !important;
+  top: 700px !important;
+  left: 0 !important;
+}
+
+.hoverdoc .modeling {
+  position: absolute !important;
+  top: 1450px !important;
+  left: 0 !important;
+}
+
+.hoverdoc .blockdiagram {
+  position: absolute !important;
+  top: 2300px !important;
+  left: 10px !important;
+}
+
+.hoverdoc .navigate {
+  position: absolute !important;
+  top: 2850px !important;
+  left: 0 !important;
+}
+
+.hoverdoc .backop {
+  display: none !important;
+}
+
+.hoverdoc .footerdoc {
+  background-color: #0000 !important;
+  position: absolute !important;
+  top: 2920px !important;
+  left: 0 !important;
+}
+
+.hoverdoc .nav-bar-tab-instance {
+  z-index: 1 !important;
+  border-radius: 0 0 3px 3px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hoverdoc .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.hoverdoc .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.hoverdoc .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.hoverdoc .nav-bar-text {
+  justify-content: left !important;
+  width: 40vw !important;
+}
+
+.hoverdoc .logo1-control {
+  height: 5vw !important;
 }
 
 .hoverdoc .logo1 {
@@ -6249,140 +6315,8 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .footer1 {
-  max-width: 834px !important;
-  height: 188px !important;
   position: absolute !important;
   top: 2420px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .groupfooter1 {
-  width: 835px !important;
-  height: 150px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .group2footer1 {
-  width: 834px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .controlcheifhighfooter1 {
-  top: 65px;
-  left: 10px;
-}
-
-.hoverdoc .maskgroupfooter1 {
-  width: 50% !important;
-  height: auto !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .group7footer1 {
-  top: -10px !important;
-  left: 720px !important;
-}
-
-.hoverdoc .group9footer1 {
-  top: -10px !important;
-  left: 550px !important;
-}
-
-.hoverdoc .textwrapperfooter1 {
-  font-size: var(--subheader-font-size) !important;
-  top: 20px !important;
-}
-
-.hoverdoc .textwrapper2footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 5px !important;
-}
-
-.hoverdoc .textwrapper3footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 30px !important;
-}
-
-.hoverdoc .textwrapper4footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 55px !important;
-}
-
-.hoverdoc .textwrapper5footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 80px !important;
-}
-
-.hoverdoc .buttonfooter1 {
-  font-size: var(--paragraph-font-size) !important;
-}
-
-.hoverdoc .group8footer1, .hoverdoc .group10footer1 {
-  left: 0 !important;
-}
-
-.hoverdoc .copyrightfooter1 {
-  font-size: var(--f10-font-size) !important;
-  width: 834px !important;
-  top: 165px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .about {
-  position: absolute !important;
-  top: 100px !important;
-  left: 101px !important;
-}
-
-.hoverdoc .howitwork {
-  position: absolute !important;
-  top: 700px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .modeling {
-  position: absolute !important;
-  top: 1450px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .blockdiagram {
-  position: absolute !important;
-  top: 2300px !important;
-  left: 10px !important;
-}
-
-.hoverdoc .navigate {
-  position: absolute !important;
-  top: 2850px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .footerdoc {
-  background-color: #0000 !important;
-  position: absolute !important;
-  top: 2920px !important;
-  left: 100px !important;
-}
-
-.hoverdoc .navbardoc {
-  z-index: 100 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .backop {
-  opacity: 0 !important;
-}
-
-.hoverdoc .about1 {
-  width: 834px !important;
-  height: 400px !important;
-  top: 60px !important;
   left: 0 !important;
 }
 
@@ -6648,102 +6582,34 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .footer5 {
-  width: 360px !important;
-  height: 100px !important;
   position: absolute !important;
   top: 1100px !important;
   left: 0 !important;
 }
 
-.hoverdoc .groupfooter {
-  width: 358px !important;
-  height: 100px !important;
-  top: 0 !important;
-  left: 0 !important;
+.hoverdoc .textwrapperfooter {
+  font-size: var(--copyright-font-size) !important;
 }
 
-.hoverdoc .group2footer {
-  width: 360px !important;
-  height: 100px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .controlcheifhighfooter {
-  top: 43px;
-  left: 10px;
-}
-
-.hoverdoc .maskgroupfooter {
-  width: 30% !important;
-  height: auto !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hoverdoc .group7footer {
-  width: 60px !important;
-  height: 80px !important;
-  top: 10px !important;
-  left: 260px !important;
+.hoverdoc .textwrapper2footer, .hoverdoc .textwrapper3footer, .hoverdoc .textwrapper4footer, .hoverdoc .textwrapper5footer, .hoverdoc .buttonfooter {
+  font-size: var(--f10-font-size) !important;
 }
 
 .hoverdoc .group9footer {
-  width: 70px !important;
-  height: 80px !important;
-  top: 10px !important;
-  left: 170px !important;
+  left: 60vw !important;
 }
 
-.hoverdoc .textwrapperfooter {
-  font-size: var(--copyright-font-size) !important;
-  top: 0 !important;
+.hoverdoc .group7footer {
+  left: 80vw !important;
 }
 
-.hoverdoc .textwrapper2footer {
-  font-size: var(--f10-font-size) !important;
-  top: 0 !important;
-}
-
-.hoverdoc .textwrapper3footer {
-  font-size: var(--f10-font-size) !important;
-  top: 15px !important;
-}
-
-.hoverdoc .textwrapper4footer {
-  font-size: var(--f10-font-size) !important;
-  top: 30px !important;
-}
-
-.hoverdoc .textwrapper5footer {
-  font-size: var(--f10-font-size) !important;
-  top: 45px !important;
-}
-
-.hoverdoc .buttonfooter {
-  font-size: var(--f10-font-size) !important;
-}
-
-.hoverdoc .group8footer {
-  width: 50px !important;
-  height: 60px !important;
-  top: 20px !important;
-  left: 0 !important;
-}
-
-.hoverdoc .group10footer {
-  width: 50px !important;
-  height: 30px !important;
-  top: 20px !important;
-  left: 0 !important;
+.hoverdoc .groupwrap {
+  height: 90px !important;
 }
 
 .hoverdoc .copyrightfooter {
-  width: 360px !important;
-  height: 10px !important;
+  margin-top: 10px !important;
   font-size: 7px !important;
-  top: 110px !important;
-  left: 0 !important;
 }
 
 .hoverdoc .navigate2 {
@@ -7008,29 +6874,6 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 0 !important;
 }
 
-.welcome-and .nav-bar-drop {
-  width: 45vw !important;
-}
-
-.welcome-and .drop-down-exp {
-  width: 65vw !important;
-  right: 10vw !important;
-}
-
-.welcome-and .drop-down-theory {
-  width: 40vw !important;
-  right: 10vw !important;
-}
-
-.welcome-and .nav-bar-text {
-  justify-content: left !important;
-  width: 40vw !important;
-}
-
-.welcome-and .logo1-control {
-  height: 5vw !important;
-}
-
 .welcome-and .intro-3 {
   position: absolute !important;
   top: 140px !important;
@@ -7081,6 +6924,29 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+}
+
+.welcome-and .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.welcome-and .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.welcome-and .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.welcome-and .nav-bar-text {
+  justify-content: left !important;
+  width: 40vw !important;
+}
+
+.welcome-and .logo1-control {
+  height: 5vw !important;
 }
 
 .welcome-and .intro-4 {

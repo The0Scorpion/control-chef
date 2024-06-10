@@ -1,46 +1,50 @@
 .about {
-  height: 583px;
+  width:100%;
+  left: 0px;
+  top: 0px;
 }
 
 .about .the-DOF-hover-wrapper {
   background-color: #ffffff73;
-  border-radius: 20px 0px 0px 20px;
-  height: 176px;
-  left: 600px;
+  border-radius: 2vw 0 0 2vw;
+  height: 25vh;
+  right: 0px; 
   position: absolute;
-  top: 225px;
-  width: 615px;
+  top: 30vh; 
+  width: 45vw; 
 }
 
 .about .the-DOF-hover {
   color: #050518;
   font-family: "Salsa", Helvetica;
-  font-size: 24px;
+  font-size: 1.5vw; 
   font-weight: 400;
-  left: 20px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 30px;
-  width: 529px;
+  top: 5vh;
+  left: 2.5vw; 
+  width: 40vw;
   text-align: justify;
   text-justify: inter-word;
+  align-items:center ;
 }
 
 .about .div {
-  height: 584px;
+ /* height: 60vh;
   left: 0;
   position: absolute;
   top: 0;
-  width: 800px;
+  width: 50vw;  */
 }
 
 .about .about-the-DOF {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 40px;
+  font-size: 3.5vw; 
   font-weight: 400;
-  left: 340px;
+  left: 18vw; 
+  width: 50vw;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -48,14 +52,13 @@
   top: 0;
   text-align: justify;
   text-align: right;
-    text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
 }
 
 .about .element {
-  height: 540px;
-  left: 0;
+  left: 5vw;
   object-fit: cover;
   position: absolute;
-  top: 44px;
-  width: 496px;
+  top: 10vh;
+  width: 30vw; 
 }

@@ -5,14 +5,81 @@
   overflow: hidden;
 }
 
-.hoverdoc .nav-bar-tab-instance {
-  height: 20px !important;
+.hoverdoc .navbardoc {
   left: 0px !important;
   position: fixed !important;
   top: 0px !important;
-  width: 360px !important;
+  z-index: 100 !important;
+}
+
+.hoverdoc .about{
+  position: absolute !important;
+  top: 100px !important;
+}
+
+.hoverdoc .howitwork{
+  position: absolute !important;
+  top: 700px !important;
+  left: 0px !important;
+}
+.hoverdoc .modeling{
+  top: 1450px !important;
+  left: 0px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .blockdiagram{
+  top:2300px !important;
+  position: absolute !important;
+  left: 10px !important;
+}
+
+.hoverdoc .navigate{
+  top:2850px !important;
+  left: 0px !important;
+  position: absolute !important;
+}
+
+.hoverdoc .backop{
+  display: none !important;
+}
+
+.hoverdoc .footerdoc {
+  background-color: transparent !important;
+  left: 0px !important;
+  position: absolute !important;
+  top: 2920px !important;
+}
+
+.hoverdoc .nav-bar-tab-instance {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
   z-index: 1 !important;
   border-radius:  0px 0px 3px 3px  !important;
+}
+
+.hoverdoc .nav-bar-drop{
+  width: 45vw !important;
+}
+
+.hoverdoc .drop-down-exp{
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.hoverdoc .drop-down-theory{
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.hoverdoc .nav-bar-text{
+  width: 40vw !important;
+  justify-content: left !important;
+}
+
+.hoverdoc .logo1-control{
+  height: 5vw !important;
 }
 
 .hoverdoc .logo1{
@@ -76,144 +143,9 @@
 }
 
 .hoverdoc .footer1{
+  position: absolute !important;
   left:0px !important;
   top:2420px !important;
-  max-width: 834px !important;
-  height: 188px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .groupfooter1{
-  left:0px !important;
-  top:0px !important;
-  height: 150px !important;
-  width: 835px !important;
-}
-
-.hoverdoc .group2footer1{
-  left:0px !important;
-  top:0px !important;
-  width: 834px !important ;
-}
-
-.hoverdoc .controlcheifhighfooter1{
-  left:10px;
-  top:65px;
-}
-
-.hoverdoc .maskgroupfooter1{
-  width: 50% !important;
-  height: auto !important;
-  left:0px !important;
-  top:0px !important;
-}
-
-.hoverdoc .group7footer1{
-  left:720px !important;
-  top:-10px !important;
-}
-
-.hoverdoc .group9footer1{
-  left:550px !important;
-  top:-10px !important;
-}
-
-.hoverdoc .textwrapperfooter1{
-  font-size: var(--subheader-font-size) !important;
-  top: 20px !important;
-}
-
-.hoverdoc .textwrapper2footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 5px !important;
-}
-
-.hoverdoc .textwrapper3footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 30px !important;
-}
-
-.hoverdoc .textwrapper4footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 55px !important;
-}
-
-.hoverdoc .textwrapper5footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 80px !important;
-}
-
-.hoverdoc .buttonfooter1{
-  font-size: var(--paragraph-font-size) !important;
-}
-
-.hoverdoc .group8footer1{
-  left:0px !important; 
-}
-
-.hoverdoc .group10footer1{
-  left:0px !important;
-}
-
-.hoverdoc .copyrightfooter1{
-  left:0px !important;
-  top: 165px !important;
-  width: 834 !important;
-  font-size: var(--f10-font-size) !important;
-}
-
-.hoverdoc .about{
-  position: absolute !important;
-  top: 100px !important;
-  left: 101px !important;
-}
-
-.hoverdoc .howitwork{
-  position: absolute !important;
-  top: 700px !important;
-  left: 0px !important;
-}
-.hoverdoc .modeling{
-  top: 1450px !important;
-  left: 0px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .blockdiagram{
-  top:2300px !important;
-  position: absolute !important;
-  left: 10px !important;
-}
-
-.hoverdoc .navigate{
-  top:2850px !important;
-  left: 0px !important;
-  position: absolute !important;
-}
-
-.hoverdoc .footerdoc {
-  background-color: transparent !important;
-  left: 100px !important;
-  position: absolute !important;
-  top: 2920px !important;
-}
-
-.hoverdoc .navbardoc {
-  left: 0px !important;
-  position: fixed !important;
-  top: 0px !important;
-  z-index: 100 !important;
-}
-
-.hoverdoc .backop{
-  opacity: 0 !important;
-}
-
-.hoverdoc .about1{
- left:0px !important;
- top:60px !important;
- width: 834px !important;
- height: 400px !important;
 }
 
 .hoverdoc .textdof{
@@ -485,99 +417,35 @@
   left:0px !important;
   top: 1100px !important;
   position: absolute !important;
-  width: 360px !important;
-  height: 100px !important;
-}
-
-.hoverdoc .groupfooter{
-  left:0px !important;
-  top:0px !important;
-  height: 100px !important;
-  width: 358px !important;
-}
-
-.hoverdoc .group2footer{
-  left:0px !important;
-  top:0px !important;
-  width: 360px !important;
-  height: 100px !important;
-}
-
-.hoverdoc .controlcheifhighfooter{
-  left: 10px;
-  top: 43px;
-}
-
-.hoverdoc .maskgroupfooter{
-  width: 30% !important;
-  height: auto !important;
-  left:0px !important;
-  top:0px !important;
-}
-
-.hoverdoc .group7footer{
-  left:260px !important;
-  top: 10px !important;
-  width: 60px !important;
-  height: 80px !important;
-}
-
-.hoverdoc .group9footer{
-  left:170px !important;
-  top: 10px !important;
-  width: 70px !important;
-  height: 80px !important;
 }
 
 .hoverdoc .textwrapperfooter{
   font-size: var(--copyright-font-size) !important;
-  top: 0px !important;
 }
 
-.hoverdoc .textwrapper2footer{
-  font-size: var(--f10-font-size) !important;
-  top: 0px !important;
-}
-
-.hoverdoc .textwrapper3footer{
-  font-size: var(--f10-font-size) !important;
-  top: 15px !important;
-}
-
-.hoverdoc .textwrapper4footer{
-  font-size: var(--f10-font-size) !important;
-  top: 30px !important;
-}
-
-.hoverdoc .textwrapper5footer{
-  font-size: var(--f10-font-size) !important;
-  top: 45px !important;
-}
-
+.hoverdoc .textwrapper2footer,
+.hoverdoc .textwrapper3footer,
+.hoverdoc .textwrapper4footer,
+.hoverdoc .textwrapper5footer,
 .hoverdoc .buttonfooter{
   font-size: var(--f10-font-size) !important;
 }
 
-.hoverdoc .group8footer{
-  left: 0px !important; 
-  top : 20px !important;
-  width: 50px !important;
-  height: 60px !important; 
+.hoverdoc .group9footer{
+  left: 60vw !important; 
 }
 
-.hoverdoc .group10footer{
-  left:0px !important;
-  top : 20px !important;
-  width: 50px !important;
-  height: 30px !important;
+.hoverdoc .group7footer{
+  left: 80vw !important;
+}
+
+.hoverdoc .groupwrap{
+  height: 90px !important;
 }
 
 .hoverdoc .copyrightfooter{
-  left:0px !important;
-  top: 110px !important;
-  width: 360px !important;
   font-size: 7px !important;
-  height: 10px !important;
+  margin-top: 10px !important;
 }
 
 .hoverdoc .navigate2{

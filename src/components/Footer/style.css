@@ -53,9 +53,9 @@ a:hover{
 
 .footer .mask-group {
   height: auto; /* Remove fixed height */
-  width: 25vw; /* Adjust width */
+  width: 18vw; /* Adjust width */
   position: absolute;
-  top: 22px;
+  top: 40px;
   left: 5vw;
 }
 
