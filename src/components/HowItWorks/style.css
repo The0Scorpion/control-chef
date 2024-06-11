@@ -2,7 +2,9 @@
   position: relative;
   width: 100%; /* Using viewport width */
   margin: 0 auto; /* Centering the div */
-  height: 95vh;
+  height: 60vw;
+  background-color:blue;
+  display: inline-block;
 }
 
 .how-it-works .the-degree-of {
@@ -20,29 +22,24 @@
   text-justify: inter-word;
 }
 
-.how-it-works .overlap-group {
+.how-it-works .HOW-IT-WORKS {
   background-color: #ffffff4c;
-  border-radius: 0px 2vw 2vw 0px; /* Using viewport units */
+  border-radius: 0px 1.5vw 1.5vw 0px; /* Using viewport units */
   height: 10vh; /* Using viewport units */
   left: 0;
   position: absolute;
   top: 0;
   width: 30vw; /* Using viewport units */
-}
-
-.how-it-works .HOW-IT-WORKS {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 2.4vw; /* Responsive font size */
   font-weight: 400;
-  left: 5vw; /* Using viewport units */
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  display: flex;
   text-align: center;
-  top: 3vh; /* Using viewport units */
-  text-align: justify;
-  text-justify: inter-word;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -58,14 +55,9 @@
     top: 16vh;
   }
 
-  .how-it-works .overlap-group {
-    height: 12vh;
-    width: 35vw;
-  }
-
   .how-it-works .HOW-IT-WORKS {
     font-size: 3.5vw;
     top: 4vh;
-    left: 2.5vw;
+    left: 0vw;
   }
 }

@@ -115,7 +115,6 @@ export const HoverDoccomponent = () => {
                 <HowItWorks
                   className="howitwork20"
                   thedegreeof="howitwork21"
-                  HowItWorksbox="howitwork22"
                   HowItWorkstext="howitwork23"
                 />
                 <Modeling

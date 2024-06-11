@@ -414,9 +414,11 @@ button:hover {
 }
 
 .how-it-works {
+  background-color: #00f;
   width: 100%;
-  height: 95vh;
+  height: 60vw;
   margin: 0 auto;
+  display: inline-block;
   position: relative;
 }
 
@@ -435,29 +437,24 @@ button:hover {
   left: 5vw;
 }
 
-.how-it-works .overlap-group {
-  background-color: #ffffff4c;
-  border-radius: 0 2vw 2vw 0;
-  width: 30vw;
-  height: 10vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .how-it-works .HOW-IT-WORKS {
   color: #fff;
   letter-spacing: 0;
   text-align: center;
-  text-align: justify;
-  text-justify: inter-word;
+  background-color: #ffffff4c;
+  border-radius: 0 1.5vw 1.5vw 0;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 10vh;
   font-family: Salsa, Helvetica;
   font-size: 2.4vw;
   font-weight: 400;
   line-height: normal;
+  display: flex;
   position: absolute;
-  top: 3vh;
-  left: 5vw;
+  top: 0;
+  left: 0;
 }
 
 @media (width <= 768px) {
@@ -473,15 +470,10 @@ button:hover {
     left: 2.5vw;
   }
 
-  .how-it-works .overlap-group {
-    width: 35vw;
-    height: 12vh;
-  }
-
   .how-it-works .HOW-IT-WORKS {
     font-size: 3.5vw;
     top: 4vh;
-    left: 2.5vw;
+    left: 0;
   }
 }
 
@@ -6262,7 +6254,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .howitwork {
-  margin-top: 10rem;
+  margin-top: 5rem;
   position: relative !important;
   left: 0 !important;
 }
@@ -6324,7 +6316,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .textsize {
-  font-size: 2.2vw !important;
+  font-size: 22px !important;
 }
 
 .hoverdoc .modeling1 {
@@ -6417,22 +6409,35 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .howitwork20 {
-  margin-top: 2rem;
+  margin-top: 5rem;
   position: relative !important;
   left: 0 !important;
 }
 
-.hoverdoc .howitwork22 {
-  height: 8vh !important;
-}
-
 .hoverdoc .howitwork23 {
+  max-height: 10vw;
+  font-size: 22px;
   top: 1.6vh !important;
 }
 
 .hoverdoc .howitwork21 {
-  font-size: 2.4vw !important;
-  top: 9vh !important;
+  font-size: 20px !important;
+  top: 12vh !important;
+}
+
+@media (width <= 450px) {
+  .hoverdoc .howitwork20 {
+    height: 110vw;
+  }
+
+  .hoverdoc .howitwork21 {
+    font-size: 3.2vw !important;
+    top: 8.5vh !important;
+  }
+
+  .hoverdoc .howitwork23 {
+    height: 10vw;
+  }
 }
 
 .hoverdoc .modeling20 {

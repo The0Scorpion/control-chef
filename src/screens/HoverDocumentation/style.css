@@ -21,7 +21,7 @@
 
 .hoverdoc .howitwork {
   position: relative !important;
-  margin-top: 10rem;
+  margin-top: 5rem;
   left: 0px !important;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .hoverdoc .textsize {
-  font-size: 2.2vw !important;
+  font-size: 22px !important;
 }
 
 .hoverdoc .modeling1 {
@@ -175,22 +175,34 @@
 }
 
 .hoverdoc .howitwork20 {
-  margin-top: 2rem;
+  margin-top: 5rem;
   left: 0px !important;
   position: relative !important;
 }
 
-.hoverdoc .howitwork22 {
-  height: 8vh !important;
-}
-
 .hoverdoc .howitwork23 {
   top: 1.6vh !important;
+  max-height: 10vw;
+  font-size: 22px;
 }
 
 .hoverdoc .howitwork21 {
-  top: 9vh !important;
-  font-size: 2.4vw !important;
+  top: 12vh !important;
+  font-size: 20px !important;
+}
+
+@media (max-width: 450px) {
+  .hoverdoc .howitwork20 {
+    height: 110vw;
+  }
+
+  .hoverdoc .howitwork21 {
+    top: 8.5vh !important;
+    font-size: 3.2vw !important;
+  }
+  .hoverdoc .howitwork23{
+    height: 10vw;
+  }
 }
 
 .hoverdoc .modeling20 {

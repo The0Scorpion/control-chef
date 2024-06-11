@@ -24,9 +24,7 @@ export const HowItWorks = ({
         Directly Through Wires. This Wiring Setup Allows For Precise Control And Monitoring Of The Hovercraft&#39;s
         Movements.
       </p>
-      <div className={`overlap-group ${HowItWorksbox}`}>
-        <div className={`HOW-IT-WORKS ${HowItWorkstext}`}>-how It Works-</div>
-      </div>
+      <div className={`HOW-IT-WORKS ${HowItWorkstext}`}>-how It Works-</div>
     </div>
   );
 };
