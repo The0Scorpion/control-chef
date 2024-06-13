@@ -17,17 +17,18 @@
   position: relative !important;
   top: 100px !important;
   left: 0px !important;
+  margin-top: 0;
 }
 
 .hoverdoc .howitwork {
   position: relative !important;
-  margin-top: 5rem;
+  margin-top: 6rem;
   left: 0px !important;
 }
 
 .hoverdoc .modeling {
   top: 100px !important;
-  margin-top: 10rem;
+  margin-top: 2rem;
   position: relative !important;
 }
 
@@ -70,14 +71,11 @@
   font-size: 18px !important;
 }
 
-.hoverdoc .titleabout {
-  font-size: 30px !important;
-}
 
 .hoverdoc .howitwork1 {
   position: relative;
   top: 70px !important;
-  margin-top: 2rem;
+  margin-top: 0rem;
   left: auto;
 }
 
@@ -96,6 +94,7 @@
 .hoverdoc .blockdiagram1 {
   margin-top: 2rem;
   width: 80vw;
+  top: 80px;
   position: relative;
 }
 
@@ -170,10 +169,6 @@
   } 
 }
 
-.hoverdoc .about25 {
-  top: 5vh !important;
-}
-
 .hoverdoc .howitwork20 {
   margin-top: 5rem;
   left: 0px !important;
@@ -182,8 +177,9 @@
 
 .hoverdoc .howitwork23 {
   top: 1.6vh !important;
-  max-height: 10vw;
-  font-size: 22px;
+ height: 10vw;
+  font-size: 20px;
+  width: 40vw;
 }
 
 .hoverdoc .howitwork21 {
@@ -202,6 +198,7 @@
   }
   .hoverdoc .howitwork23{
     height: 10vw;
+    font-size: 3.2vw;
   }
 }
 

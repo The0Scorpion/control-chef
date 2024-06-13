@@ -1,7 +1,8 @@
 .modeling {
   position: relative;
   width: 100%; /* Using viewport width */
-  height: 102vh;
+  height: 60vw;
+  background-color: chartreuse;
 }
 
 .modeling .MODELING {
@@ -28,7 +29,7 @@
   left: 1vw; /* Using viewport width */
   position: absolute;
   top: 0;
-  width: 55vw; /* Using viewport width */
+  width: 50vw; /* Using viewport width */
   height: auto;
 }
 
@@ -58,7 +59,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 90vh; /* Using viewport height */
+  top: 80vh; /* Using viewport height */
   width: 60vw; /* Using viewport width */
   text-align: justify;
   text-justify: inter-word;
@@ -66,7 +67,6 @@
 
 @media (max-width: 1300px) {
   .modeling .img {
-    width: 60vw;
     top: 8vw;
   }
 
@@ -78,7 +78,7 @@
   .modeling .the-model-equation {
     font-size: 2.7vw;
     left: 25vw;
-    top: 65vw;
+    top: 50vw;
   }
 }
 

@@ -111,7 +111,7 @@ export const HoverDoccomponent = () => {
                   className="about20"
                   theDOFhoverwrapper="about21"
                   theDOFhover="about22"
-                  img="about25" />
+                />
                 <HowItWorks
                   className="howitwork20"
                   thedegreeof="howitwork21"

@@ -1,10 +1,10 @@
 .how-it-works {
-  position: relative;
-  width: 100%; /* Using viewport width */
-  margin: 0 auto; /* Centering the div */
-  height: 60vw;
-  background-color:blue;
+  width: 100%;
+  margin: 0 ; /* Centering the div */
   display: inline-block;
+  background-color: tomato;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .how-it-works .the-degree-of {
@@ -12,12 +12,11 @@
   font-family: "Salsa", Helvetica;
   font-size: 1.8vw; /* Responsive font size */
   font-weight: 400;
-  left: 5vw; /* Using viewport units */
+  margin: 2vh 5vw 2vh 5vw; /* Use margin to position the text */
   letter-spacing: 0;
   line-height: 4vw; /* Responsive line height */
-  position: absolute;
-  top: 14vh; /* Using viewport units */
-  width: 85vw; /* Using viewport units */
+  width: 90vw; /* Ensure width fits within container */
+  top:0;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -25,10 +24,7 @@
 .how-it-works .HOW-IT-WORKS {
   background-color: #ffffff4c;
   border-radius: 0px 1.5vw 1.5vw 0px; /* Using viewport units */
-  height: 10vh; /* Using viewport units */
-  left: 0;
-  position: absolute;
-  top: 0;
+  height: 6vw; /* Let the height adjust based on content */
   width: 30vw; /* Using viewport units */
   color: #ffffff;
   font-family: "Salsa", Helvetica;
@@ -43,21 +39,14 @@
 }
 
 @media (max-width: 768px) {
-  .how-it-works {
-    height: 80vh; /* Adjust for smaller screens */
-  }
-
   .how-it-works .the-degree-of {
     font-size: 3.5vw; /* Increase font size for readability */
     line-height: 5vw;
     width: 90vw;
-    left: 2.5vw;
-    top: 16vh;
+    margin: 2vh 2.5vw 2vh 2.5vw; /* Adjust margins for smaller screens */
   }
 
   .how-it-works .HOW-IT-WORKS {
-    font-size: 3.5vw;
-    top: 4vh;
-    left: 0vw;
+    font-size: 2.5vw;
   }
 }

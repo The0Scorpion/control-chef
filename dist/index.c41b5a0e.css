@@ -20,6 +20,7 @@ a {
 }
 
 .footer {
+  background-color: #8a2be2;
   width: 100%;
   height: auto;
 }
@@ -360,11 +361,13 @@ button:hover {
 }
 
 .about {
+  background-color: #0ff;
   width: 100%;
-  height: 40vw;
   display: inline-block;
+  position: relative;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .about .the-DOF-hover {
@@ -406,20 +409,21 @@ button:hover {
 }
 
 .about .element {
-  object-fit: cover;
-  width: 30vw;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
   position: absolute;
-  top: 10vh;
   left: 0;
 }
 
 .how-it-works {
-  background-color: #00f;
+  background-color: tomato;
   width: 100%;
-  height: 60vw;
-  margin: 0 auto;
+  margin: 0;
   display: inline-block;
   position: relative;
+  overflow: hidden;
 }
 
 .how-it-works .the-degree-of {
@@ -427,14 +431,13 @@ button:hover {
   letter-spacing: 0;
   text-align: justify;
   text-justify: inter-word;
-  width: 85vw;
+  width: 90vw;
+  margin: 2vh 5vw;
   font-family: Salsa, Helvetica;
   font-size: 1.8vw;
   font-weight: 400;
   line-height: 4vw;
-  position: absolute;
-  top: 14vh;
-  left: 5vw;
+  top: 0;
 }
 
 .how-it-works .HOW-IT-WORKS {
@@ -446,40 +449,31 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 30vw;
-  height: 10vh;
+  height: 6vw;
   font-family: Salsa, Helvetica;
   font-size: 2.4vw;
   font-weight: 400;
   line-height: normal;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 @media (width <= 768px) {
-  .how-it-works {
-    height: 80vh;
-  }
-
   .how-it-works .the-degree-of {
     width: 90vw;
+    margin: 2vh 2.5vw;
     font-size: 3.5vw;
     line-height: 5vw;
-    top: 16vh;
-    left: 2.5vw;
   }
 
   .how-it-works .HOW-IT-WORKS {
-    font-size: 3.5vw;
-    top: 4vh;
-    left: 0;
+    font-size: 2.5vw;
   }
 }
 
 .modeling {
+  background-color: #7fff00;
   width: 100%;
-  height: 102vh;
+  height: 60vw;
   position: relative;
 }
 
@@ -503,7 +497,7 @@ button:hover {
 }
 
 .modeling .img {
-  width: 55vw;
+  width: 50vw;
   height: auto;
   position: absolute;
   top: 0;
@@ -538,13 +532,12 @@ button:hover {
   font-weight: 400;
   line-height: normal;
   position: absolute;
-  top: 90vh;
+  top: 80vh;
   left: 30vw;
 }
 
 @media (width <= 1300px) {
   .modeling .img {
-    width: 60vw;
     top: 8vw;
   }
 
@@ -555,7 +548,7 @@ button:hover {
 
   .modeling .the-model-equation {
     font-size: 2.7vw;
-    top: 65vw;
+    top: 50vw;
     left: 25vw;
   }
 }
@@ -607,6 +600,7 @@ button:hover {
 }
 
 .navigate {
+  background-color: #6495ed;
   width: 100%;
   height: 3.3vw;
   position: absolute;
@@ -656,6 +650,7 @@ button:hover {
 }
 
 .block-diagram {
+  background-color: #8b4513;
   width: 80vw;
   position: relative;
 }
@@ -6248,19 +6243,20 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .about {
+  margin-top: 0;
   position: relative !important;
   top: 100px !important;
   left: 0 !important;
 }
 
 .hoverdoc .howitwork {
-  margin-top: 5rem;
+  margin-top: 6rem;
   position: relative !important;
   left: 0 !important;
 }
 
 .hoverdoc .modeling {
-  margin-top: 10rem;
+  margin-top: 2rem;
   position: relative !important;
   top: 100px !important;
 }
@@ -6304,12 +6300,8 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   font-size: 18px !important;
 }
 
-.hoverdoc .titleabout {
-  font-size: 30px !important;
-}
-
 .hoverdoc .howitwork1 {
-  margin-top: 2rem;
+  margin-top: 0;
   position: relative;
   left: auto;
   top: 70px !important;
@@ -6331,6 +6323,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   width: 80vw;
   margin-top: 2rem;
   position: relative;
+  top: 80px;
 }
 
 .hoverdoc .navi1 {
@@ -6404,10 +6397,6 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   }
 }
 
-.hoverdoc .about25 {
-  top: 5vh !important;
-}
-
 .hoverdoc .howitwork20 {
   margin-top: 5rem;
   position: relative !important;
@@ -6415,8 +6404,9 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .howitwork23 {
-  max-height: 10vw;
-  font-size: 22px;
+  width: 40vw;
+  height: 10vw;
+  font-size: 20px;
   top: 1.6vh !important;
 }
 
@@ -6437,6 +6427,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
   .hoverdoc .howitwork23 {
     height: 10vw;
+    font-size: 3.2vw;
   }
 }
 
