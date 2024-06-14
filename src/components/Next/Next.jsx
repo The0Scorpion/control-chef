@@ -12,12 +12,13 @@ export const Next = ({
   next,
   back,
   linkTo1,
-  linkTo2
+  linkTo2,
+  disabled
 }) => {
   return (
     <div className={`navigate ${navigate}`}>
       <button className={`back ${back}`}><Link to={linkTo2}>Back</Link></button>
-      <button className={`next ${next}`}><Link to={linkTo1}>Next</Link></button>
+      <button className={`next ${next}`} disabled={disabled}><Link to={linkTo1}>Next</Link></button>
     </div>
   );
 };
