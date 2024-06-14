@@ -25,6 +25,7 @@ export const HoverSimcomponent = () => {
   const location = useLocation();
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
+  const [isCriteriaMet, setIsCriteriaMet] = useState(false); // State to track if criteria are met
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -38,6 +39,7 @@ export const HoverSimcomponent = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
+    setIsCriteriaMet(false);
   }, []); // Empty dependency array ensures this effect runs only once
 
   const [SimulationPoints, setSimulationPoints] = useState(null)
@@ -47,13 +49,122 @@ export const HoverSimcomponent = () => {
     const Sim = simulate(ParameterData);
     console.log("Points:", SimulationPoints);
     setSimulationPoints(Sim);
+    // Calculate overshoot
+    const Xovershoot = calculateOvershoot(Sim.XPos,ParameterData.xposSet);
+    const Yovershoot = calculateOvershoot(Sim.YPos,ParameterData.yposSet);
+    const XError = Math.abs(ParameterData.xposSet-(Sim.XPos[1999]));
+    const YError = Math.abs(ParameterData.yposSet-(Sim.YPos[1999]));
+    console.log(Xovershoot);
+    console.log(Yovershoot);
+    // Check if overshoot is less than 0.1
+    if(XError < 0.01 && YError<0.01){
+    if (Math.abs(Xovershoot) < 0.03 && Math.abs(Yovershoot) < 0.03) {
+      // Calculate variance
+      const Xvariance = calculateVariance(Sim.XPos,ParameterData.xposSet);
+      const Yvariance = calculateVariance(Sim.YPos,ParameterData.yposSet);
+      console.log(Xvariance);
+      console.log(Yvariance);
+      // Check if variance is less than 0.1
+      if (Xvariance < 0.1 && Yvariance < 0.1) {
+        setIsCriteriaMet(true); // Set criteria met
+        
+      } else {
+        setIsCriteriaMet(false); // Reset criteria met
+        alert("Variance criterion not met. Adjust PID parameters.");
+      }
+    } else {
+      setIsCriteriaMet(false); // Reset criteria met
+      alert("Overshoot criterion not met. Adjust PID parameters.");
+    }
+  }else{
+      setIsCriteriaMet(false); // Reset criteria met
+      alert("Steady State Error Too Big criterion not met. Adjust PID parameters.");
+  }
+
   };
+
   const destroygraph = () => {
     console.log(1);
     const destroy = 5;
     setSimulation(destroy);
   };
 
+  // Function to calculate overshoot
+  const calculateOvershoot = (simData,setp) => {
+    // Find the direction of movement based on the sign of the first point
+    const initialSign = Math.sign(simData[0]-setp);
+  
+    // Initialize variables to track the index of the first zero crossing and the extreme value after crossing
+    let indexOfFirstZeroCrossing = -1;
+    let extremeValueAfterCrossing = null;
+  
+    // Iterate through the data to find the first zero crossing
+    for (let i = 1; i < simData.length; i++) {
+      // Check if the current point crosses zero from the initial sign
+      if (Math.sign(simData[i]-setp) !== initialSign) {
+        indexOfFirstZeroCrossing = i;
+        break;
+      }
+    }
+  
+    // If no zero crossing is found, there's no overshoot
+    if (indexOfFirstZeroCrossing === -1) return 0;
+  
+    // Determine whether to look for the maximum or minimum value after the zero crossing
+    const lookForMaxValue = initialSign === 1; // If initial sign is positive, look for maximum value
+  
+    // Find the extreme value after the zero crossing
+    for (let i = indexOfFirstZeroCrossing; i < simData.length; i++) {
+      // If looking for maximum value, update extremeValueAfterCrossing if current value is greater
+      if (lookForMaxValue && (extremeValueAfterCrossing === null || simData[i] > extremeValueAfterCrossing)) {
+        extremeValueAfterCrossing = simData[i]-setp;
+      }
+      // If looking for minimum value, update extremeValueAfterCrossing if current value is lesser
+      else if (!lookForMaxValue && (extremeValueAfterCrossing === null || simData[i] < extremeValueAfterCrossing)) {
+        extremeValueAfterCrossing = simData[i]-setp;
+      }
+    }
+  
+    // Calculate the overshoot as the difference between the extreme value and the initial set point
+    return Math.abs(extremeValueAfterCrossing);
+  };
+  
+  
+
+  // Function to calculate variance
+  const calculateVariance = (simData,setp) => {
+    // Find the direction of movement based on the sign of the first point
+    const initialSign = Math.sign(simData[0]-setp);
+  
+    // Initialize variables to track the index of the first sign flip and the data after the flip
+    let indexOfFirstSignFlip = -1;
+    let dataAfterSignFlip = [];
+  
+    // Iterate through the data to find the first sign flip
+    for (let i = 1; i < simData.length; i++) {
+      // Check if the current point changes sign from the initial sign
+      if (Math.sign(simData[i]-setp) !== initialSign) {
+        indexOfFirstSignFlip = i;
+        dataAfterSignFlip = simData.slice(indexOfFirstSignFlip + 1);
+        break;
+      }
+    }
+  
+    // If no sign flip is found, return 0 variance
+    if (indexOfFirstSignFlip === -1) return 0;
+  
+    // Calculate the mean of the data after the sign flip
+    const mean = dataAfterSignFlip.reduce((acc, val) => acc + val, 0) / dataAfterSignFlip.length;
+  
+    // Calculate the squared differences from the mean
+    const squaredDifferences = dataAfterSignFlip.map((val) => (val - mean) ** 2);
+  
+    // Calculate the variance
+    const variance = squaredDifferences.reduce((acc, val) => acc + val, 0) / dataAfterSignFlip.length;
+  
+    return variance;
+  };
+  
   
   return (
     <Authenticator>
@@ -131,11 +242,14 @@ export const HoverSimcomponent = () => {
             group10="group10footer1"
             copyright="copyrightfooter1"
           />
-          <Next navigate="nav1"
+          <Next
+            navigate="nav1"
             next="next1"
             back="back1"
             linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation/" />
+            linkTo2="/Hover-Documentation/"
+            disable={!isCriteriaMet} // Disable Next button until criteria are met
+          />
         </>
       )}
 
@@ -160,9 +274,12 @@ export const HoverSimcomponent = () => {
             onclick={signOut}
             className="nav-bar-instance2"
           />
-          <Next navigate="nav"
+          <Next
+            navigate="nav"
             linkTo1="/hover-realtime"
-            linkTo2="/Hover-Documentation/" />
+            linkTo2="/Hover-Documentation/"
+            disable={!isCriteriaMet} // Disable Next button until criteria are met
+          />
         </>
       )}
 
@@ -235,11 +352,13 @@ export const HoverSimcomponent = () => {
             group10="group10footer"
             copyright="copyrightfooter"
           />
-          <Next navigate="nav2"
+          <Next
+            navigate="nav2"
             next="next2"
             back="back2"
             linkTo1="/hover-realtime"
             linkTo2="/Hover-Documentation/"
+            disable={!isCriteriaMet} // Disable Next button until criteria are met
           />
         </>
       )}

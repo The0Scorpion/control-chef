@@ -337,10 +337,11 @@ function simulate(data) {
     iyvelki = data.yvelki;
     ixvelkd = data.xvelkd;
     iyvelkd = data.yvelkd;
-
+    Subsystem_U.target= data.yposSet;
+    Subsystem_U.In2= data.xposSet;
     Subsystem_initialize();
     let i = 0;
-    const iterations = 1000;
+    const iterations = 2000;
     var SIO = {
         XPos: [],
         XVel: [],

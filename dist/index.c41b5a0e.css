@@ -6890,6 +6890,30 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   font-size: 7px !important;
 }
 
+.buttons .stop :hover, .buttons .start :hover, .buttons .set :hover, .buttons .reset :hover {
+  cursor: pointer;
+  transform: scale(.9);
+}
+
+.buttons .start {
+  color: #fff;
+  font-family: var(--subheader-font-family);
+  font-size: var(--subheader-font-size);
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  background-color: #6454f0;
+  border-radius: 15px;
+  width: 203px;
+  height: 50px;
+  transition: all .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .parameters {
   width: 343px;
   height: 117px;
@@ -9470,7 +9494,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative;
 }
 
-.buttons .stop :hover, .buttons .start :hover, .buttons .set :hover, .buttons .reset :hover {
+.buttons .stop :hover, .buttons .run :hover, .buttons .set :hover, .buttons .reset :hover {
   cursor: pointer;
   transform: scale(.9);
 }
@@ -9494,7 +9518,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 0;
 }
 
-.buttons .start {
+.buttons .run {
   color: #fff;
   font-family: var(--subheader-font-family);
   font-size: var(--subheader-font-size);

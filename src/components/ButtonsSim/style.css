@@ -8,7 +8,7 @@
   transform: scale(0.9);
 }
 
-.buttons .start :hover{
+.buttons .run :hover{
   cursor: pointer;
   transform: scale(0.9);
 }
@@ -43,7 +43,7 @@
   transition: all 0.2s ease;
 }
 
-.buttons .start {
+.buttons .run {
   height: 50px;
   left: 0;
   top: 0;
