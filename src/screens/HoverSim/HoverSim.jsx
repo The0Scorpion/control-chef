@@ -54,16 +54,14 @@ export const HoverSimcomponent = () => {
     const Yovershoot = calculateOvershoot(Sim.YPos,ParameterData.yposSet);
     const XError = Math.abs(ParameterData.xposSet-(Sim.XPos[1999]));
     const YError = Math.abs(ParameterData.yposSet-(Sim.YPos[1999]));
-    console.log(Xovershoot);
-    console.log(Yovershoot);
+    
     // Check if overshoot is less than 0.1
-    if(XError < 0.01 && YError<0.01){
+    if(XError < 0.01 && YError < 0.01){
     if (Math.abs(Xovershoot) < 0.03 && Math.abs(Yovershoot) < 0.03) {
       // Calculate variance
       const Xvariance = calculateVariance(Sim.XPos,ParameterData.xposSet);
       const Yvariance = calculateVariance(Sim.YPos,ParameterData.yposSet);
-      console.log(Xvariance);
-      console.log(Yvariance);
+      
       // Check if variance is less than 0.1
       if (Xvariance < 0.1 && Yvariance < 0.1) {
         setIsCriteriaMet(true); // Set criteria met
@@ -71,15 +69,22 @@ export const HoverSimcomponent = () => {
       } else {
         setIsCriteriaMet(false); // Reset criteria met
         alert("Variance criterion not met. Adjust PID parameters.");
+        console.log(Xvariance);
+      console.log(Yvariance);
       }
     } else {
       setIsCriteriaMet(false); // Reset criteria met
       alert("Overshoot criterion not met. Adjust PID parameters.");
+      console.log(Xovershoot);
+    console.log(Yovershoot);
     }
   }else{
       setIsCriteriaMet(false); // Reset criteria met
       alert("Steady State Error Too Big criterion not met. Adjust PID parameters.");
-  }
+      console.log(XError);
+    console.log(YError);
+    }
+
 
   };
 

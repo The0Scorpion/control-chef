@@ -116,6 +116,10 @@ export const URDFViewer = ({
     }
   }, [joint1, joint2]);
 
+  const buttonStyle = {
+    color: 'black'
+  };
+
   const moveCameraToPosition1 = () => {
     const camera = cameraRef.current;
     if (camera) {
@@ -158,10 +162,10 @@ export const URDFViewer = ({
   return (
     <div className={`urdf ${className}`} ref={containerRef}>
       <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 1 }}>
-        <button onClick={moveCameraToPosition1}>Camera Position 1</button>
-        <button onClick={moveCameraToPosition2}>Camera Position 2</button>
-        <button onClick={moveCameraToPosition3}>Camera Position 3</button>
-        <button onClick={enableControls}>Enable Controls</button>
+        <button style={buttonStyle} onClick={moveCameraToPosition1}>Camera Position 1</button>
+        <button style={buttonStyle} onClick={moveCameraToPosition2}>Camera Position 2</button>
+        <button style={buttonStyle} onClick={moveCameraToPosition3}>Camera Position 3</button>
+        <button style={buttonStyle} onClick={enableControls}>Enable Controls</button>
       </div>
     </div>
   );

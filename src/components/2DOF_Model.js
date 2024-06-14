@@ -340,7 +340,7 @@ function simulate(data) {
 
     Subsystem_initialize();
     let i = 0;
-    const iterations = 1000;
+    const iterations = 2000;
     var SIO = {
         XPos: [],
         XVel: [],
