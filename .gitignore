@@ -35,3 +35,4 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 
+/dist
