@@ -532,9 +532,9 @@ button:hover {
 }
 
 .modeling7 .img7 {
+  align-self: center;
   width: 50%;
   height: auto;
-  margin-right: 5vw;
 }
 
 .modeling7 .MODELING7 {
@@ -558,6 +558,7 @@ button:hover {
 .modeling7 .when-a-positive7, .modeling7 .the-model-equation7 {
   color: #fff;
   text-align: justify;
+  align-self: center;
   margin: 5vw;
   font-family: Salsa, Helvetica;
   font-size: 20px;
@@ -617,8 +618,21 @@ button:hover {
 
 .block-diagram {
   background-color: #8b4513;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
   width: 80vw;
+  height: auto;
+  display: flex;
   position: relative;
+  overflow: hidden;
+}
+
+.block-diagram img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 
 :root, [data-amplify-theme] {
@@ -6228,10 +6242,8 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .blockdiagram {
-  width: 90vw;
   margin-top: 10rem;
   position: relative !important;
-  left: 50px !important;
 }
 
 .hoverdoc .navigate {
@@ -6286,10 +6298,8 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .blockdiagram1 {
-  width: 80vw;
-  margin-top: 2rem;
+  margin-top: 10rem;
   position: relative;
-  top: 80px;
 }
 
 .hoverdoc .navi1 {
@@ -6424,10 +6434,14 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .blockdiagram21 {
-  width: 80vw;
-  margin-top: 2rem;
+  margin-top: 10rem;
   position: relative !important;
-  left: 10px !important;
+}
+
+@media (width <= 700px) {
+  .hoverdoc .blockdiagram21 {
+    margin-top: 2rem;
+  }
 }
 
 .hoverdoc .navigate2 {

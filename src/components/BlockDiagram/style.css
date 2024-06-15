@@ -1,5 +1,18 @@
 .block-diagram {
   width: 80vw;
+  height: auto;
   position: relative;
   background-color: saddlebrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  overflow: hidden; /* Ensures the image does not overflow the container */
+}
+
+.block-diagram img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Ensures the image height does not exceed the container's height */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
