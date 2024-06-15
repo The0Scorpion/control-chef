@@ -13,7 +13,7 @@
   border-radius: 2vw 0 0 2vw;
   height: 15vh;
   right: 0;
-  top: 10vh;
+  top: 25vh;
   width: 50vw;
   color: #050518;
   font-family: "Salsa", Helvetica;
@@ -40,17 +40,18 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 2vh;
   text-align: justify;
   text-align: right;
   text-justify: distribute-all-lines;
 }
 
 .about .element {
-  width: 50%;
+  width: 40%;
   height: auto; /* Ensure the image maintains its aspect ratio */
   display: block;
   margin: 0 auto;
   position: absolute;
   left: 0;
+  top: 2vh;
 }

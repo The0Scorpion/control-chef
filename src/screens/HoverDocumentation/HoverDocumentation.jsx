@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useWindowWidth } from "../../breakpoints";
 import { useLocation } from "react-router-dom";
 import { useWindowWidth } from "../../breakpoints";
 import { Footer } from "../../components/Footer";
@@ -119,6 +118,9 @@ export const HoverDoccomponent = () => {
                 />
                 <Modeling
                   className="modeling20"
+                  whenapositive="modeling21"
+                  equation="modeling21"
+                  modeling1="modeling22"
                />
                 <BlockDiagram
                   className="blockdiagram21" 

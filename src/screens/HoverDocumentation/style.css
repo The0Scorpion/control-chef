@@ -204,9 +204,29 @@
 
 .hoverdoc .modeling20 {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   left: 0px !important;
 }
+
+.hoverdoc .modeling22 {
+  font-size: 20px;
+}
+
+.hoverdoc .modeling21{
+  font-size: 20px !important;
+}
+
+@media (max-width: 450px) {
+  .hoverdoc .modeling21 {
+    top: 8.5vh !important;
+    font-size: 3.2vw !important;
+  }
+  .hoverdoc .modeling22{
+    height: 10vw;
+    font-size: 3.2vw;
+  }
+}
+
 
 .hoverdoc .blockdiagram21 {
   position: relative !important;
