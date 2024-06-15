@@ -159,9 +159,9 @@
 
 @media (max-width: 450px) {
   .hoverdoc .about22 {
-    top: 3vh !important;
+    top: 5vh !important;
     font-size: 2.4vw !important;
-    padding: 15px;
+    padding: 10px;
   } 
 }
 

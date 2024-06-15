@@ -621,7 +621,7 @@ button:hover {
   justify-content: center;
   align-self: center;
   align-items: center;
-  width: 80vw;
+  width: 95vw;
   height: auto;
   display: flex;
   position: relative;
@@ -6367,9 +6367,9 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
 @media (width <= 450px) {
   .hoverdoc .about22 {
-    padding: 15px;
+    padding: 10px;
     font-size: 2.4vw !important;
-    top: 3vh !important;
+    top: 5vh !important;
   }
 }
 
