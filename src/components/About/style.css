@@ -3,7 +3,6 @@
   left: 0;
   top: 0;
   display: inline-block;
-  background-color: aqua;
   position: relative;
   overflow: hidden; /* Ensure no overflow */
 }

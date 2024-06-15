@@ -38,8 +38,7 @@
 }
 
 .hoverdoc .navigate {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   left: 0px !important;
   position: relative !important;
 }
@@ -95,8 +94,7 @@
 }
 
 .hoverdoc .navi1 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -200,16 +198,18 @@
 
 .hoverdoc .modeling20 {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0rem;
   left: 0px !important;
 }
 
 .hoverdoc .modeling22 {
   font-size: 20px;
+  line-height: 10px;
 }
 
 .hoverdoc .modeling21{
   font-size: 20px !important;
+  line-height: 30px;
 }
 
 @media (max-width: 450px) {
@@ -238,6 +238,7 @@
 .hoverdoc .navigate2 {
   position: relative;
   margin-top: 2rem;
+  height: 30px;
 }
 
 .hoverdoc .backop2 {
@@ -246,7 +247,9 @@
 
 .hoverdoc .next2 {
   border-radius: 5px !important;
-  font-size: 12px !important;
+  height: 30px;
+  width: 20vw;
+  font-size: 15px !important;
 }
 
 .hoverdoc .footer5 {

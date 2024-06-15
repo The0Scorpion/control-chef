@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  background-color: chartreuse;
 }
 
 .modeling .img {
@@ -48,14 +47,16 @@
   text-align: justify;
   margin-bottom: 20px;
   margin-right: 2vw;
+  letter-spacing: 0;
+  line-height: 4vw; /* Responsive line height */
 }
 
 .modeling .when-a-positive {
-  font-size: 2.4vw;
+  font-size: 1.8vw;
 }
 
 .modeling .the-model-equation {
-  font-size: 2.4vw;
+  font-size: 1.8vw;
 }
 
 .modeling7 {
@@ -63,7 +64,6 @@
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  background-color: chartreuse;
 }
 
 .modeling7 .img7 {

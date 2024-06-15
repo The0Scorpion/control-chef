@@ -2,7 +2,6 @@
   width: 100%;
   margin: 0 ; /* Centering the div */
   display: inline-block;
-  background-color: tomato;
   position: relative;
   overflow: hidden; /* Ensure no overflow */
 }

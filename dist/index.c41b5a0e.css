@@ -20,7 +20,6 @@ a {
 }
 
 .footer {
-  background-color: #8a2be2;
   width: 100%;
   height: auto;
 }
@@ -361,7 +360,6 @@ button:hover {
 }
 
 .about {
-  background-color: #0ff;
   width: 100%;
   display: inline-block;
   position: relative;
@@ -419,7 +417,6 @@ button:hover {
 }
 
 .how-it-works {
-  background-color: tomato;
   width: 100%;
   margin: 0;
   display: inline-block;
@@ -472,7 +469,6 @@ button:hover {
 }
 
 .modeling {
-  background-color: #7fff00;
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
@@ -516,11 +512,13 @@ button:hover {
 .modeling .when-a-positive, .modeling .the-model-equation {
   color: #fff;
   text-align: justify;
+  letter-spacing: 0;
   margin-bottom: 20px;
   margin-right: 2vw;
   font-family: Salsa, Helvetica;
-  font-size: 2.4vw;
+  font-size: 1.8vw;
   font-weight: 400;
+  line-height: 4vw;
 }
 
 .modeling7 {
@@ -567,7 +565,6 @@ button:hover {
 }
 
 .navigate {
-  background-color: #6495ed;
   width: 100%;
   height: 3.3vw;
   position: absolute;
@@ -617,7 +614,6 @@ button:hover {
 }
 
 .block-diagram {
-  background-color: #8b4513;
   justify-content: center;
   align-self: center;
   align-items: center;
@@ -6247,8 +6243,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .navigate {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   position: relative !important;
   left: 0 !important;
 }
@@ -6303,8 +6298,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .navi1 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   position: relative;
 }
 
@@ -6408,16 +6402,18 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .modeling20 {
-  margin-top: 1rem;
+  margin-top: 0;
   position: relative;
   left: 0 !important;
 }
 
 .hoverdoc .modeling22 {
   font-size: 20px;
+  line-height: 10px;
 }
 
 .hoverdoc .modeling21 {
+  line-height: 30px;
   font-size: 20px !important;
 }
 
@@ -6445,6 +6441,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .navigate2 {
+  height: 30px;
   margin-top: 2rem;
   position: relative;
 }
@@ -6454,8 +6451,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hoverdoc .next2 {
+  width: 20vw;
+  height: 30px;
   border-radius: 5px !important;
-  font-size: 12px !important;
+  font-size: 15px !important;
 }
 
 .hoverdoc .footer5 {
