@@ -289,6 +289,8 @@ export const HoverSimcomponent = () => {
                   yPosClassName="singlegraphtitle"
                   xVelClassName="singlegraphtitle"
                   yVelClassName="singlegraphtitle"
+                  rectangleClassName="graphsize"
+                  groupClassName="graphsize-warp"
                 />
                 <Next
                   navigate="nav2"

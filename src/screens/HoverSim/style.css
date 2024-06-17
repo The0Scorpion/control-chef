@@ -228,9 +228,18 @@
   align-self: center;
 }
 
+.hoversim .graphsize{
+  height: 80vw;
+}
+
+.hoversim .graphsize-warp{
+  height: 90vw;
+}
+
 .hoversim .titlegraph{
   font-size: 30px;
   height: 30px;
+  margin-bottom: 2vw;
 }
 
 .hoversim .singlegraphtitle{

@@ -93,19 +93,19 @@ export const Graphsim = ({
           <div className={`x-pos ${xPosClassName}`}>Pitch Angle</div>
           <div ref={chartRefs.XPos} className={`rectangle1 ${rectangleClassName}`} id="chart-XPos"></div>
         </div>
-        <div className={`group-2 ${divClassName}`}>
+        <div className={`group-2 ${groupClassName}`}>
           <div className={`x-vel1 ${xVelClassName}`}>Pitch Angular Velocity</div>
-          <div ref={chartRefs.XVel} className={`rectangle2 ${divClassNameOverride}`} id="chart-XVel"></div>
+          <div ref={chartRefs.XVel} className={`rectangle2 ${rectangleClassName}`} id="chart-XVel"></div>
         </div>
       </div>
       <div class="graphs-wrap2">
-        <div className={`group-3 ${groupClassName2}`}>
+        <div className={`group-3 ${groupClassName}`}>
           <div className={`y-pos ${yPosClassName}`}>Roll Angle</div>  
-          <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassNameOverride}`} id="chart-YPos"></div>
+          <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassName}`} id="chart-YPos"></div>
         </div>
-        <div className={`group-4 ${groupClassName4}`}>
+        <div className={`group-4 ${groupClassName}`}>
           <div className={`y-vel ${yVelClassName}`}>Roll Angular Velocity</div>
-          <div ref={chartRefs.YVel} className={`rectangle4 ${rectangleClassName1}`} id="chart-YVel"></div>
+          <div ref={chartRefs.YVel} className={`rectangle4 ${rectangleClassName}`} id="chart-YVel"></div>
         </div>
       </div>
     </div>

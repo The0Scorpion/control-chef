@@ -10481,8 +10481,17 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative !important;
 }
 
+.hoversim .graphsize {
+  height: 80vw;
+}
+
+.hoversim .graphsize-warp {
+  height: 90vw;
+}
+
 .hoversim .titlegraph {
   height: 30px;
+  margin-bottom: 2vw;
   font-size: 30px;
 }
 
