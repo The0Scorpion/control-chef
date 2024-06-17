@@ -19,7 +19,6 @@ export const ButtonsSim = ({
   return (
     <div className={`buttons ${className}`}>
       <button className={`start ${startClassName}`} onClick={GraphAndSimulate}>Run Simulation</button>
-
     </div>
   );
 };

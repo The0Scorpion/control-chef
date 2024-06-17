@@ -1,20 +1,17 @@
 .simulation-streaming {
-  height: 49px;
-  position: relative;
-  width: 434px;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  width: 100%;
 }
 
 .simulation-streaming .text-wrapper-8 {
   color: #ffffff;
   font-family: var(--title-font-family);
-  font-size: var(--title-font-size);
+  font-size: 3vw;
   font-style: var(--title-font-style);
   font-weight: var(--title-font-weight);
-  height: 49px;
-  left: 0;
   letter-spacing: var(--title-letter-spacing);
   line-height: var(--title-line-height);
-  position: absolute;
   text-align: center;
-  top: -1px;
 }

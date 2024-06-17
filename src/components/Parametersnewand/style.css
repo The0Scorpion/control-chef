@@ -2,8 +2,6 @@
   height: 117px;
   width: 343px;
   position: absolute;
-  left: 5px;
-  top: 60px;
 }
 
 .parametersnewand .group {
@@ -384,7 +382,7 @@
 }
 
 .parametersnewand .line-3 {
-  height: 1px;
+  height: 2px;
   left: 4px;
   object-fit: cover;
   position: absolute;
