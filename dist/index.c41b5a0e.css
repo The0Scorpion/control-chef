@@ -10438,7 +10438,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
 .hoversim .BlockDiagrams5 {
   align-self: center;
-  margin-top: 0;
+  margin-top: 2vw;
   position: relative;
 }
 
@@ -10446,7 +10446,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   align-self: center;
   width: 30vw;
   height: 6vw;
-  margin-top: 0;
+  margin-top: 2vw;
   position: relative;
 }
 
@@ -10461,7 +10461,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
     align-self: center;
     width: 176px;
     height: 35px;
-    margin-top: 0;
+    margin-top: 2vw;
     position: relative;
   }
 
@@ -10475,7 +10475,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 .hoversim .graphs-18 {
   align-self: center;
   width: 90%;
-  margin-top: 2vw;
+  margin-top: 4vw;
   margin-left: 10vw;
   margin-right: 10vw;
   position: relative !important;
@@ -10502,7 +10502,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
 .hoversim .nav2 {
   margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
   position: relative !important;
 }
 

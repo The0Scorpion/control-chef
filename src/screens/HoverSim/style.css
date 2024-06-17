@@ -184,13 +184,13 @@
 
 .hoversim .BlockDiagrams5{
   position: relative;
-  margin-top: 0vw;
+  margin-top: 2vw;
   align-self: center;
 }
 
 .hoversim .buttons-3{
   position: relative;
-  margin-top: 0vw;
+  margin-top: 2vw;
   align-self: center;
   width: 30vw;
   height: 6vw;
@@ -205,7 +205,7 @@
 @media (max-width:580) {
   .hoversim .buttons-3{
     position: relative;
-    margin-top: 0vw;
+    margin-top: 2vw;
     align-self: center;
     width: 176px;
     height: 35px;
@@ -221,7 +221,7 @@
 
 .hoversim .graphs-18 {
   position: relative !important;
-  margin-top: 2vw;
+  margin-top: 4vw;
   margin-left: 10vw;
   margin-right: 10vw;
   width: 90%;
@@ -250,7 +250,7 @@
 .hoversim .nav2 {
   position: relative !important;
   margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
 }
 
 .hoversim .next2 {
