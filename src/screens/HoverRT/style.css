@@ -223,23 +223,6 @@
   font-size: 14px;
 }
 
-@media (max-width:580) {/*
-  .hover .buttons-3{
-    position: relative;
-    margin-top: 2vw;
-    align-self: center;
-    width: 176px;
-    height: 35px;
-  }
-  
-  .hover .button-wrap3 {
-    width: 176px;
-    height: 35px;
-    align-self: center;
-  }*/
-  
-}
-
 .hover .video-stream-instance2{
   position: relative;
   margin-top: 1vw;
@@ -261,6 +244,18 @@
 }
 
 .hover .buttonsURDF6{
+  margin: 1vw;
+  height: 6vw;
+  font-size: 11px;
+  align-self: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 132px;
+}
+
+.hover .buttonsURDF7{
+  color: white;
+  border-color: #6454f0;
   margin: 1vw;
   height: 6vw;
   font-size: 11px;

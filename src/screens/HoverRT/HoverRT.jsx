@@ -252,6 +252,7 @@ export const HoverRTcomponent = () => {
                   className="video-stream-instance2"
                   buttonWrap5="buttonsURDF5"
                   urdfbutton="buttonsURDF6"
+                  urdfbutton1="buttonsURDF7"
                   width="300"
                   height="200"
                   joint1={JointAngle1}

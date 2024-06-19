@@ -7786,6 +7786,18 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   font-size: 11px;
 }
 
+.hover .buttonsURDF7 {
+  color: #fff;
+  border-color: #6454f0;
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  width: 132px;
+  height: 6vw;
+  margin: 1vw;
+  font-size: 11px;
+}
+
 .hover .graphs-18 {
   align-self: center;
   width: 90%;
