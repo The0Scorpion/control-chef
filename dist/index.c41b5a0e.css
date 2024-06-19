@@ -6900,6 +6900,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   background-color: #6454f0;
   border: none;
   border-radius: 5px;
+  place-content: center;
   margin: 5px;
   padding: 10px 20px;
   font-family: Salsa, Helvetica;
