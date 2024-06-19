@@ -26,8 +26,8 @@ export const HoverRTcomponent = () => {
   const [scrollToTop, setScrollToTop] = useState(false);
   const [parameterData, setParameterData] = useState(null);
   const [Work, setWork] = useState(0);
-  const [JointAngle1,setJointAngle1]=useState(0);
-  const [JointAngle2,setJointAngle2]=useState(0);
+  const [JointAngle1, setJointAngle1] = useState(0);
+  const [JointAngle2, setJointAngle2] = useState(0);
   const urdfUrl1 = '2dofhover/urdf/2dofhover.urdf';
   const sendDataToLambda = () => {
     if (!parameterData) {
@@ -118,104 +118,84 @@ export const HoverRTcomponent = () => {
         <>
           <div className="hover"
             style={{
-              background: "rgb(20, 20, 80)",
-              height:
-                screenWidth < 834
-                  ? "1120px"
-                  : screenWidth >= 834 && screenWidth < 1300
-                    ? "2240px"
-                    : screenWidth >= 1300
-                      ? "2700px"
-                      : undefined,
               width: { screenWidth }
             }}
           >
             {screenWidth >= 834 && screenWidth < 1300 && (
               <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab" />
                 <SimulationStreaming
                   title="Real Time Simulation"
                   className="simulation-streaming-instance"
                 />
-                <Parametersnew
-                  setParameterData={setParameterData}
-                  className="parameters-instance"
-                  rollgroup="rollgroup1"
-                  pitchgroup="pitchgroup1"
-                  plantgroup="plantimg1"
-                  arrow3="arrow1"
-                  arrow4="arrow1"
-                />
+                <div className="input1300">
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-instance"
+                    rollgroup="rollgroup1"
+                    pitchgroup="pitchgroup1"
+                    plantgroup="plantimg1"
+                    arrow3="arrow1"
+                    arrow4="arrow1"
+                  />
+                  <Buttons
+                    sendDataToLambda={sendDataToLambda}
+                    sendDataTostart={sendDataTostart}
+                    sendDataTostop={sendDataTostop}
+                    parameterData={parameterData}
+                    className="buttons-instance"
+                    startClassName="button-start"
+                    setClassName="button-start"
+                    resetClassName="button-start"
+                    stopClassName="button-start"
+                  />
+                </div>
                 <URDFViewer
-                 urdfUrl={urdfUrl1}
+                  urdfUrl={urdfUrl1}
                   className="video-stream-instance1"
                   width="800"
                   height="500"
+                  buttonWrap5="buttonUrdf"
                   joint1={JointAngle1}
                   joint2={JointAngle2}
                 />
-                <Buttons
-                  sendDataToLambda={sendDataToLambda}
-                  sendDataTostart={sendDataTostart}
-                  sendDataTostop={sendDataTostop}
-                  parameterData={parameterData}
-                  className="buttons-instance"
-                  startClassName="start1"
-                  stopClassName="stop1"
-                  setClassName="set1"
-                  resetClassName="reset1"
-                />
                 <Graphs
                   className="graphs-instance"
-                  divClassName1="graphs-16"
-                  groupClassName="instance-node"
-                  divClassName="graphs-5"
-                  groupClassName2="graphs-9"
-                  groupClassName4="graphs-12"
-                  rectangleClassName="graphs-2"
-                  divClassNameOverride="graphs-2"
-                  rectangleClassName1="graphs-2"
-                  rectangleClassNameOverride="graphs-2"
-                  xPosClassName="graphs-3"
-                  xVelClassName="graphs-3"
-                  yPosClassName="graphs-3"
-                  yVelClassName="graphs-3"
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
                 />
                 <Next navigate="nav1"
                   next="next1"
-                  back="back1"
                   linkTo2="/hover-simulation" />
-                <NavBar_2
-                  onclick={signOut}
-                  className="nav-bar-tab" />
                 <Footer
                   className="footer1"
-                  group="groupfooter1"
-                  group2="group2footer1"
-                  controlchefhigh="controlcheifhighfooter1"
-                  maskgroup="maskgroupfooter1"
-                  group7="group7footer1"
-                  textwrapper="textwrapperfooter1"
-                  textwrapper2="textwrapper2footer1"
-                  textwrapper3="textwrapper3footer1"
-                  textwrapper4="textwrapper4footer1"
-                  textwrapper5="textwrapper5footer1"
-                  group8="group8footer1"
-                  group9="group9footer1"
-                  group10="group10footer1"
-                  copyright="copyrightfooter1"
                 />
+                <div style={{ height: 0 }}></div>
               </>
             )}
 
             {screenWidth >= 1300 && (
               <>
-                <Footer className="footer-instance" />
-                <Graphs className="graphs-17" 
-                setj1={setJointAngle1}
-                setj2={setJointAngle2}
+                <NavBar
+                  onclick={signOut}
+                  className="navbardoc"
                 />
+                <SimulationStreaming
+                  title="Real Time Simulation"
+                  className="simulation-streaming-2" />
+                <div className="inputpb">
+                <Parametersnew
+                  setParameterData={setParameterData}
+                  className="parameters-2" />
+                <Buttons
+                  sendDataToLambda={sendDataToLambda}
+                  sendDataTostart={sendDataTostart}
+                  sendDataTostop={sendDataTostop}
+                  parameterData={parameterData}
+                  className="buttons-2" />
+                </div>
                 <URDFViewer
                   urdfUrl={urdfUrl1}
                   className="video-stream-instance"
@@ -224,46 +204,37 @@ export const HoverRTcomponent = () => {
                   joint1={JointAngle1}
                   joint2={JointAngle2}
                 />
-                <Parametersnew
-                  setParameterData={setParameterData}
-                  className="parameters-2" />
-                <SimulationStreaming
-                  title="Real Time Simulation"
-                  className="simulation-streaming-2" />
-                <Buttons
-                  sendDataToLambda={sendDataToLambda}
-                  sendDataTostart={sendDataTostart}
-                  sendDataTostop={sendDataTostop}
-                  parameterData={parameterData}
-                  className="buttons-2" />
-                <NavBar
-                  onclick={signOut}
-                  className="nav-bar-instance2"
+                <Graphs className="graphs-17"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
                 />
                 <Next navigate="nav"
                   next="next"
                   linkTo2="/hover-simulation" />
+                <Footer className="footer-instance" />
+                <div style={{ height: 0 }}></div>
               </>
             )}
 
             {screenWidth < 834 && (
               <>
-                <Parameters
-                  setParameterData={setParameterData}
-                  className="parameters-3"
-                />
-                <URDFViewer
-                  urdfUrl={urdfUrl1}
-                  className="video-stream-instance2"
-                  width="300"
-                  height="200"
-                  joint1={JointAngle1}
-                  joint2={JointAngle2}
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab-instance"
+                  controlchef1="logo1-control"
+                  navbardrop="nav-bar-drop"
+                  dropdowncontentexperiments="drop-down-exp"
+                  dropdowncontenttheories="drop-down-theory"
+                  navbartext="nav-bar-text"
                 />
                 <SimulationStreaming
                   className="simulation-streaming-3"
                   title="Real Time Simulation"
-                  simulationStreamingClassName="simulation-streaming-4"
+                  simulationStreamingClassName="titlesize"
+                />
+                <Parameters
+                  setParameterData={setParameterData}
+                  className="BlockDiagram5"
                 />
                 <Buttons
                   sendDataToLambda={sendDataToLambda}
@@ -271,48 +242,41 @@ export const HoverRTcomponent = () => {
                   sendDataTostop={sendDataTostop}
                   parameterData={parameterData}
                   className="buttons-3"
-                  resetClassName="buttons-9"
-                  setClassName="buttons-11"
-                  startClassName="buttons-90"
-                  stopClassName="buttons-6"
+                  resetClassName="ButtonSingle"
+                  setClassName="ButtonSingle"
+                  startClassName="ButtonSingle"
+                  stopClassName="ButtonSingle"
+                />
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance2"
+                  buttonWrap5="buttonsURDF5"
+                  urdfbutton="buttonsURDF6"
+                  width="300"
+                  height="200"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
                 />
                 <Graphs
                   className="graphs-18"
-                  divClassName1="graphs-35"
-                  groupClassName="graphs-19"
-                  divClassName="graphs-24"
-                  groupClassName2="graphs-28"
-                  groupClassName4="graphs-31"
-                  rectangleClassName="graphs-20"
-                  divClassNameOverride="graphs-20"
-                  rectangleClassName1="graphs-20"
-                  rectangleClassNameOverride="graphs-20"
-                  xPosClassName="graphs-21"
-                  xVelClassName="graphs-21"
-                  yPosClassName="graphs-21"
-                  yVelClassName="graphs-21"
+                  divClassName1="titlegraph"
+                  xPosClassName="singlegraphtitle"
+                  yPosClassName="singlegraphtitle"
+                  xVelClassName="singlegraphtitle"
+                  yVelClassName="singlegraphtitle"
+                  rectangleClassName="graphsize"
+                  groupClassName="graphsize-warp"
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
                 />
-                <NavBar_2
-                  onclick={signOut}
-                  className="nav-bar-tab-instance"
-                  controltotal1="logo1"
-                  navbarclassName="nav-bar1"
-                  controlchef1="nav-bar2"
-                  controlchef2="nav-bar3"
-                  controlchef3="nav-bar4"
-                  navbardrop="nav-bar5"
-                  navbartext="nav-bar6"
-                  dropdowncontentexperiments="nav-bar7"
-                  dropdowncontenttheories="nav-bar8"
+                <Next navigate="nav2"
+                  next="next2"
+                  back="back2"
+                  linkTo2="/hover-simulation"
                 />
                 <Footer
                   className="footer5"
-                  group="groupfooter"
-                  group2="group2footer"
-                  controlchefhigh="controlcheifhighfooter"
-                  maskgroup="maskgroupfooter"
+                  group="groupwrap"
                   group7="group7footer"
                   buttonf="buttonfooter"
                   textwrapper="textwrapperfooter"
@@ -325,11 +289,7 @@ export const HoverRTcomponent = () => {
                   group10="group10footer"
                   copyright="copyrightfooter"
                 />
-                <Next navigate="nav2"
-                  next="next2"
-                  back="back2"
-                  linkTo2="/hover-simulation"
-                />
+                <div style={{ height: 0 }}></div>
               </>
             )}
           </div>

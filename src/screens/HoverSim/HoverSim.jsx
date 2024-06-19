@@ -302,10 +302,7 @@ export const HoverSimcomponent = () => {
                 />
                 <Footer
                   className="footer5"
-                  group="groupfooter"
-                  group2="group2footer"
-                  controlchefhigh="controlcheifhighfooter"
-                  maskgroup="maskgroupfooter"
+                  group="groupwrap"
                   group7="group7footer"
                   buttonf="buttonfooter"
                   textwrapper="textwrapperfooter"

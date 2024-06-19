@@ -1,7 +1,43 @@
-.urdf{
-    width: 1000px;
-    height: 300px;
+.urdf {
+    position: relative;
+    height: 600px;
 }
-button {
-    color: black;
-  }
+
+.button-wrap{
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+    top: 10px;
+    align-items: center;
+    margin-left: 4.2vw;
+}
+
+.urdfbutton5 {
+    font-family: "Salsa", Helvetica;
+    color: white;
+    background-color:#6454f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.urdfbutton4 {
+    font-family: "Salsa", Helvetica;
+    color:#6454f0;
+    border-color: #6454f0;
+    border: 2.5px solid;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+

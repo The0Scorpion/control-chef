@@ -6879,193 +6879,168 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   font-size: 7px !important;
 }
 
-.buttons {
-  height: 126px;
+.urdf {
+  height: 600px;
   position: relative;
 }
 
-.buttons .stop :hover, .buttons .start :hover, .buttons .set :hover, .buttons .reset :hover {
+.button-wrap {
+  z-index: 1;
+  align-self: center;
+  align-items: center;
+  margin-left: 4.2vw;
+  position: absolute;
+  top: 10px;
+}
+
+.urdfbutton5 {
+  color: #fff;
   cursor: pointer;
+  z-index: 100;
+  background-color: #6454f0;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-family: Salsa, Helvetica;
+  font-size: 1.5vw;
+  transition: background-color .3s;
+}
+
+.urdfbutton4 {
+  color: #6454f0;
+  cursor: pointer;
+  z-index: 100;
+  border: 2.5px solid;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-family: Salsa, Helvetica;
+  font-size: 1.5vw;
+  transition: background-color .3s;
+}
+
+.buttons5 {
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 70vw;
+  max-width: 150px;
+  height: 100%;
+  margin: 5px;
+  display: flex;
+  position: relative;
+}
+
+.buttons5 button {
+  color: #fff;
+  font-family: var(--subheader-font-family);
+  font-size: 1.5vw;
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 70vw;
+  max-width: 150px;
+  height: 50px;
+  margin: 10px 0;
+  transition: all .2s;
+}
+
+.buttons5 .stop {
+  border: 2.5px solid #6454f0;
+}
+
+.buttons5 .start, .buttons5 .set {
+  background-color: #6454f0;
+}
+
+.buttons5 .reset {
+  border: 2.5px solid #6454f0;
+}
+
+.buttons5 button:hover {
   transform: scale(.9);
 }
 
-.buttons .stop {
-  color: #fff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  border: 2.5px solid #6454f0;
-  border-radius: 15px;
-  width: 203px;
-  height: 50px;
-  transition: all .2s;
-  position: absolute;
-  top: 70px;
-  left: 0;
-}
-
-.buttons .start {
-  color: #fff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  background-color: #6454f0;
-  border-radius: 15px;
-  width: 203px;
-  height: 50px;
-  transition: all .2s;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.buttons .set {
-  color: #fff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  background-color: #6454f0;
-  border-radius: 15px;
-  width: 203px;
-  height: 51px;
-  transition: all .2s;
-  position: absolute;
-  top: 140px;
-  left: 0;
-}
-
-.buttons .reset {
-  color: #fff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  border: 2.5px solid #6454f0;
-  border-radius: 15px;
-  width: 203px;
-  height: 51px;
-  transition: all .2s;
-  position: absolute;
-  top: 210px;
-  left: 0;
+@media (width <= 600px) {
+  .buttons5 button {
+    font-size: 4vw;
+  }
 }
 
 .graphsim {
-  width: 1065px;
-  height: 1841px;
-  position: relative;
-  transform: translate(0, 25px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
 }
 
-.graphsim .group-22 {
-  width: 527px;
-  height: 427px;
-  position: absolute;
-  top: 98px;
-  left: 0;
+@media (width <= 1300px) {
+  .graphsim1 {
+    margin: 1vw;
+  }
+
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 48vw;
+  }
 }
 
-.graphsim .rectangle-5 {
-  background-color: #d9d9d9;
-  width: 525px;
-  height: 370px;
-  position: absolute;
-  top: 57px;
-  left: 0;
+@media (width <= 830px) {
+  .graphsim1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 2vw;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .graphs-wrap1, .graphs-wrap2 {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+  }
+
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 100%;
+    margin: 1vw 0;
+  }
 }
 
-.graphsim .text-wrapper-12 {
-  color: #fff;
-  font-family: var(--header-font-family);
-  font-size: var(--header-font-size);
-  font-style: var(--header-font-style);
-  font-weight: var(--header-font-weight);
-  letter-spacing: var(--header-letter-spacing);
-  line-height: var(--header-line-height);
-  text-align: center;
-  width: 97px;
-  height: 31px;
-  position: absolute;
-  top: 0;
-  left: 215px;
-}
+@media (width <= 360px) {
+  .graphsim1 {
+    margin: 2vw;
+  }
 
-.graphsim .group-24 {
-  width: 527px;
-  height: 426px;
-  position: absolute;
-  top: 576px;
-  left: 0;
-}
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 100%;
+    margin: .5vw 0;
+  }
 
-.graphsim .x-vel {
-  color: #fff;
-  font-family: var(--header-font-family);
-  font-size: var(--header-font-size);
-  font-style: var(--header-font-style);
-  font-weight: var(--header-font-weight);
-  letter-spacing: var(--header-letter-spacing);
-  line-height: var(--header-line-height);
-  text-align: center;
-  height: 29px;
-  position: absolute;
-  top: 0;
-  left: 233px;
-}
+  .rectangle1, .rectangle2, .rectangle3, .rectangle4 {
+    height: 50vw;
+  }
 
-.graphsim .group-26 {
-  width: 527px;
-  height: 426px;
-  position: absolute;
-  top: 99px;
-  left: 540px;
-}
-
-.graphsim .group-28 {
-  width: 527px;
-  height: 426px;
-  position: absolute;
-  top: 576px;
-  left: 540px;
-}
-
-.graphsim .text-wrapper-14 {
-  color: #fff;
-  font-family: var(--title-font-family);
-  font-size: var(--title-font-size);
-  font-style: var(--title-font-style);
-  font-weight: var(--title-font-weight);
-  letter-spacing: var(--title-letter-spacing);
-  line-height: var(--title-line-height);
-  text-align: center;
-  width: 130px;
-  height: 53px;
-  position: absolute;
-  top: -1px;
-  left: 469px;
+  .text-wrapper-14 {
+    font-size: smaller;
+  }
 }
 
 .parameters {
   width: 343px;
   height: 117px;
   position: absolute;
-  top: 60px;
-  left: 5px;
 }
 
 .parameters .group {
@@ -7555,1413 +7530,62 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hover {
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   display: flex;
   overflow: hidden;
 }
 
-.hover .overlap-6 {
-  position: absolute;
-}
-
-.hover .class {
-  border-radius: 202.57px / 662.27px !important;
-  width: 405px !important;
-  height: 1325px !important;
-  top: 2737px !important;
-}
-
-.hover .class-2 {
-  border-radius: 133.57px / 640.23px !important;
-  width: 267px !important;
-  height: 1280px !important;
-  top: 2646px !important;
-}
-
-.hover .class-3 {
-  width: 1098px !important;
-  height: 4061px !important;
-  position: absolute !important;
+.hover .navbardoc {
+  z-index: 1000000 !important;
+  position: fixed !important;
   top: 0 !important;
   left: 0 !important;
-}
-
-.hover .class-4 {
-  width: 724px !important;
-  height: 3926px !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .class-5 {
-  border-radius: 180.67px / 583.5px !important;
-  width: 361px !important;
-  height: 1167px !important;
-  left: 308px !important;
-}
-
-.hover .class-6 {
-  border-radius: 119.13px / 564.08px !important;
-  width: 238px !important;
-  height: 1128px !important;
-  left: 203px !important;
-}
-
-.hover .class-7 {
-  border-radius: 180.67px / 583.5px !important;
-  width: 361px !important;
-  height: 1167px !important;
-  top: 1561px !important;
-  left: 737px !important;
-}
-
-.hover .class-8 {
-  border-radius: 119.13px / 564.08px !important;
-  width: 238px !important;
-  height: 1128px !important;
-  top: 1509px !important;
-  left: 486px !important;
-}
-
-.hover .footer-2 {
-  background-color: #0000;
-  position: absolute;
-}
-
-.hover .group-30 {
-  background: linear-gradient(#0d4b8459 7.28%, #6929a93d 96.28%);
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-31 {
-  position: absolute;
-}
-
-.hover .control-chef-high-2 {
-  position: absolute;
-  left: 0;
-  overflow: hidden;
-}
-
-.hover .frame-5 {
-  overflow: hidden;
-}
-
-.hover .overlap-7 {
-  position: absolute;
-}
-
-.hover .frame-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-6 {
-  overflow: hidden;
-}
-
-.hover .overlap-group-4 {
-  position: absolute;
-}
-
-.hover .group-32, .hover .group-33, .hover .text-15 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-7 {
-  position: absolute;
-  overflow: hidden;
-}
-
-.hover .group-34 {
-  position: absolute;
-  left: 0;
-}
-
-.hover .group-35 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-36 {
-  position: absolute;
-}
-
-.hover .mask-group-4, .hover .mask-group-5, .hover .mask-group-6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .group-37 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .text-wrapper-15 {
-  color: #fff;
-  letter-spacing: 0;
-  text-align: center;
-  font-family: Salsa, Helvetica;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .group-38, .hover .overlap-group-5 {
-  position: absolute;
-}
-
-.hover .text-wrapper-16 {
-  color: #fff;
-  text-align: center;
-  transition: all .2s;
-  position: absolute;
-  top: 0;
-}
-
-.hover .text-wrapper-17 {
-  color: #fff;
-  text-align: center;
-  transition: all .2s;
-  position: absolute;
-  left: 1px;
-}
-
-.hover .text-wrapper-18, .hover .text-wrapper-19 {
-  color: #fff;
-  text-align: center;
-  transition: all .2s;
-  position: absolute;
-  left: 0;
-}
-
-.hover .group-39 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .control-chef {
-  color: #fff;
-  letter-spacing: 0;
-  text-align: center;
-  font-family: Salsa, Helvetica;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .group-40, .hover .overlap-group-6 {
-  position: absolute;
-}
-
-.hover .home {
-  color: #fff;
-  text-align: center;
-  transition: all .2s;
-  position: absolute;
-  top: 0;
-}
-
-.hover .about-us {
-  color: #fff;
-  text-align: center;
-  transition: all .2s;
-  position: absolute;
-  left: 0;
-}
-
-.hover .group-41 {
-  position: absolute;
-  left: 0;
-}
-
-.hover .overlap-8 {
-  position: absolute;
-}
-
-.hover .rectangle-7 {
-  background: linear-gradient(#0d4b8459 7.28%, #6929a93d 96.28%);
-  border-radius: 20px;
-  position: absolute;
-  top: 1px;
-  left: 0;
-}
-
-.hover .p {
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  top: 0;
-}
-
-.hover .graphs-instance {
-  align-items: center !important;
-  width: 765px !important;
-  height: 710px !important;
-  position: absolute !important;
-  top: 1200px !important;
-  left: 30px !important;
-}
-
-.hover .instance-node {
-  width: 379px !important;
-  height: 307px !important;
-  top: 70px !important;
-}
-
-.hover .graphs-2 {
-  width: 377px !important;
-  height: 266px !important;
-  top: 41px !important;
-}
-
-.hover .graphs-3 {
-  white-space: nowrap !important;
-  width: 70px !important;
-  height: 22px !important;
-  left: 154px !important;
-}
-
-.hover .graphs-4 {
-  width: 379px !important;
-  height: 307px !important;
-  top: 385px !important;
-}
-
-.hover .graphs-5 {
-  width: 379px !important;
-  height: 310px !important;
-  top: 400px !important;
-}
-
-.hover .graphs-6 {
-  width: 377px !important;
-  height: 266px !important;
-  top: 44px !important;
-}
-
-.hover .graphs-7 {
-  left: 158px !important;
-}
-
-.hover .graphs-8 {
-  width: 379px !important;
-  height: 307px !important;
-  top: 1016px !important;
-}
-
-.hover .graphs-9 {
-  width: 379px !important;
-  height: 310px !important;
-  top: 67px !important;
-  left: 388px !important;
-}
-
-.hover .graphs-10 {
-  left: 139px !important;
-}
-
-.hover .graphs-11 {
-  width: 379px !important;
-  height: 310px !important;
-  top: 382px !important;
-  left: 388px !important;
-}
-
-.hover .graphs-12 {
-  width: 379px !important;
-  height: 310px !important;
-  top: 400px !important;
-  left: 388px !important;
-}
-
-.hover .graphs-13 {
-  left: 140px !important;
-}
-
-.hover .graphs-14 {
-  width: 379px !important;
-  height: 310px !important;
-  top: 1013px !important;
-  left: 388px !important;
-}
-
-.hover .graphs-15 {
-  width: unset !important;
-  height: 29px !important;
-  left: 140px !important;
-}
-
-.hover .graphs-16 {
-  width: unset !important;
-  height: 49px !important;
-  top: -7px !important;
-  left: 318px !important;
-}
-
-.hover .class-9 {
-  background-color: #d9d9d9;
-  width: 327px !important;
-  height: 250px !important;
-  position: absolute !important;
-  top: 580px !important;
-  left: 15px !important;
-}
-
-.hover .class-10 {
-  background-color: #d9d9d9;
-  width: 700px !important;
-  height: 400px !important;
-  position: absolute !important;
-  top: 750px !important;
-  left: 60px !important;
-}
-
-.hover .class-11 {
-  z-index: 1;
-  font-size: var(--subheader-font-size) !important;
-  color: #ff0 !important;
-  height: 29px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .class-12 {
-  color: #ff0;
-  z-index: 1;
-  background-color: #7fffd4;
-  top: 750px !important;
-  left: 120px !important;
-}
-
-.hover .parameters-instance {
-  position: absolute !important;
-  top: 170px !important;
-  left: 0 !important;
-}
-
-.hover .simulation-streaming-instance {
-  position: absolute !important;
-  top: 90px !important;
-  left: 160px !important;
-}
-
-.hover .buttons-instance {
-  position: absolute !important;
-  top: 580px !important;
-  left: 10px !important;
-}
-
-.hover .group-42 {
-  width: 33px;
-  height: 14px;
-  position: absolute;
-  top: 12px;
-  left: 730px;
-}
-
-.hover .rectangle-8 {
-  background-color: #d9d9d9;
-  width: 33px;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .rectangle-9 {
-  background-color: #d9d9d9;
-  width: 33px;
-  height: 2px;
-  position: absolute;
-  top: 6px;
-  left: 0;
-}
-
-.hover .rectangle-10 {
-  background-color: #d9d9d9;
-  width: 33px;
-  height: 2px;
-  position: absolute;
-  top: 12px;
-  left: 0;
-}
-
-.hover .control-chef-high-3 {
-  width: 199px;
-  height: 35px;
-  transition: all .5s;
-  position: absolute;
-  top: 1px;
-  left: 0;
-  overflow: hidden;
-}
-
-.hover .div-4 {
-  height: 35px;
-}
-
-.hover .frame-8 {
-  width: 199px;
-  height: 35px;
-  overflow: hidden;
-}
-
-.hover .div-wrapper-3 {
-  width: 199px;
-  height: 35px;
-}
-
-.hover .overlap-9 {
-  height: 35px;
-  position: absolute;
-}
-
-.hover .mask-group-7 {
-  width: 199px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-9 {
-  height: 35px;
-  overflow: hidden;
-}
-
-.hover .overlap-group-7 {
-  width: 199px;
-  height: 59px;
-  position: absolute;
-}
-
-.hover .group-43 {
-  width: 59px;
-  height: 59px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-10 {
-  height: 35px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.hover .group-44 {
-  width: 95px;
-  height: 21px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-}
-
-.hover .group-45 {
-  width: 30px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  left: 103px;
-}
-
-.hover .group-46 {
-  width: 58px;
-  height: 21px;
-  position: absolute;
-  top: 6px;
-  left: 141px;
-}
-
-.hover .blur-instance {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .footer-instance {
-  background-color: #0000 !important;
-  position: absolute !important;
-  top: 2450px !important;
-  left: 100px !important;
-}
-
-.hover .nav {
-  top: 2350px !important;
-}
-
-.hover .next {
-  opacity: 0;
-}
-
-.hover .graphs-17 {
-  position: absolute !important;
-  top: 1300px !important;
-  left: 100px !important;
-}
-
-.hover .video-stream-instance {
-  position: absolute !important;
-  top: 690px !important;
-  left: 130px !important;
-}
-
-.hover .video-stream-instance1 {
-  position: absolute !important;
-  top: 690px !important;
-  left: 30px !important;
-}
-
-.hover .video-stream-instance2 {
-  position: absolute !important;
-  top: 220px !important;
-  left: 15px !important;
-}
-
-.hover .parameters-2 {
-  position: absolute !important;
-  top: 200px !important;
-  left: 120px !important;
 }
 
 .hover .simulation-streaming-2 {
-  width: 380px !important;
-  position: absolute !important;
-  top: 120px !important;
-  left: 410px !important;
+  margin-top: 8vw !important;
+  position: relative !important;
+}
+
+.hover .inputpb {
+  flex-direction: row;
+  align-self: center;
+  display: flex;
+}
+
+.hover .parameters-2 {
+  position: relative;
+  margin: 2vw !important;
 }
 
 .hover .buttons-2 {
-  position: absolute !important;
-  top: 250px !important;
-  left: 1050px !important;
+  position: relative;
 }
 
-.hover .nav-bar-instance2 {
-  z-index: 10000 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
+.hover .video-stream-instance {
+  align-self: center;
+  position: relative;
 }
 
-.hover .parameters-3 {
-  width: 326px !important;
-  height: 422px !important;
-  position: absolute !important;
-  top: 80px !important;
-  left: 15px !important;
+.hover .graphs-17 {
+  align-self: center;
+  margin-top: 1vw;
+  position: relative !important;
 }
 
-.hover .parameters-4 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 95px !important;
-  left: 7px !important;
+.hover .nav {
+  margin-bottom: 1vw;
+  position: relative;
 }
 
-.hover .parameters-5 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 57px !important;
-  height: 15px !important;
-  padding-right: 10px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
+.hover .next {
+  display: none;
 }
 
-.hover .parameters-6 {
-  width: 93px !important;
-  height: 25px !important;
-  left: 58px !important;
-}
-
-.hover .parameters-7 {
-  width: 91px !important;
-  height: 25px !important;
-}
-
-.hover .parameters-8 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 95px !important;
-  height: 15px !important;
-  padding: 5px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  left: 50px !important;
-}
-
-.hover .parameters-9 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 95px !important;
-  left: 173px !important;
-}
-
-.hover .parameters-10 {
-  width: 139px !important;
-  height: 25px !important;
-  top: 135px !important;
-  left: 6px !important;
-}
-
-.hover .parameters-11 {
-  width: 93px !important;
-  height: 25px !important;
-  left: 46px !important;
-}
-
-.hover .parameters-12 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 43px !important;
-  height: 15px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  left: 24px !important;
-}
-
-.hover .parameters-13 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 135px !important;
-  left: 175px !important;
-}
-
-.hover .parameters-14 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 174px !important;
-  left: 7px !important;
-}
-
-.hover .parameters-15 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 174px !important;
-  left: 173px !important;
-}
-
-.hover .parameters-16 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 213px !important;
-  left: 8px !important;
-}
-
-.hover .parameters-17 {
-  width: 93px !important;
-  height: 25px !important;
-  left: 47px !important;
-}
-
-.hover .parameters-18 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 45px !important;
-  height: 15px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  left: 23px !important;
-}
-
-.hover .parameters-19 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 213px !important;
-  left: 174px !important;
-}
-
-.hover .parameters-20 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 252px !important;
-  left: 10px !important;
-}
-
-.hover .parameters-21 {
-  width: 93px !important;
-  height: 25px !important;
-  left: 45px !important;
-}
-
-.hover .parameters-22 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 41px !important;
-  height: 15px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  left: 25px !important;
-}
-
-.hover .parameters-23 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 252px !important;
-  left: 176px !important;
-}
-
-.hover .parameters-24 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 291px !important;
-  left: 8px !important;
-}
-
-.hover .parameters-25 {
-  width: 141px !important;
-  height: 25px !important;
-  top: 291px !important;
-  left: 174px !important;
-}
-
-.hover .parameters-26 {
-  width: 141px !important;
-  height: 30px !important;
-  top: 327px !important;
-  left: 10px !important;
-}
-
-.hover .parameters-27 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 41px !important;
-  height: 30px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-}
-
-.hover .parameters-28 {
-  width: 93px !important;
-  height: 25px !important;
-  top: 3px !important;
-  left: 45px !important;
-}
-
-.hover .parameters-29 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: 59px !important;
-  height: 15px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  left: 16px !important;
-}
-
-.hover .parameters-30 {
-  width: 138px !important;
-  height: 30px !important;
-  top: 327px !important;
-  left: 176px !important;
-}
-
-.hover .parameters-31 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 30px !important;
-  left: 27px !important;
-}
-
-.hover .simulation-streaming-3 {
-  width: 200px !important;
-  height: 23px !important;
-  position: absolute !important;
-  top: 45px !important;
-  left: 80px !important;
-}
-
-.hover .simulation-streaming-4 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 20px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .buttons-3 {
-  width: 325px !important;
-  height: 25px !important;
-  position: absolute !important;
-  top: 185px !important;
-  left: 10px !important;
-}
-
-.hover .buttons-4 {
-  width: 138px !important;
-  height: 34px !important;
-  top: 49px !important;
-}
-
-.hover .buttons-5 {
-  width: 141px !important;
-  height: 39px !important;
-}
-
-.hover .buttons-6 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  border-width: 1px !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-  width: 70px !important;
-  height: 25px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 85px !important;
-}
-
-.hover .buttons-7 {
-  width: 138px !important;
-  height: 34px !important;
-}
-
-.hover .buttons-8 {
-  width: 136px !important;
-  height: 34px !important;
-}
-
-.hover .buttons-9 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  border-width: 1px !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-  width: 70px !important;
-  height: 25px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 255px !important;
-}
-
-.hover .buttons-90 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-  width: 70px !important;
-  height: 25px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .buttons-10 {
-  width: 138px !important;
-  height: 34px !important;
-  left: 148px !important;
-}
-
-.hover .buttons-11 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-  width: 70px !important;
-  height: 25px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 170px !important;
-}
-
-.hover .buttons-12 {
-  width: 138px !important;
-  height: 34px !important;
-  top: 51px !important;
-  left: 148px !important;
-}
-
-.hover .group-47 {
-  width: 14px;
-  height: 6px;
-  position: absolute;
-  top: 5px;
-  left: 309px;
-}
-
-.hover .rectangle-11 {
-  background-color: #d9d9d9;
-  width: 14px;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .rectangle-12 {
-  background-color: #d9d9d9;
-  width: 14px;
-  height: 1px;
-  position: absolute;
-  top: 3px;
-  left: 0;
-}
-
-.hover .rectangle-13 {
-  background-color: #d9d9d9;
-  width: 14px;
-  height: 1px;
-  position: absolute;
-  top: 5px;
-  left: 0;
-}
-
-.hover .control-chef-high-4 {
-  width: 85px;
-  height: 15px;
-  transition: all .5s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-
-.hover .div-wrapper-4 {
-  height: 15px;
-}
-
-.hover .frame-11 {
-  width: 85px;
-  height: 15px;
-  overflow: hidden;
-}
-
-.hover .div-5 {
-  width: 84px;
-  height: 15px;
-}
-
-.hover .overlap-10 {
-  width: 84px;
-  height: 15px;
-  position: absolute;
-}
-
-.hover .mask-group-8 {
-  width: 84px;
-  height: 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-12 {
-  height: 15px;
-  overflow: hidden;
-}
-
-.hover .overlap-group-8 {
-  width: 84px;
-  height: 26px;
-  position: absolute;
-}
-
-.hover .group-48 {
-  width: 25px;
-  height: 26px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover .frame-13 {
-  height: 15px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.hover .group-49 {
-  width: 40px;
-  height: 9px;
-  position: absolute;
-  top: 3px;
-  left: 0;
-}
-
-.hover .group-50 {
-  width: 13px;
-  height: 15px;
-  position: absolute;
-  top: 0;
-  left: 44px;
-}
-
-.hover .group-51 {
-  width: 24px;
-  height: 9px;
-  position: absolute;
-  top: 3px;
-  left: 60px;
-}
-
-.hover .graphs-18 {
-  width: 326px !important;
-  height: 480px !important;
-  position: absolute !important;
-  top: 430px !important;
-  left: 20px !important;
-}
-
-.hover .graphs-19 {
-  width: 160px !important;
-  height: 205px !important;
-  top: 45px !important;
-}
-
-.hover .graphs-20 {
-  width: 160px !important;
-  height: 160px !important;
-  top: 44px !important;
-}
-
-.hover .graphs-21 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  width: unset !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 60px !important;
-}
-
-.hover .graphs-22 {
-  width: 163px !important;
-  height: 359px !important;
-  top: 460px !important;
-}
-
-.hover .graphs-23 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  width: unset !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 62px !important;
-}
-
-.hover .graphs-24 {
-  width: 160px !important;
-  height: 205px !important;
-  top: 270px !important;
-}
-
-.hover .graphs-25 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 61px !important;
-}
-
-.hover .graphs-26 {
-  width: 163px !important;
-  height: 359px !important;
-  top: 1206px !important;
-}
-
-.hover .graphs-27 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  width: unset !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 64px !important;
-}
-
-.hover .graphs-28 {
-  width: 160px !important;
-  height: 205px !important;
-  top: 45px !important;
-  left: 165px !important;
-}
-
-.hover .graphs-29 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 49px !important;
-}
-
-.hover .graphs-30 {
-  width: 163px !important;
-  height: 359px !important;
-  top: 460px !important;
-  left: 165px !important;
-}
-
-.hover .graphs-31 {
-  width: 160px !important;
-  height: 205px !important;
-  top: 270px !important;
-  left: 165px !important;
-}
-
-.hover .graphs-32 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 50px !important;
-}
-
-.hover .graphs-33 {
-  width: 163px !important;
-  height: 359px !important;
-  top: 1206px !important;
-  left: 165px !important;
-}
-
-.hover .graphs-34 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-  width: unset !important;
-  height: 18px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  left: 50px !important;
-}
-
-.hover .graphs-35 {
-  font-family: Salsa, Helvetica !important;
-  font-size: 20px !important;
-  font-style: unset !important;
-  letter-spacing: 0 !important;
-  width: unset !important;
-  height: 25px !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  left: 131px !important;
-}
-
-.hover .nav-bar-tab-instance {
-  z-index: 10000 !important;
-  border-radius: 0 0 3px 3px !important;
-  width: 360px !important;
-  height: 20px !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .logo1 {
-  width: 40% !important;
-  top: 2px !important;
-  left: 10px !important;
-}
-
-.hover .nav-bar1 {
-  top: 2px !important;
-  left: 300px !important;
-}
-
-.hover .nav-bar2, .hover .nav-bar3, .hover .nav-bar4 {
-  width: 60% !important;
-  height: auto !important;
-}
-
-.hover .nav-bar5 {
-  min-width: 50px !important;
-  padding: 5px !important;
-  top: 10px !important;
-  left: 180px !important;
-}
-
-.hover .nav-bar6 {
-  font-size: var(--copyright-font-size) !important;
-}
-
-.welcome-and .nav-bar7, .welcome-and .nav-bar8 {
-  min-width: 100px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  top: 0 !important;
-  left: -85px !important;
-}
-
-.hover .footer5 {
-  width: 360px !important;
-  height: 100px !important;
-  position: absolute !important;
-  top: 1000px !important;
-  left: 0 !important;
-}
-
-.hover .groupfooter {
-  width: 358px !important;
-  height: 100px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .group2footer {
-  width: 360px !important;
-  height: 100px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .controlcheifhighfooter {
-  top: 43px;
-  left: 10px;
-}
-
-.hover .maskgroupfooter {
-  width: 30% !important;
-  height: auto !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .group7footer {
-  width: 60px !important;
-  height: 80px !important;
-  top: 10px !important;
-  left: 260px !important;
-}
-
-.hover .group9footer {
-  width: 70px !important;
-  height: 80px !important;
-  top: 10px !important;
-  left: 170px !important;
-}
-
-.hover .textwrapperfooter {
-  font-size: var(--copyright-font-size) !important;
-  top: 0 !important;
-}
-
-.hover .textwrapper2footer {
-  font-size: var(--f10-font-size) !important;
-  top: 0 !important;
-}
-
-.hover .textwrapper3footer {
-  font-size: var(--f10-font-size) !important;
-  top: 15px !important;
-}
-
-.hover .textwrapper4footer {
-  font-size: var(--f10-font-size) !important;
-  top: 30px !important;
-}
-
-.hover .textwrapper5footer {
-  font-size: var(--f10-font-size) !important;
-  top: 45px !important;
-}
-
-.hover .buttonfooter {
-  font-size: var(--f10-font-size) !important;
-}
-
-.hover .group8footer {
-  width: 50px !important;
-  height: 60px !important;
-  top: 20px !important;
-  left: 0 !important;
-}
-
-.hover .group10footer {
-  width: 50px !important;
-  height: 30px !important;
-  top: 20px !important;
-  left: 0 !important;
-}
-
-.hover .copyrightfooter {
-  width: 360px !important;
-  height: 10px !important;
-  font-size: 7px !important;
-  top: 110px !important;
-  left: 0 !important;
+.hover .footerdoc {
+  position: relative !important;
 }
 
 .hover .nav-bar-tab {
@@ -8971,87 +7595,20 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 0 !important;
 }
 
-.hover .footer1 {
-  max-width: 834px !important;
-  height: 188px !important;
-  position: absolute !important;
-  top: 2050px !important;
-  left: 0 !important;
+.hover .simulation-streaming-instance {
+  margin-top: 8vw !important;
+  position: relative !important;
 }
 
-.hover .groupfooter1 {
-  width: 835px !important;
-  height: 150px !important;
-  top: 0 !important;
-  left: 0 !important;
+.hover .input1300 {
+  flex-direction: row;
+  align-self: center;
+  display: flex;
 }
 
-.hover .group2footer1 {
-  width: 834px !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .controlcheifhighfooter1 {
-  top: 65px;
-  left: 10px;
-}
-
-.hover .maskgroupfooter1 {
-  width: 50% !important;
-  height: auto !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .group7footer1 {
-  top: -10px !important;
-  left: 720px !important;
-}
-
-.hover .group9footer1 {
-  top: -10px !important;
-  left: 550px !important;
-}
-
-.hover .textwrapperfooter1 {
-  font-size: var(--subheader-font-size) !important;
-  top: 20px !important;
-}
-
-.hover .textwrapper2footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 5px !important;
-}
-
-.hover .textwrapper3footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 30px !important;
-}
-
-.hover .textwrapper4footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 55px !important;
-}
-
-.hover .textwrapper5footer1 {
-  font-size: var(--paragraph-font-size) !important;
-  top: 80px !important;
-}
-
-.hover .buttonfooter1 {
-  font-size: var(--paragraph-font-size) !important;
-}
-
-.hover .group8footer1, .hover .group10footer1 {
-  left: 0 !important;
-}
-
-.hover .copyrightfooter1 {
-  font-size: var(--f10-font-size) !important;
-  width: 834px !important;
-  top: 165px !important;
-  left: 0 !important;
+.hover .parameters-instance {
+  margin: 2vw 1vw !important;
+  position: relative !important;
 }
 
 .hover .rollgroup1 {
@@ -9073,55 +7630,230 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 32px !important;
 }
 
-.hover .start1 {
-  width: 150px !important;
-  left: 20px !important;
+.hover .buttons-instance {
+  position: relative !important;
 }
 
-.hover .stop1 {
-  width: 150px !important;
-  top: 0 !important;
-  left: 200px !important;
+@media (width <= 1080px) {
+  .hover .input1300 {
+    flex-direction: column;
+    align-self: center;
+    display: flex;
+  }
+
+  .hover .buttons-instance {
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    max-width: 80vw;
+    display: flex;
+  }
+
+  .hover .button-start {
+    margin: 1vw;
+  }
 }
 
-.hover .set1 {
-  width: 150px !important;
-  top: 0 !important;
-  left: 400px !important;
+.hover .video-stream-instance1 {
+  align-self: center;
+  position: relative;
 }
 
-.hover .reset1 {
-  width: 150px !important;
-  top: 0 !important;
-  left: 600px !important;
+.hover .buttonUrdf {
+  margin-left: 1vw;
+  left: 0;
+}
+
+.hover .graphs-instance {
+  align-self: center;
+  margin-top: 1vw;
+  position: relative;
 }
 
 .hover .nav1 {
-  position: absolute !important;
-  top: 1980px !important;
+  margin-bottom: 1vw;
+  position: relative !important;
 }
 
 .hover .next1 {
-  opacity: 0 !important;
-  left: 500px !important;
+  display: none !important;
+}
+
+.hover .footer1 {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .nav-bar-tab-instance {
+  z-index: 1 !important;
+  border-radius: 0 0 3px 3px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .logo1-control {
+  height: 5vw !important;
+}
+
+.hover .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.hover .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.hover .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.hover .nav-bar-text {
+  justify-content: left !important;
+  width: 40vw !important;
+}
+
+.hover .simulation-streaming-3 {
+  margin-top: 8vh;
+  position: relative;
+}
+
+@media (width <= 700px) {
+  .hover .simulation-streaming-3 {
+    height: 28px;
+  }
+
+  .hover .titlesize {
+    height: 28px;
+    font-size: 23px;
+  }
+}
+
+.hover .BlockDiagram5 {
+  align-self: center;
+  margin-top: 2vw;
+  position: relative;
+}
+
+.hover .buttons-3 {
+  flex-direction: row;
+  align-self: center;
+  width: 90vw;
+  max-width: 600px;
+  margin-top: 2vw;
+  display: flex;
+  position: relative;
+}
+
+.hover .ButtonSingle {
+  height: 6vw;
+  margin: 1vw;
+  font-size: 14px;
+}
+
+.hover .video-stream-instance2 {
+  justify-content: center;
+  align-self: center;
+  width: fit-content;
+  height: auto;
+  margin-top: 1vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+}
+
+.hover .buttonsURDF5 {
+  z-index: 1;
+  align-self: center;
+  width: 93%;
+  margin-left: 0;
+  position: relative;
+  top: 0;
+}
+
+.hover .buttonsURDF6 {
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  width: 132px;
+  height: 6vw;
+  margin: 1vw;
+  font-size: 11px;
+}
+
+.hover .graphs-18 {
+  align-self: center;
+  width: 90%;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative !important;
+}
+
+.hover .graphsize {
+  height: 80vw;
+}
+
+.hover .graphsize-warp {
+  height: 90vw;
+}
+
+.hover .titlegraph {
+  height: 30px;
+  margin-bottom: 2vw;
+  font-size: 30px;
+}
+
+.hover .singlegraphtitle {
+  height: 20px;
+  font-size: 20px;
 }
 
 .hover .nav2 {
-  position: absolute !important;
-  top: 950px !important;
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+  position: relative !important;
 }
 
-.hover .next2 {
-  opacity: 0 !important;
-  left: 150px !important;
-}
-
-.hover .back2 {
+.hover .next2, .hover .back2 {
+  width: 20vw;
+  height: 30px;
   border-radius: 5px !important;
-  width: 40px !important;
-  height: 22px !important;
-  font-size: 12px !important;
-  left: 25px !important;
+  font-size: 15px !important;
+}
+
+.hover .footer5 {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .textwrapperfooter {
+  font-size: var(--copyright-font-size) !important;
+}
+
+.hover .textwrapper2footer, .hover .textwrapper3footer, .hover .textwrapper4footer, .hover .textwrapper5footer, .hover .buttonfooter {
+  font-size: var(--f10-font-size) !important;
+}
+
+.hover .group9footer {
+  left: 60vw !important;
+}
+
+.hover .group7footer {
+  left: 80vw !important;
+}
+
+.hover .groupwrap {
+  height: 90px !important;
+}
+
+.hover .copyrightfooter {
+  margin-top: 10px !important;
+  font-size: 7px !important;
 }
 
 .buttons {
@@ -9266,7 +7998,6 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .parametersnew {
-  background-color: #a187de;
   width: 861px;
   height: 387px;
   position: relative;

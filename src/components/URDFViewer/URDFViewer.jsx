@@ -2,13 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import URDFLoader from 'urdf-loader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { useLoaderData, useLocation } from 'react-router-dom';
+import "./style.css";
+
 
 export const URDFViewer = ({ 
   urdfUrl,
   width,
   height,
   className,
+  urdfbutton,
+  buttonWrap5,
   joint1,
   joint2,
 }) => {
@@ -161,11 +164,11 @@ export const URDFViewer = ({
 
   return (
     <div className={`urdf ${className}`} ref={containerRef}>
-      <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 1 }}>
-        <button style={buttonStyle} onClick={moveCameraToPosition1}>Camera Position 1</button>
-        <button style={buttonStyle} onClick={moveCameraToPosition2}>Camera Position 2</button>
-        <button style={buttonStyle} onClick={moveCameraToPosition3}>Camera Position 3</button>
-        <button style={buttonStyle} onClick={enableControls}>Enable Controls</button>
+      <div className={`button-wrap ${buttonWrap5}`}>
+        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition1}>Camera Position 1</button>
+        <button className={`urdfbutton4 ${urdfbutton}`}   onClick={moveCameraToPosition2}>Camera Position 2</button>
+        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition3}>Camera Position 3</button>
+        <button className={`urdfbutton4 ${urdfbutton}`}   onClick={enableControls}>Enable Controls</button>
       </div>
     </div>
   );
