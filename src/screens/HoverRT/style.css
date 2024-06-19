@@ -300,10 +300,7 @@
 }
 
 .hover .next2 {
-  border-radius: 5px !important;
-  height: 30px;
-  width: 20vw;
-  font-size: 15px !important;
+  display: none;
 }
 
 .hover .back2 {

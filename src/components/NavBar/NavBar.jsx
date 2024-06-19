@@ -45,8 +45,8 @@ export const NavBar = ({
             <Link to="/simulation-pendulum"><button className="p2">Linear Inverted Pendulum</button></Link>
           </div>
         </div>
-        <button className={`text-wrapper-10 ${contact}`}><Link to="/"><p className="p">Contact us</p></Link></button>
-        <button className={`text-wrapper-11 ${about}`}><Link to="/"><p className="p">About us</p></Link></button>
+        <button className={`text-wrapper-10 ${contact}`}><Link to="/Contact-US"><p className="p">Contact us</p></Link></button>
+        <button className={`text-wrapper-11 ${about}`}><Link to="/About-US"><p className="p">About us</p></Link></button>
         <button className={`reservation5 ${reservation}`}><Link to="/"><p className="p">Reservation</p></Link></button>
         <button className={`Signoutbtn ${signoutbtn}`} onClick={onclick}><p className="p">Sign Out</p></button>
       </div>

@@ -10,6 +10,8 @@ import { Pendulum } from "./screens/Pendulum";
 import { Servo } from "./screens/Servo";
 import { HoverRT } from "./screens/HoverRT";
 import { HoverSim } from "./screens/HoverSim";
+import { AboutUS } from "./screens/AboutUS";
+import { ContactUS } from "./screens/ContactUS";
 
 const app = document.getElementById("app");
 const root = ReactDOMClient.createRoot(app);
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Homepage />,
+  },
+  {
+    path: "/About-US",
+    element: <AboutUS />,
+  },
+  {
+    path: "/Contact-US",
+    element: <ContactUS />,
   },
   {
     path: "/Hover-Documentation/",
