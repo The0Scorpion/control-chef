@@ -66,7 +66,7 @@ export const Graphs = ({
     console.log("our json object", IoT_Payload);
 
     const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
-    if (ID == 0) {
+    if (ID == 1) {
       setIdArr([]);
       setXPosArr([]);
       setYPosArr([]);
