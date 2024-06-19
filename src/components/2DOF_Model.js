@@ -337,7 +337,10 @@ function simulate(data) {
     iyvelki = data.yvelki;
     ixvelkd = data.xvelkd;
     iyvelkd = data.yvelkd;
-
+    iyvelkd = data.yvelkd;
+    iyvelkd = data.yvelkd;
+    Subsystem_U.In2 = data.xposSet;
+    Subsystem_U.target = data.yposkd;
     Subsystem_initialize();
     let i = 0;
     const iterations = 2000;

@@ -16,7 +16,6 @@ export const Buttons = ({
   sendDataTostart,
   sendDataTostop,
 }) => {
-
   return (
     <div className={`buttons ${className}`}>
       <button className={`stop ${stopClassName}`} onClick={sendDataTostop} >Stop</button>
