@@ -6914,6 +6914,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   z-index: 100;
   border: 2.5px solid;
   border-radius: 5px;
+  place-content: center;
   margin: 5px;
   padding: 10px 20px;
   font-family: Salsa, Helvetica;

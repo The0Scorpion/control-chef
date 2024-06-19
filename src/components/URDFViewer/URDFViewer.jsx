@@ -165,9 +165,9 @@ export const URDFViewer = ({
   return (
     <div className={`urdf ${className}`} ref={containerRef}>
       <div className={`button-wrap ${buttonWrap5}`}>
-        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition1}>Camera Position 1</button>
-        <button className={`urdfbutton4 ${urdfbutton}`}   onClick={moveCameraToPosition2}>Camera Position 2</button>
-        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition3}>Camera Position 3</button>
+        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition1}>Cam Position 1</button>
+        <button className={`urdfbutton4 ${urdfbutton}`}   onClick={moveCameraToPosition2}>Cam Position 2</button>
+        <button className={`urdfbutton5 ${urdfbutton}`}   onClick={moveCameraToPosition3}>Cam Position 3</button>
         <button className={`urdfbutton4 ${urdfbutton}`}   onClick={enableControls}>Enable Controls</button>
       </div>
     </div>
