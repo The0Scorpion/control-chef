@@ -37,6 +37,7 @@ export const HoverRTcomponent = () => {
     fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
       method: 'POST',
       headers: {
+        'Authorization': 'Bearer ' + your_jwt_token,
         'Content-Type': 'application/json' // Specify content type as JSON ?data=${parameterData}
       },
       body: JSON.stringify(parameterData) // Stringify the parameterData object

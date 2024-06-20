@@ -7583,7 +7583,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hover .next {
-  display: none;
+  display: none !important;
 }
 
 .hover .footerdoc {
@@ -9555,12 +9555,12 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .contact-us .send-message {
-  color: #020216;
+  color: #fff;
   text-align: center;
-  background-color: #fff;
+  background-color: #9486db;
   border-radius: 2vw;
   width: 100%;
-  height: 3vw;
+  height: 5vw;
   margin-top: 2vw;
   font-family: Salsa, Helvetica;
   font-size: 1.5vw;
@@ -9616,6 +9616,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
     height: auto;
     margin-top: 4vw;
     font-size: 4vw;
+  }
+
+  .contact-us .send-message {
+    height: 5vw;
   }
 }
 

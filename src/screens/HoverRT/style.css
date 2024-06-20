@@ -50,7 +50,7 @@
 }
 
 .hover .next{
-  display: none;
+  display: none !important; 
 }
 
 .hover .footerdoc {
