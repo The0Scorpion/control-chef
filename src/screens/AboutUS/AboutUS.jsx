@@ -54,6 +54,8 @@ export const AboutUS = () => {
                   dropdowncontentexperiments="drop-down-exp"
                   dropdowncontenttheories="drop-down-theory"
                   navbartext="nav-bar-text" />
+                <Aboutus
+                  className="aboutus834"/>
                 <Footer
                   className="footer5"
                   group="groupwrap"
@@ -76,6 +78,8 @@ export const AboutUS = () => {
                 <NavBar_2 
                   onclick={signOut}
                   className="nav-bar-tab"/>
+                <Aboutus
+                  className="aboutusmid"/>
                 <Footer className="footer1"/>
                 <div style={{ height: 0 }}></div>
               </>

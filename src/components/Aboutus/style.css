@@ -41,3 +41,64 @@
   left: 40vw; 
   object-fit: cover;
 }
+
+@media (max-width:1000) {
+  .aboutus .about-us-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:800) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .aboutus .about-us {
+    position: static;
+    font-size: 50px;
+    width: auto;
+    height: auto;
+  }
+  .aboutus .about-us-text {
+    position: static;
+    font-size: 14px;
+    line-height: 23px;
+    width: 90%;
+    margin: 10px 0;
+  }
+  .aboutus .img {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width:500) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 22vw !important;
+  }
+  .aboutus .about-us {
+    position: static;
+    font-size: 30px;
+    width: auto;
+    height: auto;
+  }
+  .aboutus .about-us-text {
+    position: static;
+    font-size: 14px;
+    line-height: 23px;
+    width: 90%;
+    margin: 10px 0;
+  }
+  .aboutus .img {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}

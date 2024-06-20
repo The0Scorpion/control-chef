@@ -9325,6 +9325,11 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 0 !important;
 }
 
+.AboutUS .aboutusmid {
+  margin-top: 0;
+  position: relative;
+}
+
 .AboutUS .footer1 {
   position: relative !important;
   top: 0 !important;
@@ -9360,6 +9365,11 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 .AboutUS .nav-bar-text {
   justify-content: left !important;
   width: 40vw !important;
+}
+
+.AboutUS .aboutus834 {
+  margin-top: 13vw;
+  position: relative;
 }
 
 .AboutUS .footer5 {
@@ -9435,6 +9445,73 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: absolute;
   top: 5.83vw;
   left: 40vw;
+}
+
+@media (width <= 1000px) {
+  .aboutus .about-us-text {
+    font-size: 14px;
+  }
+}
+
+@media (width <= 800px) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .aboutus .about-us {
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    position: static;
+  }
+
+  .aboutus .about-us-text {
+    width: 90%;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 23px;
+    position: static;
+  }
+
+  .aboutus .img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 0;
+    position: static;
+  }
+}
+
+@media (width <= 500px) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 22vw !important;
+  }
+
+  .aboutus .about-us {
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    position: static;
+  }
+
+  .aboutus .about-us-text {
+    width: 90%;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 23px;
+    position: static;
+  }
+
+  .aboutus .img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 0;
+    position: static;
+  }
 }
 
 .ContactUS {

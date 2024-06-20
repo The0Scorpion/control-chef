@@ -7,6 +7,7 @@ export const Aboutus = ({
   return (
     <div className={`aboutus ${className}`}>
           <div className="about-us">About Us</div>
+          <img className="img" alt="About us" src="https://c.animaapp.com/1RUP1aFo/img/about-us-1.png" />
           <p className="about-us-text">
             The IOT motion lab is an idea inspired by many
             students who like to learn by active participation,
@@ -17,7 +18,6 @@ export const Aboutus = ({
             We at ASU aim to provide an exceptional experience to
             all our customers.
           </p>
-          <img className="img" alt="About us" src="https://c.animaapp.com/1RUP1aFo/img/about-us-1.png" />
     </div>
   );
 };
