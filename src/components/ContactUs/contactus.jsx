@@ -10,7 +10,7 @@ export const Contactus = ({ className }) => {
     event.preventDefault();
     const subject = `Message from ${name}`;
     const body = `${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${name}%0D%0AEmail: ${email}`;
-    const mailtoLink = `mailto:veronia.ibrahim19@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:controlchef.foeasu@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     // Log the mailto link to verify the format (optional)
     console.log(mailtoLink);
