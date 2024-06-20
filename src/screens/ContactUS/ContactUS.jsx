@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { NavBar } from "../../components/NavBar";
 import { NavBar_2 } from "../../components/NavBar_2";
+import { Contactus } from "../../components/ContactUs";
 import { Amplify } from "aws-amplify";
 import awsConfig from "../../aws-export";
 import { withAuthenticator } from "@aws-amplify/ui-react";
@@ -53,6 +54,7 @@ export const ContactUS = () => {
                   dropdowncontentexperiments="drop-down-exp"
                   dropdowncontenttheories="drop-down-theory"
                   navbartext="nav-bar-text" />
+                <Contactus className="contactus834"/>
                 <Footer
                   className="footer5"
                   group="groupwrap"
@@ -75,6 +77,7 @@ export const ContactUS = () => {
                 <NavBar_2 
                   onclick={signOut}
                   className="nav-bar-tab"/>
+                <Contactus className="contactusmid"/>
                 <Footer className="footer1"/>
                 <div style={{ height: 0 }}></div>
               </>
@@ -84,6 +87,7 @@ export const ContactUS = () => {
                 <NavBar
                   onclick={signOut}
                   className="navbardoc" />
+                <Contactus className="contactus1300"/>
                 <Footer className="footer-instance" />
                 <div style={{ height: 0 }}></div>
               </>

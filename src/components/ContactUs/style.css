@@ -1,0 +1,109 @@
+.contact-us {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 2vw;
+  box-sizing: border-box;
+  margin-top: 10vw;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.contact-us .chat {
+  width: 34vw;
+  height: auto;
+  align-self: flex-start;
+}
+
+.contact-us .text-wrapper {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 4.5vw;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+.contact-us .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-us .send-message {
+  background-color: #ffffff;
+  border-radius: 2vw;
+  color: #020216;
+  font-family: "Salsa", Helvetica;
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  height: 3vw;
+  margin-top: 2vw;
+}
+
+.contact-us .message {
+  background-color: #ffffff78;
+  border-radius: 2vw;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  height: 10vw;
+  margin-top: 2vw;
+}
+
+.contact-us .name,
+.contact-us .email {
+  background-color: #ffffff78;
+  border-radius: 2vw;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  height: 3vw;
+  margin-top: 2vw;
+}
+
+/* Responsive Design for screens smaller than 830px */
+@media (max-width: 830px) {
+  .contact-us {
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw;
+  }
+  
+  .contact-us .chat {
+    width: 80vw;
+    height: auto;
+    margin-top: 4vw;
+  }
+  
+  .contact-us .text-wrapper {
+    font-size: 6vw;
+    margin-top: 4vw;
+  }
+
+  .contact-info,
+  .contact-us .send-message,
+  .contact-us .name,
+  .contact-us .email,
+  .contact-us .message {
+    width: 80vw;
+    font-size: 4vw;
+    height: auto;
+    margin-top: 4vw;
+  }
+}

@@ -13,6 +13,10 @@
   z-index: 1000000 !important;
 }
 
+.ContactUS .contactus1300{
+  position: relative;
+}
+
 .ContactUS .footerdoc {
   position: relative !important;
 }
@@ -22,6 +26,10 @@
   position: fixed !important;
   top: 0px !important;
   z-index: 10000 !important;
+}
+
+.ContactUS .contactusmid{
+  position: relative;
 }
 
 .ContactUS .footer1 {
@@ -59,6 +67,10 @@
 .ContactUS .nav-bar-text {
   width: 40vw !important;
   justify-content: left !important;
+}
+
+.ContactUS .contactus834{
+  position: relative;
 }
 
 .ContactUS .footer5 {
