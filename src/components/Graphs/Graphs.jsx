@@ -43,7 +43,7 @@ export const Graphs = ({
     });
 
     ws.addEventListener('message', event => {
-      console.log('Your iot payload is:', event.data);
+      console.log('Your IoT payload is:', event.data);
       drawChart(event.data);
     });
 
@@ -70,13 +70,15 @@ export const Graphs = ({
     console.log("our json object", IoT_Payload);
 
     const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
-    if (ID == 1) {
+
+    if (ID == 1 || ID == 0 || ID == -1) {
       setIdArr([]);
       setXPosArr([]);
       setYPosArr([]);
       setXVelArr([]);
       setYVelArr([]);
     }
+
     console.log(xpos);
     setj1(xpos);
     setj2(ypos);
@@ -112,13 +114,10 @@ export const Graphs = ({
 
   const updateChart = (element, label, labels, data) => {
     if (element.data) {
-      Plotly.update(element, {
-        x: [labels],
-        y: [data],
-      });
-    } else {
-      createGraph(element, label, labels, data);
+      // Destroy the existing plot
+      Plotly.purge(element);
     }
+    createGraph(element, label, labels, data);
   };
 
   return (
@@ -134,7 +133,7 @@ export const Graphs = ({
           <div ref={chartRefs.XVel} className={`rectangle2 ${rectangleClassName}`}></div>
         </div>
       </div>
-      <div class="graphs-wrap2">
+      <div className="graphs-wrap2">
         <div className={`group-3 ${groupClassName}`}>
           <div className={`y-pos ${yPosClassName}`}>Roll Angle</div>
           <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassName}`}></div>
