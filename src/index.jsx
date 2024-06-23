@@ -12,10 +12,6 @@ import { HoverRT } from "./screens/HoverRT";
 import { HoverSim } from "./screens/HoverSim";
 import { AboutUS } from "./screens/AboutUS";
 import { ContactUS } from "./screens/ContactUS";
-import { Amplify } from 'aws-amplify';
-import awsconfig from './aws-exports'; // Ensure this path is correct
-
-Amplify.configure(awsconfig);
 
 const app = document.getElementById("app");
 const root = ReactDOMClient.createRoot(app);
