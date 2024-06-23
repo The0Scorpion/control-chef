@@ -71,7 +71,7 @@ export const Graphs = ({
 
     const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
 
-    if (ID == 1 || ID == 0 || ID == -1) {
+    if (ID == 0 || ID == -1) {
       setIdArr([]);
       setXPosArr([]);
       setYPosArr([]);
@@ -98,7 +98,6 @@ export const Graphs = ({
       mode: 'lines',
       name: label,
     };
-
     const layout = {
       title: label,
       xaxis: {
@@ -113,11 +112,16 @@ export const Graphs = ({
   };
 
   const updateChart = (element, label, labels, data) => {
+    // Sort the data by ID
+    const sortedIndices = [...Array(labels.length).keys()].sort((a, b) => labels[a] - labels[b]);
+    const sortedLabels = sortedIndices.map(i => labels[i]);
+    const sortedData = sortedIndices.map(i => data[i]);
+
+    // Destroy the existing plot
     if (element.data) {
-      // Destroy the existing plot
       Plotly.purge(element);
     }
-    createGraph(element, label, labels, data);
+    createGraph(element, label, sortedLabels, sortedData);
   };
 
   return (
