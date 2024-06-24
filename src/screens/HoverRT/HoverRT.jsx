@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useWindowWidth } from "../../breakpoints";
 import { useLocation } from "react-router-dom";
 import { Buttons } from "../../components/Buttons";
@@ -6,18 +6,18 @@ import { Footer } from "../../components/Footer";
 import { Graphs } from "../../components/Graphs";
 import { NavBar } from "../../components/NavBar";
 import { NavBar_2 } from "../../components/NavBar_2";
-import { Parameters } from "../../components/Parameters";
 import { Parametersnew } from "../../components/Parametersnew";
+import { Parameters } from "../../components/Parameters";
 import { SimulationStreaming } from "../../components/SimulationStreaming";
 import { Next } from "../../components/Next";
 import { URDFViewer } from "../../components/URDFViewer";
 import { Amplify } from "aws-amplify";
 import awsConfig from "../../aws-export";
-import { withAuthenticator } from "@aws-amplify/ui-react";
-import { Authenticator } from "@aws-amplify/ui-react";
+import { withAuthenticator, Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
 
+// Configure AWS Amplify with your aws-exports.js configuration
 Amplify.configure(awsConfig);
 
 export const HoverRTcomponent = () => {
@@ -29,15 +29,170 @@ export const HoverRTcomponent = () => {
   const [JointAngle1, setJointAngle1] = useState(0);
   const [JointAngle2, setJointAngle2] = useState(0);
   const urdfUrl1 = '2dofhover/urdf/2dofhover.urdf';
+  const [idToken, setIdToken] = useState(null);
+  const [accessToken, setAccessToken] = useState(null);
+
+  const [xPosArr, setXPosArr] = useState([]);
+  const [yPosArr, setYPosArr] = useState([]);
+  const [xVelArr, setXVelArr] = useState([]);
+  const [yVelArr, setYVelArr] = useState([]);
+
+  const [Xovershoot, setXovershoot] = useState(0);
+  const [Yovershoot, setYovershoot] = useState(0);
+  const [XError, setXError] = useState(0);
+  const [YError, setYError] = useState(0);
+  const [xtime, setXtime] = useState(0);
+  const [ytime, setYtime] = useState(0);
+
+
+  // Calculate overshoot
+  const XovershootResult = calculateOvershoot(xPosArr, ParameterData.xposSet);
+  const YovershootResult = calculateOvershoot(yPosArr, ParameterData.yposSet);
+  setXovershoot(XovershootResult.overshoot);
+  setYovershoot(YovershootResult.overshoot);
+
+  setXError(Math.abs(ParameterData.xposSet - xPosArr[1999]));
+  setYError(Math.abs(ParameterData.yposSet - yPosArr[1999]));
+
+  // Calculate xtime and ytime
+  setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.05);
+  setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.05);
+
+  // Check if overshoot is less than 0.1
+  if (XError < 0.01 && YError < 0.01) {
+    if (Math.abs(Xovershoot) < 0.03 && Math.abs(Yovershoot) < 0.03) {
+      // Calculate variance
+      const Xvariance = calculateVariance(xPosArr, ParameterData.xposSet);
+      const Yvariance = calculateVariance(yPosArr, ParameterData.yposSet);
+
+      // Check if variance is less than 0.1
+      if (Xvariance < 0.1 && Yvariance < 0.1) {
+        setIsCriteriaMet(true); // Set criteria met
+      } else {
+        setIsCriteriaMet(false); // Reset criteria met
+        alert("Variance criterion not met. Adjust PID parameters.");
+        console.log(Xvariance);
+        console.log(Yvariance);
+      }
+    } else {
+      setIsCriteriaMet(false); // Reset criteria met
+      alert("Overshoot criterion not met. Adjust PID parameters.");
+      console.log(Xovershoot);
+      console.log(Yovershoot);
+    }
+  } else {
+    setIsCriteriaMet(false); // Reset criteria met
+    alert("Steady State Error Too Big criterion not met. Adjust PID parameters.");
+    console.log(XError);
+    console.log(YError);
+  }
+
+  // Function to calculate overshoot
+  const calculateOvershoot = (simData, setp) => {
+    // Find the direction of movement based on the sign of the first point
+    const initialSign = Math.sign(simData[0] - setp);
+
+    // Initialize variables to track the index of the first zero crossing and the extreme value after crossing
+    let indexOfFirstZeroCrossing = -1;
+    let extremeValueAfterCrossing = null;
+
+    // Iterate through the data to find the first zero crossing
+    for (let i = 1; i < simData.length; i++) {
+      // Check if the current point crosses zero from the initial sign
+      if (Math.sign(simData[i] - setp) !== initialSign) {
+        indexOfFirstZeroCrossing = i;
+        break;
+      }
+    }
+
+    // If no zero crossing is found, there's no overshoot
+    if (indexOfFirstZeroCrossing === -1) {
+      return { overshoot: 0, indexOfFirstZeroCrossing };
+    }
+
+    // Determine whether to look for the maximum or minimum value after the zero crossing
+    const lookForMaxValue = initialSign === 1; // If initial sign is positive, look for maximum value
+
+    // Find the extreme value after the zero crossing
+    for (let i = indexOfFirstZeroCrossing; i < simData.length; i++) {
+      // If looking for maximum value, update extremeValueAfterCrossing if current value is greater
+      if (lookForMaxValue && (extremeValueAfterCrossing === null || simData[i] > extremeValueAfterCrossing)) {
+        extremeValueAfterCrossing = simData[i] - setp;
+      }
+      // If looking for minimum value, update extremeValueAfterCrossing if current value is lesser
+      else if (!lookForMaxValue && (extremeValueAfterCrossing === null || simData[i] < extremeValueAfterCrossing)) {
+        extremeValueAfterCrossing = simData[i] - setp;
+      }
+    }
+
+    // Calculate the overshoot as the difference between the extreme value and the initial set point
+    return { overshoot: Math.abs(extremeValueAfterCrossing), indexOfFirstZeroCrossing };
+  };
+
+  // Function to calculate variance
+  const calculateVariance = (simData, setp) => {
+    // Find the direction of movement based on the sign of the first point
+    const initialSign = Math.sign(simData[0] - setp);
+
+    // Initialize variables to track the index of the first sign flip and the data after the flip
+    let indexOfFirstSignFlip = -1;
+    let dataAfterSignFlip = [];
+
+    // Iterate through the data to find the first sign flip
+    for (let i = 1; i < simData.length; i++) {
+      // Check if the current point changes sign from the initial sign
+      if (Math.sign(simData[i] - setp) !== initialSign) {
+        indexOfFirstSignFlip = i;
+        dataAfterSignFlip = simData.slice(indexOfFirstSignFlip + 1);
+        break;
+      }
+    }
+
+    // If no sign flip is found, return 0 variance
+    if (indexOfFirstSignFlip === -1) return 0;
+
+    // Calculate the mean of the data after the sign flip
+    const mean = dataAfterSignFlip.reduce((acc, val) => acc + val, 0) / dataAfterSignFlip.length;
+
+    // Calculate the squared differences from the mean
+    const squaredDifferences = dataAfterSignFlip.map((val) => (val - mean) ** 2);
+
+    // Calculate the variance
+    const variance = squaredDifferences.reduce((acc, val) => acc + val, 0) / dataAfterSignFlip.length;
+
+    return variance;
+  };
+
+  // Fetch the current session to obtain tokens
+  useEffect(() => {
+    const fetchSession = async () => {
+      try {
+        const session = await Auth.currentSession();
+        const idToken = session.getIdToken().getJwtToken();
+        const accessToken = session.getAccessToken().getJwtToken();
+        setIdToken(idToken);
+        setAccessToken(accessToken);
+        console.log("ID Token:", idToken); // Log ID Token here
+        console.log("Access Token:", accessToken);
+      } catch (err) {
+        console.log("Error fetching session:", err);
+      }
+    };
+
+    fetchSession();
+  }, []);
+
   const sendDataToLambda = () => {
     if (!parameterData) {
       console.error("No parameter data to send.");
       return;
     }
+
     fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // Specify content type as JSON ?data=${parameterData}
+        'Content-Type': 'application/json',
+        'Authorization': idToken // Use idToken in Authorization header
       },
       body: JSON.stringify(parameterData) // Stringify the parameterData object
     })
@@ -45,6 +200,8 @@ export const HoverRTcomponent = () => {
         if (response.ok) {
           console.log('Data sent to Lambda successfully');
           console.log("Parameter Data:", parameterData);
+          console.log("ID Token:", idToken); // Log ID Token here
+          console.log("Access Token:", accessToken);
         } else {
           console.error('Failed to send data to Lambda');
         }
@@ -59,9 +216,10 @@ export const HoverRTcomponent = () => {
     fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // Specify content type as JSON ?data=${parameterData}
+        'Content-Type': 'application/json',
+        'Authorization': idToken // Use idToken in Authorization header
       },
-      body: "{\"work\": 1}" // Stringify the parameterData object
+      body: JSON.stringify({ work: 1 }) // Example body
     })
       .then(response => {
         if (response.ok) {
@@ -81,9 +239,10 @@ export const HoverRTcomponent = () => {
     fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // Specify content type as JSON ?data=${parameterData}
+        'Content-Type': 'application/json',
+        'Authorization': idToken // Use idToken in Authorization header
       },
-      body: "{\"work\": 0}" // Stringify the parameterData object
+      body: JSON.stringify({ work: 0 }) // Example body
     })
       .then(response => {
         if (response.ok) {
@@ -107,10 +266,12 @@ export const HoverRTcomponent = () => {
       setScrollToTop(false);
     }
   }, [location.pathname]);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   }, []); // Empty dependency array ensures this effect runs only once
+
 
   return (
     <Authenticator>
@@ -127,7 +288,7 @@ export const HoverRTcomponent = () => {
                   onclick={signOut}
                   className="nav-bar-tab" />
                 <SimulationStreaming
-                  title="Real Time Simulation"
+                  title="Real Time Operation"
                   className="simulation-streaming-instance"
                 />
                 <div className="input1300">
@@ -183,18 +344,18 @@ export const HoverRTcomponent = () => {
                   className="navbardoc"
                 />
                 <SimulationStreaming
-                  title="Real Time Simulation"
+                  title="Real Time Operation"
                   className="simulation-streaming-2" />
                 <div className="inputpb">
-                <Parametersnew
-                  setParameterData={setParameterData}
-                  className="parameters-2" />
-                <Buttons
-                  sendDataToLambda={sendDataToLambda}
-                  sendDataTostart={sendDataTostart}
-                  sendDataTostop={sendDataTostop}
-                  parameterData={parameterData}
-                  className="buttons-2" />
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-2" />
+                  <Buttons
+                    sendDataToLambda={sendDataToLambda}
+                    sendDataTostart={sendDataTostart}
+                    sendDataTostop={sendDataTostop}
+                    parameterData={parameterData}
+                    className="buttons-2" />
                 </div>
                 <URDFViewer
                   urdfUrl={urdfUrl1}
@@ -207,6 +368,10 @@ export const HoverRTcomponent = () => {
                 <Graphs className="graphs-17"
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
+                  onXPosUpdate={setXPosArr}
+                  onYPosUpdate={setYPosArr}
+                  onXVelUpdate={setXVelArr}
+                  onYVelUpdate={setYVelArr}
                 />
                 <Next navigate="nav"
                   next="next"
@@ -229,7 +394,7 @@ export const HoverRTcomponent = () => {
                 />
                 <SimulationStreaming
                   className="simulation-streaming-3"
-                  title="Real Time Simulation"
+                  title="Real Time Operation"
                   simulationStreamingClassName="titlesize"
                 />
                 <Parameters

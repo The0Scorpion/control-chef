@@ -1,0 +1,34 @@
+
+/* style.css */
+.Results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90vw; /* Make the container width responsive */
+  max-width: 80vw;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45vw; /* Make each item width responsive */
+  margin: 1vw 0; /* Add vertical margin between items */
+}
+
+.label, .value {
+  color: white;
+  font-size: 2vw; /* Make font-size responsive */
+}
+
+@media (max-width: 830px) {
+  .Results {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-item {
+    width: 100%;
+  }
+}

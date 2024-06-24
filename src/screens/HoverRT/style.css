@@ -44,6 +44,10 @@
   align-self: center;
 }
 
+.hover .Results1300{
+  position: relative !important;
+}
+
 .hover .nav{
   position: relative;
   margin-bottom: 1vw;

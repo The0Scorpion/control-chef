@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { ButtonsSim } from "../../components/ButtonsSim";
 import { Footer } from "../../components/Footer";
 import { Graphsim } from "../../components/Graphsim";
+import { Results } from "../../components/Results/Results";
 import { NavBar } from "../../components/NavBar";
 import { NavBar_2 } from "../../components/NavBar_2";
 import { Next } from "../../components/Next/Next";
@@ -21,11 +22,17 @@ import { Authenticator } from "@aws-amplify/ui-react";
 Amplify.configure(awsConfig);
 
 export const HoverSimcomponent = () => {
-
   const location = useLocation();
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
   const [isCriteriaMet, setIsCriteriaMet] = useState(false); // State to track if criteria are met
+
+  const [Xovershoot, setXovershoot] = useState(0);
+  const [Yovershoot, setYovershoot] = useState(0);
+  const [XError, setXError] = useState(0);
+  const [YError, setYError] = useState(0);
+  const [xtime, setXtime] = useState(0);
+  const [ytime, setYtime] = useState(0);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -36,24 +43,34 @@ export const HoverSimcomponent = () => {
       setScrollToTop(false);
     }
   }, [location.pathname]);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
     setIsCriteriaMet(false);
   }, []); // Empty dependency array ensures this effect runs only once
 
-  const [SimulationPoints, setSimulationPoints] = useState(null)
-  const [Simulation, setSimulation] = useState(null)
-  const [ParameterData, setParameterData] = useState(null)
+  const [SimulationPoints, setSimulationPoints] = useState(null);
+  const [Simulation, setSimulation] = useState(null);
+  const [ParameterData, setParameterData] = useState(null);
+
   const GraphAndSimulate = () => {
     const Sim = simulate(ParameterData);
     console.log("Points:", SimulationPoints);
     setSimulationPoints(Sim);
+
     // Calculate overshoot
-    const Xovershoot = calculateOvershoot(Sim.XPos, ParameterData.xposSet);
-    const Yovershoot = calculateOvershoot(Sim.YPos, ParameterData.yposSet);
-    const XError = Math.abs(ParameterData.xposSet - (Sim.XPos[1999]));
-    const YError = Math.abs(ParameterData.yposSet - (Sim.YPos[1999]));
+    const XovershootResult = calculateOvershoot(Sim.XPos, ParameterData.xposSet);
+    const YovershootResult = calculateOvershoot(Sim.YPos, ParameterData.yposSet);
+    setXovershoot(XovershootResult.overshoot);
+    setYovershoot(YovershootResult.overshoot);
+    
+    setXError(Math.abs(ParameterData.xposSet - Sim.XPos[1999]));
+    setYError(Math.abs(ParameterData.yposSet - Sim.YPos[1999]));
+
+    // Calculate xtime and ytime
+    setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.05);
+    setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.05);
 
     // Check if overshoot is less than 0.1
     if (XError < 0.01 && YError < 0.01) {
@@ -65,7 +82,6 @@ export const HoverSimcomponent = () => {
         // Check if variance is less than 0.1
         if (Xvariance < 0.1 && Yvariance < 0.1) {
           setIsCriteriaMet(true); // Set criteria met
-
         } else {
           setIsCriteriaMet(false); // Reset criteria met
           alert("Variance criterion not met. Adjust PID parameters.");
@@ -84,8 +100,6 @@ export const HoverSimcomponent = () => {
       console.log(XError);
       console.log(YError);
     }
-
-
   };
 
   const destroygraph = () => {
@@ -113,7 +127,9 @@ export const HoverSimcomponent = () => {
     }
 
     // If no zero crossing is found, there's no overshoot
-    if (indexOfFirstZeroCrossing === -1) return 0;
+    if (indexOfFirstZeroCrossing === -1) {
+      return { overshoot: 0, indexOfFirstZeroCrossing };
+    }
 
     // Determine whether to look for the maximum or minimum value after the zero crossing
     const lookForMaxValue = initialSign === 1; // If initial sign is positive, look for maximum value
@@ -131,7 +147,7 @@ export const HoverSimcomponent = () => {
     }
 
     // Calculate the overshoot as the difference between the extreme value and the initial set point
-    return Math.abs(extremeValueAfterCrossing);
+    return { overshoot: Math.abs(extremeValueAfterCrossing), indexOfFirstZeroCrossing };
   };
 
   // Function to calculate variance
@@ -243,6 +259,15 @@ export const HoverSimcomponent = () => {
                   SimulationPoints={SimulationPoints}
                   Simulation={Simulation}
                   className="graphs-17" />
+                <Results
+                  className="Results1300"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
                 <Next
                   navigate="nav"
                   linkTo1="/hover-realtime"

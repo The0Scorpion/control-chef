@@ -7,18 +7,17 @@ export const Graphs = ({
   groupClassName,
   rectangleClassName,
   xPosClassName,
-  rectangleClassNameOverride,
   yPosClassName,
-  divClassName,
-  divClassNameOverride,
   xVelClassName,
-  rectangleClassName1,
   yVelClassName,
-  groupClassName2,
   groupClassName4,
   divClassName1,
   setj1,
   setj2,
+  onXPosUpdate,
+  onYPosUpdate,
+  onXVelUpdate,
+  onYVelUpdate,
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -63,6 +62,13 @@ export const Graphs = ({
       updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
       updateChart(chartRefs.YVel.current, "YVel", idArr, yVelArr);
     }
+
+    // Call the update callbacks when the arrays are updated
+    if (onXPosUpdate) onXPosUpdate(xPosArr);
+    if (onYPosUpdate) onYPosUpdate(yPosArr);
+    if (onXVelUpdate) onXVelUpdate(xVelArr);
+    if (onYVelUpdate) onYVelUpdate(yVelArr);
+
   }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr]);
 
   const drawChart = (data) => {

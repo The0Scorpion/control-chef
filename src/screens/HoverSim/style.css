@@ -40,6 +40,10 @@
   align-self: center;
 }
 
+.hoversim .Results1300{
+  position: relative !important;
+}
+
 .hoversim .nav {
   margin-top: 1vw;
   margin-bottom: 1vw;

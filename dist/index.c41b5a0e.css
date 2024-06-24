@@ -521,13 +521,6 @@ button:hover {
   line-height: 4vw;
 }
 
-.modeling7 {
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  display: flex;
-}
-
 .modeling7 .img7 {
   align-self: center;
   width: 50%;
@@ -7080,367 +7073,6 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   left: 0;
 }
 
-.simulation-streaming {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  display: flex;
-}
-
-.simulation-streaming .text-wrapper-8 {
-  color: #fff;
-  font-family: var(--title-font-family);
-  font-size: 3vw;
-  font-style: var(--title-font-style);
-  font-weight: var(--title-font-weight);
-  letter-spacing: var(--title-letter-spacing);
-  line-height: var(--title-line-height);
-  text-align: center;
-}
-
-.hover {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  display: flex;
-  overflow: hidden;
-}
-
-.hover .navbardoc {
-  z-index: 1000000 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .simulation-streaming-2 {
-  margin-top: 8vw !important;
-  position: relative !important;
-}
-
-.hover .inputpb {
-  flex-direction: row;
-  align-self: center;
-  display: flex;
-}
-
-.hover .parameters-2 {
-  position: relative;
-  margin: 2vw !important;
-}
-
-.hover .buttons-2 {
-  position: relative;
-}
-
-.hover .video-stream-instance {
-  align-self: center;
-  position: relative;
-}
-
-.hover .graphs-17 {
-  align-self: center;
-  margin-top: 1vw;
-  position: relative !important;
-}
-
-.hover .nav {
-  margin-bottom: 1vw;
-  position: relative;
-}
-
-.hover .next {
-  display: none !important;
-}
-
-.hover .footerdoc {
-  position: relative !important;
-}
-
-.hover .nav-bar-tab {
-  z-index: 10000 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .simulation-streaming-instance {
-  margin-top: 8vw !important;
-  position: relative !important;
-}
-
-.hover .input1300 {
-  flex-direction: row;
-  align-self: center;
-  display: flex;
-}
-
-.hover .parameters-instance {
-  margin: 2vw 1vw !important;
-  position: relative !important;
-}
-
-.hover .rollgroup1 {
-  left: 10px !important;
-}
-
-.hover .pitchgroup1 {
-  z-index: 1 !important;
-  left: 10px !important;
-}
-
-.hover .plantimg1 {
-  z-index: 1 !important;
-  left: 400px !important;
-}
-
-.hover .arrow1 {
-  z-index: -10;
-  left: 32px !important;
-}
-
-.hover .buttons-instance {
-  position: relative !important;
-}
-
-@media (width <= 1080px) {
-  .hover .input1300 {
-    flex-direction: column;
-    align-self: center;
-    display: flex;
-  }
-
-  .hover .buttons-instance {
-    flex-direction: row;
-    align-self: center;
-    width: 100%;
-    max-width: 80vw;
-    display: flex;
-  }
-
-  .hover .button-start {
-    margin: 1vw;
-  }
-}
-
-.hover .video-stream-instance1 {
-  align-self: center;
-  position: relative;
-}
-
-.hover .buttonUrdf {
-  margin-left: 1vw;
-  left: 0;
-}
-
-.hover .graphs-instance {
-  align-self: center;
-  margin-top: 1vw;
-  position: relative;
-}
-
-.hover .nav1 {
-  margin-bottom: 1vw;
-  position: relative !important;
-}
-
-.hover .next1 {
-  display: none !important;
-}
-
-.hover .footer1 {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .nav-bar-tab-instance {
-  z-index: 1 !important;
-  border-radius: 0 0 3px 3px !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .logo1-control {
-  height: 5vw !important;
-}
-
-.hover .nav-bar-drop {
-  width: 45vw !important;
-}
-
-.hover .drop-down-exp {
-  width: 65vw !important;
-  right: 10vw !important;
-}
-
-.hover .drop-down-theory {
-  width: 40vw !important;
-  right: 10vw !important;
-}
-
-.hover .nav-bar-text {
-  justify-content: left !important;
-  width: 40vw !important;
-}
-
-.hover .simulation-streaming-3 {
-  margin-top: 8vh;
-  position: relative;
-}
-
-@media (width <= 700px) {
-  .hover .simulation-streaming-3 {
-    height: 28px;
-  }
-
-  .hover .titlesize {
-    height: 28px;
-    font-size: 23px;
-  }
-}
-
-.hover .BlockDiagram5 {
-  align-self: center;
-  margin-top: 2vw;
-  position: relative;
-}
-
-.hover .buttons-3 {
-  flex-direction: row;
-  align-self: center;
-  width: 90vw;
-  max-width: 600px;
-  margin-top: 2vw;
-  display: flex;
-  position: relative;
-}
-
-.hover .ButtonSingle {
-  height: 6vw;
-  margin: 1vw;
-  font-size: 14px;
-}
-
-.hover .video-stream-instance2 {
-  justify-content: center;
-  align-self: center;
-  width: fit-content;
-  height: auto;
-  margin-top: 1vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  position: relative;
-}
-
-.hover .buttonsURDF5 {
-  z-index: 1;
-  align-self: center;
-  width: 93%;
-  margin-left: 0;
-  position: relative;
-  top: 0;
-}
-
-.hover .buttonsURDF6 {
-  border-radius: 15px;
-  justify-content: center;
-  align-self: center;
-  width: 132px;
-  height: 6vw;
-  margin: 1vw;
-  font-size: 11px;
-}
-
-.hover .buttonsURDF7 {
-  color: #fff;
-  border-color: #6454f0;
-  border-radius: 15px;
-  justify-content: center;
-  align-self: center;
-  width: 132px;
-  height: 6vw;
-  margin: 1vw;
-  font-size: 11px;
-}
-
-.hover .graphs-18 {
-  align-self: center;
-  width: 90%;
-  margin-top: 4vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  position: relative !important;
-}
-
-.hover .graphsize {
-  height: 80vw;
-}
-
-.hover .graphsize-warp {
-  height: 90vw;
-}
-
-.hover .titlegraph {
-  height: 30px;
-  margin-bottom: 2vw;
-  font-size: 30px;
-}
-
-.hover .singlegraphtitle {
-  height: 20px;
-  font-size: 20px;
-}
-
-.hover .nav2 {
-  margin-top: 2vw;
-  margin-bottom: 5vw;
-  position: relative !important;
-}
-
-.hover .next2 {
-  display: none;
-}
-
-.hover .back2 {
-  width: 20vw;
-  height: 30px;
-  border-radius: 5px !important;
-  font-size: 15px !important;
-}
-
-.hover .footer5 {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-}
-
-.hover .textwrapperfooter {
-  font-size: var(--copyright-font-size) !important;
-}
-
-.hover .textwrapper2footer, .hover .textwrapper3footer, .hover .textwrapper4footer, .hover .textwrapper5footer, .hover .buttonfooter {
-  font-size: var(--f10-font-size) !important;
-}
-
-.hover .group9footer {
-  left: 60vw !important;
-}
-
-.hover .group7footer {
-  left: 80vw !important;
-}
-
-.hover .groupwrap {
-  height: 90px !important;
-}
-
-.hover .copyrightfooter {
-  margin-top: 10px !important;
-  font-size: 7px !important;
-}
-
 .parameters {
   width: 343px;
   height: 117px;
@@ -7874,6 +7506,371 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   display: inline-block;
 }
 
+.simulation-streaming {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.simulation-streaming .text-wrapper-8 {
+  color: #fff;
+  font-family: var(--title-font-family);
+  font-size: 3vw;
+  font-style: var(--title-font-style);
+  font-weight: var(--title-font-weight);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  text-align: center;
+}
+
+.hover {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+}
+
+.hover .navbardoc {
+  z-index: 1000000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .simulation-streaming-2 {
+  margin-top: 8vw !important;
+  position: relative !important;
+}
+
+.hover .inputpb {
+  flex-direction: row;
+  align-self: center;
+  display: flex;
+}
+
+.hover .parameters-2 {
+  position: relative;
+  margin: 2vw !important;
+}
+
+.hover .buttons-2 {
+  position: relative;
+}
+
+.hover .video-stream-instance {
+  align-self: center;
+  position: relative;
+}
+
+.hover .graphs-17 {
+  align-self: center;
+  margin-top: 1vw;
+  position: relative !important;
+}
+
+.hover .Results1300 {
+  position: relative !important;
+}
+
+.hover .nav {
+  margin-bottom: 1vw;
+  position: relative;
+}
+
+.hover .next {
+  display: none !important;
+}
+
+.hover .footerdoc {
+  position: relative !important;
+}
+
+.hover .nav-bar-tab {
+  z-index: 10000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .simulation-streaming-instance {
+  margin-top: 8vw !important;
+  position: relative !important;
+}
+
+.hover .input1300 {
+  flex-direction: row;
+  align-self: center;
+  display: flex;
+}
+
+.hover .parameters-instance {
+  margin: 2vw 1vw !important;
+  position: relative !important;
+}
+
+.hover .rollgroup1 {
+  left: 10px !important;
+}
+
+.hover .pitchgroup1 {
+  z-index: 1 !important;
+  left: 10px !important;
+}
+
+.hover .plantimg1 {
+  z-index: 1 !important;
+  left: 400px !important;
+}
+
+.hover .arrow1 {
+  z-index: -10;
+  left: 32px !important;
+}
+
+.hover .buttons-instance {
+  position: relative !important;
+}
+
+@media (width <= 1080px) {
+  .hover .input1300 {
+    flex-direction: column;
+    align-self: center;
+    display: flex;
+  }
+
+  .hover .buttons-instance {
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    max-width: 80vw;
+    display: flex;
+  }
+
+  .hover .button-start {
+    margin: 1vw;
+  }
+}
+
+.hover .video-stream-instance1 {
+  align-self: center;
+  position: relative;
+}
+
+.hover .buttonUrdf {
+  margin-left: 1vw;
+  left: 0;
+}
+
+.hover .graphs-instance {
+  align-self: center;
+  margin-top: 1vw;
+  position: relative;
+}
+
+.hover .nav1 {
+  margin-bottom: 1vw;
+  position: relative !important;
+}
+
+.hover .next1 {
+  display: none !important;
+}
+
+.hover .footer1 {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .nav-bar-tab-instance {
+  z-index: 1 !important;
+  border-radius: 0 0 3px 3px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .logo1-control {
+  height: 5vw !important;
+}
+
+.hover .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.hover .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.hover .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.hover .nav-bar-text {
+  justify-content: left !important;
+  width: 40vw !important;
+}
+
+.hover .simulation-streaming-3 {
+  margin-top: 8vh;
+  position: relative;
+}
+
+@media (width <= 700px) {
+  .hover .simulation-streaming-3 {
+    height: 28px;
+  }
+
+  .hover .titlesize {
+    height: 28px;
+    font-size: 23px;
+  }
+}
+
+.hover .BlockDiagram5 {
+  align-self: center;
+  margin-top: 2vw;
+  position: relative;
+}
+
+.hover .buttons-3 {
+  flex-direction: row;
+  align-self: center;
+  width: 90vw;
+  max-width: 600px;
+  margin-top: 2vw;
+  display: flex;
+  position: relative;
+}
+
+.hover .ButtonSingle {
+  height: 6vw;
+  margin: 1vw;
+  font-size: 14px;
+}
+
+.hover .video-stream-instance2 {
+  justify-content: center;
+  align-self: center;
+  width: fit-content;
+  height: auto;
+  margin-top: 1vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+}
+
+.hover .buttonsURDF5 {
+  z-index: 1;
+  align-self: center;
+  width: 93%;
+  margin-left: 0;
+  position: relative;
+  top: 0;
+}
+
+.hover .buttonsURDF6 {
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  width: 132px;
+  height: 6vw;
+  margin: 1vw;
+  font-size: 11px;
+}
+
+.hover .buttonsURDF7 {
+  color: #fff;
+  border-color: #6454f0;
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  width: 132px;
+  height: 6vw;
+  margin: 1vw;
+  font-size: 11px;
+}
+
+.hover .graphs-18 {
+  align-self: center;
+  width: 90%;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative !important;
+}
+
+.hover .graphsize {
+  height: 80vw;
+}
+
+.hover .graphsize-warp {
+  height: 90vw;
+}
+
+.hover .titlegraph {
+  height: 30px;
+  margin-bottom: 2vw;
+  font-size: 30px;
+}
+
+.hover .singlegraphtitle {
+  height: 20px;
+  font-size: 20px;
+}
+
+.hover .nav2 {
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+  position: relative !important;
+}
+
+.hover .next2 {
+  display: none;
+}
+
+.hover .back2 {
+  width: 20vw;
+  height: 30px;
+  border-radius: 5px !important;
+  font-size: 15px !important;
+}
+
+.hover .footer5 {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hover .textwrapperfooter {
+  font-size: var(--copyright-font-size) !important;
+}
+
+.hover .textwrapper2footer, .hover .textwrapper3footer, .hover .textwrapper4footer, .hover .textwrapper5footer, .hover .buttonfooter {
+  font-size: var(--f10-font-size) !important;
+}
+
+.hover .group9footer {
+  left: 60vw !important;
+}
+
+.hover .group7footer {
+  left: 80vw !important;
+}
+
+.hover .groupwrap {
+  height: 90px !important;
+}
+
+.hover .copyrightfooter {
+  margin-top: 10px !important;
+  font-size: 7px !important;
+}
+
 .buttons {
   width: 15vw;
   height: 4vw;
@@ -8012,6 +8009,39 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
   .text-wrapper-14 {
     font-size: smaller;
+  }
+}
+
+.Results {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.result-item {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45vw;
+  margin: 1vw 0;
+  display: flex;
+}
+
+.label, .value {
+  color: #fff;
+  font-size: 2vw;
+}
+
+@media (width <= 830px) {
+  .Results {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-item {
+    width: 100%;
   }
 }
 
@@ -9040,6 +9070,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 .hoversim .graphs-17 {
   align-self: center;
   margin-top: 1vw;
+  position: relative !important;
+}
+
+.hoversim .Results1300 {
   position: relative !important;
 }
 
