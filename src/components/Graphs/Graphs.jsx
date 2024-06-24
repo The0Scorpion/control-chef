@@ -8,6 +8,7 @@ export const Graphs = ({
   rectangleClassName,
   xPosClassName,
   yPosClassName,
+  divClassName,
   xVelClassName,
   yVelClassName,
   groupClassName4,
@@ -17,7 +18,7 @@ export const Graphs = ({
   onXPosUpdate,
   onYPosUpdate,
   onXVelUpdate,
-  onYVelUpdate,
+  onYVelUpdate
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -61,15 +62,14 @@ export const Graphs = ({
       updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
       updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
       updateChart(chartRefs.YVel.current, "YVel", idArr, yVelArr);
+
+      // Send updated arrays to parent component via props functions
+      onXPosUpdate(xPosArr);
+      onYPosUpdate(yPosArr);
+      onXVelUpdate(xVelArr);
+      onYVelUpdate(yVelArr);
     }
-
-    // Call the update callbacks when the arrays are updated
-    if (onXPosUpdate) onXPosUpdate(xPosArr);
-    if (onYPosUpdate) onYPosUpdate(yPosArr);
-    if (onXVelUpdate) onXVelUpdate(xVelArr);
-    if (onYVelUpdate) onYVelUpdate(yVelArr);
-
-  }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr]);
+  }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr, onXPosUpdate, onYPosUpdate, onXVelUpdate, onYVelUpdate]);
 
   const drawChart = (data) => {
     const IoT_Payload = JSON.parse(data);
@@ -77,7 +77,7 @@ export const Graphs = ({
 
     const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
 
-    if (ID == 0 || ID == -1) {
+    if (ID === '0' || ID === '-1') {
       setIdArr([]);
       setXPosArr([]);
       setYPosArr([]);
@@ -86,8 +86,8 @@ export const Graphs = ({
     }
 
     console.log(xpos);
-    setj1(xpos);
-    setj2(ypos);
+    setj1(Number(xpos));
+    setj2(Number(ypos));
     setIdArr(prevState => [...prevState, Number(ID)]);
     setXPosArr(prevState => [...prevState, Number(xpos)]);
     setYPosArr(prevState => [...prevState, Number(ypos)]);
@@ -118,16 +118,19 @@ export const Graphs = ({
   };
 
   const updateChart = (element, label, labels, data) => {
-    // Sort the data by ID
-    const sortedIndices = [...Array(labels.length).keys()].sort((a, b) => labels[a] - labels[b]);
-    const sortedLabels = sortedIndices.map(i => labels[i]);
-    const sortedData = sortedIndices.map(i => data[i]);
+    const sortedData = labels.map((id, index) => ({
+      id,
+      value: data[index],
+    })).sort((a, b) => a.id - b.id);
 
-    // Destroy the existing plot
+    const sortedLabels = sortedData.map(item => item.id);
+    const sortedValues = sortedData.map(item => item.value);
+
     if (element.data) {
+      // Destroy the existing plot
       Plotly.purge(element);
     }
-    createGraph(element, label, sortedLabels, sortedData);
+    createGraph(element, label, sortedLabels, sortedValues);
   };
 
   return (
@@ -139,7 +142,7 @@ export const Graphs = ({
           <div ref={chartRefs.XPos} className={`rectangle1 ${rectangleClassName}`}></div>
         </div>
         <div className={`group-2 ${groupClassName}`}>
-          <div className={`x-vel1 ${xVelClassName}`}> Pitch Angular Velocity</div>
+          <div className={`x-vel1 ${xVelClassName}`}>Pitch Angular Velocity</div>
           <div ref={chartRefs.XVel} className={`rectangle2 ${rectangleClassName}`}></div>
         </div>
       </div>
