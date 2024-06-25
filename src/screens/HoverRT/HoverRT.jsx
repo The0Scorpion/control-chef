@@ -12,12 +12,13 @@ import { Parameters } from "../../components/Parameters";
 import { SimulationStreaming } from "../../components/SimulationStreaming";
 import { Next } from "../../components/Next";
 import { URDFViewer } from "../../components/URDFViewer";
-import {Amplify,  Auth } from "aws-amplify"; // Ensure Auth is imported from aws-amplify
+import { Amplify } from "aws-amplify";
+
+import { fetchAuthSession } from "@aws-amplify/auth"; // Import Auth from @
 import awsConfig from "../../aws-export";
 import { withAuthenticator, Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
-
 // Configure AWS Amplify with your aws-exports.js configuration
 Amplify.configure(awsConfig);
 
@@ -30,13 +31,15 @@ export const HoverRTcomponent = () => {
   const [JointAngle1, setJointAngle1] = useState(0);
   const [JointAngle2, setJointAngle2] = useState(0);
   const urdfUrl1 = '2dofhover/urdf/2dofhover.urdf';
-  const [idToken, setIdToken] = useState(null);
+  const [idToken, setidToken] = useState(null);
   const [accessToken, setAccessToken] = useState(null);
 
   const [xPosArr, setXPosArr] = useState([]);
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
+
+  //console.log(xPosArr);
 
   const [Xovershoot, setXovershoot] = useState(0);
   const [Yovershoot, setYovershoot] = useState(0);
@@ -122,7 +125,7 @@ export const HoverRTcomponent = () => {
   };
 
   useEffect(() => {
-    if (xPosArr.length > 0 && yPosArr.length > 0 ) {
+    if (xPosArr.length > 0 && yPosArr.length > 0 && parameterData) {
       console.log("Calculating overshoot and errors...");
       
       // Calculate overshoot
@@ -147,114 +150,326 @@ export const HoverRTcomponent = () => {
       setXError(newXError);
       setYError(newYError);
     }
-  }, [parameterData, xPosArr, yPosArr]);
-
-  // Fetch the current session to obtain tokens
-  useEffect(() => {
     const fetchSession = async () => {
       try {
-        const session = await Auth.currentSession(); // Ensure Auth is used correctly here
-        const idToken = session.getIdToken().getJwtToken();
-        const accessToken = session.getAccessToken().getJwtToken();
-        setIdToken(idToken);
-        setAccessToken(accessToken);
-        console.log("ID Token:", idToken); // Log ID Token here
-        console.log("Access Token:", accessToken);
+        const session = await fetchAuthSession(); // Assuming fetchAuthSession() retrieves the session object
+    
+        console.log("session:", session);
+    
+        const idTokenPayload = session.tokens.idToken.payload;
+        const accessTokenPayload = session.tokens.accessToken.payload;
+    
+        console.log("idTokenPayload:", idTokenPayload);
+        console.log("accessTokenPayload:", accessTokenPayload);
+    
+        setidToken(idTokenPayload); // Assuming setidToken is a state setter function
+        setAccessToken(accessTokenPayload); // Assuming setAccessToken is a state setter function
+    
+        console.log("idToken:", idTokenPayload); // Ensure idTokenPayload is not null here
+        console.log("Access Token:", accessTokenPayload); // Ensure accessTokenPayload is not null here
+    
       } catch (err) {
         console.log("Error fetching session:", err);
       }
     };
-
     fetchSession();
-  }, []);
+  }, [parameterData, xPosArr, yPosArr]);
 
-  const sendDataToLambda = () => {
-    if (!parameterData) {
-      console.error("No parameter data to send.");
-      return;
-    }
+// Fetch the current session to obtain tokens
 
-    fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': idToken // Use idToken in Authorization header
-      },
-      body: JSON.stringify(parameterData) // Stringify the parameterData object
+
+
+
+const sendDataToLambda = () => {
+  if (!parameterData) {
+    console.error("No parameter data to send.");
+    return;
+  }
+
+  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
+    },
+    body: JSON.stringify(parameterData) // Stringify the parameterData object
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Data sent to Lambda successfully');
+        console.log("Parameter Data:", parameterData);
+        console.log("ID Token:", idToken); // Log ID Token here
+        console.log("Access Token:", accessToken);
+      } else {
+        console.error('Failed to send data to Lambda');
+      }
     })
-      .then(response => {
-        if (response.ok) {
-          console.log('Data sent to Lambda successfully');
-          console.log("Parameter Data:", parameterData);
-        } else {
-          console.error('Failed to send data to Lambda');
-        }
-      })
-      .catch(error => {
-        console.error('Error sending data to Lambda:', error);
-      });
-  };
+    .catch(error => {
+      console.error('Error sending data to Lambda:', error);
+    });
+};
+
+const sendDataTostart = () => {
+  setWork(1);
+  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ${idToken}' // Use idToken in idToken header
+    },
+    body: JSON.stringify({ work: 1 }) // Example body
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Data sent to Lambda successfully');
+        console.log("Work:", 1);
+      } else {
+        console.error('Failed to send data to Lambda');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending data to Lambda:', error);
+    });
+};
+
+const sendDataTostop = () => {
+  setWork(0);
+  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
+    },
+    body: JSON.stringify({ work: 0 }) // Example body
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Data sent to Lambda successfully');
+        console.log("Work:", 0);
+      } else {
+        console.error('Failed to send data to Lambda');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending data to Lambda:', error);
+    });
+};
+
+useEffect(() => {
+  if (location.pathname === "/") {
+    // Scroll to the top of the page when the route changes to "/"
+    window.scrollTo(0, 0);
+    setScrollToTop(true);
+  } else {
+    setScrollToTop(false);
+  }
+}, [location.pathname]);
+
+useEffect(() => {
+  // Scroll to the top of the page when the component mounts
+  window.scrollTo(0, 0);
+}, []); // Empty dependency array ensures this effect runs only once
+
 
   return (
-    <div>
-      <div>
-        <NavBar/>
-      </div>
-      <div className="row">
-        <div className="col-md-9">
-          <div className="row">
-            <div className="col-md-6">
-              <Parametersnew 
-                setParameterData={setParameterData} 
-                idToken={idToken} 
-                accessToken={accessToken} 
-              />
-              <Results
-                xpos={xPosArr[xPosArr.length - 1]}
-                ypos={yPosArr[yPosArr.length - 1]}
-                xvel={xVelArr[xVelArr.length - 1]}
-                yvel={yVelArr[yVelArr.length - 1]}
-                xtime={xtime}
-                ytime={ytime}
-                xerror={XError}
-                yerror={YError}
-                xovershoot={Xovershoot}
-                yovershoot={Yovershoot}
-                work={Work}
-              />
-            </div>
-            <div className="col-md-6">
-              <SimulationStreaming
-                parameterData={parameterData}
-                setXPosArr={setXPosArr}
-                setYPosArr={setYPosArr}
-                setXVelArr={setXVelArr}
-                setYVelArr={setYVelArr}
-              />
-              <URDFViewer urdfUrl={urdfUrl1} />
-            </div>
+    <Authenticator>
+      {({ signOut, user }) => (
+        <>
+          <div className="hover"
+            style={{
+              width: { screenWidth }
+            }}
+          >
+            {screenWidth >= 834 && screenWidth < 1300 && (
+              <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab" />
+                <SimulationStreaming
+                  title="Real Time Operation"
+                  className="simulation-streaming-instance"
+                />
+                <div className="input1300">
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-instance"
+                    rollgroup="rollgroup1"
+                    pitchgroup="pitchgroup1"
+                    plantgroup="plantimg1"
+                    arrow3="arrow1"
+                    arrow4="arrow1"
+                  />
+                  <Buttons
+                    sendDataToLambda={sendDataToLambda}
+                    sendDataTostart={sendDataTostart}
+                    sendDataTostop={sendDataTostop}
+                    parameterData={parameterData}
+                    className="buttons-instance"
+                    startClassName="button-start"
+                    setClassName="button-start"
+                    resetClassName="button-start"
+                    stopClassName="button-start"
+                  />
+                </div>
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance1"
+                  width="800"
+                  height="500"
+                  buttonWrap5="buttonUrdf"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+                <Graphs
+                  className="graphs-instance"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
+                />
+                <Next navigate="nav1"
+                  next="next1"
+                  linkTo2="/hover-simulation" />
+                <Footer
+                  className="footer1"
+                />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
+
+            {screenWidth >= 1300 && (
+              <>
+                <NavBar
+                  onclick={signOut}
+                  className="navbardoc"
+                />
+                <SimulationStreaming
+                  title="Real Time Operation"
+                  className="simulation-streaming-2" />
+                <div className="inputpb">
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-2" />
+                  <Buttons
+                    sendDataToLambda={sendDataToLambda}
+                    sendDataTostart={sendDataTostart}
+                    sendDataTostop={sendDataTostop}
+                    parameterData={parameterData}
+                    className="buttons-2" />
+                </div>
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance"
+                  width="1000"
+                  height="600"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+                <Graphs className="graphs-17"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
+                  onXPosUpdate={setXPosArr}
+                  onYPosUpdate={setYPosArr}
+                  onXVelUpdate={setXVelArr}
+                  onYVelUpdate={setYVelArr}
+                />
+                <Results
+                  className="Results1300"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
+                <Next navigate="nav"
+                  next="next"
+                  linkTo2="/hover-simulation" />
+                <Footer className="footer-instance" />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
+
+            {screenWidth < 834 && (
+              <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab-instance"
+                  controlchef1="logo1-control"
+                  navbardrop="nav-bar-drop"
+                  dropdowncontentexperiments="drop-down-exp"
+                  dropdowncontenttheories="drop-down-theory"
+                  navbartext="nav-bar-text"
+                />
+                <SimulationStreaming
+                  className="simulation-streaming-3"
+                  title="Real Time Operation"
+                  simulationStreamingClassName="titlesize"
+                />
+                <Parameters
+                  setParameterData={setParameterData}
+                  className="BlockDiagram5"
+                />
+                <Buttons
+                  sendDataToLambda={sendDataToLambda}
+                  sendDataTostart={sendDataTostart}
+                  sendDataTostop={sendDataTostop}
+                  parameterData={parameterData}
+                  className="buttons-3"
+                  resetClassName="ButtonSingle"
+                  setClassName="ButtonSingle"
+                  startClassName="ButtonSingle"
+                  stopClassName="ButtonSingle"
+                />
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance2"
+                  buttonWrap5="buttonsURDF5"
+                  urdfbutton="buttonsURDF6"
+                  urdfbutton1="buttonsURDF7"
+                  width="300"
+                  height="200"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+                <Graphs
+                  className="graphs-18"
+                  divClassName1="titlegraph"
+                  xPosClassName="singlegraphtitle"
+                  yPosClassName="singlegraphtitle"
+                  xVelClassName="singlegraphtitle"
+                  yVelClassName="singlegraphtitle"
+                  rectangleClassName="graphsize"
+                  groupClassName="graphsize-warp"
+                  setj1={setJointAngle1}
+                  setj2={setJointAngle2}
+                />
+                <Next navigate="nav2"
+                  next="next2"
+                  back="back2"
+                  linkTo2="/hover-simulation"
+                />
+                <Footer
+                  className="footer5"
+                  group="groupwrap"
+                  group7="group7footer"
+                  buttonf="buttonfooter"
+                  textwrapper="textwrapperfooter"
+                  textwrapper2="textwrapper2footer"
+                  textwrapper3="textwrapper3footer"
+                  textwrapper4="textwrapper4footer"
+                  textwrapper5="textwrapper5footer"
+                  group8="group8footer"
+                  group9="group9footer"
+                  group10="group10footer"
+                  copyright="copyrightfooter"
+                />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
           </div>
-        </div>
-        <div className="col-md-3">
-          <Graphs
-            xPosArr={xPosArr}
-            yPosArr={yPosArr}
-            xVelArr={xVelArr}
-            yVelArr={yVelArr}
-          />
-        </div>
-      </div>
-      <div className="row">
-        <Buttons onClick={sendDataToLambda} />
-      </div>
-      <div>
-        <Next />
-      </div>
-      <div>
-        <Footer />
-      </div>
-    </div>
+        </>
+      )}
+    </Authenticator>
   );
 };
 
-export default withAuthenticator(HoverRTcomponent, { hideSignUp: true });
+export const HoverRT = withAuthenticator(HoverRTcomponent);
