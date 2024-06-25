@@ -12,12 +12,11 @@ import { Parameters } from "../../components/Parameters";
 import { SimulationStreaming } from "../../components/SimulationStreaming";
 import { Next } from "../../components/Next";
 import { URDFViewer } from "../../components/URDFViewer";
-import { Amplify } from "aws-amplify";
-import awsConfig from "../../aws-export";
+import { Amplify, Auth } from "aws-amplify";
+import awsConfig from "../../aws-exports";
 import { withAuthenticator, Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
-import { array } from "prop-types";
 
 // Configure AWS Amplify with your aws-exports.js configuration
 Amplify.configure(awsConfig);
@@ -38,8 +37,6 @@ export const HoverRTcomponent = () => {
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
-
-  console.log(xPosArr);
 
   const [Xovershoot, setXovershoot] = useState(0);
   const [Yovershoot, setYovershoot] = useState(0);
@@ -125,7 +122,7 @@ export const HoverRTcomponent = () => {
   };
 
   useEffect(() => {
-    if (xPosArr.length > 0 && yPosArr.length > 0 && parameterData) {
+    if (xPosArr.length > 0 && yPosArr.length > 0 ) {
       console.log("Calculating overshoot and errors...");
       
       // Calculate overshoot
@@ -189,8 +186,6 @@ const sendDataToLambda = () => {
       if (response.ok) {
         console.log('Data sent to Lambda successfully');
         console.log("Parameter Data:", parameterData);
-        console.log("ID Token:", idToken); // Log ID Token here
-        console.log("Access Token:", accessToken);
       } else {
         console.error('Failed to send data to Lambda');
       }
@@ -316,6 +311,15 @@ useEffect(() => {
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
                 />
+                <Results
+                  className="Resultsmid"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
                 <Next navigate="nav1"
                   next="next1"
                   linkTo2="/hover-simulation" />
@@ -433,6 +437,15 @@ useEffect(() => {
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
                 />
+                <Results
+                  className="Results834"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
                 <Next navigate="nav2"
                   next="next2"
                   back="back2"

@@ -143,6 +143,10 @@
   align-self: center;
 }
 
+.hover .Resultsmid{
+  position: relative !important;
+}  
+
 .hover .nav1 {
   margin-bottom: 1vw;
   position: relative !important;
@@ -295,6 +299,10 @@
 .hover .singlegraphtitle{
   font-size: 20px;
   height: 20px;
+}
+
+.hover .Results834{
+  position: relative !important;
 }
 
 .hover .nav2 {

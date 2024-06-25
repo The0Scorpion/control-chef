@@ -31,4 +31,9 @@
   .result-item {
     width: 100%;
   }
+
+  .label, .value {
+    color: white;
+    font-size: 3vw; /* Make font-size responsive */
+  }
 }

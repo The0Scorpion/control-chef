@@ -521,6 +521,13 @@ button:hover {
   line-height: 4vw;
 }
 
+.modeling7 {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  display: flex;
+}
+
 .modeling7 .img7 {
   align-self: center;
   width: 50%;
@@ -7032,6 +7039,44 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   }
 }
 
+.Results {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.result-item {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45vw;
+  margin: 1vw 0;
+  display: flex;
+}
+
+.label, .value {
+  color: #fff;
+  font-size: 2vw;
+}
+
+@media (width <= 830px) {
+  .Results {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-item {
+    width: 100%;
+  }
+
+  .label, .value {
+    color: #fff;
+    font-size: 3vw;
+  }
+}
+
 .parametersnew .div-3 {
   background-color: #fff;
   width: 88px;
@@ -7669,6 +7714,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative;
 }
 
+.hover .Resultsmid {
+  position: relative !important;
+}
+
 .hover .nav1 {
   margin-bottom: 1vw;
   position: relative !important;
@@ -7823,6 +7872,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   font-size: 20px;
 }
 
+.hover .Results834 {
+  position: relative !important;
+}
+
 .hover .nav2 {
   margin-top: 2vw;
   margin-bottom: 5vw;
@@ -7869,39 +7922,6 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 .hover .copyrightfooter {
   margin-top: 10px !important;
   font-size: 7px !important;
-}
-
-.Results {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 90vw;
-  max-width: 80vw;
-  margin: 0 auto;
-  display: flex;
-}
-
-.result-item {
-  flex-direction: row;
-  justify-content: space-between;
-  width: 45vw;
-  margin: 1vw 0;
-  display: flex;
-}
-
-.label, .value {
-  color: #fff;
-  font-size: 2vw;
-}
-
-@media (width <= 830px) {
-  .Results {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .result-item {
-    width: 100%;
-  }
 }
 
 .buttons {

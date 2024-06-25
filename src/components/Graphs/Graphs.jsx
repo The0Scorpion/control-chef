@@ -151,7 +151,7 @@ export const Graphs = ({
           <div className={`y-pos ${yPosClassName}`}>Roll Angle</div>
           <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassName}`}></div>
         </div>
-        <div className={`group-4 ${groupClassName4}`}>
+        <div className={`group-4 ${groupClassName}`}>
           <div className={`y-vel ${yVelClassName}`}>Roll Angular Velocity</div>
           <div ref={chartRefs.YVel} className={`rectangle4 ${rectangleClassName}`}></div>
         </div>
