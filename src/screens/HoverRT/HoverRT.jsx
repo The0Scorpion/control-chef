@@ -13,7 +13,7 @@ import { SimulationStreaming } from "../../components/SimulationStreaming";
 import { Next } from "../../components/Next";
 import { URDFViewer } from "../../components/URDFViewer";
 import { Amplify, Auth } from "aws-amplify";
-import awsConfig from "../../aws-exports";
+import awsConfig from "../../aws-export";
 import { withAuthenticator, Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
