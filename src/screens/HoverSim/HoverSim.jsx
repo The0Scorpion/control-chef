@@ -44,41 +44,52 @@ export const HoverSimcomponent = () => {
     }
   }, [location.pathname]);
 
-  useEffect(() => {
-    // Scroll to the top of the page when the component mounts
-    window.scrollTo(0, 0);
-    setIsCriteriaMet(false);
-  }, []); // Empty dependency array ensures this effect runs only once
 
   const [SimulationPoints, setSimulationPoints] = useState(null);
   const [Simulation, setSimulation] = useState(null);
   const [ParameterData, setParameterData] = useState(null);
 
   const GraphAndSimulate = () => {
-    const Sim = simulate(ParameterData);
-    console.log("Points:", SimulationPoints);
-    setSimulationPoints(Sim);
-
+    try {
+      const Sim = simulate(ParameterData);
+      console.log("Points:", Sim);
+      setSimulationPoints(Sim);
+      console.log("Sim:", Sim);
+  
     // Calculate overshoot
     const XovershootResult = calculateOvershoot(Sim.XPos, ParameterData.xposSet);
     const YovershootResult = calculateOvershoot(Sim.YPos, ParameterData.yposSet);
+  
+    // Calculate errors
+    const newXError = Math.abs(ParameterData.xposSet - Sim.XPos[1999]);
+    const newYError = Math.abs(ParameterData.yposSet - Sim.YPos[1999]);
+  
+    // Calculate times
+    const newXtime = XovershootResult.indexOfFirstZeroCrossing * 0.005;
+    const newYtime = YovershootResult.indexOfFirstZeroCrossing * 0.005;
+  
+    // Set state with calculated values
     setXovershoot(XovershootResult.overshoot);
     setYovershoot(YovershootResult.overshoot);
-    
-    setXError(Math.abs(ParameterData.xposSet - Sim.XPos[1999]));
-    setYError(Math.abs(ParameterData.yposSet - Sim.YPos[1999]));
-
-    // Calculate xtime and ytime
-    setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.05);
-    setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.05);
-
+    setXError(newXError);
+    setYError(newYError);
+    setXtime(newXtime);
+    setYtime(newYtime);
+  
+    console.log("XovershootResult:", XovershootResult);
+    console.log("YovershootResult:", YovershootResult);
+    console.log("XError:", newXError);
+    console.log("YError:", newYError);
+    console.log("xtime:", newXtime);
+    console.log("ytime:", newYtime);
+  
     // Check if overshoot is less than 0.1
-    if (XError < 0.01 && YError < 0.01) {
-      if (Math.abs(Xovershoot) < 0.03 && Math.abs(Yovershoot) < 0.03) {
+    if (newXError < 0.01 && newYError < 0.01) {
+      if (Math.abs(XovershootResult.overshoot) < 0.03 && Math.abs(YovershootResult.overshoot) < 0.03) {
         // Calculate variance
         const Xvariance = calculateVariance(Sim.XPos, ParameterData.xposSet);
         const Yvariance = calculateVariance(Sim.YPos, ParameterData.yposSet);
-
+  
         // Check if variance is less than 0.1
         if (Xvariance < 0.1 && Yvariance < 0.1) {
           setIsCriteriaMet(true); // Set criteria met
@@ -91,15 +102,79 @@ export const HoverSimcomponent = () => {
       } else {
         setIsCriteriaMet(false); // Reset criteria met
         alert("Overshoot criterion not met. Adjust PID parameters.");
-        console.log(Xovershoot);
-        console.log(Yovershoot);
+        console.log(XovershootResult.overshoot);
+        console.log(YovershootResult.overshoot);
       }
     } else {
       setIsCriteriaMet(false); // Reset criteria met
       alert("Steady State Error Too Big criterion not met. Adjust PID parameters.");
-      console.log(XError);
-      console.log(YError);
+      console.log(newXError);
+      console.log(newYError);
     }
+    } catch (e) {
+      const Sim = simulate(ParameterData);
+      console.log("Points:", Sim);
+      setSimulationPoints(Sim);
+      console.log("Sim:", Sim);
+  
+    // Calculate overshoot
+    const XovershootResult = calculateOvershoot(Sim.XPos, ParameterData.xposSet);
+    const YovershootResult = calculateOvershoot(Sim.YPos, ParameterData.yposSet);
+  
+    // Calculate errors
+    const newXError = Math.abs(ParameterData.xposSet - Sim.XPos[1999]);
+    const newYError = Math.abs(ParameterData.yposSet - Sim.YPos[1999]);
+  
+    // Calculate times
+    const newXtime = XovershootResult.indexOfFirstZeroCrossing * 0.005;
+    const newYtime = YovershootResult.indexOfFirstZeroCrossing * 0.005;
+  
+    // Set state with calculated values
+    setXovershoot(XovershootResult.overshoot);
+    setYovershoot(YovershootResult.overshoot);
+    setXError(newXError);
+    setYError(newYError);
+    setXtime(newXtime);
+    setYtime(newYtime);
+  
+    console.log("XovershootResult:", XovershootResult);
+    console.log("YovershootResult:", YovershootResult);
+    console.log("XError:", newXError);
+    console.log("YError:", newYError);
+    console.log("xtime:", newXtime);
+    console.log("ytime:", newYtime);
+  
+    // Check if overshoot is less than 0.1
+    if (newXError < 0.01 && newYError < 0.01) {
+      if (Math.abs(XovershootResult.overshoot) < 0.03 && Math.abs(YovershootResult.overshoot) < 0.03) {
+        // Calculate variance
+        const Xvariance = calculateVariance(Sim.XPos, ParameterData.xposSet);
+        const Yvariance = calculateVariance(Sim.YPos, ParameterData.yposSet);
+  
+        // Check if variance is less than 0.1
+        if (Xvariance < 0.1 && Yvariance < 0.1) {
+          setIsCriteriaMet(true); // Set criteria met
+        } else {
+          setIsCriteriaMet(false); // Reset criteria met
+          alert("Variance criterion not met. Adjust PID parameters.");
+          console.log(Xvariance);
+          console.log(Yvariance);
+        }
+      } else {
+        setIsCriteriaMet(false); // Reset criteria met
+        alert("Overshoot criterion not met. Adjust PID parameters.");
+        console.log(XovershootResult.overshoot);
+        console.log(YovershootResult.overshoot);
+      }
+    } else {
+      setIsCriteriaMet(false); // Reset criteria met
+      alert("Steady State Error Too Big criterion not met. Adjust PID parameters.");
+      console.log(newXError);
+      console.log(newYError);
+    }
+    }
+  
+    
   };
 
   const destroygraph = () => {
