@@ -7762,7 +7762,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .hover .nav-bar-tab-instance {
-  z-index: 1 !important;
+  z-index: 10000 !important;
   border-radius: 0 0 3px 3px !important;
   position: fixed !important;
   top: 0 !important;
