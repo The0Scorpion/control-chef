@@ -13,7 +13,7 @@ import { HoverSim } from "./screens/HoverSim";
 import { AboutUS } from "./screens/AboutUS";
 import { ContactUS } from "./screens/ContactUS";
 import { Amplify } from "aws-amplify";
-import awsConfig from "./aws-exports";
+import awsConfig from "./aws-export";
 Amplify.configure(awsConfig);
 
 const app = document.getElementById("app");
