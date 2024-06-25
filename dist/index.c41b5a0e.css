@@ -7040,40 +7040,68 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 }
 
 .Results {
+  background-color: #f0f8ff48;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 95vw;
+  margin: 1vw;
+  display: flex;
+}
+
+.Rtitle {
+  color: #fff;
+  margin: 1vw;
+  font-family: Salsa, Helvetica;
+  font-size: 2.2vw;
+  text-decoration: underline;
+}
+
+.result-items {
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 90vw;
-  max-width: 80vw;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
 }
 
 .result-item {
+  border: .2vw solid #fff;
+  border-radius: 5px;
   flex-direction: row;
   justify-content: space-between;
   width: 45vw;
-  margin: 1vw 0;
+  margin: 1vw;
+  padding: .5vw;
   display: flex;
 }
 
 .label, .value {
   color: #fff;
+  margin: .5vw;
+  font-family: Salsa, Helvetica;
   font-size: 2vw;
 }
 
+.label {
+  text-decoration: underline;
+}
+
 @media (width <= 830px) {
-  .Results {
+  .result-items {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .result-item {
-    width: 100%;
+    width: 90vw;
   }
 
   .label, .value {
-    color: #fff;
     font-size: 3vw;
+  }
+
+  .Rtitle {
+    font-size: 3.2vw;
   }
 }
 
@@ -9181,6 +9209,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative !important;
 }
 
+.hoversim .Resultsmid {
+  position: relative !important;
+}
+
 .hoversim .nav1 {
   margin-bottom: 1vw;
   position: relative !important;
@@ -9296,6 +9328,10 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   height: 30px;
   margin-bottom: 2vw;
   font-size: 30px;
+}
+
+.hoversim .Results834 {
+  position: relative !important;
 }
 
 .hoversim .singlegraphtitle {

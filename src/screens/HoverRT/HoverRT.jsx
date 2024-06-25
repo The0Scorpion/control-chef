@@ -27,6 +27,7 @@ export const HoverRTcomponent = () => {
   const screenWidth = useWindowWidth();
   const [scrollToTop, setScrollToTop] = useState(false);
   const [parameterData, setParameterData] = useState(null);
+
   const [Work, setWork] = useState(0);
   const [JointAngle1, setJointAngle1] = useState(0);
   const [JointAngle2, setJointAngle2] = useState(0);
@@ -38,8 +39,6 @@ export const HoverRTcomponent = () => {
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
-
-  //console.log(xPosArr);
 
   const [Xovershoot, setXovershoot] = useState(0);
   const [Yovershoot, setYovershoot] = useState(0);
@@ -125,25 +124,26 @@ export const HoverRTcomponent = () => {
   };
 
   useEffect(() => {
-    if (xPosArr.length > 0 && yPosArr.length > 0 && parameterData) {
+    if (xPosArr.length > 0 && yPosArr.length > 0 ) {
+
       console.log("Calculating overshoot and errors...");
-      
+
       // Calculate overshoot
       const XovershootResult = calculateOvershoot(xPosArr, parameterData.xposSet);
       const YovershootResult = calculateOvershoot(yPosArr, parameterData.yposSet);
       console.log("XovershootResult:", XovershootResult);
       console.log("YovershootResult:", YovershootResult);
-      
+
       // Calculate XError and YError
       const newXError = Math.abs(parameterData.xposSet - xPosArr[xPosArr.length - 1]);
       const newYError = Math.abs(parameterData.yposSet - yPosArr[yPosArr.length - 1]);
       console.log("New XError:", newXError);
       console.log("New YError:", newYError);
-      
+
       // Calculate xtime and ytime
-      setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.05);
-      setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.05);
-      
+      setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.005);
+      setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.005);
+
       // Update state variables
       setXovershoot(XovershootResult.overshoot);
       setYovershoot(YovershootResult.overshoot);
@@ -153,21 +153,21 @@ export const HoverRTcomponent = () => {
     const fetchSession = async () => {
       try {
         const session = await fetchAuthSession(); // Assuming fetchAuthSession() retrieves the session object
-    
+
         console.log("session:", session);
-    
+
         const idTokenPayload = session.tokens.idToken.payload;
         const accessTokenPayload = session.tokens.accessToken.payload;
-    
+
         console.log("idTokenPayload:", idTokenPayload);
         console.log("accessTokenPayload:", accessTokenPayload);
-    
+
         setidToken(idTokenPayload); // Assuming setidToken is a state setter function
         setAccessToken(accessTokenPayload); // Assuming setAccessToken is a state setter function
-    
+
         console.log("idToken:", idTokenPayload); // Ensure idTokenPayload is not null here
         console.log("Access Token:", accessTokenPayload); // Ensure accessTokenPayload is not null here
-    
+
       } catch (err) {
         console.log("Error fetching session:", err);
       }
@@ -175,101 +175,134 @@ export const HoverRTcomponent = () => {
     fetchSession();
   }, [parameterData, xPosArr, yPosArr]);
 
-// Fetch the current session to obtain tokens
+  // Fetch the current session to obtain tokens
 
 
 
 
-const sendDataToLambda = () => {
-  if (!parameterData) {
-    console.error("No parameter data to send.");
-    return;
-  }
+  const sendDataToLambda = () => {
+    if (!parameterData) {
+      console.error("No parameter data to send.");
+      return;
+    }
 
-  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
-    },
-    body: JSON.stringify(parameterData) // Stringify the parameterData object
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Data sent to Lambda successfully');
-        console.log("Parameter Data:", parameterData);
-        console.log("ID Token:", idToken); // Log ID Token here
-        console.log("Access Token:", accessToken);
-      } else {
-        console.error('Failed to send data to Lambda');
-      }
+    fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        //'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
+      },
+      body: JSON.stringify(parameterData) // Stringify the parameterData object
     })
-    .catch(error => {
-      console.error('Error sending data to Lambda:', error);
-    });
-};
+      .then(response => {
+        if (response.ok) {
+          console.log('Data sent to Lambda successfully');
+          console.log("Parameter Data:", parameterData);
+          //console.log("ID Token:", idToken); // Log ID Token here
+          //console.log("Access Token:", accessToken);
+        } else {
+          console.error('Failed to send data to Lambda');
+        }
+      })
+      .catch(error => {
+        console.error('Error sending data to Lambda:', error);
+      });
+  };
 
-const sendDataTostart = () => {
-  setWork(1);
-  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${idToken}' // Use idToken in idToken header
-    },
-    body: JSON.stringify({ work: 1 }) // Example body
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Data sent to Lambda successfully');
-        console.log("Work:", 1);
-      } else {
-        console.error('Failed to send data to Lambda');
-      }
+  const sendDataTostop = () => {
+    setWork(0);
+    fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        //'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
+      },
+      body: JSON.stringify({ work: 0 }) // Example body
     })
-    .catch(error => {
-      console.error('Error sending data to Lambda:', error);
-    });
-};
+      .then(response => {
+        if (response.ok) {
+          console.log('Data sent to Lambda successfully');
+          console.log("Work:", 0);
+        } else {
+          console.error('Failed to send data to Lambda');
+        }
+      })
+      .catch(error => {
+        console.error('Error sending data to Lambda:', error);
+      });
+  };
 
-const sendDataTostop = () => {
-  setWork(0);
-  fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${idToken}' // Use idToken in Authorization header
-    },
-    body: JSON.stringify({ work: 0 }) // Example body
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Data sent to Lambda successfully');
-        console.log("Work:", 0);
-      } else {
-        console.error('Failed to send data to Lambda');
-      }
-    })
-    .catch(error => {
-      console.error('Error sending data to Lambda:', error);
-    });
-};
+  useEffect(() => {
+    if (location.pathname === "/") {
+      // Scroll to the top of the page when the route changes to "/"
+      window.scrollTo(0, 0);
+      setScrollToTop(true);
+    } else {
+      setScrollToTop(false);
+    }
+  }, [location.pathname]);
 
-useEffect(() => {
-  if (location.pathname === "/") {
-    // Scroll to the top of the page when the route changes to "/"
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-    setScrollToTop(true);
-  } else {
-    setScrollToTop(false);
-  }
-}, [location.pathname]);
+  }, []); // Empty dependency array ensures this effect runs only once
 
-useEffect(() => {
-  // Scroll to the top of the page when the component mounts
-  window.scrollTo(0, 0);
-}, []); // Empty dependency array ensures this effect runs only once
 
+  const saveDataToDynamoDB = async () => {
+    const apiUrl = 'https://yo6maila82.execute-api.eu-west-3.amazonaws.com/test/Data';
+
+    const data = {
+      xerror: XError,
+      yerror: YError,
+      xtime: xtime,
+      ytime: ytime,
+      xovershoot: Xovershoot,
+      yovershoot: Yovershoot
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save data');
+      }
+
+      const result = await response.json();
+      console.log('Data saved successfully:', result);
+    } catch (error) {
+      console.error('Error saving data:', error);
+    }
+  };
+
+  const sendDataTostart = () => {
+    saveDataToDynamoDB();
+    setWork(1);
+    fetch("https://rq0btgzijg.execute-api.eu-west-3.amazonaws.com/teststage", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        //'Authorization': 'Bearer ${idToken}' // Use idToken in idToken header
+      },
+      body: JSON.stringify({ work: 1 }) // Example body
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Data sent to Lambda successfully');
+          console.log("Work:", 1);
+        } else {
+          console.error('Failed to send data to Lambda');
+        }
+      })
+      .catch(error => {
+        console.error('Error sending data to Lambda:', error);
+      });
+  };
 
   return (
     <Authenticator>
@@ -324,7 +357,20 @@ useEffect(() => {
                   className="graphs-instance"
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
+                  onXPosUpdate={setXPosArr}
+                  onYPosUpdate={setYPosArr}
+                  onXVelUpdate={setXVelArr}
+                  onYVelUpdate={setYVelArr}
                 />
+                <Results
+                  className="Resultsmid"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                /> 
                 <Next navigate="nav1"
                   next="next1"
                   linkTo2="/hover-simulation" />
@@ -379,7 +425,7 @@ useEffect(() => {
                   steadyStateErrorRoll={YError}
                   overshootRoll={Yovershoot}
                   settlingTimeRoll={ytime}
-                  />
+                />
                 <Next navigate="nav"
                   next="next"
                   linkTo2="/hover-simulation" />
@@ -441,7 +487,20 @@ useEffect(() => {
                   groupClassName="graphsize-warp"
                   setj1={setJointAngle1}
                   setj2={setJointAngle2}
+                  onXPosUpdate={setXPosArr}
+                  onYPosUpdate={setYPosArr}
+                  onXVelUpdate={setXVelArr}
+                  onYVelUpdate={setYVelArr}
                 />
+                <Results
+                  className="Results834"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                 /> 
                 <Next navigate="nav2"
                   next="next2"
                   back="back2"

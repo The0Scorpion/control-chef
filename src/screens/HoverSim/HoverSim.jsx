@@ -299,6 +299,15 @@ export const HoverSimcomponent = () => {
                   Simulation={Simulation}
                   className="graphs-instance"
                 />
+                <Results
+                  className="Resultsmid"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
                 <Next
                   navigate="nav1"
                   linkTo1="/hover-realtime"
@@ -392,6 +401,15 @@ export const HoverSimcomponent = () => {
                   rectangleClassName="graphsize"
                   groupClassName="graphsize-warp"
                 />
+                <Results
+                  className="Results834"
+                  steadyStateErrorPitch={XError}
+                  overshootPitch={Xovershoot}
+                  settlingTimePitch={xtime}
+                  steadyStateErrorRoll={YError}
+                  overshootRoll={Yovershoot}
+                  settlingTimeRoll={ytime}
+                  />
                 <Next
                   navigate="nav2"
                   next="next2"

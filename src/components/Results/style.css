@@ -1,12 +1,27 @@
-
 /* style.css */
 .Results {
   display: flex;
+  flex-direction: column; /* Ensure the title is above the items */
+  align-items: center;
+  margin: 1vw;
+  width: 95vw; /* Make the container width responsive */
+  background-color: rgba(240, 248, 255, 0.281);
+  border-radius: 10px;
+}
+
+.Rtitle {
+  margin: 1vw;
+  color: white;
+  font-size: 2.2vw;
+  font-family: "Salsa", Helvetica;
+  text-decoration: underline;
+}
+
+.result-items {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 90vw; /* Make the container width responsive */
-  max-width: 80vw;
+  width: 100%;
 }
 
 .result-item {
@@ -14,26 +29,38 @@
   flex-direction: row;
   justify-content: space-between;
   width: 45vw; /* Make each item width responsive */
-  margin: 1vw 0; /* Add vertical margin between items */
+  margin: 1vw; /* Add vertical margin between items */
+  border: 0.2vw solid white;
+  border-radius: 5px;
+  padding: 0.5vw;
 }
 
 .label, .value {
   color: white;
   font-size: 2vw; /* Make font-size responsive */
+  font-family: "Salsa", Helvetica;
+  margin: 0.5vw;
+}
+
+.label{
+  text-decoration: underline;
 }
 
 @media (max-width: 830px) {
-  .Results {
+  .result-items {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .result-item {
-    width: 100%;
+    width: 90vw;
   }
 
   .label, .value {
-    color: white;
     font-size: 3vw; /* Make font-size responsive */
+  }
+
+  .Rtitle {
+    font-size: 3.2vw;
   }
 }

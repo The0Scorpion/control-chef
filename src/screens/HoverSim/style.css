@@ -128,6 +128,10 @@
   align-self: center;
 }
 
+.hoversim .Resultsmid{
+  position: relative !important;
+}
+
 .hoversim .nav1 {
   margin-bottom: 1vw;
   position: relative !important;
@@ -244,6 +248,10 @@
   font-size: 30px;
   height: 30px;
   margin-bottom: 2vw;
+}
+
+.hoversim .Results834{
+  position: relative !important;
 }
 
 .hoversim .singlegraphtitle{
