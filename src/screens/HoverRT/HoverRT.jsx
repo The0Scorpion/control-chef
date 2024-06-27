@@ -19,6 +19,7 @@ import awsConfig from "../../aws-export";
 import { withAuthenticator, Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import "./style.css";
+import { exitCode } from "process";
 // Configure AWS Amplify with your aws-exports.js configuration
 Amplify.configure(awsConfig);
 
@@ -46,7 +47,9 @@ export const HoverRTcomponent = () => {
   const [YError, setYError] = useState(0);
   const [xtime, setXtime] = useState(0);
   const [ytime, setYtime] = useState(0);
-
+  const [Authed, setAuthed] = useState(false);
+  const [QueuePosition, setQueuePosition] = useState("");
+  const [QueueStatus, setQueueStatus] = useState("");
   // Function to calculate overshoot
   const calculateOvershoot = (simData, setp) => {
     // Find the direction of movement based on the sign of the first point
@@ -126,19 +129,19 @@ export const HoverRTcomponent = () => {
   useEffect(() => {
     if (xPosArr.length > 0 && yPosArr.length > 0 ) {
 
-      console.log("Calculating overshoot and errors...");
+      //console.log("Calculating overshoot and errors...");
 
       // Calculate overshoot
       const XovershootResult = calculateOvershoot(xPosArr, parameterData.xposSet);
       const YovershootResult = calculateOvershoot(yPosArr, parameterData.yposSet);
-      console.log("XovershootResult:", XovershootResult);
-      console.log("YovershootResult:", YovershootResult);
+      //console.log("XovershootResult:", XovershootResult);
+      //console.log("YovershootResult:", YovershootResult);
 
       // Calculate XError and YError
       const newXError = Math.abs(parameterData.xposSet - xPosArr[xPosArr.length - 1]);
       const newYError = Math.abs(parameterData.yposSet - yPosArr[yPosArr.length - 1]);
-      console.log("New XError:", newXError);
-      console.log("New YError:", newYError);
+      //console.log("New XError:", newXError);
+      //console.log("New YError:", newYError);
 
       // Calculate xtime and ytime
       setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.005);
@@ -152,22 +155,9 @@ export const HoverRTcomponent = () => {
     }
     const fetchSession = async () => {
       try {
-        const session = await fetchAuthSession(); // Assuming fetchAuthSession() retrieves the session object
-
-        console.log("session:", session);
-
-        const idTokenPayload = session.tokens.idToken.payload;
-        const accessTokenPayload = session.tokens.accessToken.payload;
-
-        console.log("idTokenPayload:", idTokenPayload);
-        console.log("accessTokenPayload:", accessTokenPayload);
-
-        setidToken(idTokenPayload); // Assuming setidToken is a state setter function
-        setAccessToken(accessTokenPayload); // Assuming setAccessToken is a state setter function
-
-        console.log("idToken:", idTokenPayload); // Ensure idTokenPayload is not null here
-        console.log("Access Token:", accessTokenPayload); // Ensure accessTokenPayload is not null here
-
+        const session = await fetchAuthSession();
+        const idTokenPayload = session.credentials.sessionToken;
+        setidToken(idTokenPayload);
       } catch (err) {
         console.log("Error fetching session:", err);
       }
@@ -231,7 +221,149 @@ export const HoverRTcomponent = () => {
         console.error('Error sending data to Lambda:', error);
       });
   };
+  let userAddedToQueue = false;
 
+  const deleteUser = async (userId1) => {
+    return fetch(`https://cjedoxbspa.execute-api.eu-west-3.amazonaws.com/prod/queue/leave`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Authorization': idToken // Use idToken in Authorization header if needed
+      },
+      body: JSON.stringify({ userId: userId1 })
+    }).then(response => {
+      if (response.ok) {
+        console.log(`User ${userId1} deleted successfully`);
+      } else {
+        console.error('Failed to delete user from queue');
+      }
+    })
+    .catch(error => {
+      console.error('Error deleting user from queue:', error);
+    });
+  };
+  
+  const checkQueueStatus = async () => {
+    const response = await sendQueueRequest('status', 'GET');
+    try{
+    if (response.ok) {
+      const data = await response.json();
+      const queueStatus = JSON.parse(data.body);
+      const queueItems = queueStatus.queueItems;
+      const currentTime = new Date();
+      const twoMinutes = 5 * 60 * 1000; // 2 minutes in milliseconds
+      console.log("Data:", queueItems);
+  
+      // Identify users who have been inactive for over 2 minutes
+      const expiredUsers = queueItems.filter(item => {
+        const lastActiveTime = new Date(item.lastActiveTime);
+        return currentTime - lastActiveTime >= new Date(5 * 60 * 1000);
+      });
+  
+      // Send request to delete expired users
+      for (const user of expiredUsers) {
+        await deleteUser(user.userId);
+      }
+  
+      // Remove expired users from activeUsers
+      const activeUsers = queueItems.filter(item => {
+        const lastActiveTime = new Date(item.lastActiveTime);
+        return currentTime - lastActiveTime < twoMinutes;
+      });
+  
+      const currentUserInQueue = queueItems.find(item => item.userId === idToken);
+  
+      // Only add user to queue if their ID isn't already present in queueItems
+      if (!currentUserInQueue && !userAddedToQueue) {
+        joinQueue();
+        userAddedToQueue = true; // Set flag to true once user is added to queue
+      }
+  
+      // If no active users remain, set auth to true
+      if (activeUsers.length === 0) {
+        setAuthed(true);
+        setQueueStatus(true);
+        userAddedToQueue = false; // Reset flag when no active users are present
+      } else {
+        // Check if it's the current user's turn
+        const currentTurnUser = activeUsers[0]; // Assuming the first in the list is the current turn
+        if (currentTurnUser && currentTurnUser.userId === idToken) {
+          setAuthed(true);
+          setQueueStatus(true);
+          userAddedToQueue = false; // Reset flag
+        } else {
+          setAuthed(false);
+          setQueueStatus(false);
+          const estimatedTime = 5 * activeUsers.length; // Approximate wait time
+          setQueuePosition(`Estimated wait time: ${estimatedTime} minutes`);
+  
+          // Rerun the checkQueueStatus function every minute
+          setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
+        }
+      
+      }} else {
+      console.error('Failed to retrieve queue status');
+    }
+      } catch (e){
+
+  }
+  };
+  
+  
+  
+    const joinQueue = async () => {
+      try {
+        const response = await sendQueueRequest('join', 'POST');
+      if (response.ok) {
+        setQueuePosition('You are in the queue');
+        const id = setTimeout(() => {
+          alert('Session timed out');
+          leaveQueue();
+        }, 300000); // 5 minutes
+        //setTimeoutId(id);
+        startSessionTimeoutUpdate();
+      }
+    }
+    catch (e){
+
+      }
+    };
+  
+    const leaveQueue = async () => {
+      clearTimeout(timeoutId);
+      await sendQueueRequest('leave', 'DELETE');
+      setQueuePosition(null);
+    };
+  
+    const startSessionTimeoutUpdate = () => {
+      const intervalId = setInterval(async () => {
+        await sendQueueRequest('sessionTimeout', 'PATCH');
+      }, 60000); // Update every minute
+      return () => clearInterval(intervalId);
+    };
+  
+    const sendQueueRequest = async (endpoint, method) => {
+      return fetch(`https://cjedoxbspa.execute-api.eu-west-3.amazonaws.com/prod/queue/${endpoint}`, {
+        method: method,
+        headers: {
+          
+          'Content-Type': 'application/json',
+          //'Authorization': idToken // Use idToken in Authorization header
+        },
+        body: method === 'GET' ? null : JSON.stringify({ userId: idToken }) // Sending userId for identification
+      }).then(response => {
+        if (response.ok) {
+          //console.log("ID Token:", idToken); // Log ID Token here
+          //console.log("response:", response); // Log ID Token here
+          return response;
+        } else {
+          console.error('Failed to send data to Lambda');
+        }
+      })
+      .catch(error => {
+        console.error('Error sending data to Lambda:', error);
+      });;
+    };
   useEffect(() => {
     if (location.pathname === "/") {
       // Scroll to the top of the page when the route changes to "/"
@@ -303,7 +435,8 @@ export const HoverRTcomponent = () => {
         console.error('Error sending data to Lambda:', error);
       });
   };
-
+  checkQueueStatus();
+if(Authed){
   return (
     <Authenticator>
       {({ signOut, user }) => (
@@ -529,6 +662,13 @@ export const HoverRTcomponent = () => {
       )}
     </Authenticator>
   );
+}else{
+  return (
+  <div>
+    Waiting in Queue
+  </div>
+  )
+}
 };
 
 export const HoverRT = withAuthenticator(HoverRTcomponent);
