@@ -1,0 +1,105 @@
+.aboutus {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 46.9vw;
+}
+
+.aboutus .about-us {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 6.25vw;
+  font-weight: 400;
+  width: 28.06vw;
+  height: 7.08vw;
+  position: absolute;
+  text-align: center;
+  left: 10vw;
+  top: 10vw;
+}
+
+.aboutus .about-us-text {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 1.39vw;
+  font-weight: 400;
+  line-height: 2.3vw;
+  width: 37vw;
+  height: auto;
+  position: absolute;
+  text-align: justify;
+  left: 3vw;
+  top: 20vw;
+  margin: 1vw;
+}
+
+.aboutus .img {
+  width: 59.58vw;
+  height: 40.07vw;
+  position: absolute;
+  top: 5.83vw; 
+  left: 40vw; 
+  object-fit: cover;
+}
+
+@media (max-width:1000) {
+  .aboutus .about-us-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:800) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 13vw !important;
+  }
+  .aboutus .about-us {
+    position: static;
+    font-size: 50px;
+    width: auto;
+    height: auto;
+  }
+  .aboutus .about-us-text {
+    position: static;
+    font-size: 14px;
+    line-height: 23px;
+    width: 90%;
+    margin: 10px 0;
+  }
+  .aboutus .img {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width:500) {
+  .aboutus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 22vw !important;
+  }
+  .aboutus .about-us {
+    position: static;
+    font-size: 30px;
+    width: auto;
+    height: auto;
+  }
+  .aboutus .about-us-text {
+    position: static;
+    font-size: 14px;
+    line-height: 23px;
+    width: 90%;
+    margin: 10px 0;
+  }
+  .aboutus .img {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}

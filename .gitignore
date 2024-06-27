@@ -25,7 +25,6 @@ sourcemap-info.json
 
 build/
 node_modules/
-aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
 amplifyconfiguration.dart
@@ -35,4 +34,5 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 
+/dist
 /dist

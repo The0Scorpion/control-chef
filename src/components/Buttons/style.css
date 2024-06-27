@@ -1,103 +1,56 @@
-.buttons {
-  height: 126px;
+.buttons5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+  width: 70vw;
+  max-width: 150px;
+  margin: 5px;
   position: relative;
 }
 
-.buttons .stop :hover{
-  cursor: pointer;
-  transform: scale(0.9);
-}
-
-.buttons .start :hover{
-  cursor: pointer;
-  transform: scale(0.9);
-}
-
-.buttons .set :hover{
-  cursor: pointer;
-  transform: scale(0.9);
-}
-
-.buttons .reset :hover{
-  cursor: pointer;
-  transform: scale(0.9);
-}
-
-.buttons .stop {
+.buttons5 button {
+  width: 70vw;
+  max-width: 150px;
+  margin: 10px 0;
   height: 50px;
-  left: 0px;
-  top: 70px;
-  width: 203px;
-  border: 2.5px solid;
-  border-color: #6454f0;
   border-radius: 15px;
   color: #ffffff;
   font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
+  font-size: 1.5vw;
   font-style: var(--subheader-font-style);
   font-weight: var(--subheader-font-weight);
   letter-spacing: var(--subheader-letter-spacing);
   line-height: var(--subheader-line-height);
-  position: absolute;
   text-align: center;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.buttons .start {
-  height: 50px;
-  left: 0;
-  top: 0;
-  width: 203px;
-  position: absolute;
+.buttons5 .stop {
+  border: 2.5px solid #6454f0;
+}
+
+.buttons5 .start {
   background-color: #6454f0;
-  border-radius: 15px;
-  color: #ffffff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  transition: all 0.2s ease;
 }
 
-.buttons .set {
-  height: 51px;
-  left: 0px;
-  top: 140px;
-  width: 203px;
-  position: absolute;
+.buttons5 .set {
   background-color: #6454f0;
-  border-radius: 15px;
-  color: #ffffff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  position: absolute;
-  text-align: center;  
-  transition: all 0.2s ease;
 }
 
-.buttons .reset {
-  height: 51px;
-  left: 0px;
-  top: 210px;
-  width: 203px;
-  position: absolute;
-  border: 2.5px solid;
-  border-color: #6454f0;
-  border-radius: 15px;
-  color: #ffffff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  transition: all 0.2s ease;
+.buttons5 .reset {
+  border: 2.5px solid #6454f0;
+}
+
+.buttons5 button:hover {
+  transform: scale(0.9);
+}
+
+@media (max-width: 600px) {
+  .buttons5 button {
+    font-size: 4vw; /* Adjust as needed for smaller screens */
+  }
 }

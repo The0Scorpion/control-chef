@@ -1,94 +1,113 @@
 .graphsim {
-  height: 1841px;
-  position: relative;
-  transform: translate(0, 25px);
-  width: 1065px;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center; /* Center the entire graphsim1 container */
+  justify-content: center;
+  overflow: hidden;
 }
 
-.graphsim .group-22 {
-  height: 427px;
-  left: 0;
-  position: absolute;
-  top: 98px;
-  width: 527px;
-}
-
-.graphsim .rectangle-5 {
-  background-color: #d9d9d9;
-  height: 370px;
-  left: 0;
-  position: absolute;
-  top: 57px;
-  width: 525px;
-}
-
-.graphsim .text-wrapper-12 {
-  color: #ffffff;
-  font-family: var(--header-font-family);
-  font-size: var(--header-font-size);
-  font-style: var(--header-font-style);
-  font-weight: var(--header-font-weight);
-  height: 31px;
-  left: 215px;
-  letter-spacing: var(--header-letter-spacing);
-  line-height: var(--header-line-height);
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 97px;
-}
-
-.graphsim .group-24 {
-  height: 426px;
-  left: 0;
-  position: absolute;
-  top: 576px;
-  width: 527px;
-}
-
-.graphsim .x-vel {
-  color: #ffffff;
-  font-family: var(--header-font-family);
-  font-size: var(--header-font-size);
-  font-style: var(--header-font-style);
-  font-weight: var(--header-font-weight);
-  height: 29px;
-  left: 233px;
-  letter-spacing: var(--header-letter-spacing);
-  line-height: var(--header-line-height);
-  position: absolute;
-  text-align: center;
-  top: 0;
-}
-
-.graphsim .group-26 {
-  height: 426px;
-  left: 540px;
-  position: absolute;
-  top: 99px;
-  width: 527px;
-}
-
-.graphsim .group-28 {
-  height: 426px;
-  left: 540px;
-  position: absolute;
-  top: 576px;
-  width: 527px;
-}
-
-.graphsim .text-wrapper-14 {
+.text-wrapper-14 {
   color: #ffffff;
   font-family: var(--title-font-family);
   font-size: var(--title-font-size);
   font-style: var(--title-font-style);
   font-weight: var(--title-font-weight);
-  height: 53px;
-  left: 469px;
-  letter-spacing: var(--title-letter-spacing);
-  line-height: var(--title-line-height);
-  position: absolute;
   text-align: center;
-  top: -1px;
-  width: 130px;
+  align-self: center;
+  position: relative;
+  height: 4vw;
+  top: 0;
+}
+
+.graphs-wrap1, .graphs-wrap2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center; /* Center the graphs horizontally */
+  width: 100%;
+  align-self: center;
+}
+
+.group-1, .group-2, .group-3, .group-4 {
+  width: 45vw; /* Adjusted width for better centering */
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  height: 45vw;
+  position: relative;
+  align-items: center; /* Center the contents of the group */
+}
+
+.rectangle1, .rectangle2, .rectangle3, .rectangle4 {
+  background-color: #ffffff;
+  width: 100%;
+  height: 37vw;
+}
+
+.x-pos, .x-vel1, .y-pos, .y-vel {
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: var(--header-font-size);
+  font-style: var(--header-font-style);
+  font-weight: var(--header-font-weight);
+  text-align: center;
+  align-self: center;
+  margin-bottom: 1vw;
+}
+
+/* Breakpoint at 1300px */
+@media (max-width: 1300px) {
+  .graphsim1{
+    margin: 1vw;
+  }
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 48vw; /* Adjusted width for better centering at 1300px */
+  }
+}
+
+/* Breakpoint at 700px */
+@media (max-width: 830px) {
+  .graphsim1 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center; /* Center the entire graphsim1 container */
+    justify-content: center;
+    overflow: hidden;
+    margin: 2vw;
+  }
+
+  .graphs-wrap1, .graphs-wrap2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Center the graphs horizontally */
+    width: 100%;
+    align-self: center;
+  }
+
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 100%; /* Full width for smaller screens */
+    margin: 1vw 0; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Breakpoint at 360px */
+@media (max-width: 360px) {
+  .graphsim1{
+    margin: 2vw;
+  }
+  .group-1, .group-2, .group-3, .group-4 {
+    width: 100%;
+    margin: 0.5vw 0; /* Further adjust margin for smallest screens */
+  }
+
+  .rectangle1, .rectangle2, .rectangle3, .rectangle4 {
+    height: 50vw; /* Adjust height for smaller screens */
+  }
+
+  .text-wrapper-14 {
+    font-size: smaller; /* Adjust font size for smallest screens */
+  }
 }

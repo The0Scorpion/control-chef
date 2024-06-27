@@ -1,131 +1,112 @@
 .modeling {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.modeling .img {
+  width: 50%;
+  height: auto;
+  margin-right: 20px;
+  margin-top: 10vh;
+}
+
+.modeling .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
   position: relative;
-  width: 100%; /* Using viewport width */
-  height: 102vh;
+  padding: 0;
 }
 
 .modeling .MODELING {
   background-color: #ffffff4c;
-  border-radius: 1vw 0px 0px 1vw; /* Using viewport units */
-  height: 8vh; /* Using viewport height */
-  right: 0vw;
-  position: absolute;
-  top: 0;
-  width: 30vw; /* Using viewport width */
+  border-radius: 1vw 0 0 1vw;
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 2vw; /* Responsive font size */
+  font-size: 2.4vw;
   font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  text-justify: inter-word;
-  align-content:center;
-}
-
-.modeling .img {
-  left: 1vw; /* Using viewport width */
-  position: absolute;
-  top: 0;
-  width: 55vw; /* Using viewport width */
-  height: auto;
-}
-
-.modeling .when-a-positive {
-  color: #ffffff;
-  font-family: "Salsa", Helvetica;
-  font-size: 2vw; /* Responsive font size */
-  font-weight: 400;
-  right: 1vw; /* Using viewport width */
-  letter-spacing: 0;
-  line-height: 3vw; /* Using viewport width */
-  position: absolute;
   text-align: right;
-  top: 10vh; /* Using viewport height */
-  width: 45vw; /* Using viewport width */
-  text-align: justify;
-  text-justify: inter-word;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  height: 6vw; /* Let the height adjust based on content */
+  width: 30vw; /* Using viewport units */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
+.modeling .when-a-positive,
 .modeling .the-model-equation {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 2.5vw; /* Responsive font size */
   font-weight: 400;
-  left: 30vw; /* Using viewport width */
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 90vh; /* Using viewport height */
-  width: 60vw; /* Using viewport width */
   text-align: justify;
-  text-justify: inter-word;
+  margin-bottom: 20px;
+  margin-right: 2vw;
+  letter-spacing: 0;
+  line-height: 4vw; /* Responsive line height */
 }
 
-@media (max-width: 1300px) {
-  .modeling .img {
-    width: 60vw;
-    top: 8vw;
-  }
-
-  .modeling .when-a-positive {
-    font-size: 2.2vw;
-    line-height: 3.2vw;
-  }
-
-  .modeling .the-model-equation {
-    font-size: 2.7vw;
-    left: 25vw;
-    top: 65vw;
-  }
+.modeling .when-a-positive {
+  font-size: 1.8vw;
 }
 
-@media (max-width: 830px) {
-
-  .modeling .img {
-    width: 65vw;
-  }
-
-  .modeling .when-a-positive {
-    font-size: 2.4vw;
-    line-height: 3.4vw;
-    width: 49vw;
-    right: 0vw;
-  }
-
-  .modeling .the-model-equation {
-    font-size: 2.9vw;
-    left: 19vw;
-    top: 79vh;
-    width: 64vw;
-  }
+.modeling .the-model-equation {
+  font-size: 1.8vw;
 }
 
-@media (max-width: 360px) {
-
-  .modeling .MODELING {
-    font-size: 4vw;
-    left: 10vw;
-    top: 3vh;
-  }
-
-  .modeling .img {
-    width: 70vw;
-  }
-
-  .modeling .when-a-positive {
-    font-size: 3vw;
-    line-height: 4vw;
-    width: 52vw;
-    left: 58vw;
-  }
-
-  .modeling .the-model-equation {
-    font-size: 3.5vw;
-    left: 20vw;
-    top: 82vh;
-    width: 68vw;
-  }
+.modeling7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
 }
+
+.modeling7 .img7 {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  
+}
+
+.modeling7 .MODELING7 {
+  background-color: #ffffff4c;
+  border-radius: 1vw 0 0 1vw;
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-size: 2.4vw;
+  font-weight: 400;
+  text-align: right;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  height: 6vw; /* Let the height adjust based on content */
+  width: 30vw; /* Using viewport units */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.modeling7 .when-a-positive7,
+.modeling7 .the-model-equation7 {
+  color: #ffffff;
+  font-family: "Salsa", Helvetica;
+  font-weight: 400;
+  line-height: 5vw;
+  text-align: justify;
+  align-self: center;
+  margin: 5vw;
+}
+
+.modeling7 .when-a-positive7 {
+  font-size: 20px;
+}
+
+.modeling7 .the-model-equation7 {
+  font-size: 20px;
+}
+

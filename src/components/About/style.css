@@ -1,17 +1,18 @@
 .about {
-  width:100%;
-  left: 0px;
-  top: 0px;
-  height: 40vw;
+  width: 100%;
+  left: 0;
+  top: 0;
   display: inline-block;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .about .the-DOF-hover {
   background-color: #ffffff73;
   border-radius: 2vw 0 0 2vw;
   height: 15vh;
-  right: 0vw;
-  top: 10vh;
+  right: 0;
+  top: 25vh;
   width: 50vw;
   color: #050518;
   font-family: "Salsa", Helvetica;
@@ -30,24 +31,26 @@
 .about .about-the-DOF {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
-  font-size: 3.5vw; 
+  font-size: 3.5vw;
   font-weight: 400;
-  left: 18vw; 
+  left: 18vw;
   width: 50vw;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 2vh;
   text-align: justify;
   text-align: right;
   text-justify: distribute-all-lines;
 }
 
 .about .element {
-  left: 0px;
-  object-fit: cover;
+  width: 40%;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  display: block;
+  margin: 0 auto;
   position: absolute;
-  top: 10vh;
-  width: 30vw; 
+  left: 0;
+  top: 2vh;
 }

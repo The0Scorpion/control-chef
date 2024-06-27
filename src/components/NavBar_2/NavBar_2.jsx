@@ -36,8 +36,8 @@ export const NavBar_2 = ({
           <div className="rectangle-10" />
         </button>
         <div className={`dropdown-content-nav ${navbardrop}`}>
-          <Link className="a" to="/#"><button className={`text1 ${navbartext}`}>About us</button></Link>
-          <Link className="a" to="/#"><button className={`text1 ${navbartext}`}>Contact us</button></Link>
+          <Link className="a" to="/About-US"><button className={`text1 ${navbartext}`}>About us</button></Link>
+          <Link className="a" to="/Contact-US"><button className={`text1 ${navbartext}`}>Contact us</button></Link>
           <Link className="a" to="/#"><button className={`text1 ${navbartext}`}>Reservation</button></Link>
           <div className="dropdown-theory">
             <div className="a">

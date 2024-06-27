@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import Chart from "chart.js/auto"; // Import Chart.js library
+import React, { useEffect, useRef } from "react";
+import Plotly from "plotly.js-dist-min"; // Import Plotly library
 import "./style.css";
 
 export const Graphsim = ({
@@ -7,20 +7,13 @@ export const Graphsim = ({
   groupClassName,
   rectangleClassName,
   xPosClassName,
-  rectangleClassNameOverride,
   yPosClassName,
-  divClassName,
-  divClassNameOverride,
   xVelClassName,
-  rectangleClassName1,
   yVelClassName,
-  groupClassName2,
-  groupClassName4,
   divClassName1,
   SimulationPoints,
   Simulation,
 }) => {
-
   // Define chartRefs object
   const chartRefs = {
     XPos: useRef(),
@@ -29,90 +22,65 @@ export const Graphsim = ({
     YVel: useRef(),
   };
 
-  // Define state to hold thetaX and thetaY values
-  //const [thetaValues, setThetaValues] = useState({ XPos: [], YPos: [], XVel: [], YVel: [] });
-
   useEffect(() => {
     // Call the main function to get XPos, YPos, XVel, and YVel values
     if (Simulation === 5) {
       for (const [key, ref] of Object.entries(chartRefs)) {
         if (SimulationPoints[key] && ref.current) {
           // Destroy existing chart if it exists
-          const canvasId = `chart-${key}`;
-          const existingChart = Chart.getChart(canvasId);
-          if (existingChart) {
-            existingChart.destroy(); // Destroy the chart instance
-          } 
+          const chartId = `chart-${key}`;
+          Plotly.purge(chartId); // Destroy the chart instance
         }
       }
     }
-     
-    if(SimulationPoints){
-    // Create charts when data changes
-    for (const [key, ref] of Object.entries(chartRefs)) {
-      console.log("THETA:"+ SimulationPoints);
-      if (SimulationPoints[key] && ref.current) {
-        // Destroy existing chart if it exists
-        const canvasId = `chart-${key}`;
-        const existingChart = Chart.getChart(canvasId);
-        if (existingChart) {
-          existingChart.destroy(); // Destroy the chart instance
+
+    if (SimulationPoints) {
+      // Create charts when data changes
+      for (const [key, ref] of Object.entries(chartRefs)) {
+        if (SimulationPoints[key] && ref.current) {
+          // Destroy existing chart if it exists
+          const chartId = `chart-${key}`;
+          Plotly.purge(chartId); // Destroy the chart instance
         }
-      }  
-      if (SimulationPoints[key] && ref.current) {
-        try{
-        createGraph(ref.current.getContext("2d"), key, SimulationPoints[key]);
-        } catch(e){
-          if (typeof Chart !== 'undefined' && Chart.helpers && Chart.helpers.each) {
-            Chart.helpers.each(Chart.instances, function (instance) {
-              instance.destroy();
-            });
-          }
+        if (SimulationPoints[key] && ref.current) {
+          createGraph(ref.current, key, SimulationPoints[key]);
         }
       }
     }
-  }
     // Cleanup function
     return () => {
-      // Destroy all existing charts if Chart.js is loaded
-      if (typeof Chart !== 'undefined' && Chart.helpers && Chart.helpers.each) {
-        Chart.helpers.each(Chart.instances, function (instance) {
-          instance.destroy();
-        });
+      for (const [key, ref] of Object.entries(chartRefs)) {
+        if (ref.current) {
+          Plotly.purge(ref.current.id);
+        }
       }
     };
-  }, [SimulationPoints]); // Run effect whenever thetaValues change
+  }, [SimulationPoints]); // Run effect whenever SimulationPoints change
+
   // Function to create chart
-  const createGraph = (ctx, label, data) => {
-    return new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: data.map((_, index) => index),
-        datasets: [{
-          label: label,
-          borderColor: "black",
-          borderWidth: 1,
-          pointRadius: 0,
-          data: data,
-          fill: false,
-        }],
+  const createGraph = (element, label, data) => {
+    Plotly.newPlot(element, [
+      {
+        x: data.map((_, index) => index),
+        y: data,
+        type: "scatter",
+        mode: "lines",
+        name: label,
+        line: { color: "black" },
       },
-      options: {
-        scales: {
-          x: {
-            type: "linear",
-            position: "bottom",
-          },
-          y: {
-            type: "linear",
-            position: "left",
-          },
-        },
+    ], {
+      title: label,
+      xaxis: {
+        title: "Index",
+      },
+      yaxis: {
+        title: label,
       },
     });
   };
 
   return (
+<<<<<<< HEAD
     <div className={`graphsim ${className}`}>
       <div className={`group-22 ${groupClassName}`}>
         <canvas ref={chartRefs.XPos} className={`rectangle-5 ${rectangleClassName}`} id={`chart-XPos`}></canvas>
@@ -130,7 +98,30 @@ export const Graphsim = ({
         <canvas ref={chartRefs.YVel} className={`rectangle-5 ${rectangleClassName1}`} id={`chart-YVel`}></canvas>
         <div className={`x-vel ${yVelClassName}`}>Roll Angular Velocity</div>
       </div>
+=======
+    <div className={`graphsim1 ${className}`}>
+>>>>>>> main
       <div className={`text-wrapper-14 ${divClassName1}`}>Graphs</div>
+      <div className="graphs-wrap1">
+        <div className={`group-1 ${groupClassName}`}>
+          <div className={`x-pos ${xPosClassName}`}>Pitch Angle</div>
+          <div ref={chartRefs.XPos} className={`rectangle1 ${rectangleClassName}`} id="chart-XPos"></div>
+        </div>
+        <div className={`group-2 ${groupClassName}`}>
+          <div className={`x-vel1 ${xVelClassName}`}>Pitch Angular Velocity</div>
+          <div ref={chartRefs.XVel} className={`rectangle2 ${rectangleClassName}`} id="chart-XVel"></div>
+        </div>
+      </div>
+      <div class="graphs-wrap2">
+        <div className={`group-3 ${groupClassName}`}>
+          <div className={`y-pos ${yPosClassName}`}>Roll Angle</div>  
+          <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassName}`} id="chart-YPos"></div>
+        </div>
+        <div className={`group-4 ${groupClassName}`}>
+          <div className={`y-vel ${yVelClassName}`}>Roll Angular Velocity</div>
+          <div ref={chartRefs.YVel} className={`rectangle4 ${rectangleClassName}`} id="chart-YVel"></div>
+        </div>
+      </div>
     </div>
   );
 };

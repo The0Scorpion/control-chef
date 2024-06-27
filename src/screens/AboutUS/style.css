@@ -1,0 +1,113 @@
+.AboutUS {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.AboutUS .navbardoc {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 1000000 !important;
+}
+
+.AboutUS .aboutus1300{
+  margin-top: 0vw;
+  position: relative;
+}
+
+.AboutUS .footerdoc {
+  position: fixed !important;
+  bottom: 0;
+}
+
+.AboutUS .nav-bar-tab {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 10000 !important;
+}
+
+.AboutUS .aboutusmid{
+  margin-top: 0vw;
+  position: relative;
+}
+
+.AboutUS .footer1 {
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+.AboutUS .nav-bar-tab-instance {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 1 !important;
+  border-radius: 0px 0px 3px 3px !important;
+}
+
+.AboutUS .logo1-control {
+  height: 5vw !important;
+}
+
+.AboutUS .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.AboutUS .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.AboutUS .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.AboutUS .nav-bar-text {
+  width: 40vw !important;
+  justify-content: left !important;
+}
+
+.AboutUS .aboutus834{
+  margin-top: 5vw;
+  position: relative;
+}
+
+.AboutUS .footer5 {
+  left: 0px !important;
+  top: 0px !important;
+  position: relative !important;
+}
+
+.AboutUS .textwrapperfooter {
+  font-size: var(--copyright-font-size) !important;
+}
+
+.AboutUS .textwrapper2footer,
+.AboutUS .textwrapper3footer,
+.AboutUS .textwrapper4footer,
+.AboutUS .textwrapper5footer,
+.AboutUS .buttonfooter {
+  font-size: var(--f10-font-size) !important;
+}
+
+.AboutUS .group9footer {
+  left: 60vw !important;
+}
+
+.AboutUS .group7footer {
+  left: 80vw !important;
+}
+
+.AboutUS .groupwrap {
+  height: 90px !important;
+}
+
+.AboutUS .copyrightfooter {
+  font-size: 7px !important;
+  margin-top: 10px !important;
+}

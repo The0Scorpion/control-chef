@@ -1,1471 +1,64 @@
 .hover {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.hover .overlap-6 {
-  position: absolute;
-}
-
-.hover .class {
-  border-radius: 202.57px/662.27px !important;
-  height: 1325px !important;
-  top: 2737px !important;
-  width: 405px !important;
-}
-
-.hover .class-2 {
-  border-radius: 133.57px/640.23px !important;
-  height: 1280px !important;
-  top: 2646px !important;
-  width: 267px !important;
-}
-
-.hover .class-3 {
-  height: 4061px !important;
-  left: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-  width: 1098px !important;
-}
-
-.hover .class-4 {
-  height: 3926px !important;
-  left: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-  width: 724px !important;
-}
-
-.hover .class-5 {
-  border-radius: 180.67px/583.5px !important;
-  height: 1167px !important;
-  left: 308px !important;
-  width: 361px !important;
-}
-
-.hover .class-6 {
-  border-radius: 119.13px/564.08px !important;
-  height: 1128px !important;
-  left: 203px !important;
-  width: 238px !important;
-}
-
-.hover .class-7 {
-  border-radius: 180.67px/583.5px !important;
-  height: 1167px !important;
-  left: 737px !important;
-  top: 1561px !important;
-  width: 361px !important;
-}
-
-.hover .class-8 {
-  border-radius: 119.13px/564.08px !important;
-  height: 1128px !important;
-  left: 486px !important;
-  top: 1509px !important;
-  width: 238px !important;
-}
-
-.hover .footer-2 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.hover .group-30 {
-  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-31 {
-  position: absolute;
-}
-
-.hover .control-chef-high-2 {
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.hover .frame-5 {
-  overflow: hidden;
-}
-
-.hover .overlap-7 {
-  position: absolute;
-}
-
-.hover .frame-wrapper {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .frame-6 {
-  overflow: hidden;
-}
-
-.hover .overlap-group-4 {
-  position: absolute;
-}
-
-.hover .group-32 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-33 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .text-15 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .frame-7 {
-  overflow: hidden;
-  position: absolute;
-}
-
-.hover .group-34 {
-  left: 0;
-  position: absolute;
-}
-
-.hover .group-35 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-36 {
-  position: absolute;
-}
-
-.hover .mask-group-4 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .mask-group-5 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .mask-group-6 {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-.hover .group-37 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .text-wrapper-15 {
-  color: #ffffff;
-  font-family: "Salsa", Helvetica;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-}
-
-.hover .group-38 {
-  position: absolute;
-}
-
-.hover .overlap-group-5 {
-  position: absolute;
-}
-
-.hover .text-wrapper-16 {
-  color: #ffffff;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: all 0.2s ease;
-}
-
-.hover .text-wrapper-17 {
-  color: #ffffff;
-  left: 1px;
-  position: absolute;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-
-.hover .text-wrapper-18 {
-  color: #ffffff;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-
-.hover .text-wrapper-19 {
-  color: #ffffff;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-
-.hover .group-39 {
-  position: absolute;
-  top: 0;
-}
-
-.hover .control-chef {
-  color: #ffffff;
-  font-family: "Salsa", Helvetica;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-}
-
-.hover .group-40 {
-  position: absolute;
-}
-
-.hover .overlap-group-6 {
-  position: absolute;
-}
-
-.hover .home {
-  color: #ffffff;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: all 0.2s ease;
-}
-
-.hover .about-us {
-  color: #ffffff;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-
-.hover .group-41 {
-  left: 0;
-  position: absolute;
-}
-
-.hover .overlap-8 {
-  position: absolute;
-}
-
-.hover .rectangle-7 {
-  background: linear-gradient(180deg, rgba(13.17, 74.83, 131.75, 0.35) 7.28%, rgba(104.88, 40.83, 168.94, 0.24) 96.28%);
-  border-radius: 20px;
-  left: 0;
-  position: absolute;
-  top: 1px;
-}
-
-.hover .p {
-  color: #ffffff;
-  text-align: center;
-  top: 0;
-  white-space: nowrap;
-}
-
-.hover .graphs-instance {
-  height: 710px !important;
-  left: 30px !important;
-  position: absolute !important;
-  top: 1200px !important;
-  width: 765px !important;
-  align-items: center !important;
-}
-
-.hover .instance-node {
-  height: 307px !important;
-  top: 70px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-2 {
-  height: 266px !important;
-  top: 41px !important;
-  width: 377px !important;
-}
-
-.hover .graphs-3 {
-  height: 22px !important;
-  left: 154px !important;
-  white-space: nowrap !important;
-  width: 70px !important;
-}
-
-.hover .graphs-4 {
-  height: 307px !important;
-  top: 385px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-5 {
-  height: 310px !important;
-  top: 400px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-6 {
-  height: 266px !important;
-  top: 44px !important;
-  width: 377px !important;
-}
-
-.hover .graphs-7 {
-  left: 158px !important;
-}
-
-.hover .graphs-8 {
-  height: 307px !important;
-  top: 1016px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-9 {
-  height: 310px !important;
-  left: 388px !important;
-  top: 67px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-10 {
-  left: 139px !important;
-}
-
-.hover .graphs-11 {
-  height: 310px !important;
-  left: 388px !important;
-  top: 382px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-12 {
-  height: 310px !important;
-  left: 388px !important;
-  top: 400px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-13 {
-  left: 140px !important;
-}
-
-.hover .graphs-14 {
-  height: 310px !important;
-  left: 388px !important;
-  top: 1013px !important;
-  width: 379px !important;
-}
-
-.hover .graphs-15 {
-  height: 29px !important;
-  left: 140px !important;
-  width: unset !important;
-}
-
-.hover .graphs-16 {
-  height: 49px !important;
-  left: 318px !important;
-  top: -7px !important;
-  width: unset !important;
-}
-
-.hover .class-9 {
-  height: 250px !important;
-  left: 15px !important;
-  position: absolute !important;
-  top: 580px !important;
-  width: 327px !important;
-  background-color: #d9d9d9;
-}
-
-.hover .class-10 {
-  height: 400px !important;
-  left: 60px !important;
-  background-color: #d9d9d9;
-  position: absolute !important;
-  top: 750px !important;
-  width: 700px !important;
-}
-
-.hover .class-11 {
-  font-size: var(--subheader-font-size) !important;
-  height: 29px !important;
+.hover .navbardoc {
   left: 0px !important;
+  position: fixed !important;
   top: 0px !important;
-  color: yellow !important;
-  z-index: 1;
-}
-
-.hover .class-12 {
-  left: 120px !important;
-  top: 750 !important;
-  color:yellow;
-  background-color: aquamarine;
-  z-index: 1;
-}
-
-
-.hover .parameters-instance {
-  left: 0px !important;
-  position: absolute !important;
-  top: 170px !important;
-}
-
-.hover .simulation-streaming-instance {
-  left: 160px !important;
-  position: absolute !important;
-  top: 90px !important;
-}
-
-.hover .buttons-instance {
-  left: 10px !important;
-  position: absolute !important;
-  top: 580px !important;
-}
-
-.hover .group-42 {
-  height: 14px;
-  left: 730px;
-  position: absolute;
-  top: 12px;
-  width: 33px;
-}
-
-.hover .rectangle-8 {
-  background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 33px;
-}
-
-.hover .rectangle-9 {
-  background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 6px;
-  width: 33px;
-}
-
-.hover .rectangle-10 {
-  background-color: #d9d9d9;
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 12px;
-  width: 33px;
-}
-
-.hover .control-chef-high-3 {
-  height: 35px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 1px;
-  transition: all 0.5s ease;
-  width: 199px;
-}
-
-.hover .div-4 {
-  height: 35px;
-}
-
-.hover .frame-8 {
-  height: 35px;
-  overflow: hidden;
-  width: 199px;
-}
-
-.hover .div-wrapper-3 {
-  height: 35px;
-  width: 199px;
-}
-
-.hover .overlap-9 {
-  height: 35px;
-  position: absolute;
-}
-
-.hover .mask-group-7 {
-  height: 35px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 199px;
-}
-
-.hover .frame-9 {
-  height: 35px;
-  overflow: hidden;
-}
-
-.hover .overlap-group-7 {
-  height: 59px;
-  position: absolute;
-  width: 199px;
-}
-
-.hover .group-43 {
-  height: 59px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 59px;
-}
-
-.hover .frame-10 {
-  height: 35px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.hover .group-44 {
-  height: 21px;
-  left: 0;
-  position: absolute;
-  top: 7px;
-  width: 95px;
-}
-
-.hover .group-45 {
-  height: 35px;
-  left: 103px;
-  position: absolute;
-  top: 0;
-  width: 30px;
-}
-
-.hover .group-46 {
-  height: 21px;
-  left: 141px;
-  position: absolute;
-  top: 6px;
-  width: 58px;
-}
-
-.hover .blur-instance {
-  left: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-}
-
-.hover .footer-instance {
-  background-color: transparent !important;
-  left: 100px !important;
-  position: absolute !important;
-  top: 2450px !important;
-}
-
-.hover .nav{
-  top: 2350px !important;
-}
-
-.hover .next{
-  opacity: 0;
-}
-
-.hover .graphs-17 {
-  left: 100px !important;
-  position: absolute !important;
-  top: 1300px !important;
-}
-
-.hover .video-stream-instance {
-  left: 130px !important;
-  position: absolute !important;
-  top: 690px !important;
-}
-
-.hover .video-stream-instance1 {
-  left: 30px !important;
-  position: absolute !important;
-  top: 690px !important;
-}
-
-.hover .video-stream-instance2 {
-  left: 15px !important;
-  position: absolute !important;
-  top: 220px !important;
-}
-
-.hover .parameters-2 {
-  left: 120px !important;
-  position: absolute !important;
-  top: 200px !important;
+  z-index: 1000000 !important;
 }
 
 .hover .simulation-streaming-2 {
-  left: 410px !important;
-  position: absolute !important;
-  top: 120px !important;
-  width: 380px !important;
+  position: relative !important;
+  margin-top: 8vw !important;
 }
 
-.hover .buttons-2 {
-  left: 1050px !important;
-  position: absolute !important;
-  top: 250px !important;
+.hover .inputpb {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.hover .nav-bar-instance2 {
-  left: 0px !important;
-  position: fixed !important;
-  top: 0px !important;
-  z-index: 10000 !important;
+.hover .parameters-2{
+  position: relative;
+  margin: 2vw !important;
 }
 
-.hover .parameters-3 {
-  height: 422px !important;
-  left: 15px !important;
-  position: absolute !important;
-  top: 80px !important;
-  width: 326px !important;
+.hover .buttons-2{
+  position: relative;
 }
 
-.hover .parameters-4 {
-  height: 25px !important;
-  left: 7px !important;
-  top: 95px !important;
-  width: 141px !important;
+.hover .video-stream-instance{
+  position: relative;
+  align-self: center;
 }
 
-.hover .parameters-5 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  width: 57px !important;
-  padding-right: 10px !important;
+.hover .graphs-17{
+  position: relative !important;
+  margin-top: 1vw;
+  align-self: center;
 }
 
-.hover .parameters-6 {
-  height: 25px !important;
-  left: 58px !important;
-  width: 93px !important;
+.hover .Results1300{
+  position: relative !important;
 }
 
-.hover .parameters-7 {
-  height: 25px !important;
-  width: 91px !important;
+.hover .nav{
+  position: relative;
+  margin-bottom: 1vw;
 }
 
-.hover .parameters-8 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  left: 50px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  width: 95px !important;
-  padding: 5px !important;
+.hover .next{
+  display: none !important; 
 }
 
-.hover .parameters-9 {
-  height: 25px !important;
-  left: 173px !important;
-  top: 95px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-10 {
-  height: 25px !important;
-  left: 6px !important;
-  top: 135px !important;
-  width: 139px !important;
-}
-
-.hover .parameters-11 {
-  height: 25px !important;
-  left: 46px !important;
-  width: 93px !important;
-}
-
-.hover .parameters-12 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  left: 24px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  width: 43px !important;
-}
-
-.hover .parameters-13 {
-  height: 25px !important;
-  left: 175px !important;
-  top: 135px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-14 {
-  height: 25px !important;
-  left: 7px !important;
-  top: 174px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-15 {
-  height: 25px !important;
-  left: 173px !important;
-  top: 174px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-16 {
-  height: 25px !important;
-  left: 8px !important;
-  top: 213px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-17 {
-  height: 25px !important;
-  left: 47px !important;
-  width: 93px !important;
-}
-
-.hover .parameters-18 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  left: 23px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  width: 45px !important;
-}
-
-.hover .parameters-19 {
-  height: 25px !important;
-  left: 174px !important;
-  top: 213px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-20 {
-  height: 25px !important;
-  left: 10px !important;
-  top: 252px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-21 {
-  height: 25px !important;
-  left: 45px !important;
-  width: 93px !important;
-}
-
-.hover .parameters-22 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  left: 25px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  width: 41px !important;
-}
-
-.hover .parameters-23 {
-  height: 25px !important;
-  left: 176px !important;
-  top: 252px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-24 {
-  height: 25px !important;
-  left: 8px !important;
-  top: 291px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-25 {
-  height: 25px !important;
-  left: 174px !important;
-  top: 291px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-26 {
-  height: 30px !important;
-  left: 10px !important;
-  top: 327px !important;
-  width: 141px !important;
-}
-
-.hover .parameters-27 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 30px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0 !important;
-  width: 41px !important;
-}
-
-.hover .parameters-28 {
-  height: 25px !important;
-  left: 45px !important;
-  top: 3px !important;
-  width: 93px !important;
-}
-
-.hover .parameters-29 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 12px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 15px !important;
-  left: 16px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 5px !important;
-  width: 59px !important;
-}
-
-.hover .parameters-30 {
-  height: 30px !important;
-  left: 176px !important;
-  top: 327px !important;
-  width: 138px !important;
-}
-
-.hover .parameters-31 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 27px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 30px !important;
-  white-space: nowrap !important;
-}
-
-.hover .simulation-streaming-3 {
-  height: 23px !important;
-  left: 80px !important;
-  position: absolute !important;
-  top: 45px !important;
-  width: 200px !important;
-}
-
-.hover .simulation-streaming-4 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 20px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  left: 0px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-}
-
-.hover .buttons-3 {
-  height: 25px !important;
-  left: 10px !important;
-  position: absolute !important;
-  top: 185px !important;
-  width: 325px !important;
-}
-
-.hover .buttons-4 {
-  height: 34px !important;
-  top: 49px !important;
-  width: 138px !important;
-}
-
-.hover .buttons-5 {
-  height: 39px !important;
-  width: 141px !important;
-}
-
-.hover .buttons-6 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 25px !important;
-  left: 85px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  white-space: nowrap !important;
-  width: 70px !important;
-  align-items: center !important;
-  border-radius: 7px !important;
-  border-width: 1px !important;
-}
-
-.hover .buttons-7 {
-  height: 34px !important;
-  width: 138px !important;
-}
-
-.hover .buttons-8 {
-  height: 34px !important;
-  width: 136px !important;
-}
-
-.hover .buttons-9 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 25px !important;
-  left: 255px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  white-space: nowrap !important;
-  width: 70px !important;
-  align-items: center !important;
-  border-radius: 7px !important;
-  border-width: 1px !important;
-}
-
-.hover .buttons-90 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 25px !important;
-  left: 0px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  white-space: nowrap !important;
-  width: 70px !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-}
-
-.hover .buttons-10 {
-  height: 34px !important;
-  left: 148px !important;
-  width: 138px !important;
-}
-
-.hover .buttons-11 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 10px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 25px !important;
-  left: 170px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  white-space: nowrap !important;
-  width: 70px !important;
-  border-radius: 7px !important;
-  align-items: center !important;
-}
-
-.hover .buttons-12 {
-  height: 34px !important;
-  left: 148px !important;
-  top: 51px !important;
-  width: 138px !important;
-}
-
-
-.hover .group-47 {
-  height: 6px;
-  left: 309px;
-  position: absolute;
-  top: 5px;
-  width: 14px;
-}
-
-.hover .rectangle-11 {
-  background-color: #d9d9d9;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 14px;
-}
-
-.hover .rectangle-12 {
-  background-color: #d9d9d9;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 3px;
-  width: 14px;
-}
-
-.hover .rectangle-13 {
-  background-color: #d9d9d9;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 5px;
-  width: 14px;
-}
-
-.hover .control-chef-high-4 {
-  height: 15px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  transition: all 0.5s ease;
-  width: 85px;
-}
-
-.hover .div-wrapper-4 {
-  height: 15px;
-}
-
-.hover .frame-11 {
-  height: 15px;
-  overflow: hidden;
-  width: 85px;
-}
-
-.hover .div-5 {
-  height: 15px;
-  width: 84px;
-}
-
-.hover .overlap-10 {
-  height: 15px;
-  position: absolute;
-  width: 84px;
-}
-
-.hover .mask-group-8 {
-  height: 15px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 84px;
-}
-
-.hover .frame-12 {
-  height: 15px;
-  overflow: hidden;
-}
-
-.hover .overlap-group-8 {
-  height: 26px;
-  position: absolute;
-  width: 84px;
-}
-
-.hover .group-48 {
-  height: 26px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 25px;
-}
-
-.hover .frame-13 {
-  height: 15px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.hover .group-49 {
-  height: 9px;
-  left: 0;
-  position: absolute;
-  top: 3px;
-  width: 40px;
-}
-
-.hover .group-50 {
-  height: 15px;
-  left: 44px;
-  position: absolute;
-  top: 0;
-  width: 13px;
-}
-
-.hover .group-51 {
-  height: 9px;
-  left: 60px;
-  position: absolute;
-  top: 3px;
-  width: 24px;
-}
-
-.hover .graphs-18 {
-  height: 480px !important;
-  left: 20px !important;
-  position: absolute !important;
-  top: 430px !important;
-  width: 326px !important;
-}
-
-.hover .graphs-19 {
-  top: 45px !important;
-  width: 160px !important;
-  height: 205px !important;
-}
-
-.hover .graphs-20 {
-  height: 160px !important;
-  top: 44px !important;
-  width: 160px !important;
-}
-
-.hover .graphs-21 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 60px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-  width: unset !important;
-}
-
-.hover .graphs-22 {
-  height: 359px !important;
-  top: 460px !important;
-  width: 163px !important;
-}
-
-.hover .graphs-23 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 62px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-  width: unset !important;
-}
-
-.hover .graphs-24 {
-  top: 270px !important;
-  width: 160px !important;
-  height: 205px !important;
-}
-
-.hover .graphs-25 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 61px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-}
-
-.hover .graphs-26 {
-  height: 359px !important;
-  top: 1206px !important;
-  width: 163px !important;
-}
-
-.hover .graphs-27 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 64px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-  width: unset !important;
-}
-
-.hover .graphs-28 {
-  left: 165px !important;
-  top: 45px !important;
-  width: 160px !important;
-  height: 205px !important;
-}
-
-.hover .graphs-29 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 49px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-}
-
-.hover .graphs-30 {
-  height: 359px !important;
-  left: 165px !important;
-  top: 460px !important;
-  width: 163px !important;
-}
-
-.hover .graphs-31 {
-  left: 165px !important;
-  top: 270px !important;
-  width: 160px !important;
-  height: 205px !important;
-}
-
-.hover .graphs-32 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 50px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-}
-
-.hover .graphs-33 {
-  height: 359px !important;
-  left: 165px !important;
-  top: 1206px !important;
-  width: 163px !important;
-}
-
-.hover .graphs-34 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 15px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 18px !important;
-  left: 50px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  white-space: nowrap !important;
-  width: unset !important;
-}
-
-.hover .graphs-35 {
-  font-family: "Salsa", Helvetica !important;
-  font-size: 20px !important;
-  font-style: unset !important;
-  font-weight: 400 !important;
-  height: 25px !important;
-  left: 131px !important;
-  letter-spacing: 0 !important;
-  line-height: normal !important;
-  top: 0px !important;
-  width: unset !important;
-}
-
-.hover .nav-bar-tab-instance {
-  height: 20px !important;
-  left: 0px !important;
-  position: fixed !important;
-  top: 0px !important;
-  width: 360px !important;
-  z-index: 10000 !important;
-  border-radius:  0px 0px 3px 3px  !important;
-}
-
-.hover .logo1{
-  left:10px !important;
-  top: 2px !important;
-  width: 40% !important;
-}
-
-.hover .nav-bar1{
-  left: 300px !important;
-  top: 2px !important;
-}
-
-.hover .nav-bar2{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hover .nav-bar3{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hover .nav-bar4{
-  width:60% !important;
-  height:auto !important;
-}
-
-.hover .nav-bar5{
-  left: 180px !important;
-  min-width: 50px !important;
-  top:10px !important;
-  padding: 5px !important;
-}
-
-.hover .nav-bar6{
-  font-size: var(--copyright-font-size) !important;
-}
-
-.welcome-and .nav-bar7{
-  left: -85px !important;
-  top: 0px !important;
-  min-width: 100px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.welcome-and .nav-bar8{
-  left: -85px !important;
-  top: 0px !important;
-  min-width: 100px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.hover .footer5{
-  left:0px !important;
-  top:1000px !important;
-  position: absolute !important;
-  width: 360px !important;
-  height: 100px !important;
-}
-
-.hover .groupfooter{
-  left:0px !important;
-  top:0px !important;
-  height: 100px !important;
-  width: 358px !important;
-}
-
-.hover .group2footer{
-  left:0px !important;
-  top:0px !important;
-  width: 360px !important;
-  height: 100px !important;
-}
-
-.hover .controlcheifhighfooter{
-  left: 10px;
-  top: 43px;
-}
-
-.hover .maskgroupfooter{
-  width: 30% !important;
-  height: auto !important;
-  left:0px !important;
-  top:0px !important;
-}
-
-.hover .group7footer{
-  left:260px !important;
-  top: 10px !important;
-  width: 60px !important;
-  height: 80px !important;
-}
-
-.hover .group9footer{
-  left:170px !important;
-  top: 10px !important;
-  width: 70px !important;
-  height: 80px !important;
-}
-
-.hover .textwrapperfooter{
-  font-size: var(--copyright-font-size) !important;
-  top: 0px !important;
-}
-
-.hover .textwrapper2footer{
-  font-size: var(--f10-font-size) !important;
-  top: 0px !important;
-}
-
-.hover .textwrapper3footer{
-  font-size: var(--f10-font-size) !important;
-  top: 15px !important;
-}
-
-.hover .textwrapper4footer{
-  font-size: var(--f10-font-size) !important;
-  top: 30px !important;
-}
-
-.hover .textwrapper5footer{
-  font-size: var(--f10-font-size) !important;
-  top: 45px !important;
-}
-
-.hover .buttonfooter{
-  font-size: var(--f10-font-size) !important;
-}
-
-.hover .group8footer{
-  left:0px !important;
-  top : 20px !important;
-  width: 50px !important;
-  height: 60px !important;   
-}
-
-.hover .group10footer{
-  left:0px !important;
-  top : 20px !important;
-  width: 50px !important;
-  height: 30px !important;
-}
-
-.hover .copyrightfooter{
-  left:0px !important;
-  top: 110px !important;
-  width: 360px !important;
-  font-size: 7px !important;
-  height: 10px !important;
+.hover .footerdoc {
+  position: relative !important;
 }
 
 .hover .nav-bar-tab {
@@ -1475,159 +68,291 @@
   z-index: 10000 !important;
 }
 
-.hover .footer1{
-  left:0px !important;
-  top:2050px !important;
-  max-width: 834px !important;
-  height: 188px !important;
-  position: absolute !important;
+.hover .simulation-streaming-instance {
+  position: relative !important;
+  margin-top: 8vw !important;
 }
 
-.hover .groupfooter1{
-  left:0px !important;
-  top:0px !important;
-  height: 150px !important;
-  width: 835px !important;
+.hover .input1300 {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.hover .group2footer1{
-  left:0px !important;
-  top:0px !important;
-  width: 834px !important ;
+.hover .parameters-instance {
+  position: relative !important;
+  margin: 2vw 1vw !important;
 }
 
-.hover .controlcheifhighfooter1{
-  left:10px;
-  top:65px;
-}
-
-.hover .maskgroupfooter1{
-  width: 50% !important;
-  height: auto !important;
-  left:0px !important;
-  top:0px !important;
-}
-
-.hover .group7footer1{
-  left:720px !important;
-  top:-10px !important;
-}
-
-.hover .group9footer1{
-  left:550px !important;
-  top:-10px !important;
-}
-
-.hover .textwrapperfooter1{
-  font-size: var(--subheader-font-size) !important;
-  top: 20px !important;
-}
-
-.hover .textwrapper2footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 5px !important;
-}
-
-.hover .textwrapper3footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 30px !important;
-}
-
-.hover .textwrapper4footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 55px !important;
-}
-
-.hover .textwrapper5footer1{
-  font-size: var(--paragraph-font-size) !important;
-  top: 80px !important;
-}
-
-.hover .buttonfooter1{
-  font-size: var(--paragraph-font-size) !important;
-}
-
-.hover .group8footer1{
-  left:0px !important; 
-}
-
-.hover .group10footer1{
-  left:0px !important;
-}
-
-.hover .copyrightfooter1{
-  left:0px !important;
-  top: 165px !important;
-  width: 834 !important;
-  font-size: var(--f10-font-size) !important;
-}
-
-.hover .rollgroup1{
+.hover .rollgroup1 {
   left: 10px !important;
 }
 
-.hover .pitchgroup1{
-  left:10px !important;
+.hover .pitchgroup1 {
+  left: 10px !important;
   z-index: 1 !important;
 }
 
-.hover .plantimg1{
+.hover .plantimg1 {
   left: 400px !important;
   z-index: 1 !important;
 }
 
-.hover .arrow1{
+.hover .arrow1 {
   left: 32px !important;
   z-index: -10;
 }
 
-.hover .start1{
-  left: 20px !important;
-  width: 150px !important;
+.hover .buttons-instance {
+  position: relative !important;
 }
 
-.hover .stop1{
-  left: 200px !important;
-  top: 0px !important;
-  width: 150px !important;
+@media (max-width:1080) {
+  .hover .input1300 {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hover .buttons-instance {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  .hover .button-start{
+    margin: 1vw;
+  }
 }
 
-.hover .set1{
-  left: 400px !important;
-  top: 0px !important;
-  width: 150px !important;
+.hover .video-stream-instance1{
+  position: relative;
+  align-self: center;
 }
 
-.hover .reset1{
-  left: 600px !important;
-  top: 0px !important;
-  width: 150px !important;
+.hover .buttonUrdf{
+  left: 0;
+  margin-left: 1vw;
 }
 
-.hover .nav1{
-  top: 1980px !important;
-  position: absolute !important;
+.hover .graphs-instance{
+  position: relative;
+  margin-top: 1vw;
+  align-self: center;
+}
+
+.hover .Resultsmid{
+  position: relative !important;
+}  
+
+.hover .nav1 {
+  margin-bottom: 1vw;
+  position: relative !important;
 }
 
 .hover .next1{
-  opacity: 0%  !important;
-  left: 500px !important;
+  display: none !important;
 }
 
-.hover .nav2{
-  position: absolute !important;
-  top: 950px !important;
+.hover .footer1 {
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
 }
 
-.hover .next2{
-  opacity: 0% !important;
-  left: 150px !important
+.hover .nav-bar-tab-instance {
+  left: 0px !important;
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 10000 !important;
+  border-radius: 0px 0px 3px 3px !important;
 }
 
-.hover .back2{
+.hover .logo1-control {
+  height: 5vw !important;
+}
+
+.hover .nav-bar-drop {
+  width: 45vw !important;
+}
+
+.hover .drop-down-exp {
+  width: 65vw !important;
+  right: 10vw !important;
+}
+
+.hover .drop-down-theory {
+  width: 40vw !important;
+  right: 10vw !important;
+}
+
+.hover .nav-bar-text {
+  width: 40vw !important;
+  justify-content: left !important;
+}
+
+.hover .simulation-streaming-3 {
+  position: relative;
+  margin-top: 8vh;
+}
+
+@media (max-width:700) {
+  .hover .simulation-streaming-3 {
+    height: 28px;
+  }
+  .hover .titlesize {
+    font-size: 23px;
+    height: 28px;
+  }
+}
+
+.hover .BlockDiagram5{
+  position: relative;
+  margin-top: 2vw;
+  align-self: center;
+}
+
+.hover .buttons-3{
+  position: relative;
+  margin-top: 2vw;
+  align-self: center;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  max-width: 600px;
+}
+
+.hover .ButtonSingle {
+  margin: 1vw;
+  height: 6vw;
+  font-size: 14px;
+}
+
+.hover .video-stream-instance2{
+  position: relative;
+  margin-top: 1vw;
+  align-self: center;
+  justify-content: center;
+  height: auto;
+  width: fit-content;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hover .buttonsURDF5{
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  margin-left: 0vw;
+  align-self: center;
+  width: 93%;
+}
+
+.hover .buttonsURDF6{
+  margin: 1vw;
+  height: 6vw;
+  font-size: 11px;
+  align-self: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 132px;
+}
+
+.hover .buttonsURDF7{
+  color: white;
+  border-color: #6454f0;
+  margin: 1vw;
+  height: 6vw;
+  font-size: 11px;
+  align-self: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 132px;
+}
+
+.hover .graphs-18 {
+  position: relative !important;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 90%;
+  align-self: center;
+}
+
+.hover .graphsize{
+  height: 80vw;
+}
+
+.hover .graphsize-warp{
+  height: 90vw;
+}
+
+.hover .titlegraph{
+  font-size: 30px;
+  height: 30px;
+  margin-bottom: 2vw;
+}
+
+.hover .singlegraphtitle{
+  font-size: 20px;
+  height: 20px;
+}
+
+.hover .Results834{
+  position: relative !important;
+}
+
+.hover .nav2 {
+  position: relative !important;
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+}
+
+.hover .next2 {
+  display: none;
+}
+
+.hover .back2 {
   border-radius: 5px !important;
-  height: 22px !important;
-  width: 40px !important;
-  left: 25px !important;
-  font-size: 12px !important;
+  height: 30px;
+  width: 20vw;
+  font-size: 15px !important;
+}
+
+.hover .footer5 {
+  left: 0px !important;
+  top: 0px !important;
+  position: relative !important;
+}
+
+.hover .textwrapperfooter {
+  font-size: var(--copyright-font-size) !important;
+}
+
+.hover .textwrapper2footer,
+.hover .textwrapper3footer,
+.hover .textwrapper4footer,
+.hover .textwrapper5footer,
+.hover .buttonfooter {
+  font-size: var(--f10-font-size) !important;
+}
+
+.hover .group9footer {
+  left: 60vw !important;
+}
+
+.hover .group7footer {
+  left: 80vw !important;
+}
+
+.hover .groupwrap {
+  height: 90px !important;
+}
+
+.hover .copyrightfooter {
+  font-size: 7px !important;
+  margin-top: 10px !important;
 }

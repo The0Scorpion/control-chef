@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./style.css";
 
 export const Parametersnewand = ({
-  setParameterData
+  setParameterData,
+  className
 }) => {
   const [xposkp, setXPosKp] = useState(0);
   const [yposkp, setYPosKp] = useState(0);
@@ -68,7 +69,7 @@ export const Parametersnewand = ({
   };
 
   return (
-    <div className="parametersnewand">
+    <div className={`parametersnewand ${className}`}>
       <div className="group">
         <button className="pitch-input-angle" onClick={openPitchPopup}>Pitch Input Angle</button>
         {isPitchPopupOpen && (

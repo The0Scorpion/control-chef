@@ -1,10 +1,10 @@
-.parametersim {
+.parametersnew {
   height: 387px;
   position: relative;
   width: 861px;
 }
 
-.parametersim .overlap {
+.parametersnew .overlap {
   background-color: #6454f0;
   border-radius: 5px;
   height: 58px;
@@ -14,7 +14,7 @@
   width: 153px;
 }
 
-.parametersim .pitch-set-point {
+.parametersnew .pitch-set-point {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -28,7 +28,7 @@
   top: 4px;
 }
 
-.parametersim .pitch {
+.parametersnew .pitch {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -42,8 +42,8 @@
   top: 28px;
 }
 
-.parametersim .pitch-input {
-  background-color: #d9d9d9;
+.parametersnew .pitch-input {
+  background-color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 10px;
   height: 17px;
@@ -53,7 +53,7 @@
   width: 88px;
 }
 
-.parametersim .overlap-group {
+.parametersnew .overlap-group {
   height: 387px;
   left: 153px;
   position: absolute;
@@ -61,7 +61,7 @@
   width: 708px;
 }
 
-.parametersim .div {
+.parametersnew .div {
   height: 37px;
   left: 0;
   position: absolute;
@@ -69,8 +69,8 @@
   width: 59px;
 }
 
-.parametersim .summation-point {
-  background-color: #d9d9d9;
+.parametersnew .summation-point {
+  background-color: #ffffff;
   border-radius: 18.5px;
   height: 37px;
   left: 22px;
@@ -79,7 +79,7 @@
   width: 37px;
 }
 
-.parametersim .arrow {
+.parametersnew .arrow {
   height: 15px;
   left: 0;
   position: absolute;
@@ -88,7 +88,7 @@
   z-index: 0;
 }
 
-.parametersim .text-wrapper {
+.parametersnew .text-wrapper {
   color: #6454f0;
   font-family: "Salsa", Helvetica;
   font-size: 20px;
@@ -102,7 +102,7 @@
   width: 31px;
 }
 
-.parametersim .overlap-2 {
+.parametersnew .overlap-2 {
   height: 37px;
   left: 234px;
   position: absolute;
@@ -110,7 +110,7 @@
   width: 59px;
 }
 
-.parametersim .img {
+.parametersnew .img {
   height: 15px;
   left: 0;
   position: absolute;
@@ -118,7 +118,7 @@
   width: 23px;
 }
 
-.parametersim .text-wrapper-2 {
+.parametersnew .text-wrapper-2 {
   color: #6454f0;
   font-family: "Salsa", Helvetica;
   font-size: 20px;
@@ -132,7 +132,7 @@
   width: 31px;
 }
 
-.parametersim .overlap-3 {
+.parametersnew .overlap-3 {
   height: 387px;
   left: 34px;
   position: absolute;
@@ -140,7 +140,7 @@
   width: 674px;
 }
 
-.parametersim .overlap-4 {
+.parametersnew .overlap-4 {
   height: 98px;
   left: 25px;
   position: absolute;
@@ -148,7 +148,7 @@
   width: 175px;
 }
 
-.parametersim .div-2 {
+.parametersnew .div-2 {
   background-color: #6454f0;
   border-radius: 5px;
   height: 98px;
@@ -158,7 +158,7 @@
   width: 153px;
 }
 
-.parametersim .text-wrapper-3 {
+.parametersnew .text-wrapper-3 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -172,7 +172,7 @@
   top: 4px;
 }
 
-.parametersim .text-wrapper-4 {
+.parametersnew .text-wrapper-4 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -186,7 +186,7 @@
   top: 28px;
 }
 
-.parametersim .text-wrapper-5 {
+.parametersnew .text-wrapper-5 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -200,18 +200,19 @@
   top: 49px;
 }
 
-.parametersim .div-3 {
+.parametersnew .div-3 {
   background-color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 10px;
   height: 17px;
+  width: 88px;
   left: 67px;
   position: absolute;
   top: 28px;
-  width: 88px;
+  z-index: 3;
 }
 
-.parametersim .div-4 {
+.parametersnew .div-4 {
   background-color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 10px;
@@ -220,9 +221,10 @@
   position: absolute;
   top: 49px;
   width: 88px;
+  z-index: 3;
 }
 
-.parametersim .text-wrapper-6 {
+.parametersnew .text-wrapper-6 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -236,7 +238,7 @@
   top: 70px;
 }
 
-.parametersim .div-5 {
+.parametersnew .div-5 {
   background-color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 10px;
@@ -245,9 +247,10 @@
   position: absolute;
   top: 70px;
   width: 88px;
+  z-index: 3;
 }
 
-.parametersim .arrow-2 {
+.parametersnew .arrow-2 {
   height: 15px;
   left: 0;
   position: absolute;
@@ -256,7 +259,7 @@
   z-index: 1000;
 }
 
-.parametersim .overlap-5 {
+.parametersnew .overlap-5 {
   height: 98px;
   left: 259px;
   position: absolute;
@@ -264,7 +267,7 @@
   width: 175px;
 }
 
-.parametersim .overlap-6 {
+.parametersnew .overlap-6 {
   height: 387px;
   left: 434px;
   position: absolute;
@@ -272,7 +275,7 @@
   width: 240px;
 }
 
-.parametersim .img-box {
+.parametersnew .img-box {
   background-color: #6454f0;
   border-radius: 5px;
   height: 387px;
@@ -282,7 +285,7 @@
   width: 172px;
 }
 
-.parametersim .plant-img {
+.parametersnew .plant-img {
   height: 213px;
   left: 78px;
   object-fit: cover;
@@ -291,7 +294,7 @@
   width: 151px;
 }
 
-.parametersim .text-wrapper-7 {
+.parametersnew .text-wrapper-7 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -305,7 +308,7 @@
   top: 12px;
 }
 
-.parametersim .arrow-3 {
+.parametersnew .arrow-3 {
   height: 15px;
   left: 0;
   position: absolute;
@@ -313,7 +316,7 @@
   width: 69px;
 }
 
-.parametersim .arrow-4 {
+.parametersnew .arrow-4 {
   height: 15px;
   left: 0;
   position: absolute;
@@ -322,7 +325,7 @@
   z-index: -1000;
 }
 
-.parametersim .sensed-angular {
+.parametersnew .sensed-angular {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -336,7 +339,7 @@
   top: 105px;
 }
 
-.parametersim .pitch-angle {
+.parametersnew .pitch-angle {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -350,7 +353,7 @@
   top: 134px;
 }
 
-.parametersim .roll-angle {
+.parametersnew .roll-angle {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -364,7 +367,7 @@
   top: 346px;
 }
 
-.parametersim .overlap-7 {
+.parametersnew .overlap-7 {
   height: 85px;
   left: 0;
   position: absolute;
@@ -372,7 +375,7 @@
   width: 502px;
 }
 
-.parametersim .arrow-5 {
+.parametersnew .arrow-5 {
   height: 84px;
   left: 0;
   position: absolute;
@@ -381,7 +384,7 @@
   z-index: 1000;
 }
 
-.parametersim .line {
+.parametersnew .line {
   height: 2px;
   left: 7px;
   position: absolute;
@@ -389,7 +392,7 @@
   width: 495px;
 }
 
-.parametersim .overlap-8 {
+.parametersnew .overlap-8 {
   height: 53px;
   left: 234px;
   position: absolute;
@@ -397,7 +400,7 @@
   width: 268px;
 }
 
-.parametersim .arrow-6 {
+.parametersnew .arrow-6 {
   height: 53px;
   left: 0;
   position: absolute;
@@ -406,7 +409,7 @@
   z-index: 1000;
 }
 
-.parametersim .line-2 {
+.parametersnew .line-2 {
   height: 2px;
   left: 7px;
   position: absolute;
@@ -414,7 +417,7 @@
   width: 261px;
 }
 
-.parametersim .overlap-group-2 {
+.parametersnew .overlap-group-2 {
   height: 98px;
   left: 25px;
   position: absolute;
@@ -422,7 +425,7 @@
   width: 175px;
 }
 
-.parametersim .overlap-9 {
+.parametersnew .overlap-9 {
   height: 98px;
   left: 259px;
   position: absolute;
@@ -430,7 +433,7 @@
   width: 175px;
 }
 
-.parametersim .sensed-angular-2 {
+.parametersnew .sensed-angular-2 {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -444,7 +447,7 @@
   top: 307px;
 }
 
-.parametersim .overlap-10 {
+.parametersnew .overlap-10 {
   height: 98px;
   left: 0;
   position: absolute;
@@ -452,7 +455,7 @@
   width: 502px;
 }
 
-.parametersim .arrow-7 {
+.parametersnew .arrow-7 {
   height: 98px;
   left: 0;
   position: absolute;
@@ -461,7 +464,7 @@
   z-index: 1000;
 }
 
-.parametersim .line-3 {
+.parametersnew .line-3 {
   height: 2px;
   left: 7px;
   position: absolute;
@@ -469,7 +472,7 @@
   width: 495px;
 }
 
-.parametersim .overlap-11 {
+.parametersnew .overlap-11 {
   height: 59px;
   left: 234px;
   position: absolute;
@@ -477,7 +480,7 @@
   width: 268px;
 }
 
-.parametersim .arrow-8 {
+.parametersnew .arrow-8 {
   height: 59px;
   left: 0;
   position: absolute;
@@ -486,7 +489,7 @@
   z-index: 1000;
 }
 
-.parametersim .line-4 {
+.parametersnew .line-4 {
   height: 2px;
   left: 7px;
   position: absolute;
@@ -494,7 +497,7 @@
   width: 261px;
 }
 
-.parametersim .overlap-12 {
+.parametersnew .overlap-12 {
   height: 37px;
   left: 0;
   position: absolute;
@@ -502,7 +505,7 @@
   width: 59px;
 }
 
-.parametersim .overlap-13 {
+.parametersnew .overlap-13 {
   height: 37px;
   left: 234px;
   position: absolute;
@@ -510,7 +513,7 @@
   width: 59px;
 }
 
-.parametersim .overlap-14 {
+.parametersnew .overlap-14 {
   background-color: #6454f0;
   border-radius: 5px;
   height: 58px;
@@ -520,7 +523,7 @@
   width: 153px;
 }
 
-.parametersim .roll-set-point {
+.parametersnew .roll-set-point {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;
@@ -534,7 +537,7 @@
   top: 4px;
 }
 
-.parametersim .roll {
+.parametersnew .roll {
   color: #ffffff;
   font-family: "Salsa", Helvetica;
   font-size: 12px;

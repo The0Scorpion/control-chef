@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Chart from "chart.js/auto";
+import Plotly from "plotly.js-dist-min";
 import "./style.css";
 
 export const Graphs = ({
@@ -7,18 +7,18 @@ export const Graphs = ({
   groupClassName,
   rectangleClassName,
   xPosClassName,
-  rectangleClassNameOverride,
   yPosClassName,
   divClassName,
-  divClassNameOverride,
   xVelClassName,
-  rectangleClassName1,
   yVelClassName,
-  groupClassName2,
   groupClassName4,
   divClassName1,
   setj1,
   setj2,
+  onXPosUpdate,
+  onYPosUpdate,
+  onXVelUpdate,
+  onYVelUpdate
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -43,13 +43,17 @@ export const Graphs = ({
     });
 
     ws.addEventListener('message', event => {
-      console.log('Your iot payload is:', event.data);
+      console.log('Your IoT payload is:', event.data);
       drawChart(event.data);
     });
 
     // Set the WebSocket object in state
     setSocket(ws);
 
+    // Clean up on component unmount
+    return () => {
+      ws.close();
+    };
   }, []);
 
   useEffect(() => {
@@ -58,24 +62,32 @@ export const Graphs = ({
       updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
       updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
       updateChart(chartRefs.YVel.current, "YVel", idArr, yVelArr);
+
+      // Send updated arrays to parent component via props functions
+      onXPosUpdate(xPosArr);
+      onYPosUpdate(yPosArr);
+      onXVelUpdate(xVelArr);
+      onYVelUpdate(yVelArr);
     }
-  }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr]);
+  }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr, onXPosUpdate, onYPosUpdate, onXVelUpdate, onYVelUpdate]);
 
   const drawChart = (data) => {
     const IoT_Payload = JSON.parse(data);
     console.log("our json object", IoT_Payload);
 
     const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
-    if (ID == 0) {
+
+    if (ID === '0' || ID === '-1') {
       setIdArr([]);
       setXPosArr([]);
       setYPosArr([]);
       setXVelArr([]);
       setYVelArr([]);
     }
+
     console.log(xpos);
-    setj1(xpos);
-    setj2(ypos);
+    setj1(Number(xpos));
+    setj2(Number(ypos));
     setIdArr(prevState => [...prevState, Number(ID)]);
     setXPosArr(prevState => [...prevState, Number(xpos)]);
     setYPosArr(prevState => [...prevState, Number(ypos)]);
@@ -83,65 +95,67 @@ export const Graphs = ({
     setYVelArr(prevState => [...prevState, Number(yvel)]);
   };
 
-  const createGraph = (ctx, label, labels, data) => {
+  const createGraph = (element, label, labels, data) => {
     console.log("Creating chart for", label);
-    return new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: labels,
-        datasets: [{
-          label: label,
-          borderColor: "black",
-          borderWidth: 1,
-          pointRadius: 0,
-          data: data,
-          fill: false,
-        }],
+    const trace = {
+      x: labels,
+      y: data,
+      type: 'scatter',
+      mode: 'lines',
+      name: label,
+    };
+    const layout = {
+      title: label,
+      xaxis: {
+        title: 'ID',
       },
-      options: {
-        scales: {
-          x: {
-            type: "category", // Change to category type for string labels
-            position: "bottom",
-          },
-          y: {
-            type: "linear",
-            position: "left",
-          },
-        },
+      yaxis: {
+        title: label,
       },
-    });
+    };
+
+    Plotly.newPlot(element, [trace], layout);
   };
 
-  const updateChart = (ctx, label, labels, data) => {
-    if (!ctx.chart) {
-      ctx.chart = createGraph(ctx, label, labels, data);
-    } else {
-      ctx.chart.data.labels = labels;
-      ctx.chart.data.datasets[0].data = data;
-      ctx.chart.update();
+  const updateChart = (element, label, labels, data) => {
+    const sortedData = labels.map((id, index) => ({
+      id,
+      value: data[index],
+    })).sort((a, b) => a.id - b.id);
+
+    const sortedLabels = sortedData.map(item => item.id);
+    const sortedValues = sortedData.map(item => item.value);
+
+    if (element.data) {
+      // Destroy the existing plot
+      Plotly.purge(element);
     }
+    createGraph(element, label, sortedLabels, sortedValues);
   };
 
   return (
     <div className={`graphsim ${className}`}>
-      <div className={`group-22 ${groupClassName}`}>
-        <canvas ref={chartRefs.XPos} className={`rectangle-5 ${rectangleClassName}`}></canvas>
-        <div className={`text-wrapper-12 ${xPosClassName}`}>X Pos</div>
-      </div>
-      <div className={`group-24 ${divClassName}`}>
-        <canvas ref={chartRefs.XVel} className={`rectangle-5 ${divClassNameOverride}`}></canvas>
-        <div className={`x-vel ${xVelClassName}`}> X Vel</div>
-      </div>
-      <div className={`group-26 ${groupClassName2}`}>
-        <canvas ref={chartRefs.YPos} className={`rectangle-5 ${rectangleClassNameOverride}`}></canvas>
-        <div className={`text-wrapper-12 ${yPosClassName}`}>Y Pos</div>
-      </div>
-      <div className={`group-28 ${groupClassName4}`}>
-        <canvas ref={chartRefs.YVel} className={`rectangle-5 ${rectangleClassName1}`}></canvas>
-        <div className={`text-wrapper-12 ${yVelClassName}`}>Y Vel</div>
-      </div>
       <div className={`text-wrapper-14 ${divClassName1}`}>Graphs</div>
+      <div className="graphs-wrap1">
+        <div className={`group-1 ${groupClassName}`}>
+          <div className={`x-pos ${xPosClassName}`}>Pitch Angle</div>
+          <div ref={chartRefs.XPos} className={`rectangle1 ${rectangleClassName}`}></div>
+        </div>
+        <div className={`group-2 ${groupClassName}`}>
+          <div className={`x-vel1 ${xVelClassName}`}>Pitch Angular Velocity</div>
+          <div ref={chartRefs.XVel} className={`rectangle2 ${rectangleClassName}`}></div>
+        </div>
+      </div>
+      <div className="graphs-wrap2">
+        <div className={`group-3 ${groupClassName}`}>
+          <div className={`y-pos ${yPosClassName}`}>Roll Angle</div>
+          <div ref={chartRefs.YPos} className={`rectangle3 ${rectangleClassName}`}></div>
+        </div>
+        <div className={`group-4 ${groupClassName}`}>
+          <div className={`y-vel ${yVelClassName}`}>Roll Angular Velocity</div>
+          <div ref={chartRefs.YVel} className={`rectangle4 ${rectangleClassName}`}></div>
+        </div>
+      </div>
     </div>
   );
 };

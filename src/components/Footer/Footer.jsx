@@ -49,7 +49,7 @@ export const Footer = ({
           <div className={`text-wrapper ${textwrapper}`}>Control Chef</div>
           <div className={`group-10 ${group10}`}>
             <div className={`text-wrapper-2 ${textwrapper2}`}><Link to="/"><button className={`buttonf ${buttonf}`}>Home</button></Link></div>
-            <div className={`text-wrapper-3 ${textwrapper3}`}><Link to="/#"><button className={`buttonf ${buttonf}`}>About Us</button></Link></div>
+            <div className={`text-wrapper-3 ${textwrapper3}`}><Link to="/About-US"><button className={`buttonf ${buttonf}`}>About Us</button></Link></div>
           </div>
         </div>
       </div>

@@ -1,11 +1,7 @@
 .buttons {
-  height: 126px;
+  height: 4vw;
   position: relative;
-}
-
-.buttons .stop :hover{
-  cursor: pointer;
-  transform: scale(0.9);
+  width: 15vw;
 }
 
 .buttons .run :hover{
@@ -13,6 +9,7 @@
   transform: scale(0.9);
 }
 
+<<<<<<< HEAD
 .buttons .set :hover{
   cursor: pointer;
   transform: scale(0.9);
@@ -48,6 +45,11 @@
   left: 0;
   top: 0;
   width: 203px;
+=======
+.buttons .start {
+  height: 4vw;
+  width: 15vw;
+>>>>>>> main
   position: absolute;
   background-color: #6454f0;
   border-radius: 15px;
@@ -62,42 +64,3 @@
   transition: all 0.2s ease;
 }
 
-.buttons .set {
-  height: 51px;
-  left: 0px;
-  top: 140px;
-  width: 203px;
-  position: absolute;
-  background-color: #6454f0;
-  border-radius: 15px;
-  color: #ffffff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  position: absolute;
-  text-align: center;  
-  transition: all 0.2s ease;
-}
-
-.buttons .reset {
-  height: 51px;
-  left: 0px;
-  top: 210px;
-  width: 203px;
-  position: absolute;
-  border: 2.5px solid;
-  border-color: #6454f0;
-  border-radius: 15px;
-  color: #ffffff;
-  font-family: var(--subheader-font-family);
-  font-size: var(--subheader-font-size);
-  font-style: var(--subheader-font-style);
-  font-weight: var(--subheader-font-weight);
-  letter-spacing: var(--subheader-letter-spacing);
-  line-height: var(--subheader-line-height);
-  text-align: center;
-  transition: all 0.2s ease;
-}
