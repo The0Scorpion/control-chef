@@ -367,17 +367,11 @@ function simulate(data) {
     iyvelki = data.yvelki;
     ixvelkd = data.xvelkd;
     iyvelkd = data.yvelkd;
-<<<<<<< HEAD
-    Subsystem_U.target= data.yposSet;
-    Subsystem_U.In2= data.xposSet;
-    Subsystem_initialize();
-=======
     iyvelkd = data.yvelkd;
     iyvelkd = data.yvelkd;
     TwoDOF_U.X_setpoint = data.xposSet;
     TwoDOF_U.Y_setpoint = data.yposkd;
     TwoDOF_initialize();
->>>>>>> main
     let i = 0;
     const iterations = 2000;
     var SIO = {
