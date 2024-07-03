@@ -366,7 +366,7 @@ const joinQueue = async () => {
 
           
           userAddedToQueue = true; // Set flag to true once user is added to queue
-          setTimeoutId(id);
+          //setTimeoutId(id);
           startSessionTimeoutUpdate();
       }
   } catch (e) {
