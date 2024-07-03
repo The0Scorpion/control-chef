@@ -4,7 +4,7 @@
   width: 15vw;
 }
 
-.buttons .start :hover{
+.buttons .run :hover{
   cursor: pointer;
   transform: scale(0.9);
 }

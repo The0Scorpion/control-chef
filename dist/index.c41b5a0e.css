@@ -7958,7 +7958,7 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative;
 }
 
-.buttons .start :hover {
+.buttons .run :hover {
   cursor: pointer;
   transform: scale(.9);
 }

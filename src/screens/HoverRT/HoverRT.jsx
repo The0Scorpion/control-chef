@@ -32,7 +32,7 @@ export const HoverRTcomponent = () => {
   const [JointAngle1, setJointAngle1] = useState(0);
   const [JointAngle2, setJointAngle2] = useState(0);
   const urdfUrl1 = '2dofhover/urdf/2dofhover.urdf';
-  const [idToken, setidToken] = useState(null);
+  idToken="";
   const [accessToken, setAccessToken] = useState(null);
 
   const [xPosArr, setXPosArr] = useState([]);
@@ -46,7 +46,11 @@ export const HoverRTcomponent = () => {
   const [YError, setYError] = useState(0);
   const [xtime, setXtime] = useState(0);
   const [ytime, setYtime] = useState(0);
-
+  const [Authed, setAuthed] = useState(false);
+  const [QueuePosition, setQueuePosition] = useState("");
+  const [QueueStatus, setQueueStatus] = useState("");
+  const [timeoutId, setTimeoutId]=useState(null);
+  first=true;
   // Function to calculate overshoot
   const calculateOvershoot = (simData, setp) => {
     // Find the direction of movement based on the sign of the first point
@@ -150,29 +154,7 @@ export const HoverRTcomponent = () => {
       setXError(newXError);
       setYError(newYError);
     }
-    const fetchSession = async () => {
-      try {
-        const session = await fetchAuthSession(); // Assuming fetchAuthSession() retrieves the session object
-
-        console.log("session:", session);
-
-        const idTokenPayload = session.tokens.idToken.payload;
-        const accessTokenPayload = session.tokens.accessToken.payload;
-
-        console.log("idTokenPayload:", idTokenPayload);
-        console.log("accessTokenPayload:", accessTokenPayload);
-
-        setidToken(idTokenPayload); // Assuming setidToken is a state setter function
-        setAccessToken(accessTokenPayload); // Assuming setAccessToken is a state setter function
-
-        console.log("idToken:", idTokenPayload); // Ensure idTokenPayload is not null here
-        console.log("Access Token:", accessTokenPayload); // Ensure accessTokenPayload is not null here
-
-      } catch (err) {
-        console.log("Error fetching session:", err);
-      }
-    };
-    fetchSession();
+    
   }, [parameterData, xPosArr, yPosArr]);
 
   // Fetch the current session to obtain tokens
@@ -231,8 +213,217 @@ export const HoverRTcomponent = () => {
         console.error('Error sending data to Lambda:', error);
       });
   };
+  let userAddedToQueue = false;
+  const deleteUser = async (userId1) => {
+    return fetch(`https://cjedoxbspa.execute-api.eu-west-3.amazonaws.com/prod/queue/leave`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Authorization': idToken // Use idToken in Authorization header if needed
+      },
+      body: JSON.stringify({ userId: userId1 })
+    }).then(response => {
+      if (response.ok) {
+        console.log(`User ${userId1} deleted successfully`);
+      } else {
+        console.error('Failed to delete user from queue');
+      }
+    })
+    .catch(error => {
+      console.error('Error deleting user from queue:', error);
+    });
+  };
 
+  const checkQueueStatus = async () => {
+    if(!first){
+      return;
+    }
+    first=false;
+    try {
+      const session = await fetchAuthSession();
+      const idTokenPayload = session.tokens.signInDetails.loginId;
+      idToken=idTokenPayload;
+      console.log("USER:", idTokenPayload);
+    } catch (err) {
+      console.log("Error fetching session:", err);
+    }
+    try {
+        const response = await sendQueueRequest('status', 'POST');
+        //console.log("idToken:",idToken);
+        if (response.ok) {
+            const data = await response.json();
+            //console.log("Status", data);
+
+            if(data.statusCode!=200){
+              setAuthed(false);
+              setQueuePosition("User Is not Authed To Control Hardware,\r\n contact Us for further Info.");
+              return;
+            }
+           
+            const queueStatus = JSON.parse(data.body);
+            const queueItems = queueStatus.queueItems;
+            const currentTime = new Date();
+            const ActivePeriod = 5 * 60 * 1000; // 5 minutes in milliseconds
+            
+            //console.log("Current Time:", currentTime.getTime());
+            
+            // Identify users who have been inactive for over 2 minutes
+            const expiredUsers = queueItems.filter(item => {
+              const lastActiveTime = new Date(item.lastActiveTime);
+              const lastActiveTimeMillis = lastActiveTime.getTime()+3*60*60*1000 ; // Convert to milliseconds since epoch
+              const currentTimeMillis = currentTime.getTime(); // Convert to milliseconds since epoch
+              //console.log("User Time:", lastActiveTimeMillis);
+              console.log("delta Time:", (currentTimeMillis - lastActiveTimeMillis));
+              return (currentTimeMillis - lastActiveTimeMillis) >= ActivePeriod;
+          });
+            
+            console.log("Expired Users:", expiredUsers);
+            
+            // Send request to delete expired users
+            for (const user of expiredUsers) {
+                await deleteUser(user.userId);
+            }
+            
+            // Remove expired users from activeUsers
+            const activeUsers = queueItems.filter(item => {
+              const lastActiveTime = new Date(item.lastActiveTime);
+              const lastActiveTimeMillis = lastActiveTime.getTime()+3*60*60*1000 ; // Convert to milliseconds since epoch
+              const currentTimeMillis = currentTime.getTime(); // Convert to milliseconds since epoch
+              //console.log("User Time:", lastActiveTimeMillis);
+              console.log("delta Time:", (currentTimeMillis - lastActiveTimeMillis));
+              return (currentTimeMillis - lastActiveTimeMillis) < ActivePeriod;
+            });
+            
+            console.log("Active Users:", activeUsers);
+            
+            const currentUserInQueue = queueItems.find(item => item.userId === idToken);
+            
+            // Only add user to queue if their ID isn't already present in queueItems
+            if (!currentUserInQueue && !userAddedToQueue) {
+                
+                joinQueue();
+                
+            }
+            
+            // If no active users remain, set auth to true
+            if (activeUsers.length === 0) {
+                setAuthed(true);
+                setQueueStatus(true);
+                const id = setTimeout(() => {
+                  alert('Session timed out');
+                  leaveQueue();
+                }, 300000); // 5 minutes
+                userAddedToQueue = false; // Reset flag when no active users are present
+            } else {
+                // Check if it's the current user's turn
+                const currentTurnUser = activeUsers[0]; // Assuming the first in the list is the current turn
+                if (currentTurnUser && currentTurnUser.userId === idToken) {
+                    setAuthed(true);
+                    const id = setTimeout(() => {
+                      alert('Session timed out');
+                      leaveQueue();
+                  }, 300000); // 5 minutes
+                    setQueueStatus(true);
+                    userAddedToQueue = false; // Reset flag
+                    console.log("Table Busy but users is Up");
+                } else {
+                    setAuthed(false);
+                    setQueueStatus(false);
+                    const estimatedTime = 5 * activeUsers.length; // Approximate wait time
+                    setQueuePosition(`Estimated wait time: ${estimatedTime} minutes`);
+                    
+                    // Rerun the checkQueueStatus function every minute
+                    first=true;
+                    setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
+                }
+            }
+        } else {
+            console.error('Failed to retrieve queue status');
+        }
+    } catch (error) {
+        console.error('Error in checkQueueStatus:', error);
+    }
+};
+
+  
+  
+  
+const joinQueue = async () => {
+  try {
+      const response = await sendQueueRequest('join', 'POST');
+      if (response.ok) {
+          //setQueuePosition('You are in the queue');
+
+          // Read and log the response body as text
+          //const responseBodyText = await response.text();
+          //console.log("Response as text:", responseBodyText);
+
+          // Parse the JSON string if needed
+          //const data = await JSON.parse(response.text());
+
+          // If you need to log the parsed JSON directly
+          //console.log("Parsed JSON:", data);
+
+          
+          userAddedToQueue = true; // Set flag to true once user is added to queue
+          setTimeoutId(id);
+          startSessionTimeoutUpdate();
+      }
+  } catch (e) {
+      console.error('Error in joinQueue:', e);
+  }
+};
+
+  
+const leaveQueue = async () => {
+  clearTimeout(timeoutId);
+  await sendQueueRequest('leave', 'DELETE');
+  setQueuePosition(null);
+
+  // Show alert with options
+  const userChoice = window.confirm("Please rejoin the queue or go back to the main page. Click 'OK' to reload the page, or 'Cancel' to go to the main page.");
+
+  if (userChoice) {
+    // Reload the page
+    window.location.reload();
+  } else {
+    // Redirect to the main page
+    window.location.href = "/";
+  }
+};
+
+  
+    const startSessionTimeoutUpdate = () => {
+      const intervalId = setInterval(async () => {
+        await sendQueueRequest('sessionTimeout', 'PATCH');
+      }, 60000); // Update every minute
+      return () => clearInterval(intervalId);
+    };
+  
+    const sendQueueRequest = async (endpoint, method) => {
+      return fetch(`https://cjedoxbspa.execute-api.eu-west-3.amazonaws.com/prod/queue/${endpoint}`, {
+        method: method,
+        headers: {
+          
+          'Content-Type': 'application/json',
+          //'Authorization': idToken // Use idToken in Authorization header
+        },
+        body: JSON.stringify({ userId: idToken }) // Sending userId for identification
+      }).then(response => {
+        if (response.ok) {
+          //console.log("ID Token:", idToken); // Log ID Token here
+          //console.log("response:", response); // Log ID Token here
+          return response;
+        } else {
+          console.error('Failed to send data to Lambda');
+        }
+      })
+      .catch(error => {
+        console.error('Error sending data to Lambda:', error);
+      });;
+    };
   useEffect(() => {
+    
     if (location.pathname === "/") {
       // Scroll to the top of the page when the route changes to "/"
       window.scrollTo(0, 0);
@@ -245,6 +436,7 @@ export const HoverRTcomponent = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
+    checkQueueStatus();
   }, []); // Empty dependency array ensures this effect runs only once
 
 
@@ -303,7 +495,8 @@ export const HoverRTcomponent = () => {
         console.error('Error sending data to Lambda:', error);
       });
   };
-
+  
+if(Authed){
   return (
     <Authenticator>
       {({ signOut, user }) => (
@@ -529,6 +722,158 @@ export const HoverRTcomponent = () => {
       )}
     </Authenticator>
   );
+}else {
+  return (
+    <Authenticator>
+      {({ signOut, user }) => (
+        <>
+          <div className="hover"
+            style={{
+              width: { screenWidth }
+            }}
+          >
+            {screenWidth >= 834 && screenWidth < 1300 && (
+              <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab" />
+                <SimulationStreaming
+                  title="Real Time Operation"
+                  className="simulation-streaming-instance"
+                />
+                <div className="input1300">
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-instance"
+                    rollgroup="rollgroup1"
+                    pitchgroup="pitchgroup1"
+                    plantgroup="plantimg1"
+                    arrow3="arrow1"
+                    arrow4="arrow1"
+                  />
+                  <div style={{color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
+                  <div>Controls are Disabled <br/></div>
+                  <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
+                </div>
+                </div>
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance1"
+                  width="800"
+                  height="500"
+                  buttonWrap5="buttonUrdf"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+                <Next navigate="nav1"
+                  next="next1"
+                  linkTo2="/hover-simulation" />
+                <Footer
+                  className="footer1"
+                />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
+
+            {screenWidth >= 1300 && (
+              <>
+                <NavBar
+                  onclick={signOut}
+                  className="navbardoc"
+                />
+                <SimulationStreaming
+                  title="Real Time Operation"
+                  className="simulation-streaming-2" />
+                <div className="inputpb">
+                  <Parametersnew
+                    setParameterData={setParameterData}
+                    className="parameters-2" />
+                <div style={{color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
+                <div>Controls are Disabled <br/></div>
+                <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
+                </div>
+                </div>
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance"
+                  width="1000"
+                  height="600"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+               
+                <Next navigate="nav"
+                  next="next"
+                  linkTo2="/hover-simulation" />
+                <Footer className="footer-instance" />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
+
+            {screenWidth < 834 && (
+              <>
+                <NavBar_2
+                  onclick={signOut}
+                  className="nav-bar-tab-instance"
+                  controlchef1="logo1-control"
+                  navbardrop="nav-bar-drop"
+                  dropdowncontentexperiments="drop-down-exp"
+                  dropdowncontenttheories="drop-down-theory"
+                  navbartext="nav-bar-text"
+                />
+                <SimulationStreaming
+                  className="simulation-streaming-3"
+                  title="Real Time Operation"
+                  simulationStreamingClassName="titlesize"
+                />
+                <Parameters
+                  setParameterData={setParameterData}
+                  className="BlockDiagram5"
+                />
+                <div style={{color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
+                <div>Controls are Disabled <br/></div>
+                <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
+                </div>
+                <URDFViewer
+                  urdfUrl={urdfUrl1}
+                  className="video-stream-instance2"
+                  buttonWrap5="buttonsURDF5"
+                  urdfbutton="buttonsURDF6"
+                  urdfbutton1="buttonsURDF7"
+                  width="300"
+                  height="200"
+                  joint1={JointAngle1}
+                  joint2={JointAngle2}
+                />
+                <Next navigate="nav2"
+                  next="next2"
+                  back="back2"
+                  linkTo2="/hover-simulation"
+                />
+                <Footer
+                  className="footer5"
+                  group="groupwrap"
+                  group7="group7footer"
+                  buttonf="buttonfooter"
+                  textwrapper="textwrapperfooter"
+                  textwrapper2="textwrapper2footer"
+                  textwrapper3="textwrapper3footer"
+                  textwrapper4="textwrapper4footer"
+                  textwrapper5="textwrapper5footer"
+                  group8="group8footer"
+                  group9="group9footer"
+                  group10="group10footer"
+                  copyright="copyrightfooter"
+                />
+                <div style={{ height: 0 }}></div>
+              </>
+            )}
+          </div>
+        </>
+      )}
+    </Authenticator>
+  );
+}
 };
 
 export const HoverRT = withAuthenticator(HoverRTcomponent);
