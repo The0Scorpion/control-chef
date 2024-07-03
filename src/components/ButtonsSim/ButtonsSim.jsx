@@ -18,14 +18,7 @@ export const ButtonsSim = ({
 
   return (
     <div className={`buttons ${className}`}>
-<<<<<<< HEAD
-      {/*<button className={`stop ${stopClassName}`} onClick={destroygraph} >Stop</button>*/}
-      <button className={`run ${startClassName}`} onClick={GraphAndSimulate}>Run</button>
-      {/*<button className={`set ${setClassName}`} onClick={GraphAndSimulate}>Set</button>
-      <button className={`reset ${resetClassName}`}>Reset</button>*/}
-=======
       <button className={`start ${startClassName}`} onClick={GraphAndSimulate}>Run Simulation</button>
->>>>>>> main
     </div>
   );
 };
