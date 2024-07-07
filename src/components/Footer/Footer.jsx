@@ -40,7 +40,7 @@ export const Footer = ({
           <div className={`text-wrapper ${textwrapper}`}>Contact</div>
           <div className={`group-8 ${group8}`}>
             <div className={`text-wrapper-2 ${textwrapper2}`}><button className={`buttonf ${buttonf}`}><a href="https://mail.google.com/">Email</a></button></div>
-            <div className={`text-wrapper-3 ${textwrapper3}`}><button className={`buttonf ${buttonf}`}><a href="https://www.linkedin.com/">Linkedin</a></button></div>
+            <div className={`text-wrapper-3 ${textwrapper3}`}><button className={`buttonf ${buttonf}`}><a href="https://www.linkedin.com/in/abdelrahmanmagdy1/">Linkedin</a></button></div>
             <div className={`text-wrapper-4 ${textwrapper4}`}><button className={`buttonf ${buttonf}`}><a href="https://www.instagram.com/">Instgram</a></button></div>
             <div className={`text-wrapper-5 ${textwrapper5}`}><button className={`buttonf ${buttonf}`}><a href="https://www.facebook.com/">Facebook</a></button></div>
           </div>
