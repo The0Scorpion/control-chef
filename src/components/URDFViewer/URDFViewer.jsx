@@ -107,13 +107,13 @@ export const URDFViewer = ({
     if (robotRef.current) {
       if (robotRef.current.joints['joint1']) {
         robotRef.current.joints['joint1'].setJointValue(-joint1);
-        console.log(`Updated joint1 to ${joint1}`);
+        //console.log(`Updated joint1 to ${joint1}`);
       } else {
         console.warn('Joint "joint1" not found');
       }
       if (robotRef.current.joints['joint2']) {
         robotRef.current.joints['joint2'].setJointValue(joint2);
-        console.log(`Updated joint2 to ${joint2}`);
+        //console.log(`Updated joint2 to ${joint2}`);
       } else {
         console.warn('Joint "joint2" not found');
       }

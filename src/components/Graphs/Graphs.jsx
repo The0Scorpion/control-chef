@@ -32,6 +32,11 @@ export const Graphs = ({
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
+  const [idArr1, setIdArr1] = useState([]);
+  const [xPosArr1, setXPosArr1] = useState([]);
+  const [yPosArr1, setYPosArr1] = useState([]);
+  const [xVelArr1, setXVelArr1] = useState([]);
+  const [yVelArr1, setYVelArr1] = useState([]);
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
@@ -55,13 +60,26 @@ export const Graphs = ({
       ws.close();
     };
   }, []);
+  const sortDataById = (labels, data) => {
+    const sortedData = labels.map((id, index) => ({
+      id,
+      value: data[index],
+    })).sort((a, b) => a.id - b.id);
 
+    const sortedLabels = sortedData.map(item => item.id);
+    const sortedValues = sortedData.map(item => item.value);
+
+    return { sortedLabels, sortedValues };
+  };
   useEffect(() => {
     if (idArr.length > 0) {
+
+
+      // Update charts
       updateChart(chartRefs.XPos.current, "XPos", idArr, xPosArr);
       updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
       updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
-      updateChart(chartRefs.YVel.current, "YVel", idArr, yVelArr);
+      updateChart(chartRefs.YVel.current, "YVel", idArr, xVelArr);
 
       // Send updated arrays to parent component via props functions
       onXPosUpdate(xPosArr);
@@ -71,32 +89,74 @@ export const Graphs = ({
     }
   }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr, onXPosUpdate, onYPosUpdate, onXVelUpdate, onYVelUpdate]);
 
-  const drawChart = (data) => {
-    const IoT_Payload = JSON.parse(data);
-    console.log("our json object", IoT_Payload);
+  let updateQueue = [];
+  let isUpdating = false;
 
-    const { ID, xpos, ypos, xvel, yvel } = IoT_Payload;
-
-    if (ID === '0' || ID === '-1') {
-      setIdArr([]);
-      setXPosArr([]);
-      setYPosArr([]);
-      setXVelArr([]);
-      setYVelArr([]);
+  const processQueue = () => {
+    if (updateQueue.length === 0) {
+      isUpdating = false;
+      return;
     }
 
-    console.log(xpos);
-    setj1(Number(xpos));
-    setj2(Number(ypos));
-    setIdArr(prevState => [...prevState, Number(ID)]);
-    setXPosArr(prevState => [...prevState, Number(xpos)]);
-    setYPosArr(prevState => [...prevState, Number(ypos)]);
-    setXVelArr(prevState => [...prevState, Number(xvel)]);
-    setYVelArr(prevState => [...prevState, Number(yvel)]);
+    isUpdating = true;
+    const data = updateQueue.shift();
+    const IoT_Payload = JSON.parse(data);
+    console.log("JSON object", IoT_Payload);
+
+    const { numPackets, startPacket, ...packets } = IoT_Payload;
+    console.log(`Number of packets: ${numPackets}, Starting packet: ${startPacket}`);
+
+    let delay = 0;
+
+    for (const key in packets) {
+      if (packets.hasOwnProperty(key)) {
+        const packet = packets[key];
+        const {id, xpos, ypos, xvel, yvel } = packet;
+
+        // Set a timeout for each packet's state update
+        setTimeout(() => {
+          setj1(Number(xpos));
+          setj2(Number(ypos));
+          console.log(idArr);
+          setIdArr(prevState => [...prevState, Number(key)]);
+          setXPosArr(prevState => [...prevState, Number(xpos)]);
+          setYPosArr(prevState => [...prevState, Number(ypos)]);
+          setXVelArr(prevState => [...prevState, Number(xvel)]);
+          setYVelArr(prevState => [...prevState, Number(yvel)]);
+          const { sortedLabels: sortedXPosLabels, sortedValues: sortedXPosValues } = sortDataById(idArr1, xPosArr1);
+          const { sortedLabels: sortedYPosLabels, sortedValues: sortedYPosValues } = sortDataById(idArr1, yPosArr1);
+          const { sortedLabels: sortedXVelLabels, sortedValues: sortedXVelValues } = sortDataById(idArr1, xVelArr1);
+          const { sortedLabels: sortedYVelLabels, sortedValues: sortedYVelValues } = sortDataById(idArr1, yVelArr1);
+
+          // Update arrays
+          /*setIdArr(sortedXPosLabels);
+          setXPosArr(sortedXPosValues);
+          setYPosArr(sortedYPosValues);
+          setXVelArr(sortedXVelValues);
+          setYVelArr(sortedYVelValues);*/
+          //console.log(idArr1);
+          // If this is the last packet, process the next item in the queue
+          if (delay === (numPackets - 1) * 200) { //make it 5
+            processQueue();
+          }
+        }, delay);
+
+        // Increase the delay for the next packet
+        delay += 200; // 5ms delay between each update
+      }
+    }
   };
 
+  const drawChart = (data) => {
+    updateQueue.push(data);
+    if (!isUpdating) {
+      processQueue();
+    }
+  };
+
+
   const createGraph = (element, label, labels, data) => {
-    console.log("Creating chart for", label);
+    //console.log("Creating chart for", label);
     const trace = {
       x: labels,
       y: data,
@@ -117,21 +177,14 @@ export const Graphs = ({
     Plotly.newPlot(element, [trace], layout);
   };
 
-  const updateChart = (element, label, labels, data) => {
-    const sortedData = labels.map((id, index) => ({
-      id,
-      value: data[index],
-    })).sort((a, b) => a.id - b.id);
-
-    const sortedLabels = sortedData.map(item => item.id);
-    const sortedValues = sortedData.map(item => item.value);
-
+  const updateChart = (element, label, sortedLabels, sortedValues) => {
     if (element.data) {
       // Destroy the existing plot
       Plotly.purge(element);
     }
     createGraph(element, label, sortedLabels, sortedValues);
   };
+
 
   return (
     <div className={`graphsim ${className}`}>
