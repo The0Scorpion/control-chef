@@ -3,7 +3,7 @@ We're constantly improving the code you see.
 Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
 */
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./style.css";
 
 export const Parametersnew = ({ 
@@ -51,6 +51,10 @@ export const Parametersnew = ({
       };
       setParameterData(data);
     };
+     // Run updateParameterData once when the component is mounted
+  useEffect(() => {
+    updateParameterData();
+  }, []); // Empty dependency array ensures this runs only once
   return (
     <div className={`parametersnew ${className}`}>
       <div className={`overlap ${pitchgroup}`}>
@@ -152,7 +156,7 @@ export const Parametersnew = ({
           <div className="summation-point" />
           <img className="arrow" alt="Arrow" src="https://c.animaapp.com/8sio1tS4/img/arrow-13-1.svg" />
           <div className="text-wrapper">
-            +<br />
+            <br />
             &nbsp;&nbsp;-
           </div>
         </div>

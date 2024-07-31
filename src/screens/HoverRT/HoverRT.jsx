@@ -40,7 +40,7 @@ export const HoverRTcomponent = () => {
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
-
+  const [updateQueue, setUpdateQueue] = useState([]);
   const [xOvershoot, setXovershoot] = useState(0);
   const [yOvershoot, setYovershoot] = useState(0);
   const [xError, setXError] = useState(0);
@@ -126,31 +126,31 @@ export const HoverRTcomponent = () => {
   useEffect(() => {
     if (xPosArr.length > 0 && yPosArr.length > 0 && parameterData!=null) {
 
-      console.log("Calculating overshoot and errors...");
+      //console.log("Calculating overshoot and errors...");
 
 
       const XovershootResult = calculateOvershoot(xPosArr, parameterData.xposSet);
       const YovershootResult = calculateOvershoot(yPosArr, parameterData.yposSet);
-      console.log("XovershootResult:", XovershootResult);
-      console.log("YovershootResult:", YovershootResult);
+      //console.log("XovershootResult:", XovershootResult);
+      //console.log("YovershootResult:", YovershootResult);
 
       const newXError = Math.abs(parameterData.xposSet - xPosArr[xPosArr.length - 1]);
       const newYError = Math.abs(parameterData.yposSet - yPosArr[yPosArr.length - 1]);
-      console.log("New XError:", newXError);
-      console.log("New YError:", newYError);
+      //console.log("New XError:", newXError);
+      //console.log("New YError:", newYError);
 
       setXtime(XovershootResult.indexOfFirstZeroCrossing * 0.005);
       setYtime(YovershootResult.indexOfFirstZeroCrossing * 0.005);
 
       const xRiseTime = calculateRiseTime(xPosArr, parameterData.xposSet);
       const yRiseTime = calculateRiseTime(yPosArr, parameterData.yposSet);
-      console.log("XRiseTime:", xRiseTime);
-      console.log("YRiseTime:", yRiseTime);
+      //console.log("XRiseTime:", xRiseTime);
+      //console.log("YRiseTime:", yRiseTime);
 
       const xSettlingTime = calculateSettlingTime(xPosArr, parameterData.xposSet);
       const ySettlingTime = calculateSettlingTime(yPosArr, parameterData.yposSet);
-      console.log("XSettlingTime:", xSettlingTime);
-      console.log("YSettlingTime:", ySettlingTime);
+      //console.log("XSettlingTime:", xSettlingTime);
+      //console.log("YSettlingTime:", ySettlingTime);
 
       setXovershoot(XovershootResult.overshoot);
       setYovershoot(YovershootResult.overshoot);
@@ -210,6 +210,7 @@ export const HoverRTcomponent = () => {
   const sendDataTostop = async () => {
     const session = await fetchAuthSession();
     idTokenPayload = session.tokens.signInDetails.loginId;
+    setUpdateQueue([]);
     //console.log("USER:", idTokenPayload);
     setIdToken(idTokenPayload);
     setWork(0);
@@ -468,7 +469,7 @@ export const HoverRTcomponent = () => {
     idTokenPayload = session.tokens.signInDetails.loginId;
     //console.log("USER:", idTokenPayload);
     setIdToken(idTokenPayload);
-    saveDataToDynamoDB();
+    //saveDataToDynamoDB();
     setWork(1);
 
     const dataToSend = {
@@ -527,6 +528,7 @@ export const HoverRTcomponent = () => {
                       plantgroup="plantimg1"
                       arrow3="arrow1"
                       arrow4="arrow1"
+                      updateQueue1={updateQueue}
                     />
                     <Buttons
                       sendDataToLambda={sendDataToLambda}
@@ -557,6 +559,7 @@ export const HoverRTcomponent = () => {
                     onYPosUpdate={setYPosArr}
                     onXVelUpdate={setXVelArr}
                     onYVelUpdate={setYVelArr}
+                    updateQueue1={updateQueue}
                   />
                   <Results
                     className="Resultsmid"
@@ -589,7 +592,8 @@ export const HoverRTcomponent = () => {
                   <div className="inputpb">
                     <Parametersnew
                       setParameterData={setParameterData}
-                      className="parameters-2" />
+                      className="parameters-2"
+                      updateQueue1={updateQueue}/>
                     <Buttons
                       sendDataToLambda={sendDataToLambda}
                       sendDataTostart={sendDataTostart}
@@ -612,6 +616,7 @@ export const HoverRTcomponent = () => {
                     onYPosUpdate={setYPosArr}
                     onXVelUpdate={setXVelArr}
                     onYVelUpdate={setYVelArr}
+                    updateQueue1={updateQueue}
                   />
                   <Results
                     className="Results1300"
@@ -687,6 +692,7 @@ export const HoverRTcomponent = () => {
                     onYPosUpdate={setYPosArr}
                     onXVelUpdate={setXVelArr}
                     onYVelUpdate={setYVelArr}
+                    updateQueue1={updateQueue}
                   />
                   <Results
                     className="Results834"
@@ -753,6 +759,7 @@ export const HoverRTcomponent = () => {
                       plantgroup="plantimg1"
                       arrow3="arrow1"
                       arrow4="arrow1"
+                      updateQueue1={updateQueue}
                     />
                     <div style={{ color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
                       <div>Controls are Disabled <br /></div>
@@ -790,7 +797,8 @@ export const HoverRTcomponent = () => {
                   <div className="inputpb">
                     <Parametersnew
                       setParameterData={setParameterData}
-                      className="parameters-2" />
+                      className="parameters-2" 
+                      />
                     <div style={{ color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
                       <div>Controls are Disabled <br /></div>
                       <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>

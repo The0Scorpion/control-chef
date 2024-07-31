@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Plotly from "plotly.js-dist-min";
 import "./style.css";
+import { number } from "prop-types";
 
 export const Graphs = ({
   className,
@@ -18,7 +19,8 @@ export const Graphs = ({
   onXPosUpdate,
   onYPosUpdate,
   onXVelUpdate,
-  onYVelUpdate
+  onYVelUpdate,
+  updateQueue1
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -48,7 +50,7 @@ export const Graphs = ({
     });
 
     ws.addEventListener('message', event => {
-      console.log('Your IoT payload is:', event.data);
+      //console.log('Your IoT payload is:', event.data);
       drawChart(event.data);
     });
 
@@ -89,69 +91,85 @@ export const Graphs = ({
     }
   }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr, onXPosUpdate, onYPosUpdate, onXVelUpdate, onYVelUpdate]);
 
-  let updateQueue = [];
+ 
   let isUpdating = false;
 
   const processQueue = () => {
-    if (updateQueue.length === 0) {
+    console.log(`Number of messgaes left: ${updateQueue1.length}`);
+    if (updateQueue1.length < 1) {
+      console.log(`no Queue left`);
       isUpdating = false;
       return;
     }
 
-    isUpdating = true;
-    const data = updateQueue.shift();
-    const IoT_Payload = JSON.parse(data);
-    console.log("JSON object", IoT_Payload);
 
-    const { numPackets, startPacket, ...packets } = IoT_Payload;
+    isUpdating = true;
+    const data = updateQueue1.shift(); //0,1,2>>1,2
+
+    const IoT_Payload = JSON.parse(data);
+    console.log("processing: ", IoT_Payload);
+    if(Number(IoT_Payload.numPackets)>0){
+    
+    const startPacket = IoT_Payload.startPacket;
+    const numPackets = IoT_Payload.numPackets;
+    delete IoT_Payload.numPackets;
+    delete IoT_Payload.startPacket;
+    
+    // Extract the remaining properties as packets
+    const packets = { ...IoT_Payload };
+    console.log("JSON object", packets);
+    const UpdateTime=5;
     console.log(`Number of packets: ${numPackets}, Starting packet: ${startPacket}`);
 
     let delay = 0;
-
+    
     for (const key in packets) {
-      if (packets.hasOwnProperty(key)) {
+      if(Number(key)==0){
+        setIdArr([]);
+          setXPosArr([]);
+          setYPosArr([]);
+          setXVelArr([]);
+          setYVelArr([]);
+      }
         const packet = packets[key];
-        const {id, xpos, ypos, xvel, yvel } = packet;
-
+        const { id, xpos, ypos, xvel, yvel } = packet;
+        
         // Set a timeout for each packet's state update
         setTimeout(() => {
+          //console.log("ID: ", key);
+          //console.log("delay: ",  Number(numPackets)+Number(startPacket)-1);
           setj1(Number(xpos));
           setj2(Number(ypos));
-          console.log(idArr);
+          //console.log(key);
           setIdArr(prevState => [...prevState, Number(key)]);
           setXPosArr(prevState => [...prevState, Number(xpos)]);
           setYPosArr(prevState => [...prevState, Number(ypos)]);
           setXVelArr(prevState => [...prevState, Number(xvel)]);
           setYVelArr(prevState => [...prevState, Number(yvel)]);
-          const { sortedLabels: sortedXPosLabels, sortedValues: sortedXPosValues } = sortDataById(idArr1, xPosArr1);
-          const { sortedLabels: sortedYPosLabels, sortedValues: sortedYPosValues } = sortDataById(idArr1, yPosArr1);
-          const { sortedLabels: sortedXVelLabels, sortedValues: sortedXVelValues } = sortDataById(idArr1, xVelArr1);
-          const { sortedLabels: sortedYVelLabels, sortedValues: sortedYVelValues } = sortDataById(idArr1, yVelArr1);
 
-          // Update arrays
-          /*setIdArr(sortedXPosLabels);
-          setXPosArr(sortedXPosValues);
-          setYPosArr(sortedYPosValues);
-          setXVelArr(sortedXVelValues);
-          setYVelArr(sortedYVelValues);*/
-          //console.log(idArr1);
-          // If this is the last packet, process the next item in the queue
-          if (delay === (numPackets - 1) * 200) { //make it 5
+          if (Number(key) == Number(numPackets)+Number(startPacket)-1) {
+            console.log("Finished");
+            isUpdating=false;
             processQueue();
           }
         }, delay);
 
         // Increase the delay for the next packet
-        delay += 200; // 5ms delay between each update
-      }
+        delay += UpdateTime; // 5ms delay between each update
+    }}else{
+      console.log("Skipping Heartbeat");
+      processQueue();
     }
   };
 
   const drawChart = (data) => {
-    updateQueue.push(data);
-    if (!isUpdating) {
+    updateQueue1.push(data); //{num:n,start:,[x,y,xdot,ydot]}
+    //console.log("Pushed message to queue");
+    if(!isUpdating){
       processQueue();
     }
+    
+
   };
 
 
