@@ -253,7 +253,7 @@ export const HoverRTcomponent = () => {
     try {
       const session = await fetchAuthSession();
       idTokenPayload = session.tokens.signInDetails.loginId;
-      //console.log("USER:", idTokenPayload);
+      console.log("USER:", idTokenPayload);
       setIdToken(idTokenPayload);
       //console.log("ID Token set:", idTokenPayload); // This confirms if the token is set correctly
 
@@ -265,8 +265,8 @@ export const HoverRTcomponent = () => {
     try {
       const response = await sendQueueRequest('status', 'POST');
       const data = await response.json();
-      const body = JSON.parse(data.body);
-
+      const body = JSON.parse(data.body); 
+      console.log(data.statusCode);
       if (response.status === 200) {
         if (data.statusCode === 200) {
           // User's turn is up
@@ -275,7 +275,8 @@ export const HoverRTcomponent = () => {
           setQueuePosition("User's turn is up.");
         } else if (data.statusCode === 201) {
           // User is already in the queue
-          if (data.queuePosition) {
+          //console.log(data);
+          if (body.queuePosition) {
             setAuthed(true);
             setQueueStatus(true);
             setQueuePosition(`You are number ${data.queuePosition} in the queue.`);
