@@ -277,9 +277,10 @@ export const HoverRTcomponent = () => {
           // User is already in the queue
           //console.log(data);
           if (body.queuePosition) {
-            setAuthed(true);
-            setQueueStatus(true);
-            setQueuePosition(`You are number ${data.queuePosition} in the queue.`);
+            setAuthed(false);
+            setQueueStatus(false);
+            setQueuePosition(`You are number ${body.queuePosition} in the queue.`);
+            setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
           } else {
             // User is allowed but not in the queue
             setAuthed(false);
@@ -290,10 +291,10 @@ export const HoverRTcomponent = () => {
           }
         } else if (data.statusCode === 202) {
           // User has joined the queue
-          if (data.queuePosition) {
+          if (body.queuePosition) {
             setAuthed(true);
             setQueueStatus(true);
-            setQueuePosition(`You are number ${data.queuePosition} in the queue.`);
+            setQueuePosition(`You are number ${body.queuePosition} in the queue.`);
             setTimeout(leaveQueue, 120 * 1000); // 1 minute in milliseconds
           } else {
             // Unexpected case, handle accordingly
