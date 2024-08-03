@@ -1,3 +1,4 @@
+/* style.css */
 .buttons5 {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,55 @@
   max-width: 150px;
   margin: 5px;
   position: relative;
+}
+
+.buttons5 .status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: var(--subheader-font-family);
+  font-size: 1vw;
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+}
+
+.buttons5 .status.online {
+  color: green;
+}
+
+.buttons5 .status.offline {
+  color: red;
+}
+
+.buttons5 .status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.buttons5 .status-dot.green-dot {
+  background-color: green;
+}
+
+.buttons5 .status-dot.red-dot {
+  background-color: red;
+}
+
+.buttons5 .trials-info {
+  margin-bottom: 15px;
+  font-family: var(--subheader-font-family);
+  font-size: 1vw;
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  color: #333; /* Adjust color as needed */
 }
 
 .buttons5 button {
@@ -47,6 +97,11 @@
 
 .buttons5 button:hover {
   transform: scale(0.9);
+}
+
+.buttons5 button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 600px) {

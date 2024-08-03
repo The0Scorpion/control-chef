@@ -20,7 +20,9 @@ export const Graphs = ({
   onYPosUpdate,
   onXVelUpdate,
   onYVelUpdate,
-  updateQueue1
+  updateQueue1,
+  setactive,
+  setsaveData,
 }) => {
   const chartRefs = {
     XPos: useRef(null),
@@ -34,11 +36,6 @@ export const Graphs = ({
   const [yPosArr, setYPosArr] = useState([]);
   const [xVelArr, setXVelArr] = useState([]);
   const [yVelArr, setYVelArr] = useState([]);
-  const [idArr1, setIdArr1] = useState([]);
-  const [xPosArr1, setXPosArr1] = useState([]);
-  const [yPosArr1, setYPosArr1] = useState([]);
-  const [xVelArr1, setXVelArr1] = useState([]);
-  const [yVelArr1, setYVelArr1] = useState([]);
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
@@ -46,7 +43,7 @@ export const Graphs = ({
     const ws = new WebSocket('wss://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production');
 
     ws.addEventListener('open', event => {
-      console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
+      //console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
     });
 
     ws.addEventListener('message', event => {
@@ -62,21 +59,8 @@ export const Graphs = ({
       ws.close();
     };
   }, []);
-  const sortDataById = (labels, data) => {
-    const sortedData = labels.map((id, index) => ({
-      id,
-      value: data[index],
-    })).sort((a, b) => a.id - b.id);
-
-    const sortedLabels = sortedData.map(item => item.id);
-    const sortedValues = sortedData.map(item => item.value);
-
-    return { sortedLabels, sortedValues };
-  };
   useEffect(() => {
     if (idArr.length > 0) {
-
-
       // Update charts
       updateChart(chartRefs.XPos.current, "XPos", idArr, xPosArr);
       updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
@@ -95,9 +79,9 @@ export const Graphs = ({
   let isUpdating = false;
 
   const processQueue = () => {
-    console.log(`Number of messgaes left: ${updateQueue1.length}`);
+    //console.log(`Number of messgaes left: ${updateQueue1.length}`);
     if (updateQueue1.length < 1) {
-      console.log(`no Queue left`);
+      //console.log(`no Queue left`);
       isUpdating = false;
       return;
     }
@@ -107,7 +91,7 @@ export const Graphs = ({
     const data = updateQueue1.shift(); //0,1,2>>1,2
 
     const IoT_Payload = JSON.parse(data);
-    console.log("processing: ", IoT_Payload);
+    //console.log("processing: ", IoT_Payload);
     if(Number(IoT_Payload.numPackets)>0){
     
     const startPacket = IoT_Payload.startPacket;
@@ -117,30 +101,31 @@ export const Graphs = ({
     
     // Extract the remaining properties as packets
     const packets = { ...IoT_Payload };
-    console.log("JSON object", packets);
+    //console.log("JSON object", packets);
     const UpdateTime=5;
-    console.log(`Number of packets: ${numPackets}, Starting packet: ${startPacket}`);
+    //console.log(`Number of packets: ${numPackets}, Starting packet: ${startPacket}`);
 
     let delay = 0;
     
     for (const key in packets) {
+      
       if(Number(key)==0){
         setIdArr([]);
           setXPosArr([]);
           setYPosArr([]);
           setXVelArr([]);
           setYVelArr([]);
+      }else if(Number(key)==2000){
+      setsaveData(1);
+      return;
       }
         const packet = packets[key];
         const { id, xpos, ypos, xvel, yvel } = packet;
         
         // Set a timeout for each packet's state update
         setTimeout(() => {
-          //console.log("ID: ", key);
-          //console.log("delay: ",  Number(numPackets)+Number(startPacket)-1);
           setj1(Number(xpos));
           setj2(Number(ypos));
-          //console.log(key);
           setIdArr(prevState => [...prevState, Number(key)]);
           setXPosArr(prevState => [...prevState, Number(xpos)]);
           setYPosArr(prevState => [...prevState, Number(ypos)]);
@@ -148,7 +133,7 @@ export const Graphs = ({
           setYVelArr(prevState => [...prevState, Number(yvel)]);
 
           if (Number(key) == Number(numPackets)+Number(startPacket)-1) {
-            console.log("Finished");
+            //console.log("Finished");
             isUpdating=false;
             processQueue();
           }
@@ -157,14 +142,14 @@ export const Graphs = ({
         // Increase the delay for the next packet
         delay += UpdateTime; // 5ms delay between each update
     }}else{
-      console.log("Skipping Heartbeat");
+      //console.log("Skipping Heartbeat");
       processQueue();
     }
   };
 
   const drawChart = (data) => {
     updateQueue1.push(data); //{num:n,start:,[x,y,xdot,ydot]}
-    //console.log("Pushed message to queue");
+    setactive(Date.now());
     if(!isUpdating){
       processQueue();
     }

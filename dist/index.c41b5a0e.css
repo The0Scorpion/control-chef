@@ -6935,6 +6935,55 @@ html[dir="rtl"] .amplify-field-group__inner-start {
   position: relative;
 }
 
+.buttons5 .status {
+  font-family: var(--subheader-font-family);
+  font-size: 1vw;
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.buttons5 .status.online {
+  color: green;
+}
+
+.buttons5 .status.offline {
+  color: red;
+}
+
+.buttons5 .status-dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.buttons5 .status-dot.green-dot {
+  background-color: green;
+}
+
+.buttons5 .status-dot.red-dot {
+  background-color: red;
+}
+
+.buttons5 .trials-info {
+  font-family: var(--subheader-font-family);
+  font-size: 1vw;
+  font-style: var(--subheader-font-style);
+  font-weight: var(--subheader-font-weight);
+  letter-spacing: var(--subheader-letter-spacing);
+  line-height: var(--subheader-line-height);
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
 .buttons5 button {
   color: #fff;
   font-family: var(--subheader-font-family);
@@ -6967,6 +7016,11 @@ html[dir="rtl"] .amplify-field-group__inner-start {
 
 .buttons5 button:hover {
   transform: scale(.9);
+}
+
+.buttons5 button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 @media (width <= 600px) {

@@ -5,9 +5,11 @@ export const Results = ({
   className,
   steadyStateErrorPitch,
   overshootPitch,
+  riseTimePitch,
   settlingTimePitch,
   steadyStateErrorRoll,
   overshootRoll,
+  riseTimeRoll,
   settlingTimeRoll
 }) => {
   return (
@@ -19,20 +21,28 @@ export const Results = ({
           <span className="value">{steadyStateErrorPitch}</span>
         </div>
         <div className="result-item">
-          <span className="label">Overshoot of Pitch angle:</span>
-          <span className="value">{overshootPitch}</span>
-        </div>
-        <div className="result-item">
-          <span className="label">Settling Time of Pitch angle:</span>
-          <span className="value">{settlingTimePitch}</span>
-        </div>
-        <div className="result-item">
           <span className="label">Steady State Error of Roll angle:</span>
           <span className="value">{steadyStateErrorRoll}</span>
         </div>
         <div className="result-item">
+          <span className="label">Overshoot of Pitch angle:</span>
+          <span className="value">{overshootPitch}</span>
+        </div>
+        <div className="result-item">
           <span className="label">Overshoot of Roll angle:</span>
           <span className="value">{overshootRoll}</span>
+        </div>
+        <div className="result-item">
+          <span className="label">Rise Time of Pitch angle:</span>
+          <span className="value">{riseTimePitch}</span>
+        </div>
+        <div className="result-item">
+          <span className="label">Rise Time of Roll angle:</span>
+          <span className="value">{riseTimeRoll}</span>
+        </div>
+        <div className="result-item">
+          <span className="label">Settling Time of Pitch angle:</span>
+          <span className="value">{settlingTimePitch}</span>
         </div>
         <div className="result-item">
           <span className="label">Settling Time of Roll angle:</span>
