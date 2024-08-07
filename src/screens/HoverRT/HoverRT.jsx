@@ -47,17 +47,18 @@ export const HoverRTcomponent = () => {
   const [ySettlingTime, setYSettlingTime] = useState(0);
   const [Authed, setAuthed] = useState(false);
   const [QueuePosition, setQueuePosition] = useState("");
+  const [QueueState, setQueueState] = useState(1);
   const [ActiveTime, setActiveTime] = useState(Date.now() - 20000);
   const [ConnectionStatus, setConnectionStatus] = useState(1);
   const [IsUserActive, setIsUserActive] = useState(1);
   const [SaveData, setSaveData] = useState(0);
-  const [AllowedTrials, setAllowedTrials]=useState(0);
+  const [AllowedTrials, setAllowedTrials] = useState(0);
   const userActivitytimeoutRef = useRef(null);
   const warningTimeoutRef = useRef(null);
   const warningTime = 10000; // 60 seconds for warning //Edit
   const inactivityTime = 600000; // 60 seconds to be considered inactive //edit
   const SessionTime = 120000;
-  
+
   var idTokenPayload = "";
   first = true;
 
@@ -149,7 +150,7 @@ export const HoverRTcomponent = () => {
   }, [xPosArr, yPosArr]);
 
   const sendDataToLambda = async () => {
-    if(await checkQueueStatus()==0){
+    if (await checkQueueStatus() == 0) {
       return;
     }
     const session = await fetchAuthSession();
@@ -195,6 +196,7 @@ export const HoverRTcomponent = () => {
         alert("You have been kicked for inactivity");
         sendQueueRequest('leave', 'DELETE');
         setQueuePosition(null);
+        setQueueState(0);
         setIsUserActive(0); // Set user activity status to inactive
         window.location.href = "/";// Redirect to home page
       }
@@ -280,12 +282,14 @@ export const HoverRTcomponent = () => {
           if (body.queuePosition) {
             setAuthed(false);
             setQueuePosition(`You are number ${body.queuePosition} in the queue.`);
+            setQueueState(2);//in queue
             setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
             return 0;
           } else {
             // User is allowed but not in the queue
             setAuthed(false);
             setQueuePosition("You are not currently in the queue.");
+            setQueueState(4);//not in queue
             first = true;
             setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
             return 0;
@@ -295,6 +299,7 @@ export const HoverRTcomponent = () => {
           if (body.queuePosition) {
             setAuthed(true);
             setQueuePosition(`You are number ${body.queuePosition} in the queue.`);
+            setQueueState(2);//in queue
             setTimeout(leaveQueue, SessionTime);
             setAllowedTrials(body.trials_remaining);
             return 1;
@@ -302,6 +307,7 @@ export const HoverRTcomponent = () => {
             // Unexpected case, handle accordingly
             setAuthed(false);
             setQueuePosition("Error: Unexpected status in the queue.");
+            setQueueState(-1);
             first = true;
             setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
             return 0;
@@ -311,6 +317,7 @@ export const HoverRTcomponent = () => {
           setAuthed(false);
           //console.log(data);
           setQueuePosition(body.message || "An error occurred.");
+          setQueueState(3);//no reamining trials 
           first = true;
           setTimeout(checkQueueStatus, 60 * 1000); // 1 minute in milliseconds
           return 0;
@@ -412,7 +419,7 @@ export const HoverRTcomponent = () => {
 
 
   const saveDataToDynamoDB = async () => {
-    if(await checkQueueStatus()==0){
+    if (await checkQueueStatus() == 0) {
       return;
     }
     if (xPosArr.length > 0 && yPosArr.length > 0 || 1) {
@@ -471,7 +478,7 @@ export const HoverRTcomponent = () => {
     }
   }, [SaveData, setSaveData, saveDataToDynamoDB]);
   const UpdateWork = async (work) => {
-    if(await checkQueueStatus()==0){
+    if (await checkQueueStatus() == 0) {
       return;
     }
     try {
@@ -511,6 +518,7 @@ export const HoverRTcomponent = () => {
 
   const sendDataTostop = () => {
     saveDataToDynamoDB();
+    setUpdateQueue([]);
     UpdateWork(0);
   };
 
@@ -622,7 +630,7 @@ export const HoverRTcomponent = () => {
                       className="buttons-2"
                       isOnline={ConnectionStatus}
                       trials={AllowedTrials}
-                      />
+                    />
                   </div>
                   <URDFViewer
                     urdfUrl={urdfUrl1}
@@ -796,7 +804,19 @@ export const HoverRTcomponent = () => {
                     />
                     <div style={{ color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
                       <div>Controls are Disabled <br /></div>
-                      <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
+                      <div>
+                        {QueueState === 1 ? (
+                          'Waiting for Auth'
+                        ) : QueueState === 2 ? (
+                          QueuePosition
+                        ) : QueueState === 3 ? (
+                          <>
+                            Please <a href="/Contact-US" style={{ color: 'blue' }}>contact us</a> to be able to get more Trials
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div>
                     </div>
                   </div>
                   <URDFViewer
@@ -834,8 +854,19 @@ export const HoverRTcomponent = () => {
                     />
                     <div style={{ color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
                       <div>Controls are Disabled <br /></div>
-                      <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
-                    </div>
+                      <div>
+                        {QueueState === 1 ? (
+                          'Waiting for Auth'
+                        ) : QueueState === 2 ? (
+                          QueuePosition
+                        ) : QueueState === 3 ? (
+                          <>
+                            Please <a href="/Contact-US" style={{ color: 'blue' }}>contact us</a> to be able to get more Trials
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div></div>
                   </div>
                   <URDFViewer
                     urdfUrl={urdfUrl1}
@@ -876,8 +907,19 @@ export const HoverRTcomponent = () => {
                   />
                   <div style={{ color: 'white', textAlign: 'center', fontSize: '1em', fontWeight: 'bold', marginTop: '50px' }}>
                     <div>Controls are Disabled <br /></div>
-                    <div dangerouslySetInnerHTML={{ __html: QueuePosition.replace(/\n/g, '<br/>') }}></div>
-                  </div>
+                    <div>
+                        {QueueState === 1 ? (
+                          'Waiting for Auth'
+                        ) : QueueState === 2 ? (
+                          QueuePosition
+                        ) : QueueState === 3 ? (
+                          <>
+                            Please <a href="/Contact-US" style={{ color: 'blue' }} >contact us</a> to be able to get more Trials
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div></div>
                   <URDFViewer
                     urdfUrl={urdfUrl1}
                     className="video-stream-instance2"

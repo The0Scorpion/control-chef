@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Plotly from "plotly.js-dist-min";
 import "./style.css";
-import { number } from "prop-types";
 
 export const Graphs = ({
   className,
@@ -39,127 +38,129 @@ export const Graphs = ({
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    // Initialize WebSocket connection
     const ws = new WebSocket('wss://w76kpcwds2.execute-api.eu-west-3.amazonaws.com/production');
 
-    ws.addEventListener('open', event => {
-      //console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
+    ws.addEventListener('open', () => {
+      // console.log('WebSocket is connected, now check for your new Connection ID in Cloudwatch on AWS');
     });
 
-    ws.addEventListener('message', event => {
-      //console.log('Your IoT payload is:', event.data);
+    ws.addEventListener('message', (event) => {
       drawChart(event.data);
     });
 
-    // Set the WebSocket object in state
     setSocket(ws);
 
-    // Clean up on component unmount
     return () => {
       ws.close();
     };
   }, []);
+
   useEffect(() => {
     if (idArr.length > 0) {
-      // Update charts
-      updateChart(chartRefs.XPos.current, "XPos", idArr, xPosArr);
-      updateChart(chartRefs.YPos.current, "YPos", idArr, yPosArr);
-      updateChart(chartRefs.XVel.current, "XVel", idArr, xVelArr);
-      updateChart(chartRefs.YVel.current, "YVel", idArr, xVelArr);
+      const sortedData = sortDataById(idArr, xPosArr, yPosArr, xVelArr, yVelArr);
 
-      // Send updated arrays to parent component via props functions
-      onXPosUpdate(xPosArr);
-      onYPosUpdate(yPosArr);
-      onXVelUpdate(xVelArr);
-      onYVelUpdate(yVelArr);
+      const { sortedIds, sortedXPos, sortedYPos, sortedXVel, sortedYVel } = sortedData;
+
+      updateChart(chartRefs.XPos.current, "XPos", sortedIds, sortedXPos);
+      updateChart(chartRefs.YPos.current, "YPos", sortedIds, sortedYPos);
+      updateChart(chartRefs.XVel.current, "XVel", sortedIds, sortedXVel);
+      updateChart(chartRefs.YVel.current, "YVel", sortedIds, sortedYVel);
+
+      onXPosUpdate(sortedXPos);
+      onYPosUpdate(sortedYPos);
+      onXVelUpdate(sortedXVel);
+      onYVelUpdate(sortedYVel);
     }
   }, [idArr, xPosArr, yPosArr, xVelArr, yVelArr, onXPosUpdate, onYPosUpdate, onXVelUpdate, onYVelUpdate]);
 
- 
   let isUpdating = false;
 
   const processQueue = () => {
-    //console.log(`Number of messgaes left: ${updateQueue1.length}`);
     if (updateQueue1.length < 1) {
-      //console.log(`no Queue left`);
       isUpdating = false;
       return;
     }
 
-
     isUpdating = true;
-    const data = updateQueue1.shift(); //0,1,2>>1,2
+    const data = updateQueue1.shift();
 
     const IoT_Payload = JSON.parse(data);
-    //console.log("processing: ", IoT_Payload);
-    if(Number(IoT_Payload.numPackets)>0){
-    
-    const startPacket = IoT_Payload.startPacket;
-    const numPackets = IoT_Payload.numPackets;
-    delete IoT_Payload.numPackets;
-    delete IoT_Payload.startPacket;
-    
-    // Extract the remaining properties as packets
-    const packets = { ...IoT_Payload };
-    //console.log("JSON object", packets);
-    const UpdateTime=5;
-    //console.log(`Number of packets: ${numPackets}, Starting packet: ${startPacket}`);
+    if (Number(IoT_Payload.numPackets) > 0) {
+      const startPacket = IoT_Payload.startPacket;
+      const numPackets = IoT_Payload.numPackets;
+      delete IoT_Payload.numPackets;
+      delete IoT_Payload.startPacket;
 
-    let delay = 0;
-    
-    for (const key in packets) {
-      
-      if(Number(key)==0){
-        setIdArr([]);
+      const packets = { ...IoT_Payload };
+      const UpdateTime = 5;
+
+      let delay = 0;
+
+      for (const key in packets) {
+        if (Number(key) == 0) {
+          setIdArr([]);
           setXPosArr([]);
           setYPosArr([]);
           setXVelArr([]);
           setYVelArr([]);
-      }else if(Number(key)==2000){
-      setsaveData(1);
-      return;
-      }
+        } else if (Number(key) == 2000) {
+          setsaveData(1);
+          return;
+        }
         const packet = packets[key];
         const { id, xpos, ypos, xvel, yvel } = packet;
-        
-        // Set a timeout for each packet's state update
+
         setTimeout(() => {
           setj1(Number(xpos));
           setj2(Number(ypos));
-          setIdArr(prevState => [...prevState, Number(key)]);
-          setXPosArr(prevState => [...prevState, Number(xpos)]);
-          setYPosArr(prevState => [...prevState, Number(ypos)]);
-          setXVelArr(prevState => [...prevState, Number(xvel)]);
-          setYVelArr(prevState => [...prevState, Number(yvel)]);
+          setIdArr((prevState) => [...prevState, Number(key)]);
+          setXPosArr((prevState) => [...prevState, Number(xpos)]);
+          setYPosArr((prevState) => [...prevState, Number(ypos)]);
+          setXVelArr((prevState) => [...prevState, Number(xvel)]);
+          setYVelArr((prevState) => [...prevState, Number(yvel)]);
 
-          if (Number(key) == Number(numPackets)+Number(startPacket)-1) {
-            //console.log("Finished");
-            isUpdating=false;
+          if (Number(key) == Number(numPackets) + Number(startPacket) - 1) {
+            isUpdating = false;
             processQueue();
           }
         }, delay);
 
-        // Increase the delay for the next packet
-        delay += UpdateTime; // 5ms delay between each update
-    }}else{
-      //console.log("Skipping Heartbeat");
+        delay += UpdateTime;
+      }
+    } else {
       processQueue();
     }
   };
 
   const drawChart = (data) => {
-    updateQueue1.push(data); //{num:n,start:,[x,y,xdot,ydot]}
+    updateQueue1.push(data);
     setactive(Date.now());
-    if(!isUpdating){
+    if (!isUpdating) {
       processQueue();
     }
-    
-
   };
 
+  const sortDataById = (ids, xPos, yPos, xVel, yVel) => {
+    const combined = ids.map((id, index) => ({
+      id,
+      xpos: xPos[index],
+      ypos: yPos[index],
+      xvel: xVel[index],
+      yvel: yVel[index],
+    }));
+
+    combined.sort((a, b) => a.id - b.id);
+
+    return {
+      sortedIds: combined.map((item) => item.id),
+      sortedXPos: combined.map((item) => item.xpos),
+      sortedYPos: combined.map((item) => item.ypos),
+      sortedXVel: combined.map((item) => item.xvel),
+      sortedYVel: combined.map((item) => item.yvel),
+    };
+  };
 
   const createGraph = (element, label, labels, data) => {
-    //console.log("Creating chart for", label);
     const trace = {
       x: labels,
       y: data,
@@ -182,12 +183,10 @@ export const Graphs = ({
 
   const updateChart = (element, label, sortedLabels, sortedValues) => {
     if (element.data) {
-      // Destroy the existing plot
       Plotly.purge(element);
     }
     createGraph(element, label, sortedLabels, sortedValues);
   };
-
 
   return (
     <div className={`graphsim ${className}`}>

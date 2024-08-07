@@ -40,9 +40,9 @@ export const NavBar = ({
           <button className={`experiments ${experiments}`}>Experiments</button>
           <div className={`dropdown-content-experiments ${dropdowncontentexperiments}`}>
             <Link to="/Hover-Documentation"><button className="p2">2 DOF Hover</button></Link>
-            <Link to="/simulation-ballbalance"><button className="p2">2 DOF Ball Balance</button></Link>
+            {/*<Link to="/simulation-ballbalance"><button className="p2">2 DOF Ball Balance</button></Link>
             <Link to="/simulation-servo"><button className="p2">Servo Base Unit</button></Link>
-            <Link to="/simulation-pendulum"><button className="p2">Linear Inverted Pendulum</button></Link>
+            <Link to="/simulation-pendulum"><button className="p2">Linear Inverted Pendulum</button></Link>*/}
           </div>
         </div>
         <button className={`text-wrapper-10 ${contact}`}><Link to="/Contact-US"><p className="p">Contact us</p></Link></button>

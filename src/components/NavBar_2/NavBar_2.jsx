@@ -51,9 +51,9 @@ export const NavBar_2 = ({
           <div className="dropdown-experiment"><button className={`experiments ${navbartext}`}>Experiments</button>
             <div className={`dropdown-content-experiments ${dropdowncontentexperiments}`}>
               <Link className="a" to="/Hover-Documentation"><button className={`p2 ${navbartext}`}>2 DOF Hover</button></Link>
-              <Link className="a" to="/simulation-ballbalance"><button className={`p2 ${navbartext}`}>2 DOF Ball Balance</button></Link>
+              {/*<Link className="a" to="/simulation-ballbalance"><button className={`p2 ${navbartext}`}>2 DOF Ball Balance</button></Link>
               <Link className="a" to="/simulation-servo"><button className={`p2 ${navbartext}`}>Servo Base Unit</button></Link>
-              <Link className="a" to="/simulation-pendulum"><button className={`p2 ${navbartext}`}>Linear Inverted Pendulum</button></Link>
+              <Link className="a" to="/simulation-pendulum"><button className={`p2 ${navbartext}`}>Linear Inverted Pendulum</button></Link>*/}
             </div>
           </div>
           <div className="a"><button className={`text1 ${navbartext}`} onClick={onclick}>Sign Out</button></div>
